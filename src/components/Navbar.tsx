@@ -7,18 +7,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: '#about', label: 'About' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#case-studies', label: 'Case Studies' },
-    { href: '#faq', label: 'FAQ' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#solutions', label: 'Solutions' },
+    { href: '#approach', label: 'Our Approach' },
+    { href: '#about', label: 'About Us' },
+    { href: '#careers', label: 'Careers' }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b">
+    <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <a href="/" className="text-xl font-bold text-primary">AI Engineer</a>
+        <div className="flex items-center justify-between h-20">
+          <a href="/" className="text-2xl font-bold text-primary">lemni</a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -26,12 +25,12 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <Button>Get in Touch</Button>
+            <Button>Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -50,13 +49,13 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                className="block py-2 text-sm font-medium text-foreground hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button className="w-full mt-4">Get in Touch</Button>
+            <Button className="w-full mt-4">Get Started</Button>
           </div>
         )}
       </div>

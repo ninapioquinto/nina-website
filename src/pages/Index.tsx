@@ -2,12 +2,7 @@
 import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { Button } from '../components/ui/button';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "../components/ui/accordion";
+import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -25,7 +20,7 @@ const Index = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,78 +32,50 @@ const Index = () => {
       <section className="pt-32 pb-16 md:pt-48 md:pb-32">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Automating The Future With
-              <span className="text-primary"> Artificial Intelligence</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Automate Your Business with AI
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Transforming businesses through innovative AI solutions and automation engineering
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Transform your operations with cutting-edge AI solutions. 
+              Streamline workflows, reduce costs, and drive innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">View Portfolio</Button>
-              <Button size="lg" variant="outline">Contact Me</Button>
+              <Button size="lg" className="text-lg px-8">
+                Book a Demo <ArrowRight className="ml-2" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg">
+                Learn More
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 bg-accent">
+      {/* Solutions Section */}
+      <section id="solutions" className="py-24 bg-accent">
         <div className="container">
           <div className="reveal">
-            <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">AI Automation Expert</h3>
-                <p className="text-muted-foreground mb-6">
-                  With extensive experience in AI and automation engineering, I help businesses
-                  streamline their operations and enhance productivity through cutting-edge
-                  technology solutions.
-                </p>
-                <Button>Learn More</Button>
-              </div>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4">
-                    <h4 className="text-4xl font-bold text-primary mb-2">50+</h4>
-                    <p className="text-sm text-muted-foreground">Projects Completed</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <h4 className="text-4xl font-bold text-primary mb-2">100%</h4>
-                    <p className="text-sm text-muted-foreground">Client Satisfaction</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <h4 className="text-4xl font-bold text-primary mb-2">10+</h4>
-                    <p className="text-sm text-muted-foreground">Years Experience</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <h4 className="text-4xl font-bold text-primary mb-2">30+</h4>
-                    <p className="text-sm text-muted-foreground">Happy Clients</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Portfolio Section */}
-      <section id="portfolio" className="py-16">
-        <div className="container">
-          <div className="reveal">
-            <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item) => (
-                <div key={item} className="group relative overflow-hidden rounded-lg">
-                  <div className="aspect-video bg-muted relative overflow-hidden">
-                    <div className="absolute inset-0 bg-primary/10" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold mb-2">AI Automation Project {item}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Automated workflow solution for enterprise operations
-                    </p>
-                  </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+              AI Solutions that Drive Results
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Process Automation",
+                  description: "Streamline repetitive tasks and workflows with intelligent automation"
+                },
+                {
+                  title: "Data Analytics",
+                  description: "Transform raw data into actionable insights with AI-powered analytics"
+                },
+                {
+                  title: "Custom Solutions",
+                  description: "Tailored AI solutions designed for your specific business needs"
+                }
+              ].map((solution, index) => (
+                <div key={index} className="p-6 bg-background rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <h3 className="text-xl font-semibold mb-4">{solution.title}</h3>
+                  <p className="text-muted-foreground">{solution.description}</p>
                 </div>
               ))}
             </div>
@@ -116,71 +83,63 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="py-16 bg-accent">
-        <div className="container max-w-3xl">
+      {/* Approach Section */}
+      <section id="approach" className="py-24">
+        <div className="container">
           <div className="reveal">
-            <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger>What AI technologies do you specialize in?</AccordionTrigger>
-                <AccordionContent>
-                  I specialize in machine learning, natural language processing, computer vision,
-                  and robotic process automation technologies.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>How long does a typical project take?</AccordionTrigger>
-                <AccordionContent>
-                  Project timelines vary based on complexity, but typically range from 2-6 months
-                  for full implementation.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Do you offer maintenance and support?</AccordionTrigger>
-                <AccordionContent>
-                  Yes, I provide ongoing maintenance and support services to ensure your AI
-                  solutions continue to perform optimally.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Approach</h2>
+              <p className="text-xl text-muted-foreground mb-12">
+                We combine deep expertise in AI with a thorough understanding of your business 
+                to deliver transformative solutions.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                {[
+                  {
+                    title: "Discovery",
+                    description: "We analyze your current processes and identify opportunities for automation"
+                  },
+                  {
+                    title: "Design",
+                    description: "Create tailored solutions that align with your business objectives"
+                  },
+                  {
+                    title: "Implementation",
+                    description: "Seamless integration of AI solutions into your existing workflows"
+                  }
+                ].map((step, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white font-bold">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-accent aspect-square rounded-lg" />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-16">
-        <div className="container max-w-3xl">
-          <div className="reveal">
-            <h2 className="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    className="w-full p-3 border rounded-md"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    className="w-full p-3 border rounded-md"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    className="w-full p-3 border rounded-md h-32"
-                    placeholder="Your message"
-                  ></textarea>
-                </div>
-                <Button className="w-full">Send Message</Button>
-              </form>
-            </div>
+      {/* CTA Section */}
+      <section className="py-24 bg-primary text-white">
+        <div className="container">
+          <div className="reveal max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl mb-12 text-white/80">
+              Let's discuss how our AI solutions can help you achieve your goals.
+            </p>
+            <Button size="lg" variant="outline" className="text-lg px-8 bg-white text-primary hover:bg-white/90">
+              Get Started Today
+            </Button>
           </div>
         </div>
       </section>
