@@ -1,23 +1,41 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const links = [
-    { href: '#solutions', label: 'Solutions' },
-    { href: '#approach', label: 'Our Approach' },
-    { href: '#about', label: 'About Us' },
-    { href: '#careers', label: 'Careers' }
+    { href: '#about', label: 'About' },
+    { href: '#portfolio', label: 'Portfolio' },
+    { href: '#case-study', label: 'Case Study' },
+    { href: '#faq', label: 'FAQ' },
+    { href: '#contact', label: 'Contact' }
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-background/90 backdrop-blur-md py-2 shadow-md' : 'bg-transparent py-4'
+    }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <a href="/" className="text-2xl font-bold text-primary">lemni</a>
+        <div className="flex items-center justify-between">
+          <a href="#" className="text-2xl font-bold text-gradient">Luna</a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -25,17 +43,19 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-white/80 hover:text-white hover:text-glow transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
             ))}
-            <Button>Get Started</Button>
+            <Button className="bg-transparent border border-primary/50 text-primary hover:bg-primary/10 glow-border">
+              Let's Connect
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden"
+            className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
             <Menu className="h-6 w-6" />
@@ -44,18 +64,22 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4">
+          <div className="md:hidden py-4 bg-accent/80 backdrop-blur-md mt-2 rounded-md">
             {links.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="block py-2 text-sm font-medium text-foreground hover:text-primary"
+                className="block py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-primary/10"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <Button className="w-full mt-4">Get Started</Button>
+            <div className="px-4 pt-3">
+              <Button className="w-full bg-transparent border border-primary/50 text-primary hover:bg-primary/10">
+                Let's Connect
+              </Button>
+            </div>
           </div>
         )}
       </div>
