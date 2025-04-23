@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 interface Particle {
   id: number;
@@ -9,34 +9,52 @@ interface Particle {
   color: string;
   delay: number;
   duration: number;
+  opacity: number;
 }
 
 const Particles = () => {
   const [particles, setParticles] = useState<Particle[]>([]);
+  const requestRef = useRef<number>();
+  const previousTimeRef = useRef<number>();
   
   useEffect(() => {
-    // Generate random particles
+    // Generate random particles with better colors for lemni.com style
     const colors = [
-      'rgba(139, 92, 246, 0.15)', // Purple
-      'rgba(56, 189, 248, 0.15)', // Blue
-      'rgba(232, 121, 249, 0.15)', // Pink
+      'rgba(139, 92, 246, 0.12)', // Purple
+      'rgba(56, 189, 248, 0.12)', // Blue
+      'rgba(232, 121, 249, 0.12)', // Pink
+      'rgba(167, 139, 250, 0.12)', // Lavender
     ];
     
     const newParticles: Particle[] = [];
     
-    for (let i = 0; i < 18; i++) {
+    // Create more particles for a denser effect
+    for (let i = 0; i < 24; i++) {
       newParticles.push({
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 150 + 50,
+        size: Math.random() * 180 + 70, // Larger particles
         color: colors[Math.floor(Math.random() * colors.length)],
         delay: Math.random() * 5,
-        duration: 15 + Math.random() * 20
+        duration: 25 + Math.random() * 30, // Slower movement
+        opacity: 0.1 + Math.random() * 0.25 // Variable opacity
       });
     }
     
     setParticles(newParticles);
+
+    // Create animation loop
+    const animate = (time: number) => {
+      if (previousTimeRef.current !== undefined) {
+        // Animation logic could go here if needed
+      }
+      previousTimeRef.current = time;
+      requestRef.current = requestAnimationFrame(animate);
+    };
+    
+    requestRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(requestRef.current as number);
   }, []);
   
   return (
@@ -51,7 +69,8 @@ const Particles = () => {
             width: `${particle.size}px`,
             height: `${particle.size}px`,
             backgroundColor: particle.color,
-            filter: 'blur(60px)',
+            filter: 'blur(80px)',
+            opacity: particle.opacity,
             animationDelay: `${particle.delay}s`,
             animationDuration: `${particle.duration}s`
           }}
