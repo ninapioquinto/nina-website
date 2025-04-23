@@ -8,6 +8,7 @@ interface Particle {
   size: number;
   color: string;
   delay: number;
+  duration: number;
 }
 
 const Particles = () => {
@@ -16,21 +17,22 @@ const Particles = () => {
   useEffect(() => {
     // Generate random particles
     const colors = [
-      'rgba(139, 92, 246, 0.3)', // Purple
-      'rgba(56, 189, 248, 0.3)', // Blue
-      'rgba(232, 121, 249, 0.3)', // Pink
+      'rgba(139, 92, 246, 0.15)', // Purple
+      'rgba(56, 189, 248, 0.15)', // Blue
+      'rgba(232, 121, 249, 0.15)', // Pink
     ];
     
     const newParticles: Particle[] = [];
     
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 18; i++) {
       newParticles.push({
         id: i,
         x: Math.random() * 100,
         y: Math.random() * 100,
-        size: Math.random() * 80 + 40,
+        size: Math.random() * 150 + 50,
         color: colors[Math.floor(Math.random() * colors.length)],
-        delay: Math.random() * 5
+        delay: Math.random() * 5,
+        duration: 15 + Math.random() * 20
       });
     }
     
@@ -49,8 +51,9 @@ const Particles = () => {
             width: `${particle.size}px`,
             height: `${particle.size}px`,
             backgroundColor: particle.color,
-            filter: 'blur(40px)',
-            animationDelay: `${particle.delay}s`
+            filter: 'blur(60px)',
+            animationDelay: `${particle.delay}s`,
+            animationDuration: `${particle.duration}s`
           }}
         />
       ))}

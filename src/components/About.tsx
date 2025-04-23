@@ -36,11 +36,31 @@ const About = () => {
     <section id="about" ref={sectionRef} className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center reveal">
-            About <span className="text-gradient">Me</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center reveal">
+            I design <span className="text-gradient">smart systems</span> that make your business run better.
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="reveal">
+              <p className="text-lg mb-6">
+                I'm Luna, a Systems Engineer and Certified AI Automation Developer. I've spent the last 6+ years helping teams fix messy operations, automate repetitive tasks, and build custom systems that support real growth.
+              </p>
+              
+              <p className="text-lg mb-6">
+                My focus is simple: Build reliable systems that save time, cut errors, and help you deliver faster — without adding more people or complexity.
+              </p>
+              
+              <p className="text-lg mb-8">
+                I work with tools like Make, GoHighLevel, Zapier, OpenAI, ClickUp, and Airtable — and I make sure the tech fits your workflow, not the other way around.
+              </p>
+              
+              <div className="bg-accent/20 border border-primary/20 px-6 py-4 rounded-lg">
+                <p className="text-lg italic text-white/90">
+                  "If you're spending too much time on what should be automated, I can help."
+                </p>
+              </div>
+            </div>
+            
             <div className="reveal">
               <div className="relative rounded-xl overflow-hidden glow-border group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent-blue/20 opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
@@ -51,20 +71,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div>
-              <p className="text-lg mb-6 reveal">
-                I'm a versatile AI Systems Engineer with over 6 years of experience designing and implementing intelligent automation solutions for businesses. My expertise lies at the intersection of AI technology and practical business applications, with a focus on creating systems that feel intuitive and human-centered.
-              </p>
-              
-              <p className="text-lg mb-6 reveal">
-                My approach combines technical precision with clear communication, ensuring that complex systems remain accessible to everyone who interacts with them. I believe that the best AI solutions enhance human capabilities rather than replace them.
-              </p>
-              
-              <p className="text-lg reveal">
-                When I'm not crafting automation systems, you'll find me exploring new technologies, contributing to open-source projects, or mentoring the next generation of AI engineers through community workshops.
-              </p>
             </div>
           </div>
         </div>

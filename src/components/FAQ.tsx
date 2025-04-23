@@ -9,28 +9,20 @@ import {
 
 const faqData = [
   {
-    question: "What types of AI automation projects do you specialize in?",
-    answer: "I specialize in document processing automation, conversational AI systems, predictive analytics implementations, and custom workflow automation. My expertise is particularly strong in systems that bridge the gap between complex AI capabilities and practical business needs."
+    question: "What tools do you specialize in?",
+    answer: "I primarily work with Make (formerly Integromat), Zapier, OpenAI, GoHighLevel, ClickUp, Airtable, and various CRMs. I'm tool-agnostic and learn new systems quickly based on your existing tech stack and needs."
   },
   {
-    question: "How long does a typical automation project take to implement?",
-    answer: "Project timelines vary based on complexity and scope. A focused solution might take 4-6 weeks, while enterprise-wide implementations typically require 3-6 months. I provide detailed timeline estimates during the initial consultation and discovery phase."
+    question: "What kind of businesses do you work with?",
+    answer: "I work with service businesses, agencies, and consultancies that have grown to the point where manual operations are causing bottlenecks. My clients typically have 5-50 team members and have outgrown their initial systems but aren't ready for enterprise solutions."
   },
   {
-    question: "What technologies and programming languages do you use?",
-    answer: "I work primarily with Python for AI and machine learning, utilizing frameworks like TensorFlow, PyTorch, and scikit-learn. For backend systems, I use a combination of Python, Node.js, and occasionally Go. My solutions integrate with major cloud platforms (AWS, Azure, GCP) and CRM systems like Salesforce."
+    question: "What does your process look like?",
+    answer: "My process starts with a thorough systems audit to understand your current workflows, pain points, and goals. Then, I design a custom automation roadmap, build and integrate solutions in phases, and provide training to your team. Every project includes documentation and 30 days of support."
   },
   {
-    question: "Do your solutions require ongoing maintenance?",
-    answer: "Most AI systems benefit from ongoing monitoring, updates, and occasional retraining as data patterns change. I offer flexible maintenance packages to ensure your systems continue performing optimally. Each solution includes documentation and knowledge transfer to your team."
-  },
-  {
-    question: "How do you approach data privacy and security?",
-    answer: "Data privacy is fundamental to my approach. I design systems with privacy-by-design principles, implement industry-standard security practices, and ensure compliance with relevant regulations like GDPR and CCPA. All projects include data handling agreements and clear documentation of security measures."
-  },
-  {
-    question: "What does your pricing structure look like?",
-    answer: "I offer project-based pricing for defined scope work and retainer arrangements for ongoing development. Pricing reflects project complexity, timeline requirements, and long-term value generation. I provide transparent quotes after initial consultation and discovery sessions."
+    question: "Do you offer maintenance/support?",
+    answer: "Yes. After implementation, I offer flexible monthly maintenance packages to ensure your automations remain optimized as your business evolves. I also provide emergency support for critical issues and quarterly system reviews to identify new automation opportunities."
   }
 ];
 
@@ -73,7 +65,7 @@ const FAQ = () => {
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
-            Common questions about working with me and my approach to AI automation
+            Common questions about working with me and my approach to automation
           </p>
           
           <div className="reveal">
@@ -82,12 +74,12 @@ const FAQ = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`} 
-                  className="border border-white/10 rounded-lg overflow-hidden bg-accent/20 px-6"
+                  className="border border-white/10 rounded-lg overflow-hidden bg-accent/20 px-6 group"
                 >
                   <AccordionTrigger className="text-left py-5 hover:no-underline">
-                    <span className="text-lg font-medium">{item.question}</span>
+                    <span className="text-lg font-medium group-data-[state=open]:text-primary transition-colors">{item.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 pb-5">
+                  <AccordionContent className="text-white/80 pb-5 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

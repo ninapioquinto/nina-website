@@ -2,17 +2,20 @@
 import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { Github, Linkedin, Mail, MessageSquare, Send, Twitter } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail, MessageSquare, Send } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
+    business: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,7 +30,12 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setFormState({ name: '', email: '', message: '' });
+      setFormState({ name: '', email: '', business: '', message: '' });
+      
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+      });
       
       // Reset success message after 5 seconds
       setTimeout(() => {
@@ -74,7 +82,7 @@ const Contact = () => {
                 Let's <span className="text-gradient">Connect</span>
               </h2>
               <p className="text-lg text-white/70 mb-8 reveal">
-                Interested in working together? Have questions about how AI automation could help your business? I'd love to hear from you.
+                Ready to streamline your operations with smart automation? I'd love to hear about your business challenges and how I can help solve them.
               </p>
               
               <div className="space-y-6 reveal">
@@ -110,7 +118,7 @@ const Contact = () => {
                     href="#" 
                     className="h-10 w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
                   >
-                    <Twitter className="h-4 w-4" />
+                    <Instagram className="h-4 w-4" />
                   </a>
                   <a 
                     href="#" 
@@ -118,12 +126,10 @@ const Contact = () => {
                   >
                     <Linkedin className="h-4 w-4" />
                   </a>
-                  <a 
-                    href="#" 
-                    className="h-10 w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
-                  >
-                    <Github className="h-4 w-4" />
-                  </a>
+                </div>
+                
+                <div className="mt-6 text-white/50 text-sm">
+                  22k+ Instagram followers
                 </div>
               </div>
             </div>
@@ -172,6 +178,20 @@ const Contact = () => {
                       </div>
                       
                       <div>
+                        <label htmlFor="business" className="block text-sm mb-1">
+                          Business Type
+                        </label>
+                        <Input
+                          id="business"
+                          name="business"
+                          value={formState.business}
+                          onChange={handleChange}
+                          placeholder="Agency, SaaS, Service Business, etc."
+                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30"
+                        />
+                      </div>
+                      
+                      <div>
                         <label htmlFor="message" className="block text-sm mb-1">
                           Message
                         </label>
@@ -180,7 +200,7 @@ const Contact = () => {
                           name="message"
                           value={formState.message}
                           onChange={handleChange}
-                          placeholder="How can I help you?"
+                          placeholder="Tell me about your project or challenge"
                           required
                           rows={5}
                           className="w-full bg-accent/30 border border-white/10 rounded-md px-3 py-2 focus:outline-none focus:border-primary/50 placeholder:text-white/30"

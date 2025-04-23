@@ -18,11 +18,11 @@ const Hero = () => {
               intelligent
               <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-accent-blue rounded-full"></span>
             </span>
-            systems with heart.
+            systems that make business operations easier.
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            AI Systems Engineer • CRM & Automation Specialist
+            Systems Engineer • AI Automation Developer • CRM Architect
           </p>
           
           <Button 

@@ -1,55 +1,56 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight } from 'lucide-react';
 
 const projectData = [
   {
     id: 1,
-    title: "AI-Powered CRM Integration",
-    description: "Automated customer journey mapping with predictive analytics",
-    tech: ["Python", "TensorFlow", "Salesforce API"],
+    title: "Client Onboarding Automation",
+    description: "Reduced onboarding time from 2 weeks to 2 days with zero manual data entry",
+    tech: ["Zapier", "Airtable", "Make"],
     link: "#"
   },
   {
     id: 2,
-    title: "Intelligent Document Processing",
-    description: "NLP system for extracting and categorizing information from unstructured documents",
-    tech: ["PyTorch", "Hugging Face", "MongoDB"],
+    title: "Service Agency Task Management",
+    description: "Automated 80% of manual tasks for a service agency of 50+ employees",
+    tech: ["ClickUp", "GoHighLevel", "Zapier"],
     link: "#"
   },
   {
     id: 3,
-    title: "Conversational Support Bot",
-    description: "Customer service automation with context-aware responses",
-    tech: ["Node.js", "DialogFlow", "Zendesk"],
+    title: "AI-Powered Support System",
+    description: "Cut support ticket resolution time by 65% using intelligent automation",
+    tech: ["OpenAI", "Make", "Zendesk"],
     link: "#"
   },
   {
     id: 4,
-    title: "Workflow Automation Suite",
-    description: "End-to-end business process automation with ML optimization",
-    tech: ["Python", "Celery", "Docker", "PostgreSQL"],
+    title: "Sales Pipeline Automation",
+    description: "Increased sales team capacity by 40% through workflow optimization",
+    tech: ["GoHighLevel", "Salesforce", "Make"],
     link: "#"
   },
   {
     id: 5,
-    title: "Predictive Inventory System",
-    description: "Supply chain optimization using time series forecasting",
-    tech: ["Python", "Prophet", "AWS"],
+    title: "Client Reporting Dashboard",
+    description: "Eliminated 15 hours of weekly manual reporting with real-time dashboards",
+    tech: ["Airtable", "Google Data Studio", "Zapier"],
     link: "#"
   },
   {
     id: 6,
-    title: "Data Integration Platform",
-    description: "Multi-source data pipeline with automated cleaning and transformation",
-    tech: ["Apache Kafka", "Spark", "Airflow"],
+    title: "Document Processing System",
+    description: "Automated document management saving 30+ hours per week for accounting team",
+    tech: ["Make", "OpenAI", "Google Workspace"],
     link: "#"
   }
 ];
 
 const Portfolio = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [activeCard, setActiveCard] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,6 +80,14 @@ const Portfolio = () => {
     };
   }, []);
 
+  const handleMouseEnter = (id: number) => {
+    setActiveCard(id);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveCard(null);
+  };
+
   return (
     <section id="portfolio" ref={sectionRef} className="py-24 bg-accent/5 relative bg-grid">
       <div className="container mx-auto px-4">
@@ -87,17 +96,23 @@ const Portfolio = () => {
             Featured <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
-            A selection of my recent work in AI systems engineering and automation
+            A selection of my recent work in automation and system design
           </p>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
             {projectData.map((project, index) => (
               <div 
                 key={project.id} 
                 className="reveal" 
                 style={{ animationDelay: `${index * 0.1}s` }}
+                onMouseEnter={() => handleMouseEnter(project.id)}
+                onMouseLeave={handleMouseLeave}
               >
-                <Card className="h-full border border-white/10 bg-accent/30 backdrop-blur-sm hover:border-primary/30 transition-all duration-300 glow-border">
+                <Card 
+                  className={`h-full border border-white/10 bg-accent/30 backdrop-blur-sm transition-all duration-500 ${
+                    activeCard === project.id ? 'border-primary/50 scale-[1.02] shadow-lg shadow-primary/20' : 'hover:border-primary/30'
+                  }`}
+                >
                   <CardHeader>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                     <CardDescription className="text-white/70">{project.description}</CardDescription>
@@ -117,9 +132,13 @@ const Portfolio = () => {
                   <CardFooter>
                     <a 
                       href={project.link} 
-                      className="text-sm text-primary flex items-center hover:text-primary/80 transition-colors"
+                      className={`text-sm flex items-center transition-colors ${
+                        activeCard === project.id ? 'text-primary' : 'text-primary/80'
+                      }`}
                     >
-                      View Project <ArrowUpRight className="ml-1 h-4 w-4" />
+                      View Project <ArrowUpRight className={`ml-1 h-4 w-4 transition-transform duration-300 ${
+                        activeCard === project.id ? 'translate-x-1 -translate-y-1' : ''
+                      }`} />
                     </a>
                   </CardFooter>
                 </Card>
