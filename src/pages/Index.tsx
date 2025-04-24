@@ -6,6 +6,7 @@ import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
 import FAQ from '../components/FAQ';
+import Services from '../components/Services';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
@@ -64,6 +65,7 @@ const Index = () => {
       <Portfolio />
       <CaseStudy />
       <FAQ />
+      <Services />
       <Contact />
       <Footer />
     </div>
