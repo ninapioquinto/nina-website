@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { phone, home, user, calendar, send, MessageSquare } from 'lucide-react';
+import { Phone, Home, User, Calendar, Send, MessageSquare } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 interface Service {
@@ -11,17 +11,17 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <phone className="w-6 h-6 text-green-400" />,
+    icon: <Phone className="w-6 h-6 text-green-400" />,
     title: "Phone Appointment",
     actions: ["Book Calendar Event", "Send Email"]
   },
   {
-    icon: <home className="w-6 h-6 text-sky-400" />,
+    icon: <Home className="w-6 h-6 text-sky-400" />,
     title: "Airbnb Concierge",
     actions: ["Get House Info", "Send Email"]
   },
   {
-    icon: <user className="w-6 h-6 text-violet-400" />,
+    icon: <User className="w-6 h-6 text-violet-400" />,
     title: "Realtor",
     actions: ["Book Calendar Event", "Send Email"]
   },
@@ -48,10 +48,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Our <span className="text-gradient">Services</span>
+            Grow Smarter, <span className="text-gradient">Not Harder</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
-            Streamlined solutions for modern businesses
+            AI agents designed to automate your operations and elevate the customer experience
           </p>
 
           <div className="relative h-[200px] reveal">
@@ -78,7 +78,7 @@ const Services = () => {
                         transition-colors duration-300 text-sm text-white/70
                         hover:text-white group"
                       >
-                        {i === 0 ? <calendar className="w-4 h-4" /> : <send className="w-4 h-4" />}
+                        {i === 0 ? <Calendar className="w-4 h-4" /> : <Send className="w-4 h-4" />}
                         {action}
                       </button>
                     ))}
