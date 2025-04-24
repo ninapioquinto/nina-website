@@ -1,8 +1,12 @@
 
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { useRotatingText } from '../hooks/useRotatingText';
 
 const Hero = () => {
+  const rotatingWords = ["intelligent", "scalable", "secure", "efficient"];
+  const { currentWord, isAnimating } = useRotatingText(rotatingWords, 2000);
+
   const handleExplore = () => {
     const portfolioSection = document.getElementById('portfolio');
     portfolioSection?.scrollIntoView({ behavior: 'smooth' });
@@ -14,9 +18,17 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter">
             Hi, I'm <span className="text-gradient">Luna</span> — I build
-            <span className="relative inline-block mx-2">
-              intelligent
-              <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-accent-blue rounded-full"></span>
+            <span className="relative inline-block mx-2 min-w-[180px]">
+              <span 
+                className={`absolute left-0 transition-all duration-500 ease-in-out ${
+                  isAnimating ? 'opacity-0 -translate-y-2' : 'opacity-100 translate-y-0'
+                }`}
+                style={{
+                  textShadow: '0 0 20px rgba(139, 92, 246, 0.3)'
+                }}
+              >
+                {currentWord}
+              </span>
             </span>
             systems that make business operations easier.
           </h1>
