@@ -18,13 +18,13 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter">
             Hi, I'm <span className="text-gradient">Luna</span> — I build
-            <span className="relative inline-block mx-2 min-w-[180px]">
+            <span className="relative inline-block mx-2 min-w-[180px] h-[60px]">
               <span 
-                className={`absolute left-0 transition-all duration-500 ease-in-out ${
-                  isAnimating ? 'opacity-0 -translate-y-2' : 'opacity-100 translate-y-0'
+                className={`absolute left-0 transition-all duration-300 ease-in-out ${
+                  isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'
                 }`}
                 style={{
-                  textShadow: '0 0 20px rgba(139, 92, 246, 0.3)'
+                  textShadow: '0 0 30px rgba(139, 92, 246, 0.5)'
                 }}
               >
                 {currentWord}
@@ -40,7 +40,9 @@ const Hero = () => {
           <Button 
             onClick={handleExplore}
             size="lg" 
-            className="text-lg px-8 py-6 bg-transparent border border-primary/50 text-white hover:bg-primary/10 transition-all duration-300 glow-border animate-pulse-glow group"
+            className="text-lg px-8 py-6 bg-primary/10 border border-primary/50 text-white 
+                     hover:bg-primary/20 hover:border-primary transition-all duration-500 group
+                     shadow-[0_0_15px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.6)]"
           >
             Explore My Work 
             <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
