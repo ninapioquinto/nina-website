@@ -1,34 +1,67 @@
 
 import React, { useState, useEffect } from 'react';
-import { Phone, Home, User, Calendar, Send, MessageSquare } from 'lucide-react';
+import { 
+  Phone, FileText, ClipboardList, Receipt, Home, 
+  UserPlus, RefreshCw, CalendarCheck, Calendar, 
+  Send, Check, Mail, Search, Box 
+} from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
 interface Service {
   icon: React.ReactNode;
   title: string;
+  description: string;
   actions: string[];
 }
 
 const services: Service[] = [
   {
     icon: <Phone className="w-6 h-6 text-green-400" />,
-    title: "Phone Appointment",
-    actions: ["Book Calendar Event", "Send Email"]
+    title: "Lead Qualification",
+    description: "Qualify leads instantly",
+    actions: ["Ask pre-screening questions", "Send follow-up email", "Book calendar event"]
   },
   {
-    icon: <Home className="w-6 h-6 text-sky-400" />,
-    title: "Airbnb Concierge",
-    actions: ["Get House Info", "Send Email"]
+    icon: <Box className="w-6 h-6 text-blue-400" />,
+    title: "Order Support",
+    description: "Handle order status inquiries",
+    actions: ["Track order via API", "Send order updates", "Escalate to human agent if needed"]
   },
   {
-    icon: <User className="w-6 h-6 text-violet-400" />,
-    title: "Realtor",
-    actions: ["Book Calendar Event", "Send Email"]
+    icon: <ClipboardList className="w-6 h-6 text-purple-400" />,
+    title: "Intake Automation",
+    description: "Collect client details with ease",
+    actions: ["Gather form responses", "Sync with CRM", "Create new record"]
   },
   {
-    icon: <MessageSquare className="w-6 h-6 text-pink-400" />,
-    title: "Customer Intake",
-    actions: ["Create Contact", "Book Calendar Event"]
+    icon: <Receipt className="w-6 h-6 text-yellow-400" />,
+    title: "Invoice Follow-Up",
+    description: "Recover unpaid invoices",
+    actions: ["Detect overdue payments", "Send payment reminders", "Schedule next follow-up"]
+  },
+  {
+    icon: <Home className="w-6 h-6 text-pink-400" />,
+    title: "Real Estate Inquiry",
+    description: "Respond to property questions",
+    actions: ["Share property info", "Schedule viewings", "Send agent intro email"]
+  },
+  {
+    icon: <UserPlus className="w-6 h-6 text-indigo-400" />,
+    title: "Onboarding Assistant",
+    description: "Welcome new users",
+    actions: ["Provide onboarding guide", "Create CRM entry", "Send custom welcome email"]
+  },
+  {
+    icon: <RefreshCw className="w-6 h-6 text-cyan-400" />,
+    title: "Subscription Renewal",
+    description: "Automate renewals & reminders",
+    actions: ["Track subscription end dates", "Send renewal reminders", "Link to payment"]
+  },
+  {
+    icon: <CalendarCheck className="w-6 h-6 text-rose-400" />,
+    title: "Event Registration Bot",
+    description: "Manage event sign-ups",
+    actions: ["Register attendees", "Send confirmation", "Add to calendar"]
   }
 ];
 
@@ -54,7 +87,7 @@ const Services = () => {
             AI agents designed to automate your operations and elevate the customer experience
           </p>
 
-          <div className="relative h-[200px] reveal">
+          <div className="relative h-[280px] reveal">
             {services.map((service, index) => (
               <Card
                 key={service.title}
@@ -65,11 +98,16 @@ const Services = () => {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     {service.icon}
-                    <h3 className="text-xl font-semibold text-white">
-                      {service.title}
-                    </h3>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/70">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex gap-4 items-center">
+                  <div className="flex flex-wrap gap-3">
                     {service.actions.map((action, i) => (
                       <button
                         key={i}
@@ -78,7 +116,9 @@ const Services = () => {
                         transition-colors duration-300 text-sm text-white/70
                         hover:text-white group"
                       >
-                        {i === 0 ? <Calendar className="w-4 h-4" /> : <Send className="w-4 h-4" />}
+                        {i === 0 ? <Check className="w-4 h-4" /> : 
+                         i === 1 ? <Mail className="w-4 h-4" /> :
+                         <Calendar className="w-4 h-4" />}
                         {action}
                       </button>
                     ))}
