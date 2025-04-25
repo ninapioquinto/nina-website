@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -173,7 +172,20 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Custom cursor */
+/* Custom cursor styles */
+body, 
+button, 
+a, 
+input, 
+textarea, 
+select {
+  cursor: none !important;
+}
+
+.custom-cursor-hidden {
+  cursor: none !important;
+}
+
 .custom-cursor {
   position: fixed;
   width: 20px;
