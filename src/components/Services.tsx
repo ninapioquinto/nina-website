@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Phone, FileText, ClipboardList, Receipt, Home, 
@@ -171,7 +170,7 @@ const Services = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes scroll-left {
           from { transform: translateX(0); }
           to { transform: translateX(calc(-300px * 4 - 1.5rem * 4)); }
