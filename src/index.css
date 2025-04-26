@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -25,7 +26,6 @@
   * {
     @apply border-border;
     scrollbar-width: none;
-    cursor: none !important;
   }
 
   html {
@@ -44,7 +44,7 @@
     display: none;
   }
   
-  a, button, [role="button"] {
+  a, button {
     cursor: none;
   }
 }
@@ -209,12 +209,4 @@
 /* Accordion animations */
 .group-data-\[state\=open\]:text-primary {
   color: rgb(139, 92, 246);
-}
-
-.splash-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9999;
 }

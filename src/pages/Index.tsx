@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -11,13 +12,13 @@ import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
 import CustomCursor from '../components/CustomCursor';
-import SplashEffect from '../components/SplashEffect';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Simulate loading time and enable smooth scroll when loaded
     const timer = setTimeout(() => {
       setIsLoaded(true);
       
@@ -37,6 +38,7 @@ const Index = () => {
       window.addEventListener('scroll', handleScroll);
       handleScroll(); // Check elements in view on initial load
       
+      // Enhanced scroll experience - disable default scrollbar
       document.body.style.overflowX = 'hidden';
       document.documentElement.style.scrollBehavior = 'smooth';
       
@@ -54,9 +56,8 @@ const Index = () => {
       ref={scrollRef}
       className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
-      <SplashEffect />
-      <CustomCursor />
       <Loader />
+      <CustomCursor />
       <Particles />
       <Navbar />
       <Hero />
