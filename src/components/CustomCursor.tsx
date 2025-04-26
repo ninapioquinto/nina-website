@@ -14,10 +14,28 @@ const CustomCursor = () => {
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Initial color matching the "Luna" text gradient
+    const primaryColor = {
+      r: 0.545, // 139 / 255 (from #8B5CF6)
+      g: 0.361, // 92 / 255
+      b: 0.965  // 246 / 255
+    };
+
+    // Initialize WebGL context
+    const gl = canvas.getContext('webgl2', {
+      alpha: true,
+      preserveDrawingBuffer: false
+    });
     
-    // Initialize mouse position
+    if (!gl) {
+      console.error('WebGL 2 not supported');
+      return;
+    }
+
     let mousePos = { x: 0, y: 0 };
-    let lastMousePos = { ...mousePos };
+    let lastMousePos = { x: 0, y: 0 };
     
     // Mouse event handlers
     const handleMouseMove = (e: MouseEvent) => {
@@ -27,24 +45,14 @@ const CustomCursor = () => {
       };
     };
 
-    // Add event listeners safely
-    window.addEventListener('resize', resizeCanvas);
+    // Set up event listeners
     window.addEventListener('mousemove', handleMouseMove);
 
-    // Animation frame reference for proper cleanup
-    let animationFrameId: number | null = null;
+    // Animation frame
+    let animationFrameId: number;
 
-    // Render loop with safe animation frame handling
+    // Render loop
     const render = () => {
-      if (!canvas) return;
-      
-      const gl = canvas.getContext('webgl2', {
-        alpha: true,
-        preserveDrawingBuffer: false
-      });
-      
-      if (!gl) return;
-      
       // Calculate velocity based on mouse movement
       const dx = (mousePos.x - lastMousePos.x) * 10;
       const dy = (mousePos.y - lastMousePos.y) * 10;
@@ -55,23 +63,23 @@ const CustomCursor = () => {
       gl.clearColor(0, 0, 0, 0);
       gl.clear(gl.COLOR_BUFFER_BIT);
 
-      // Request next frame safely
+      // We would implement fluid simulation here
+      // For now we'll just draw a simple gradient circle
+      const centerX = mousePos.x;
+      const centerY = mousePos.y;
+
+      // Request next frame
       animationFrameId = requestAnimationFrame(render);
     };
 
-    // Start animation with safe reference
-    animationFrameId = requestAnimationFrame(render);
+    // Start animation
+    render();
 
-    // Cleanup function
+    // Cleanup
     return () => {
-      // Cancel animation frame if it exists
-      if (animationFrameId !== null) {
-        cancelAnimationFrame(animationFrameId);
-      }
-      
-      // Remove event listeners
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
@@ -79,7 +87,7 @@ const CustomCursor = () => {
   return (
     <canvas 
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-50"
+      className="fixed inset-0 w-screen h-screen pointer-events-none z-50"
       style={{ cursor: 'none' }}
     />
   );
