@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
+import Hero from '../components/Hero';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
@@ -11,7 +11,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
-import FluidCursor from '../components/FluidCursor';
+import CustomCursor from '../components/CustomCursor';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -42,13 +42,9 @@ const Index = () => {
       document.body.style.overflowX = 'hidden';
       document.documentElement.style.scrollBehavior = 'smooth';
       
-      // Add fluid cursor class to body
-      document.body.classList.add('fluid-cursor-active');
-      
       return () => {
         window.removeEventListener('scroll', handleScroll);
         document.body.style.overflowX = 'auto';
-        document.body.classList.remove('fluid-cursor-active');
       };
     }, 2000);
 
@@ -61,10 +57,10 @@ const Index = () => {
       className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <Loader />
-      <FluidCursor />
+      <CustomCursor />
       <Particles />
       <Navbar />
-      <HeroSection />
+      <Hero />
       <About />
       <Portfolio />
       <CaseStudy />

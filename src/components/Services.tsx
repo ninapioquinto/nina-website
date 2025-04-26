@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { 
   Phone, FileText, ClipboardList, Receipt, Home, 
-  UserPlus, RefreshCw, Calendar, Send, Check, Mail, Box 
+  UserPlus, RefreshCw, CalendarCheck, Calendar, 
+  Send, Check, Mail, Search, Box 
 } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 
@@ -56,7 +58,7 @@ const services: Service[] = [
     actions: ["Track subscription end dates", "Send renewal reminders", "Link to payment"]
   },
   {
-    icon: <Calendar className="w-6 h-6 text-rose-400" />,
+    icon: <CalendarCheck className="w-6 h-6 text-rose-400" />,
     title: "Event Registration Bot",
     description: "Manage event sign-ups",
     actions: ["Register attendees", "Send confirmation", "Add to calendar"]
@@ -64,37 +66,20 @@ const services: Service[] = [
 ];
 
 const Services = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
 
-    const section = document.getElementById('services-section');
-    if (section) {
-      observer.observe(section);
-    }
-
-    return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
-    };
+    return () => clearInterval(timer);
   }, []);
 
-  const firstRow = services.slice(0, 4);
-  const secondRow = services.slice(4);
-
   return (
-    <section id="services-section" className="py-24 bg-black/30 relative overflow-hidden">
+    <section className="py-24 bg-black/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
             Grow Smarter, <span className="text-gradient">Not Harder</span>
           </h2>
@@ -102,103 +87,48 @@ const Services = () => {
             AI agents designed to automate your operations and elevate the customer experience
           </p>
 
-          <div className="space-y-12 relative">
-            {/* First Row - Moving Left */}
-            <div className={`flex gap-6 transition-all duration-1000 ${isVisible ? 'animate-slide-left' : 'opacity-0'}`}>
-              <div className="flex gap-6 animate-scroll-left">
-                {[...firstRow, ...firstRow].map((service, index) => (
-                  <Card key={index} className="min-w-[300px] flex-shrink-0 bg-accent/20 border border-white/10 backdrop-blur-sm">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        {service.icon}
-                        <div>
-                          <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                          <p className="text-white/70">{service.description}</p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        {service.actions.map((action, i) => (
-                          <button
-                            key={i}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-sm text-white/70 hover:text-white"
-                          >
-                            {i === 0 ? <Check className="w-4 h-4" /> : 
-                             i === 1 ? <Mail className="w-4 h-4" /> :
-                             <Send className="w-4 h-4" />}
-                            {action}
-                          </button>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-
-            {/* Second Row - Moving Right */}
-            <div className={`flex gap-6 transition-all duration-1000 ${isVisible ? 'animate-slide-right' : 'opacity-0'}`}>
-              <div className="flex gap-6 animate-scroll-right">
-                {[...secondRow, ...secondRow].map((service, index) => (
-                  <Card key={index} className="min-w-[300px] flex-shrink-0 bg-accent/20 border border-white/10 backdrop-blur-sm">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-4 mb-4">
-                        {service.icon}
-                        <div>
-                          <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                          <p className="text-white/70">{service.description}</p>
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-2">
-                        {service.actions.map((action, i) => (
-                          <button
-                            key={i}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-sm text-white/70 hover:text-white"
-                          >
-                            {i === 0 ? <Check className="w-4 h-4" /> : 
-                             i === 1 ? <Mail className="w-4 h-4" /> :
-                             <Send className="w-4 h-4" />}
-                            {action}
-                          </button>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+          <div className="relative h-[280px] reveal">
+            {services.map((service, index) => (
+              <Card
+                key={service.title}
+                className={`absolute w-full transition-all duration-500 ease-in-out 
+                  ${index === activeIndex ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} 
+                  bg-accent/20 border border-white/10 backdrop-blur-sm`}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    {service.icon}
+                    <div>
+                      <h3 className="text-xl font-semibold text-white">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/70">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-3">
+                    {service.actions.map((action, i) => (
+                      <button
+                        key={i}
+                        className="flex items-center gap-2 px-4 py-2 rounded-full 
+                        bg-white/5 hover:bg-white/10 border border-white/10 
+                        transition-colors duration-300 text-sm text-white/70
+                        hover:text-white group"
+                      >
+                        {i === 0 ? <Check className="w-4 h-4" /> : 
+                         i === 1 ? <Mail className="w-4 h-4" /> :
+                         <Calendar className="w-4 h-4" />}
+                        {action}
+                      </button>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes scroll-left {
-          from { transform: translateX(0); }
-          to { transform: translateX(calc(-300px * 4 - 1.5rem * 4)); }
-        }
-
-        @keyframes scroll-right {
-          from { transform: translateX(calc(-300px * 4 - 1.5rem * 4)); }
-          to { transform: translateX(0); }
-        }
-
-        .animate-scroll-left {
-          animation: scroll-left 20s linear infinite;
-        }
-
-        .animate-scroll-right {
-          animation: scroll-right 20s linear infinite;
-        }
-
-        .animate-slide-left {
-          transform: translateX(0);
-          opacity: 1;
-        }
-
-        .animate-slide-right {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      `}</style>
     </section>
   );
 };

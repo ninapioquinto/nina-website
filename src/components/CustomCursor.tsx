@@ -1,95 +1,94 @@
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CustomCursor = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [followerPosition, setFollowerPosition] = useState({ x: -100, y: -100 });
+  const [isHovering, setIsHovering] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const updatePosition = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const updateFollowerPosition = () => {
+      setFollowerPosition((prev) => {
+        return {
+          x: prev.x + (position.x - prev.x) * 0.3,
+          y: prev.y + (position.y - prev.y) * 0.3
+        };
+      });
+      requestAnimationFrame(updateFollowerPosition);
+    };
+
+    const animationFrame = requestAnimationFrame(updateFollowerPosition);
+
+    const handleMouseEnter = () => {
+      setIsVisible(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsVisible(false);
+    };
+
+    const handleHoverStart = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName.toLowerCase() === 'a' || 
+          target.tagName.toLowerCase() === 'button' || 
+          target.closest('a') || 
+          target.closest('button')) {
+        setIsHovering(true);
+      }
+    };
+
+    const handleHoverEnd = () => {
+      setIsHovering(false);
+    };
+
+    document.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mouseenter', handleMouseEnter);
+    document.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('mouseover', handleHoverStart);
+    document.addEventListener('mouseout', handleHoverEnd);
     
-    // Set up the canvas to match the window size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Initial color matching the "Luna" text gradient
-    const primaryColor = {
-      r: 0.545, // 139 / 255 (from #8B5CF6)
-      g: 0.361, // 92 / 255
-      b: 0.965  // 246 / 255
-    };
-
-    // Initialize WebGL context
-    const gl = canvas.getContext('webgl2', {
-      alpha: true,
-      preserveDrawingBuffer: false
-    });
-    
-    if (!gl) {
-      console.error('WebGL 2 not supported');
-      return;
-    }
-
-    let mousePos = { x: 0, y: 0 };
-    let lastMousePos = { x: 0, y: 0 };
-    
-    // Mouse event handlers
-    const handleMouseMove = (e: MouseEvent) => {
-      mousePos = {
-        x: e.clientX / window.innerWidth,
-        y: 1.0 - (e.clientY / window.innerHeight)
-      };
-    };
-
-    // Set up event listeners
-    window.addEventListener('mousemove', handleMouseMove);
-
-    // Animation frame
-    let animationFrameId: number;
-
-    // Render loop
-    const render = () => {
-      // Calculate velocity based on mouse movement
-      const dx = (mousePos.x - lastMousePos.x) * 10;
-      const dy = (mousePos.y - lastMousePos.y) * 10;
-      
-      lastMousePos = { ...mousePos };
-      
-      // Update cursor position
-      gl.clearColor(0, 0, 0, 0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-
-      // We would implement fluid simulation here
-      // For now we'll just draw a simple gradient circle
-      const centerX = mousePos.x;
-      const centerY = mousePos.y;
-
-      // Request next frame
-      animationFrameId = requestAnimationFrame(render);
-    };
-
-    // Start animation
-    render();
-
-    // Cleanup
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      window.removeEventListener('mousemove', handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener('mousemove', updatePosition);
+      document.removeEventListener('mouseenter', handleMouseEnter);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('mouseover', handleHoverStart);
+      document.removeEventListener('mouseout', handleHoverEnd);
+      cancelAnimationFrame(animationFrame);
     };
-  }, []);
+  }, [position.x, position.y]);
 
-  // Hide default cursor and render our canvas
+  if (typeof window === 'undefined') {
+    return null; // Don't render on server side
+  }
+
+  // Don't render cursor on touch devices
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (isTouchDevice) {
+    return null;
+  }
+
   return (
-    <canvas 
-      ref={canvasRef}
-      className="fixed inset-0 w-screen h-screen pointer-events-none z-50"
-      style={{ cursor: 'none' }}
-    />
+    <>
+      <div 
+        className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
+        style={{ 
+          transform: `translate(${position.x}px, ${position.y}px)`,
+          opacity: isVisible ? 1 : 0
+        }}
+      />
+      <div 
+        className="custom-cursor-follower" 
+        style={{ 
+          transform: `translate(${followerPosition.x}px, ${followerPosition.y}px)`,
+          opacity: isVisible ? 1 : 0
+        }}
+      />
+    </>
   );
 };
 
