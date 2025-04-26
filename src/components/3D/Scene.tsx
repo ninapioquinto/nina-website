@@ -35,8 +35,9 @@ const Scene: React.FC = () => {
     <div className="relative w-full h-full" ref={canvasRef}>
       <Canvas
         camera={{ position: [0, 0, 5], fov: 45 }}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
         style={{ background: 'transparent' }}
+        dpr={[1, 2]} // Limit pixel ratio for better performance
       >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />

@@ -1,9 +1,8 @@
 
-import React, { useRef } from 'react';
+import React, { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Sphere } from '@react-three/drei';
 import * as THREE from 'three';
-import { useEffect } from 'react';
 
 type GlobeProps = {
   position?: [number, number, number];
@@ -19,10 +18,8 @@ const Globe: React.FC<GlobeProps> = ({
   const meshRef = useRef<THREE.Mesh>(null);
   const pointsRef = useRef<THREE.Points>(null);
   
-  // Create points geometry for particles on the globe
-  useEffect(() => {
-    if (!pointsRef.current) return;
-    
+  // Create geometry for particles using useMemo to avoid recreating on every render
+  const { positions, colors, sizes } = useMemo(() => {
     const count = 4500;
     const radius = 2.0;
     
@@ -55,11 +52,7 @@ const Globe: React.FC<GlobeProps> = ({
       sizes[i] = Math.random() * 2.5;
     }
     
-    const geometry = pointsRef.current.geometry;
-    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-    geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
-    
+    return { positions, colors, sizes };
   }, []);
 
   // Rotate the globe gently and respond to mouse movement
@@ -92,7 +85,26 @@ const Globe: React.FC<GlobeProps> = ({
       
       {/* Points layer */}
       <points ref={pointsRef}>
-        <bufferGeometry />
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            count={positions.length / 3}
+            array={positions}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-color"
+            count={colors.length / 3}
+            array={colors}
+            itemSize={3}
+          />
+          <bufferAttribute
+            attach="attributes-size"
+            count={sizes.length}
+            array={sizes}
+            itemSize={1}
+          />
+        </bufferGeometry>
         <pointsMaterial
           size={0.02}
           sizeAttenuation={true}

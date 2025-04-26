@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ErrorBoundary from './3D/ErrorBoundary';
 import Scene from './3D/Scene';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -53,7 +54,9 @@ const HeroSection = () => {
           
           {/* 3D Globe container */}
           <div className="lg:w-1/2 h-[50vh] lg:h-[70vh] z-20">
-            <Scene />
+            <ErrorBoundary>
+              <Scene />
+            </ErrorBoundary>
           </div>
         </div>
       </div>
