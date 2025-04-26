@@ -1,0 +1,24 @@
+
+@layer utilities {
+  body, 
+  button, 
+  a, 
+  input, 
+  textarea, 
+  select {
+    cursor: none !important;
+  }
+
+  .cursor-none {
+    cursor: none !important;
+  }
+
+  .cursor-pointer {
+    cursor: none !important;
+  }
+
+  /* Hide default cursor when fluid cursor is active */
+  .fluid-cursor-active * {
+    cursor: none !important;
+  }
+}

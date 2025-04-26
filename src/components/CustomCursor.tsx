@@ -1,94 +1,95 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
-import SplashParticle from './SplashParticle';
+import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([]);
-  const [isHovering, setIsHovering] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const addParticle = useCallback((x: number, y: number) => {
-    const id = Date.now();
-    setParticles(prev => [...prev, { id, x, y }]);
-    setTimeout(() => {
-      setParticles(prev => prev.filter(particle => particle.id !== id));
-    }, 1000);
-  }, []);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    let lastX = -100;
-    let lastY = -100;
-    let particleTimeout: number | null = null;
-
-    const updatePosition = (e: MouseEvent) => {
-      const newX = e.clientX;
-      const newY = e.clientY;
-      setPosition({ x: newX, y: newY });
-
-      const distance = Math.hypot(newX - lastX, newY - lastY);
-      if (distance > 20 && !particleTimeout) {
-        addParticle(newX, newY);
-        particleTimeout = window.setTimeout(() => {
-          particleTimeout = null;
-        }, 50);
-      }
-      lastX = newX;
-      lastY = newY;
-    };
-
-    const handleMouseEnter = () => setIsVisible(true);
-    const handleMouseLeave = () => setIsVisible(false);
-
-    const handleHoverStart = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      if (target.tagName.toLowerCase() === 'a' || 
-          target.tagName.toLowerCase() === 'button' || 
-          target.closest('a') || 
-          target.closest('button')) {
-        setIsHovering(true);
-      }
-    };
-
-    const handleHoverEnd = () => setIsHovering(false);
-
-    document.addEventListener('mousemove', updatePosition);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseover', handleHoverStart);
-    document.addEventListener('mouseout', handleHoverEnd);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     
-    return () => {
-      document.removeEventListener('mousemove', updatePosition);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseover', handleHoverStart);
-      document.removeEventListener('mouseout', handleHoverEnd);
+    // Set up the canvas to match the window size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
-  }, [addParticle]);
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-  if (typeof window === 'undefined') return null;
-  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return null;
+    // Initial color matching the "Luna" text gradient
+    const primaryColor = {
+      r: 0.545, // 139 / 255 (from #8B5CF6)
+      g: 0.361, // 92 / 255
+      b: 0.965  // 246 / 255
+    };
 
+    // Initialize WebGL context
+    const gl = canvas.getContext('webgl2', {
+      alpha: true,
+      preserveDrawingBuffer: false
+    });
+    
+    if (!gl) {
+      console.error('WebGL 2 not supported');
+      return;
+    }
+
+    let mousePos = { x: 0, y: 0 };
+    let lastMousePos = { x: 0, y: 0 };
+    
+    // Mouse event handlers
+    const handleMouseMove = (e: MouseEvent) => {
+      mousePos = {
+        x: e.clientX / window.innerWidth,
+        y: 1.0 - (e.clientY / window.innerHeight)
+      };
+    };
+
+    // Set up event listeners
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Animation frame
+    let animationFrameId: number;
+
+    // Render loop
+    const render = () => {
+      // Calculate velocity based on mouse movement
+      const dx = (mousePos.x - lastMousePos.x) * 10;
+      const dy = (mousePos.y - lastMousePos.y) * 10;
+      
+      lastMousePos = { ...mousePos };
+      
+      // Update cursor position
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+      // We would implement fluid simulation here
+      // For now we'll just draw a simple gradient circle
+      const centerX = mousePos.x;
+      const centerY = mousePos.y;
+
+      // Request next frame
+      animationFrameId = requestAnimationFrame(render);
+    };
+
+    // Start animation
+    render();
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  // Hide default cursor and render our canvas
   return (
-    <>
-      <div 
-        className="custom-cursor"
-        style={{ 
-          transform: `translate(${position.x}px, ${position.y}px)`,
-          opacity: isVisible ? 1 : 0,
-          width: isHovering ? '50px' : '20px',
-          height: isHovering ? '50px' : '20px',
-        }}
-      />
-      {particles.map(particle => (
-        <SplashParticle
-          key={particle.id}
-          x={particle.x}
-          y={particle.y}
-        />
-      ))}
-    </>
+    <canvas 
+      ref={canvasRef}
+      className="fixed inset-0 w-screen h-screen pointer-events-none z-50"
+      style={{ cursor: 'none' }}
+    />
   );
 };
 

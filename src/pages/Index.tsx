@@ -11,7 +11,7 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
-import CustomCursor from '../components/CustomCursor';
+import FluidCursor from '../components/FluidCursor';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -42,9 +42,13 @@ const Index = () => {
       document.body.style.overflowX = 'hidden';
       document.documentElement.style.scrollBehavior = 'smooth';
       
+      // Add fluid cursor class to body
+      document.body.classList.add('fluid-cursor-active');
+      
       return () => {
         window.removeEventListener('scroll', handleScroll);
         document.body.style.overflowX = 'auto';
+        document.body.classList.remove('fluid-cursor-active');
       };
     }, 2000);
 
@@ -57,7 +61,7 @@ const Index = () => {
       className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <Loader />
-      <CustomCursor />
+      <FluidCursor />
       <Particles />
       <Navbar />
       <Hero />
