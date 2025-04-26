@@ -21,4 +21,10 @@
   .fluid-cursor-active * {
     cursor: none !important;
   }
+
+  /* Ensure canvas elements don't clash */
+  .fluid-cursor-canvas {
+    pointer-events: none !important;
+    z-index: 50 !important;
+  }
 }

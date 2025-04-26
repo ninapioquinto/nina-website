@@ -10,11 +10,11 @@ const FluidCursor = () => {
     
     // Set up the canvas to match the window size
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
 
     // Luna purple color
     const primaryColor = {
@@ -23,7 +23,7 @@ const FluidCursor = () => {
       b: 246/255
     };
 
-    // WebGL setup
+    // WebGL setup with null check
     const gl = canvas.getContext('webgl2', {
       alpha: true,
       preserveDrawingBuffer: false
@@ -83,7 +83,7 @@ const FluidCursor = () => {
       }
     `;
     
-    // Create shader program
+    // Create shader program with null checks
     const createShader = (type: number, source: string) => {
       const shader = gl.createShader(type);
       if (!shader) return null;
@@ -150,7 +150,7 @@ const FluidCursor = () => {
     
     // Mouse tracking variables
     let mousePos = { x: 0.5, y: 0.5 };
-    let prevMousePos = { x: 0.5, y: 0.5 };
+    let prevMousePos = { ...mousePos };
     let startTime = Date.now();
     
     // Mouse move handler
@@ -162,10 +162,17 @@ const FluidCursor = () => {
       };
     };
     
+    // Add event listeners
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Animation frame ID for cleanup
+    let animationFrameId: number | null = null;
     
     // Render loop
     const render = () => {
+      if (!canvas || !gl) return;
+      
       const time = (Date.now() - startTime) / 1000; // seconds
       
       // Update uniforms
@@ -186,22 +193,38 @@ const FluidCursor = () => {
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
       
       // Request next frame
-      requestAnimationFrame(render);
+      animationFrameId = requestAnimationFrame(render);
     };
     
     // Start rendering
-    render();
+    animationFrameId = requestAnimationFrame(render);
     
     // Cleanup on unmount
     return () => {
+      // Cancel animation frame if it exists
+      if (animationFrameId !== null) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      
+      // Remove event listeners
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', resizeCanvas);
       
+      // Clean up WebGL resources
       if (gl) {
-        gl.deleteProgram(program);
-        gl.deleteShader(vertexShader);
-        gl.deleteShader(fragmentShader);
-        gl.deleteBuffer(positionBuffer);
+        // Delete program and shaders only if they exist
+        if (program) {
+          gl.deleteProgram(program);
+        }
+        if (vertexShader) {
+          gl.deleteShader(vertexShader);
+        }
+        if (fragmentShader) {
+          gl.deleteShader(fragmentShader);
+        }
+        if (positionBuffer) {
+          gl.deleteBuffer(positionBuffer);
+        }
       }
     };
   }, []);
