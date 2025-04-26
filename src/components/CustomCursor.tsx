@@ -1,187 +1,95 @@
 
-import React, { useEffect, useState, useRef } from 'react';
-
-interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  life: number;
-  maxLife: number;
-}
+import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const followerRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
-  const [particles, setParticles] = useState<Particle[]>([]);
-  const [mousePos, setMousePos] = useState({ x: -100, y: -100 });
-  const [prevMousePos, setPrevMousePos] = useState({ x: -100, y: -100 });
-  const animationFrameRef = useRef<number | null>(null);
-  const lastUpdateTime = useRef<number>(Date.now());
-  const isMounted = useRef(true);
-  
-  // Splash effect color - can be easily customized
-  const splashColor = "rgba(139, 92, 246, 0.7)"; // Primary color (purple)
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  // Initialize cursor and add event listeners
   useEffect(() => {
-    const cursor = cursorRef.current;
-    const follower = followerRef.current;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
     
-    if (!cursor || !follower) return;
+    // Set up the canvas to match the window size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-    // Mouse move handler
+    // Initial color matching the "Luna" text gradient
+    const primaryColor = {
+      r: 0.545, // 139 / 255 (from #8B5CF6)
+      g: 0.361, // 92 / 255
+      b: 0.965  // 246 / 255
+    };
+
+    // Initialize WebGL context
+    const gl = canvas.getContext('webgl2', {
+      alpha: true,
+      preserveDrawingBuffer: false
+    });
+    
+    if (!gl) {
+      console.error('WebGL 2 not supported');
+      return;
+    }
+
+    let mousePos = { x: 0, y: 0 };
+    let lastMousePos = { x: 0, y: 0 };
+    
+    // Mouse event handlers
     const handleMouseMove = (e: MouseEvent) => {
-      if (!isMounted.current) return;
-      
-      const { clientX, clientY } = e;
-      
-      // Update the current mouse position
-      setMousePos({ x: clientX, y: clientY });
-      
-      // Generate particles based on mouse speed
-      const now = Date.now();
-      const dt = now - lastUpdateTime.current;
-      
-      if (dt > 30) { // Limit particle generation rate
-        const dx = clientX - prevMousePos.x;
-        const dy = clientY - prevMousePos.y;
-        const speed = Math.sqrt(dx * dx + dy * dy);
-        
-        // Only generate particles if the mouse is moving fast enough
-        if (speed > 5) {
-          // Generate 1-3 particles based on speed
-          const particlesToAdd = Math.min(Math.floor(speed / 10) + 1, 3);
-          
-          if (isMounted.current) {
-            setParticles(prev => {
-              const newParticles = [...prev];
-              for (let i = 0; i < particlesToAdd; i++) {
-                const angle = Math.random() * Math.PI * 2;
-                const speed = Math.random() * 2 + 1;
-                
-                newParticles.push({
-                  x: clientX,
-                  y: clientY,
-                  size: Math.random() * 10 + 5,
-                  speedX: Math.cos(angle) * speed,
-                  speedY: Math.sin(angle) * speed,
-                  life: 0,
-                  maxLife: Math.random() * 20 + 20
-                });
-              }
-              // Limit number of particles to prevent performance issues
-              return newParticles.slice(-50);
-            });
-          }
-        }
-        
-        setPrevMousePos({ x: clientX, y: clientY });
-        lastUpdateTime.current = now;
-      }
-      
-      // Check if mouse is over a clickable element
-      const target = e.target as HTMLElement;
-      const isHoverable = 
-        target.tagName === 'BUTTON' || 
-        target.tagName === 'A' || 
-        target.tagName === 'INPUT' || 
-        target.closest('button') || 
-        target.closest('a') || 
-        target.closest('input');
-      
-      setIsHovering(!!isHoverable);
-    };
-    
-    // Handle mouse leave
-    const handleMouseLeave = () => {
-      if (!isMounted.current) return;
-      setMousePos({ x: -100, y: -100 });
+      mousePos = {
+        x: e.clientX / window.innerWidth,
+        y: 1.0 - (e.clientY / window.innerHeight)
+      };
     };
 
-    // Add event listeners
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    // Set up event listeners
+    window.addEventListener('mousemove', handleMouseMove);
 
-    // Start animation frame for particles
-    const animateParticles = () => {
-      if (!isMounted.current) return;
+    // Animation frame
+    let animationFrameId: number;
+
+    // Render loop
+    const render = () => {
+      // Calculate velocity based on mouse movement
+      const dx = (mousePos.x - lastMousePos.x) * 10;
+      const dy = (mousePos.y - lastMousePos.y) * 10;
       
-      setParticles(prevParticles => 
-        prevParticles
-          .map(p => ({
-            ...p,
-            x: p.x + p.speedX,
-            y: p.y + p.speedY,
-            size: p.size * 0.95,
-            life: p.life + 1
-          }))
-          .filter(p => p.life < p.maxLife && p.size > 0.5)
-      );
+      lastMousePos = { ...mousePos };
       
-      animationFrameRef.current = requestAnimationFrame(animateParticles);
+      // Update cursor position
+      gl.clearColor(0, 0, 0, 0);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+
+      // We would implement fluid simulation here
+      // For now we'll just draw a simple gradient circle
+      const centerX = mousePos.x;
+      const centerY = mousePos.y;
+
+      // Request next frame
+      animationFrameId = requestAnimationFrame(render);
     };
-    
-    animationFrameRef.current = requestAnimationFrame(animateParticles);
 
+    // Start animation
+    render();
+
+    // Cleanup
     return () => {
-      isMounted.current = false;
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      
-      // Cancel any ongoing animation frame
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-        animationFrameRef.current = null;
-      }
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
-  // Update cursor position
-  useEffect(() => {
-    const cursor = cursorRef.current;
-    const follower = followerRef.current;
-    
-    if (!cursor || !follower) return;
-    
-    cursor.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
-    follower.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
-  }, [mousePos]);
-
+  // Hide default cursor and render our canvas
   return (
-    <>
-      <div 
-        ref={cursorRef}
-        className={`custom-cursor ${isHovering ? 'hover' : ''}`}
-      />
-      <div 
-        ref={followerRef}
-        className="custom-cursor-follower"
-      />
-      
-      {/* Render particles */}
-      {particles.map((particle, index) => {
-        const opacity = 1 - (particle.life / particle.maxLife);
-        
-        return (
-          <div
-            key={`particle-${index}-${particle.life}`}
-            className="custom-cursor-particle"
-            style={{
-              left: `${particle.x}px`,
-              top: `${particle.y}px`,
-              width: `${particle.size}px`,
-              height: `${particle.size}px`,
-              opacity,
-              background: splashColor,
-              boxShadow: `0 0 ${particle.size * 2}px ${splashColor}`
-            }}
-          />
-        );
-      })}
-    </>
+    <canvas 
+      ref={canvasRef}
+      className="fixed inset-0 w-screen h-screen pointer-events-none z-50"
+      style={{ cursor: 'none' }}
+    />
   );
 };
 
