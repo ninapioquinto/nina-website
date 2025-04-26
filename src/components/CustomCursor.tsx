@@ -1,36 +1,44 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
+import SplashParticle from './SplashParticle';
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [followerPosition, setFollowerPosition] = useState({ x: -100, y: -100 });
+  const [particles, setParticles] = useState<{ id: number; x: number; y: number }[]>([]);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  const addParticle = useCallback((x: number, y: number) => {
+    const id = Date.now();
+    setParticles(prev => [...prev, { id, x, y }]);
+    setTimeout(() => {
+      setParticles(prev => prev.filter(particle => particle.id !== id));
+    }, 1000);
+  }, []);
+
   useEffect(() => {
+    let lastX = -100;
+    let lastY = -100;
+    let particleTimeout: number | null = null;
+
     const updatePosition = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      const newX = e.clientX;
+      const newY = e.clientY;
+      setPosition({ x: newX, y: newY });
+
+      const distance = Math.hypot(newX - lastX, newY - lastY);
+      if (distance > 20 && !particleTimeout) {
+        addParticle(newX, newY);
+        particleTimeout = window.setTimeout(() => {
+          particleTimeout = null;
+        }, 50);
+      }
+      lastX = newX;
+      lastY = newY;
     };
 
-    const updateFollowerPosition = () => {
-      setFollowerPosition((prev) => {
-        return {
-          x: prev.x + (position.x - prev.x) * 0.3,
-          y: prev.y + (position.y - prev.y) * 0.3
-        };
-      });
-      requestAnimationFrame(updateFollowerPosition);
-    };
-
-    const animationFrame = requestAnimationFrame(updateFollowerPosition);
-
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsVisible(false);
-    };
+    const handleMouseEnter = () => setIsVisible(true);
+    const handleMouseLeave = () => setIsVisible(false);
 
     const handleHoverStart = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -42,9 +50,7 @@ const CustomCursor = () => {
       }
     };
 
-    const handleHoverEnd = () => {
-      setIsHovering(false);
-    };
+    const handleHoverEnd = () => setIsHovering(false);
 
     document.addEventListener('mousemove', updatePosition);
     document.addEventListener('mouseenter', handleMouseEnter);
@@ -58,36 +64,30 @@ const CustomCursor = () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       document.removeEventListener('mouseover', handleHoverStart);
       document.removeEventListener('mouseout', handleHoverEnd);
-      cancelAnimationFrame(animationFrame);
     };
-  }, [position.x, position.y]);
+  }, [addParticle]);
 
-  if (typeof window === 'undefined') {
-    return null; // Don't render on server side
-  }
-
-  // Don't render cursor on touch devices
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  if (isTouchDevice) {
-    return null;
-  }
+  if (typeof window === 'undefined') return null;
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return null;
 
   return (
     <>
       <div 
-        className={`custom-cursor ${isHovering ? 'hover' : ''}`} 
+        className="custom-cursor"
         style={{ 
           transform: `translate(${position.x}px, ${position.y}px)`,
-          opacity: isVisible ? 1 : 0
+          opacity: isVisible ? 1 : 0,
+          width: isHovering ? '50px' : '20px',
+          height: isHovering ? '50px' : '20px',
         }}
       />
-      <div 
-        className="custom-cursor-follower" 
-        style={{ 
-          transform: `translate(${followerPosition.x}px, ${followerPosition.y}px)`,
-          opacity: isVisible ? 1 : 0
-        }}
-      />
+      {particles.map(particle => (
+        <SplashParticle
+          key={particle.id}
+          x={particle.x}
+          y={particle.y}
+        />
+      ))}
     </>
   );
 };
