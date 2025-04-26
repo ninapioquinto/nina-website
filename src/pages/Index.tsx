@@ -16,8 +16,17 @@ import CustomCursor from '../components/CustomCursor';
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Check if device is mobile or tablet
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1024);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     // Simulate loading time and enable smooth scroll when loaded
     const timer = setTimeout(() => {
       setIsLoaded(true);
@@ -44,6 +53,7 @@ const Index = () => {
       
       return () => {
         window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('resize', checkMobile);
         document.body.style.overflowX = 'auto';
       };
     }, 2000);
@@ -57,7 +67,7 @@ const Index = () => {
       className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <Loader />
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
       <Particles />
       <Navbar />
       <Hero />

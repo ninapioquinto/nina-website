@@ -20,6 +20,7 @@ const CustomCursor = () => {
   const [prevMousePos, setPrevMousePos] = useState({ x: -100, y: -100 });
   const animationFrameRef = useRef<number | null>(null);
   const lastUpdateTime = useRef<number>(Date.now());
+  const isMounted = useRef(true);
   
   // Splash effect color - can be easily customized
   const splashColor = "rgba(139, 92, 246, 0.7)"; // Primary color (purple)
@@ -33,6 +34,8 @@ const CustomCursor = () => {
 
     // Mouse move handler
     const handleMouseMove = (e: MouseEvent) => {
+      if (!isMounted.current) return;
+      
       const { clientX, clientY } = e;
       
       // Update the current mouse position
@@ -52,8 +55,26 @@ const CustomCursor = () => {
           // Generate 1-3 particles based on speed
           const particlesToAdd = Math.min(Math.floor(speed / 10) + 1, 3);
           
-          for (let i = 0; i < particlesToAdd; i++) {
-            createParticle(clientX, clientY);
+          if (isMounted.current) {
+            setParticles(prev => {
+              const newParticles = [...prev];
+              for (let i = 0; i < particlesToAdd; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = Math.random() * 2 + 1;
+                
+                newParticles.push({
+                  x: clientX,
+                  y: clientY,
+                  size: Math.random() * 10 + 5,
+                  speedX: Math.cos(angle) * speed,
+                  speedY: Math.sin(angle) * speed,
+                  life: 0,
+                  maxLife: Math.random() * 20 + 20
+                });
+              }
+              // Limit number of particles to prevent performance issues
+              return newParticles.slice(-50);
+            });
           }
         }
         
@@ -76,6 +97,7 @@ const CustomCursor = () => {
     
     // Handle mouse leave
     const handleMouseLeave = () => {
+      if (!isMounted.current) return;
       setMousePos({ x: -100, y: -100 });
     };
 
@@ -83,49 +105,10 @@ const CustomCursor = () => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      
-      // Cancel any ongoing animation frame
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-      }
-    };
-  }, []);
-
-  // Update cursor position
-  useEffect(() => {
-    const cursor = cursorRef.current;
-    const follower = followerRef.current;
-    
-    if (!cursor || !follower) return;
-    
-    cursor.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
-    follower.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
-  }, [mousePos]);
-
-  // Create a new particle
-  const createParticle = (x: number, y: number) => {
-    const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 2 + 1;
-    
-    const newParticle: Particle = {
-      x,
-      y,
-      size: Math.random() * 10 + 5,
-      speedX: Math.cos(angle) * speed,
-      speedY: Math.sin(angle) * speed,
-      life: 0,
-      maxLife: Math.random() * 20 + 20
-    };
-    
-    setParticles(prev => [...prev, newParticle]);
-  };
-
-  // Animate particles
-  useEffect(() => {
+    // Start animation frame for particles
     const animateParticles = () => {
+      if (!isMounted.current) return;
+      
       setParticles(prevParticles => 
         prevParticles
           .map(p => ({
@@ -142,13 +125,30 @@ const CustomCursor = () => {
     };
     
     animationFrameRef.current = requestAnimationFrame(animateParticles);
-    
+
     return () => {
+      isMounted.current = false;
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      
+      // Cancel any ongoing animation frame
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
+        animationFrameRef.current = null;
       }
     };
   }, []);
+
+  // Update cursor position
+  useEffect(() => {
+    const cursor = cursorRef.current;
+    const follower = followerRef.current;
+    
+    if (!cursor || !follower) return;
+    
+    cursor.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
+    follower.style.transform = `translate(${mousePos.x}px, ${mousePos.y}px)`;
+  }, [mousePos]);
 
   return (
     <>
@@ -167,7 +167,7 @@ const CustomCursor = () => {
         
         return (
           <div
-            key={index}
+            key={`particle-${index}-${particle.life}`}
             className="custom-cursor-particle"
             style={{
               left: `${particle.x}px`,
