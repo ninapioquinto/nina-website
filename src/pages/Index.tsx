@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import HeroSection from '../components/HeroSection';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
@@ -64,7 +64,7 @@ const Index = () => {
       <FluidCursor />
       <Particles />
       <Navbar />
-      <Hero />
+      <HeroSection />
       <About />
       <Portfolio />
       <CaseStudy />
