@@ -11,18 +11,24 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
-import FluidCursor from '../components/FluidCursor';
+import CustomCursor from '../components/CustomCursor';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Mark component as mounted
+    setIsMounted(true);
+    
     // Simulate loading time and enable smooth scroll when loaded
     const timer = setTimeout(() => {
       setIsLoaded(true);
       
       const handleScroll = () => {
+        if (!isMounted) return;
+        
         const reveals = document.querySelectorAll('.reveal');
         reveals.forEach((reveal) => {
           const windowHeight = window.innerHeight;
@@ -46,14 +52,25 @@ const Index = () => {
       document.body.classList.add('fluid-cursor-active');
       
       return () => {
-        window.removeEventListener('scroll', handleScroll);
-        document.body.style.overflowX = 'auto';
-        document.body.classList.remove('fluid-cursor-active');
+        if (isMounted) {
+          window.removeEventListener('scroll', handleScroll);
+          document.body.style.overflowX = 'auto';
+          document.body.classList.remove('fluid-cursor-active');
+        }
       };
     }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    // Cleanup on unmount
+    return () => {
+      setIsMounted(false);
+      clearTimeout(timer);
+    };
+  }, [isMounted]);
+
+  // Safe check for rendering
+  if (!isMounted) {
+    return <Loader />;
+  }
 
   return (
     <div 
@@ -61,7 +78,7 @@ const Index = () => {
       className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <Loader />
-      <FluidCursor />
+      <CustomCursor />
       <Particles />
       <Navbar />
       <Hero />

@@ -1,24 +1,98 @@
 
 @layer utilities {
+  /* Hide default cursor when custom cursor is active */
+  .fluid-cursor-active * {
+    cursor: none !important;
+  }
+  
+  /* Only apply custom cursor on non-touch devices */
+  @media (pointer: fine) {
+    body, 
+    button, 
+    a, 
+    input, 
+    textarea, 
+    select {
+      cursor: none !important;
+    }
+  }
+}
+
+/* Custom cursor styles */
+.custom-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #9b87f5;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  pointer-events: none;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, background-color 0.3s, border 0.3s;
+}
+
+.cursor-dot.cursor-active {
+  width: 12px;
+  height: 12px;
+  background-color: #8B5CF6;
+}
+
+.cursor-follower.cursor-active {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(139, 92, 246, 0.3);
+}
+
+.cursor-dot.cursor-hover {
+  width: 12px;
+  height: 12px;
+  background-color: #8B5CF6;
+}
+
+.cursor-follower.cursor-hover {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+/* For touch devices (mobile and tablet), use default cursor */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-follower {
+    display: none;
+  }
+  
   body, 
   button, 
   a, 
   input, 
   textarea, 
   select {
-    cursor: none !important;
-  }
-
-  .cursor-none {
-    cursor: none !important;
-  }
-
-  .cursor-pointer {
-    cursor: none !important;
-  }
-
-  /* Hide default cursor when fluid cursor is active */
-  .fluid-cursor-active * {
-    cursor: none !important;
+    cursor: auto !important;
   }
 }

@@ -2,94 +2,89 @@
 import React, { useEffect, useRef } from 'react';
 
 const CustomCursor = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
+  const cursorDotRef = useRef<HTMLDivElement>(null);
+  const cursorFollowerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const cursorDot = cursorDotRef.current;
+    const cursorFollower = cursorFollowerRef.current;
     
-    // Set up the canvas to match the window size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    if (!cursorDot || !cursorFollower) return;
+    
+    const mouseMoveHandler = (e: MouseEvent) => {
+      const posX = e.clientX;
+      const posY = e.clientY;
+      
+      // Position the dot directly at cursor position
+      cursorDot.style.left = `${posX}px`;
+      cursorDot.style.top = `${posY}px`;
+      
+      // Add slight delay for follower
+      setTimeout(() => {
+        cursorFollower.style.left = `${posX}px`;
+        cursorFollower.style.top = `${posY}px`;
+      }, 50);
     };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Initial color matching the "Luna" text gradient
-    const primaryColor = {
-      r: 0.545, // 139 / 255 (from #8B5CF6)
-      g: 0.361, // 92 / 255
-      b: 0.965  // 246 / 255
+    
+    const mouseDownHandler = () => {
+      cursorDot.classList.add('cursor-active');
+      cursorFollower.classList.add('cursor-active');
     };
-
-    // Initialize WebGL context
-    const gl = canvas.getContext('webgl2', {
-      alpha: true,
-      preserveDrawingBuffer: false
+    
+    const mouseUpHandler = () => {
+      cursorDot.classList.remove('cursor-active');
+      cursorFollower.classList.remove('cursor-active');
+    };
+    
+    const handleMouseOver = () => {
+      cursorDot.classList.add('cursor-hover');
+      cursorFollower.classList.add('cursor-hover');
+    };
+    
+    const handleMouseOut = () => {
+      cursorDot.classList.remove('cursor-hover');
+      cursorFollower.classList.remove('cursor-hover');
+    };
+    
+    // Add event listeners
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mousedown', mouseDownHandler);
+    document.addEventListener('mouseup', mouseUpHandler);
+    
+    const clickables = document.querySelectorAll('a, button, .cursor-hover-element');
+    clickables.forEach(el => {
+      el.addEventListener('mouseover', handleMouseOver);
+      el.addEventListener('mouseout', handleMouseOut);
     });
     
-    if (!gl) {
-      console.error('WebGL 2 not supported');
-      return;
-    }
-
-    let mousePos = { x: 0, y: 0 };
-    let lastMousePos = { x: 0, y: 0 };
-    
-    // Mouse event handlers
-    const handleMouseMove = (e: MouseEvent) => {
-      mousePos = {
-        x: e.clientX / window.innerWidth,
-        y: 1.0 - (e.clientY / window.innerHeight)
-      };
-    };
-
-    // Set up event listeners
-    window.addEventListener('mousemove', handleMouseMove);
-
-    // Animation frame
-    let animationFrameId: number;
-
-    // Render loop
-    const render = () => {
-      // Calculate velocity based on mouse movement
-      const dx = (mousePos.x - lastMousePos.x) * 10;
-      const dy = (mousePos.y - lastMousePos.y) * 10;
-      
-      lastMousePos = { ...mousePos };
-      
-      // Update cursor position
-      gl.clearColor(0, 0, 0, 0);
-      gl.clear(gl.COLOR_BUFFER_BIT);
-
-      // We would implement fluid simulation here
-      // For now we'll just draw a simple gradient circle
-      const centerX = mousePos.x;
-      const centerY = mousePos.y;
-
-      // Request next frame
-      animationFrameId = requestAnimationFrame(render);
-    };
-
-    // Start animation
-    render();
-
-    // Cleanup
+    // Cleanup function
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      window.removeEventListener('mousemove', handleMouseMove);
-      cancelAnimationFrame(animationFrameId);
+      document.removeEventListener('mousemove', mouseMoveHandler);
+      document.removeEventListener('mousedown', mouseDownHandler);
+      document.removeEventListener('mouseup', mouseUpHandler);
+      
+      clickables.forEach(el => {
+        el.removeEventListener('mouseover', handleMouseOver);
+        el.removeEventListener('mouseout', handleMouseOut);
+      });
     };
   }, []);
-
-  // Hide default cursor and render our canvas
+  
+  // Check if device is mobile or tablet
+  const isMobileOrTablet = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  };
+  
+  // Only render custom cursor on desktop
+  if (typeof window !== 'undefined' && isMobileOrTablet()) {
+    return null;
+  }
+  
   return (
-    <canvas 
-      ref={canvasRef}
-      className="fixed inset-0 w-screen h-screen pointer-events-none z-50"
-      style={{ cursor: 'none' }}
-    />
+    <div className="custom-cursor-container">
+      <div ref={cursorDotRef} className="cursor-dot"></div>
+      <div ref={cursorFollowerRef} className="cursor-follower"></div>
+    </div>
   );
 };
 
