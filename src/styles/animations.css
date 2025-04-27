@@ -75,4 +75,17 @@
     border-radius: 50%;
     animation: spin 1.2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
   }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
 }

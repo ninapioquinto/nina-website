@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import PoweredBy from '../components/PoweredBy';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
@@ -77,6 +78,7 @@ const Index = () => {
       <Particles />
       <Navbar />
       <Hero />
+      <PoweredBy />
       <About />
       <Portfolio />
       <CaseStudy />
