@@ -1,4 +1,3 @@
-
 @layer utilities {
   .reveal {
     position: relative;
@@ -30,6 +29,17 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
   }
 
   .loader {
