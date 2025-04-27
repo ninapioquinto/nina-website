@@ -1,4 +1,3 @@
-
 @layer utilities {
   /* Hide default cursor when custom cursor is active */
   .fluid-cursor-active * {
