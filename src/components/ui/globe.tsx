@@ -14,11 +14,11 @@ const GLOBE_CONFIG: COBEOptions = {
   phi: 0,
   theta: 0.3,
   dark: 0,
-  diffuse: 0.4,
+  diffuse: 0.6,  // Increased diffuse for better lighting
   mapSamples: 16000,
   mapBrightness: 1.2,
   baseColor: [1, 1, 1],
-  markerColor: [139/255, 92/255, 246/255], // Updated to match site's purple theme
+  markerColor: [139/255, 92/255, 246/255], // Purple markers matching the site theme
   glowColor: [1, 1, 1],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
@@ -47,6 +47,7 @@ export function Globe({
   const pointerInteracting = useRef(null)
   const pointerInteractionMovement = useRef(0)
   const [r, setR] = useState(0)
+  const globeRef = useRef<any>(null)
 
   const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value
@@ -76,6 +77,12 @@ export function Globe({
   const onResize = () => {
     if (canvasRef.current) {
       width = canvasRef.current.offsetWidth
+      
+      // Update globe dimensions if it exists
+      if (globeRef.current) {
+        globeRef.current.width = width * 2
+        globeRef.current.height = width * 2
+      }
     }
   }
 
@@ -83,17 +90,30 @@ export function Globe({
     window.addEventListener("resize", onResize)
     onResize()
 
-    const globe = createGlobe(canvasRef.current!, {
-      ...config,
-      width: width * 2,
-      height: width * 2,
-      onRender,
-    })
+    if (canvasRef.current) {
+      const globe = createGlobe(canvasRef.current, {
+        ...config,
+        width: width * 2,
+        height: width * 2,
+        onRender,
+      })
+      
+      // Store reference to the globe instance for cleanup
+      globeRef.current = globe
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"))
+      setTimeout(() => {
+        if (canvasRef.current) {
+          canvasRef.current.style.opacity = "1"
+        }
+      }, 100)
+    }
+
+    // Proper cleanup
     return () => {
       window.removeEventListener("resize", onResize)
-      globe.destroy()
+      if (globeRef.current) {
+        globeRef.current.destroy()
+      }
     }
   }, [])
 
@@ -121,6 +141,7 @@ export function Globe({
           e.touches[0] && updateMovement(e.touches[0].clientX)
         }
       />
+      <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),rgba(10,10,12,0.7))]"></div>
     </div>
   )
 }
