@@ -1,3 +1,4 @@
+
 @layer utilities {
   .reveal {
     position: relative;
@@ -88,4 +89,15 @@
   .animate-infinite-scroll {
     animation: infinite-scroll 20s linear infinite;
   }
+
+  @keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+  }
+
+  .twinkle {
+    animation: twinkle 5s ease-in-out infinite;
+  }
 }
+
