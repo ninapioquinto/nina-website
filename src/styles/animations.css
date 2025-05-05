@@ -99,5 +99,32 @@
   .twinkle {
     animation: twinkle 5s ease-in-out infinite;
   }
+  
+  @keyframes float-card {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  
+  .float-animation {
+    animation: float-card 5s ease-in-out infinite;
+  }
+  
+  @keyframes shine {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  
+  .shine-effect {
+    background: linear-gradient(
+      90deg,
+      rgba(139, 92, 246, 0) 0%,
+      rgba(139, 92, 246, 0.3) 25%,
+      rgba(139, 92, 246, 0.5) 50%,
+      rgba(139, 92, 246, 0.3) 75%,
+      rgba(139, 92, 246, 0) 100%
+    );
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+  }
 }
-
