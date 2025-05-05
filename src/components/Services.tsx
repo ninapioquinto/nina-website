@@ -1,87 +1,69 @@
-
 import React, { useState, useEffect } from 'react';
-import { PricingCard } from './ui/pricing-card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
+import { 
+  Phone, FileText, ClipboardList, Receipt, Home, 
+  UserPlus, RefreshCw, Calendar, Send, Check, Mail, Box 
+} from 'lucide-react';
+import { Card, CardContent } from './ui/card';
 
-const AI_AUTOMATION_TIERS = [
-  {
-    name: "Basic Automation",
-    price: {
-      monthly: 49,
-      yearly: 490,
-    },
-    description: "Essential AI tools for small businesses",
-    features: [
-      "Email response automation",
-      "Basic customer inquiries",
-      "Lead qualification",
-      "3 AI workflows",
-      "Standard support"
-    ],
-    cta: "Start Automating",
-  },
-  {
-    name: "Advanced AI Suite",
-    price: {
-      monthly: 129,
-      yearly: 1290,
-    },
-    description: "Comprehensive AI automation for growing teams",
-    features: [
-      "All Basic features",
-      "Custom AI workflows",
-      "API integrations",
-      "Advanced analytics",
-      "Intelligent handoff to humans",
-      "Priority support"
-    ],
-    cta: "Get Advanced AI",
-    highlighted: true,
-    popular: true,
-  },
-];
+interface Service {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  actions: string[];
+}
 
-const CRM_OPTIMIZATION_TIERS = [
+const services: Service[] = [
   {
-    name: "CRM Essentials",
-    price: {
-      monthly: 59,
-      yearly: 590,
-    },
-    description: "Streamline your customer relationships",
-    features: [
-      "Data migration & cleanup",
-      "Basic automation rules",
-      "Standard reporting",
-      "Email templates",
-      "Training resources"
-    ],
-    cta: "Optimize Your CRM",
+    icon: <Phone className="w-6 h-6 text-green-400" />,
+    title: "Lead Qualification",
+    description: "Qualify leads instantly",
+    actions: ["Ask pre-screening questions", "Send follow-up email", "Book calendar event"]
   },
   {
-    name: "CRM Enterprise",
-    price: {
-      monthly: 149,
-      yearly: 1490,
-    },
-    description: "Complete CRM transformation for maximum efficiency",
-    features: [
-      "All Essentials features",
-      "Custom workflows & fields",
-      "Advanced integrations",
-      "AI recommendations",
-      "Dedicated success manager",
-      "24/7 priority support"
-    ],
-    cta: "Transform Your CRM",
-    highlighted: true,
-    popular: true,
+    icon: <Box className="w-6 h-6 text-blue-400" />,
+    title: "Order Support",
+    description: "Handle order status inquiries",
+    actions: ["Track order via API", "Send order updates", "Escalate to human agent if needed"]
   },
+  {
+    icon: <ClipboardList className="w-6 h-6 text-purple-400" />,
+    title: "Intake Automation",
+    description: "Collect client details with ease",
+    actions: ["Gather form responses", "Sync with CRM", "Create new record"]
+  },
+  {
+    icon: <Receipt className="w-6 h-6 text-yellow-400" />,
+    title: "Invoice Follow-Up",
+    description: "Recover unpaid invoices",
+    actions: ["Detect overdue payments", "Send payment reminders", "Schedule next follow-up"]
+  },
+  {
+    icon: <Home className="w-6 h-6 text-pink-400" />,
+    title: "Real Estate Inquiry",
+    description: "Respond to property questions",
+    actions: ["Share property info", "Schedule viewings", "Send agent intro email"]
+  },
+  {
+    icon: <UserPlus className="w-6 h-6 text-indigo-400" />,
+    title: "Onboarding Assistant",
+    description: "Welcome new users",
+    actions: ["Provide onboarding guide", "Create CRM entry", "Send custom welcome email"]
+  },
+  {
+    icon: <RefreshCw className="w-6 h-6 text-cyan-400" />,
+    title: "Subscription Renewal",
+    description: "Automate renewals & reminders",
+    actions: ["Track subscription end dates", "Send renewal reminders", "Link to payment"]
+  },
+  {
+    icon: <Calendar className="w-6 h-6 text-rose-400" />,
+    title: "Event Registration Bot",
+    description: "Manage event sign-ups",
+    actions: ["Register attendees", "Send confirmation", "Add to calendar"]
+  }
 ];
 
 const Services = () => {
-  const [paymentFrequency, setPaymentFrequency] = useState("monthly");
-  const [activeService, setActiveService] = useState("ai");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -106,93 +88,117 @@ const Services = () => {
     };
   }, []);
 
-  const toggleService = (service: string) => {
-    setActiveService(service);
-  };
-
-  const toggleFrequency = (frequency: string) => {
-    setPaymentFrequency(frequency);
-  };
+  const firstRow = services.slice(0, 4);
+  const secondRow = services.slice(4);
 
   return (
     <section id="services-section" className="py-24 bg-black/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Elevate Your Business with <span className="text-gradient">Smart Solutions</span>
+            Grow Smarter, <span className="text-gradient">Not Harder</span>
           </h2>
-          <p className="text-center text-lg text-white/70 mb-12 max-w-2xl mx-auto reveal">
-            Choose the service that aligns with your business needs and growth objectives
+          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
+            AI agents designed to automate your operations and elevate the customer experience
           </p>
 
-          <div className={`space-y-8 relative transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            {/* Service Type Selector */}
-            <Tabs defaultValue="ai" className="w-full" onValueChange={toggleService}>
-              <div className="flex justify-center mb-8">
-                <TabsList className="bg-accent/20 border border-white/10 backdrop-blur-sm">
-                  <TabsTrigger 
-                    value="ai"
-                    className={`${activeService === 'ai' ? 'data-[state=active]:bg-primary' : ''} px-6 py-3`}
-                  >
-                    AI Automation
-                  </TabsTrigger>
-                  <TabsTrigger 
-                    value="crm"
-                    className={`${activeService === 'crm' ? 'data-[state=active]:bg-primary' : ''} px-6 py-3`}
-                  >
-                    CRM Optimization
-                  </TabsTrigger>
-                </TabsList>
+          <div className="space-y-12 relative">
+            {/* First Row - Moving Left */}
+            <div className={`flex gap-6 transition-all duration-1000 ${isVisible ? 'animate-slide-left' : 'opacity-0'}`}>
+              <div className="flex gap-6 animate-scroll-left">
+                {[...firstRow, ...firstRow].map((service, index) => (
+                  <Card key={index} className="min-w-[300px] flex-shrink-0 bg-accent/20 border border-white/10 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        {service.icon}
+                        <div>
+                          <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                          <p className="text-white/70">{service.description}</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        {service.actions.map((action, i) => (
+                          <button
+                            key={i}
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-sm text-white/70 hover:text-white"
+                          >
+                            {i === 0 ? <Check className="w-4 h-4" /> : 
+                             i === 1 ? <Mail className="w-4 h-4" /> :
+                             <Send className="w-4 h-4" />}
+                            {action}
+                          </button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
+            </div>
 
-              {/* Payment Frequency Selector */}
-              <div className="flex justify-center mb-10">
-                <div className="flex items-center gap-4 bg-accent/10 p-2 rounded-full">
-                  <button
-                    onClick={() => toggleFrequency("monthly")}
-                    className={`px-4 py-2 rounded-full transition-all ${
-                      paymentFrequency === "monthly"
-                        ? "bg-primary text-white"
-                        : "text-white/70"
-                    }`}
-                  >
-                    Monthly
-                  </button>
-                  <button
-                    onClick={() => toggleFrequency("yearly")}
-                    className={`px-4 py-2 rounded-full transition-all ${
-                      paymentFrequency === "yearly"
-                        ? "bg-primary text-white"
-                        : "text-white/70"
-                    }`}
-                  >
-                    Yearly (10% off)
-                  </button>
-                </div>
+            {/* Second Row - Moving Right */}
+            <div className={`flex gap-6 transition-all duration-1000 ${isVisible ? 'animate-slide-right' : 'opacity-0'}`}>
+              <div className="flex gap-6 animate-scroll-right">
+                {[...secondRow, ...secondRow].map((service, index) => (
+                  <Card key={index} className="min-w-[300px] flex-shrink-0 bg-accent/20 border border-white/10 backdrop-blur-sm">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        {service.icon}
+                        <div>
+                          <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                          <p className="text-white/70">{service.description}</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        {service.actions.map((action, i) => (
+                          <button
+                            key={i}
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors text-sm text-white/70 hover:text-white"
+                          >
+                            {i === 0 ? <Check className="w-4 h-4" /> : 
+                             i === 1 ? <Mail className="w-4 h-4" /> :
+                             <Send className="w-4 h-4" />}
+                            {action}
+                          </button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-
-              <TabsContent value="ai" className="mt-0">
-                <div className="grid gap-6 md:grid-cols-2">
-                  {AI_AUTOMATION_TIERS.map((tier) => (
-                    <PricingCard key={tier.name} tier={tier} paymentFrequency={paymentFrequency} />
-                  ))}
-                </div>
-              </TabsContent>
-
-              <TabsContent value="crm" className="mt-0">
-                <div className="grid gap-6 md:grid-cols-2">
-                  {CRM_OPTIMIZATION_TIERS.map((tier) => (
-                    <PricingCard key={tier.name} tier={tier} paymentFrequency={paymentFrequency} />
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.15),rgba(255,255,255,0))]"></div>
+      <style>{`
+        @keyframes scroll-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(calc(-300px * 4 - 1.5rem * 4)); }
+        }
+
+        @keyframes scroll-right {
+          from { transform: translateX(calc(-300px * 4 - 1.5rem * 4)); }
+          to { transform: translateX(0); }
+        }
+
+        .animate-scroll-left {
+          animation: scroll-left 20s linear infinite;
+        }
+
+        .animate-scroll-right {
+          animation: scroll-right 20s linear infinite;
+        }
+
+        .animate-slide-left {
+          transform: translateX(0);
+          opacity: 1;
+        }
+
+        .animate-slide-right {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      `}</style>
     </section>
   );
 };
