@@ -51,7 +51,7 @@ const Navbar = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            Luna
+            Nina
           </a>
           
           {/* Desktop Navigation */}

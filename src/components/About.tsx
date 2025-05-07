@@ -43,7 +43,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="reveal">
               <p className="text-lg mb-6">
-                I'm Luna, a Systems Engineer and Certified AI Automation Developer. I've spent the last 6+ years helping teams fix messy operations, automate repetitive tasks, and build custom systems that support real growth.
+                I'm Nina, a Systems Engineer and Certified AI Automation Developer. I've spent the last 6+ years helping teams fix messy operations, automate repetitive tasks, and build custom systems that support real growth.
               </p>
               
               <p className="text-lg mb-6">
@@ -67,7 +67,7 @@ const About = () => {
                 <div className="aspect-square bg-accent rounded-xl flex items-center justify-center p-4">
                   {/* Avatar placeholder - replace with actual image */}
                   <div className="w-3/4 h-3/4 rounded-full bg-gradient-to-br from-primary to-accent-blue/70 overflow-hidden flex items-center justify-center">
-                    <div className="text-5xl font-bold text-white">L</div>
+                    <div className="text-5xl font-bold text-white">N</div>
                   </div>
                 </div>
               </div>

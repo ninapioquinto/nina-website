@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 mb-8 md:mb-0">
             <a
-              href="mailto:luna@example.com"
+              href="mailto:nina@example.com"
               className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
             >
               <span className="h-8 w-8 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-center md:items-end gap-2">
             <div className="text-white/50 text-sm">
-              © {new Date().getFullYear()} Luna • AI Automation Developer
+              © {new Date().getFullYear()} Nina • AI Automation Developer
             </div>
             <div className="text-white/50 text-sm">
               Designed & Built with 💜
