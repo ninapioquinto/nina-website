@@ -9,6 +9,7 @@ import CaseStudy from '../components/CaseStudy';
 import Certifications from '../components/Certifications';
 import FAQ from '../components/FAQ';
 import Services from '../components/Services';
+import MyServices from '../components/MyServices';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
@@ -87,6 +88,7 @@ const Index = () => {
       <Certifications />
       <FAQ />
       <Services />
+      <MyServices />
       <Contact />
       <Footer />
     </div>
