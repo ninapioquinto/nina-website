@@ -57,15 +57,13 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative h-[500px] hidden md:block">
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
-                <Globe className="scale-110" />
-              </div>
+          <div className="relative hidden md:block">
+            <div className="absolute right-0 transform translate-x-[10%] -translate-y-[5%] w-[450px] h-[450px]">
+              <Globe className="w-full h-full" />
+              
+              {/* Soft glow effect around the globe */}
+              <div className="absolute inset-0 rounded-full blur-2xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-50"></div>
             </div>
-            
-            {/* Overlay glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none rounded-full blur-xl opacity-40"></div>
           </div>
         </div>
       </div>
