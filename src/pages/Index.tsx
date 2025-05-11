@@ -13,7 +13,6 @@ import MyServices from '../components/MyServices';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
-import StarryBackground from '../components/StarryBackground';
 import Loader from '../components/Loader';
 
 const Index = () => {
@@ -74,10 +73,9 @@ const Index = () => {
   return (
     <div 
       ref={scrollRef}
-      className={`min-h-screen bg-background overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`min-h-screen overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <Loader />
-      <StarryBackground />
       <Particles />
       <Navbar />
       <Hero />

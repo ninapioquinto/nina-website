@@ -81,13 +81,13 @@ const crmOptimizationTiers = [
 
 const MyServices = () => {
     return (
-        <section id="my-services" className="py-20 relative overflow-hidden bg-black/20 backdrop-blur-sm">
+        <section id="my-services" className="py-20 relative overflow-hidden backdrop-blur-sm bg-black/10">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 reveal">
                         My <span className="text-gradient">Services</span>
                     </h2>
-                    <p className="text-lg text-white/70 max-w-2xl mx-auto mb-16 reveal">
+                    <p className="text-lg text-white/80 max-w-2xl mx-auto mb-16 reveal">
                         I specialize in implementing AI automation solutions and optimizing CRM systems to streamline your business operations
                     </p>
                 </div>
@@ -100,7 +100,7 @@ const MyServices = () => {
                         tiers={aiAutomationTiers}
                         className="gap-6"
                         containerClassName="py-6"
-                        sectionClassName="py-8"
+                        sectionClassName="py-8 bg-transparent"
                     />
                 </div>
                 
@@ -112,13 +112,13 @@ const MyServices = () => {
                         tiers={crmOptimizationTiers}
                         className="gap-6"
                         containerClassName="py-6"
-                        sectionClassName="py-8"
+                        sectionClassName="py-8 bg-transparent"
                     />
                 </div>
                 
-                {/* Background elements */}
-                <div className="absolute left-0 top-1/4 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl"></div>
-                <div className="absolute right-0 bottom-1/4 w-80 h-80 bg-accent-blue/5 rounded-full filter blur-3xl"></div>
+                {/* Background elements - using subtle glows that complement the new background */}
+                <div className="absolute left-0 top-1/4 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl"></div>
+                <div className="absolute right-0 bottom-1/4 w-80 h-80 bg-accent-blue/10 rounded-full filter blur-3xl"></div>
             </div>
         </section>
     );

@@ -37,7 +37,10 @@
   body {
     @apply bg-background text-foreground font-inter antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
-    background-color: #0a0a0c;
+    background-image: url('/lovable-uploads/c50fef96-b7a7-4856-a6ef-c8e0baf975e1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #f8f8f8;
     cursor: default;
   }
