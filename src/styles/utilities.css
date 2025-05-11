@@ -61,4 +61,30 @@
   .group-data-\[state\=open\]:text-primary {
     color: rgb(139, 92, 246);
   }
+  
+  /* Ensure consistent section backgrounds */
+  .section-overlay {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 14, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+  }
+  
+  /* Fix for background seams */
+  .bg-seamless {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

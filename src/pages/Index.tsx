@@ -73,22 +73,25 @@ const Index = () => {
   return (
     <div 
       ref={scrollRef}
-      className={`min-h-screen overflow-hidden transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className="min-h-screen w-full overflow-hidden transition-opacity duration-1000"
+      style={{ opacity: isLoaded ? 1 : 0 }}
     >
       <Loader />
       <Particles />
-      <Navbar />
-      <Hero />
-      <PoweredBy />
-      <About />
-      <Portfolio />
-      <CaseStudy />
-      <Certifications />
-      <FAQ />
-      <Services />
-      <MyServices />
-      <Contact />
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <PoweredBy />
+        <About />
+        <Portfolio />
+        <CaseStudy />
+        <Certifications />
+        <FAQ />
+        <Services />
+        <MyServices />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 };
