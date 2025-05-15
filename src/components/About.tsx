@@ -64,11 +64,18 @@ const About = () => {
             <div className="reveal">
               <div className="relative rounded-xl overflow-hidden glow-border group">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent-blue/20 opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                {/* Video element replacing the image placeholder */}
                 <div className="aspect-square bg-accent rounded-xl flex items-center justify-center p-4">
-                  {/* Avatar placeholder - replace with actual image */}
-                  <div className="w-3/4 h-3/4 rounded-full bg-gradient-to-br from-primary to-accent-blue/70 overflow-hidden flex items-center justify-center">
-                    <div className="text-5xl font-bold text-white">N</div>
-                  </div>
+                  <video 
+                    className="w-full h-full rounded-xl object-cover"
+                    controls
+                    playsInline
+                    muted
+                    loop
+                  >
+                    <source src="/your-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>
