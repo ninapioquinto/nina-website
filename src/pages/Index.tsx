@@ -2,18 +2,18 @@
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import PoweredBy from '../components/PoweredBy';
 import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
+import Services from '../components/Services';
 import MyServices from '../components/MyServices';
 import Certifications from '../components/Certifications';
 import FAQ from '../components/FAQ';
-import Services from '../components/Services';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
+import PoweredBy from '../components/PoweredBy';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -83,11 +83,11 @@ const Index = () => {
         <Hero />
         <PoweredBy />
         <About />
+        <Services />
         <Portfolio />
         <CaseStudy />
         <MyServices />
         <Certifications />
-        <Services />
         <FAQ />
         <Contact />
         <Footer />
