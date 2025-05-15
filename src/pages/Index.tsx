@@ -1,11 +1,12 @@
+
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import PoweredBy from '../components/PoweredBy';
+import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
 import MyServices from '../components/MyServices';
-import About from '../components/About';
 import Certifications from '../components/Certifications';
 import FAQ from '../components/FAQ';
 import Services from '../components/Services';
@@ -81,10 +82,10 @@ const Index = () => {
         <Navbar />
         <Hero />
         <PoweredBy />
+        <About />
         <Portfolio />
         <CaseStudy />
         <MyServices />
-        <About />
         <Certifications />
         <Services />
         <FAQ />
