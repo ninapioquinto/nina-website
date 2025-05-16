@@ -71,11 +71,11 @@ const Benefits = () => {
     <section id="benefits" ref={sectionRef} className="py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center reveal">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center reveal text-white">
             Transform Your Business <span className="text-gradient">Results</span>
           </h2>
           
-          <p className="text-lg text-center mb-16 max-w-3xl mx-auto reveal">
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto reveal text-white">
             Don't just improve your systems—revolutionize how your business operates. Here's what you'll gain when we work together:
           </p>
           
@@ -87,8 +87,8 @@ const Benefits = () => {
                   <div className="mb-6 rounded-full bg-primary/10 p-3 w-fit">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                  <p className="text-white/80">{item.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
+                  <p className="text-white">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -96,7 +96,7 @@ const Benefits = () => {
           
           <div className="mt-16 text-center reveal">
             <div className="inline-block bg-accent/30 border border-primary/30 px-6 py-4 rounded-lg max-w-2xl">
-              <p className="text-lg italic text-white/90">
+              <p className="text-lg italic text-white">
                 "I don't just build systems—I create transformations that can double your team's productivity while cutting operational costs by up to 40%."
               </p>
             </div>
