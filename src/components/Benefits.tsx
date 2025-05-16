@@ -42,8 +42,8 @@ const Benefits = () => {
     },
     {
       icon: <ThumbsUp className="h-10 w-10 text-primary" />,
-      title: "Dramatic Error Reduction",
-      description: "Significantly reduce costly mistakes with intelligent quality checks and safeguards that dramatically improve accuracy and consistency."
+      title: "Significant Error Reduction",
+      description: "Substantially reduce costly mistakes with intelligent quality checks and safeguards that improve accuracy and consistency."
     },
     {
       icon: <Users className="h-10 w-10 text-primary" />,
