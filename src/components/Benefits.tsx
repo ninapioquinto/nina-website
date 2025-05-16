@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
-import { Check, Award, Star } from 'lucide-react';
+import { Check, Award, Star, ThumbsUp, Rocket, Users } from 'lucide-react';
 
 const Benefits = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -36,19 +36,34 @@ const Benefits = () => {
 
   const benefitItems = [
     {
+      icon: <Rocket className="h-10 w-10 text-primary" />,
+      title: "30-50% Faster Workflows",
+      description: "Stop wasting time on manual tasks. My systems typically cut processing time in half, so your team can focus on growth, not admin."
+    },
+    {
+      icon: <ThumbsUp className="h-10 w-10 text-primary" />,
+      title: "99% Error Reduction",
+      description: "Eliminate costly mistakes with automated quality checks and safeguards that ensure accuracy every single time."
+    },
+    {
+      icon: <Users className="h-10 w-10 text-primary" />,
+      title: "Scale Without Adding Staff",
+      description: "Handle 2-3x more clients or projects with your existing team by automating repetitive processes that drain resources."
+    },
+    {
       icon: <Check className="h-10 w-10 text-primary" />,
-      title: "Custom Systems Integration",
-      description: "Get a tailored system that integrates seamlessly with your existing tools and workflows."
+      title: "Seamless Tools Integration",
+      description: "Connect your favorite tools in ways you never thought possible, creating a unified ecosystem that works for you, not against you."
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,
-      title: "Time & Cost Efficiency",
-      description: "Save up to 20 hours per week with automated processes that eliminate repetitive tasks."
+      title: "ROI Within 90 Days",
+      description: "Most clients see system costs recovered within 3 months through time savings, reduced errors, and increased capacity."
     },
     {
       icon: <Star className="h-10 w-10 text-primary" />,
-      title: "Scalable Solutions",
-      description: "Future-proof systems that grow with your business without adding complexity."
+      title: "Future-Proof Operations",
+      description: "Get systems built with scalability in mind, easily adaptable as your business grows without major overhauls or disruptions."
     }
   ];
 
@@ -57,11 +72,11 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center reveal">
-            Why Work With <span className="text-gradient">Me</span>
+            Transform Your Business <span className="text-gradient">Results</span>
           </h2>
           
           <p className="text-lg text-center mb-16 max-w-3xl mx-auto reveal">
-            I deliver custom solutions that solve real business problems, saving you time and resources while improving operational efficiency.
+            Don't just improve your systems—revolutionize how your business operates. Here's what you'll gain when we work together:
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -82,7 +97,7 @@ const Benefits = () => {
           <div className="mt-16 text-center reveal">
             <div className="inline-block bg-accent/30 border border-primary/30 px-6 py-4 rounded-lg max-w-2xl">
               <p className="text-lg italic text-white/90">
-                "My focus is on creating systems that make your business run smoother, faster, and with fewer headaches."
+                "I don't just build systems—I create transformations that can double your team's productivity while cutting operational costs by up to 40%."
               </p>
             </div>
           </div>
