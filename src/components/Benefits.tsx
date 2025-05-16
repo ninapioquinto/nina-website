@@ -42,8 +42,8 @@ const Benefits = () => {
     },
     {
       icon: <ThumbsUp className="h-10 w-10 text-primary" />,
-      title: "99% Error Reduction",
-      description: "Eliminate costly mistakes with automated quality checks and safeguards that ensure accuracy every single time."
+      title: "Dramatic Error Reduction",
+      description: "Significantly reduce costly mistakes with intelligent quality checks and safeguards that dramatically improve accuracy and consistency."
     },
     {
       icon: <Users className="h-10 w-10 text-primary" />,
@@ -57,8 +57,8 @@ const Benefits = () => {
     },
     {
       icon: <Award className="h-10 w-10 text-primary" />,
-      title: "ROI Within 90 Days",
-      description: "Most clients see system costs recovered within 3 months through time savings, reduced errors, and increased capacity."
+      title: "Rapid Return on Investment",
+      description: "Experience the financial impact quickly as time savings, improved efficiency, and increased capacity start delivering measurable value to your business."
     },
     {
       icon: <Star className="h-10 w-10 text-primary" />,
