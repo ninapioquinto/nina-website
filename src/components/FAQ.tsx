@@ -62,7 +62,7 @@ const FAQ = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Frequently Asked <span className="text-gradient">Questions</span>
+            Frequently Asked <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Questions</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
             Common questions about working with me and my approach to automation

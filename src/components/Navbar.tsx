@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="text-2xl font-bold text-gradient"
+            className="text-2xl font-bold bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });

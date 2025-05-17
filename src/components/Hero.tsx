@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter">
-            Hi, I'm <span className="text-gradient">Nina</span> — I build
+            Hi, I'm <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Nina</span> — I build
             <span className="relative inline-block mx-2 min-w-[180px] h-[60px]">
               <span 
                 className={`absolute left-0 transition-all duration-300 ease-in-out ${

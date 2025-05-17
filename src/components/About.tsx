@@ -37,7 +37,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center reveal">
-            I design <span className="text-gradient">smart systems</span> that make your business run better.
+            I design <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">smart systems</span> that make your business run better.
           </h2>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
