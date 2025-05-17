@@ -1,44 +1,38 @@
 
-import { PricingCards } from './ui/pricing-cards';
+import { Card, CardContent } from './ui/card';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
 
-const serviceTiers = [
+const services = [
     {
         name: "AI AUTOMATION",
-        price: 2999,
-        interval: "quarterly",
         description: "Comprehensive AI automation solutions for your business",
-        highlight: true,
         features: [
-            { name: "Lead qualification automation", included: true },
-            { name: "Full email & communication AI", included: true },
-            { name: "Smart scheduling & calendar optimization", included: true },
-            { name: "Multi-channel follow-up sequences", included: true },
-            { name: "Advanced analytics & reporting", included: true },
-            { name: "Custom AI workflows & integrations", included: true },
+            "Lead qualification automation",
+            "Full email & communication AI",
+            "Smart scheduling & calendar optimization",
+            "Multi-channel follow-up sequences",
+            "Advanced analytics & reporting",
+            "Custom AI workflows & integrations",
         ],
-        cta: {
-            text: "Contact me",
-            href: "#contact",
-        }
+        ctaText: "Contact me",
+        ctaHref: "#contact",
+        highlight: true
     },
     {
         name: "CRM OPTIMIZATION",
-        price: 3499,
-        interval: "project",
         description: "Complete CRM setup, optimization and training",
-        highlight: false,
         features: [
-            { name: "CRM platform selection consulting", included: true },
-            { name: "Advanced setup with custom workflows", included: true },
-            { name: "Full data migration & cleaning", included: true },
-            { name: "Comprehensive team training", included: true },
-            { name: "90 days of priority support", included: true },
-            { name: "Custom integrations & automations", included: true },
+            "CRM platform selection consulting",
+            "Advanced setup with custom workflows",
+            "Full data migration & cleaning",
+            "Comprehensive team training",
+            "90 days of priority support",
+            "Custom integrations & automations",
         ],
-        cta: {
-            text: "Get started",
-            href: "#contact",
-        }
+        ctaText: "Get started",
+        ctaHref: "#contact",
+        highlight: false
     },
 ];
 
@@ -55,12 +49,77 @@ const MyServices = () => {
                     </p>
                 </div>
 
-                <PricingCards 
-                    tiers={serviceTiers}
-                    className="gap-8"
-                    containerClassName="py-6"
-                    sectionClassName="py-8 bg-transparent"
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {services.map((service, index) => (
+                        <div 
+                            key={index}
+                            className={`relative group rounded-2xl border transition-all duration-500 ${
+                                service.highlight 
+                                    ? "bg-gradient-to-b from-accent to-accent/80 backdrop-blur-lg border-white/10" 
+                                    : "bg-accent/20 backdrop-blur-lg border-white/10"
+                            } hover:border-primary/30 hover:shadow-[0_8px_40px_-12px_rgba(139,92,246,0.3)]`}
+                        >
+                            <div className="p-10 flex flex-col h-full">
+                                <div className="space-y-4">
+                                    <h3 className="text-lg uppercase tracking-wider font-medium text-white">
+                                        {service.name}
+                                    </h3>
+                                    <p className={`text-sm pb-6 border-b ${
+                                        service.highlight
+                                            ? "text-white/70 border-white/20"
+                                            : "text-white/70 border-white/10"
+                                    }`}>
+                                        {service.description}
+                                    </p>
+                                </div>
+
+                                <div className="mt-8 space-y-4 flex-grow">
+                                    {service.features.map((feature, featureIndex) => (
+                                        <div
+                                            key={featureIndex}
+                                            className="flex items-center gap-3"
+                                        >
+                                            <div className={
+                                                service.highlight
+                                                    ? "text-white"
+                                                    : "text-white"
+                                            }>
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5">
+                                                    <path d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            <span className={
+                                                service.highlight
+                                                    ? "text-white/90"
+                                                    : "text-white/80"
+                                            }>
+                                                {feature}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-8">
+                                    <Button
+                                        className={`w-full h-12 group relative ${
+                                            service.highlight
+                                                ? "bg-white hover:bg-white/90 text-accent border border-white/20"
+                                                : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
+                                        } transition-all duration-300`}
+                                        asChild
+                                    >
+                                        <a href={service.ctaHref}>
+                                            <span className="relative z-10 flex items-center justify-center gap-2 font-medium tracking-wide">
+                                                {service.ctaText}
+                                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                            </span>
+                                        </a>
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 
                 {/* Background elements - using subtle glows that complement the new background */}
                 <div className="absolute left-0 top-1/4 w-64 h-64 bg-primary/10 rounded-full filter blur-3xl"></div>
