@@ -95,19 +95,20 @@ const Portfolio = () => {
           {title}
         </h3>
         
-        {/* Video placeholder */}
+        {/* Video placeholder with luxury style */}
         <div className="mb-8 reveal">
-          <div className="relative aspect-video bg-accent/50 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center">
+          <div className="relative aspect-video rounded-2xl overflow-hidden border border-primary/20 flex items-center justify-center bg-gradient-to-br from-black/40 to-black/80">
+            <div className="absolute inset-0 bg-grid opacity-20"></div>
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center backdrop-blur-sm border border-white/10">
-                <Play className="h-8 w-8 text-white" />
+              <div className="h-20 w-20 rounded-full bg-primary/20 flex items-center justify-center backdrop-blur-sm border border-white/10 transition-transform duration-300 hover:scale-110 cursor-pointer group">
+                <Play className="h-10 w-10 text-white transition-transform duration-300 group-hover:translate-x-0.5" />
               </div>
             </div>
-            <p className="text-white/50 text-sm">Video will be added here</p>
+            <p className="text-white/50 text-sm absolute bottom-4 right-4">Coming Soon</p>
           </div>
         </div>
         
-        {/* Projects grid */}
+        {/* Projects grid with luxury cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
           {projects.map((project, index) => (
             <div 
@@ -117,19 +118,24 @@ const Portfolio = () => {
               onMouseEnter={() => handleMouseEnter(project.id)} 
               onMouseLeave={handleMouseLeave}
             >
-              <Card className={`h-full border border-white/10 bg-accent/30 backdrop-blur-sm transition-all duration-500 ${
+              <Card className={`h-full luxury-card transition-all duration-500 ${
                 activeCard === project.id 
-                  ? 'border-primary/50 scale-[1.02] shadow-lg shadow-primary/20' 
+                  ? 'border-primary/50 scale-[1.03] shadow-lg shadow-primary/20' 
                   : 'hover:border-primary/30'
               }`}>
                 <CardHeader>
-                  <CardTitle className="text-xl text-zinc-50">{project.title}</CardTitle>
+                  <CardTitle className={`text-xl ${activeCard === project.id ? 'text-gradient' : 'text-zinc-50'}`}>
+                    {project.title}
+                  </CardTitle>
                   <CardDescription className="text-white/70">{project.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, i) => (
-                      <span key={i} className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary">
+                      <span 
+                        key={i} 
+                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
+                      >
                         {tech}
                       </span>
                     ))}
@@ -160,11 +166,14 @@ const Portfolio = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Featured <span className="text-gradient">Projects</span>
+            Featured <span className="text-gradient glow-text">Projects</span>
           </h2>
-          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
+          <p className="text-center text-lg text-white/70 mb-6 max-w-2xl mx-auto reveal">
             A selection of my recent work in automation and system design
           </p>
+          
+          {/* Luxury divider */}
+          <div className="luxury-divider mx-auto w-32 mb-16"></div>
           
           {/* AI Automation Projects */}
           {renderProjectSection("AI Automation", aiAutomationProjects)}
@@ -173,6 +182,10 @@ const Portfolio = () => {
           {renderProjectSection("CRM Solutions", crmProjects)}
         </div>
       </div>
+      
+      {/* Luxury background elements */}
+      <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-accent-blue/5 to-transparent rounded-full blur-3xl opacity-30"></div>
     </section>
   );
 };

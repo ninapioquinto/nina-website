@@ -29,8 +29,8 @@
 
   .bg-grid {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
@@ -75,9 +75,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(10, 10, 14, 0.4);
-    backdrop-filter: blur(5px);
+    background-color: rgba(10, 10, 14, 0.5);
+    backdrop-filter: blur(8px);
     z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
   }
   
   /* Fix for background seams */
@@ -86,5 +88,84 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  /* Luxury divider line */
+  .luxury-divider {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(139, 92, 246, 0.5) 50%, 
+      rgba(255, 255, 255, 0) 100%);
+    margin: 2rem 0;
+  }
+  
+  .luxury-divider::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(139, 92, 246, 0.8);
+    box-shadow: 0 0 10px 2px rgba(139, 92, 246, 0.6);
+  }
+
+  /* Luxury card styling */
+  .luxury-card {
+    @apply rounded-xl border border-white/10 bg-black/40 backdrop-blur-lg;
+    box-shadow: 
+      0 10px 30px -5px rgba(10, 10, 14, 0.8),
+      0 0 10px 0 rgba(139, 92, 246, 0.1);
+    transition: all 0.5s ease;
+  }
+  
+  .luxury-card:hover {
+    box-shadow: 
+      0 20px 40px -10px rgba(10, 10, 14, 0.9),
+      0 0 15px 2px rgba(139, 92, 246, 0.2);
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+  }
+
+  /* Subtle gold accents */
+  .gold-accent {
+    color: #D4AF37;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+  }
+
+  /* Luxury button styling */
+  .btn-luxury {
+    @apply relative overflow-hidden rounded-full bg-black/30 border border-white/10 px-6 py-3;
+    transition: all 0.4s ease;
+  }
+  
+  .btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+  
+  .btn-luxury:hover {
+    @apply border-primary/50 bg-black/50;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  .btn-luxury:hover::before {
+    left: 100%;
   }
 }
