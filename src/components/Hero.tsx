@@ -16,17 +16,8 @@ const Hero = () => {
     <section className="min-h-screen flex items-center pt-20 bg-grid relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Luxury badge icon */}
-          <div className="mb-8 flex justify-center">
-            <div className="h-16 w-16 rounded-full bg-black/30 border border-primary/20 flex items-center justify-center">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"></path>
-              </svg>
-            </div>
-          </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter">
-            Hi, I'm <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent glow-text">Nina</span> — I build
+            Hi, I'm <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Nina</span> — I build
             <span className="relative inline-block mx-2 min-w-[180px] h-[60px]">
               <span 
                 className={`absolute left-0 transition-all duration-300 ease-in-out ${
@@ -43,10 +34,8 @@ const Hero = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            <span className="text-primary/80">Systems Engineer</span> • <span className="text-white/90">AI Automation Developer</span> • <span className="text-primary/80">CRM Architect</span>
+            Systems Engineer • AI Automation Developer • CRM Architect
           </p>
-          
-          <div className="luxury-divider mx-auto w-24 mb-10"></div>
           
           <Button 
             onClick={handleExplore}
@@ -67,14 +56,10 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Enhanced floating elements */}
-      <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-primary/5 backdrop-blur-sm border border-primary/10 animate-float" style={{ animationDelay: '0s' }}></div>
-      <div className="absolute bottom-1/4 right-1/3 w-24 h-24 rounded-full bg-accent-blue/5 backdrop-blur-sm border border-accent-blue/10 animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-accent-pink/5 backdrop-blur-sm border border-accent-pink/10 animate-float" style={{ animationDelay: '2s' }}></div>
-      
-      {/* Additional luxury elements */}
-      <div className="absolute bottom-20 left-20 w-32 h-32 rounded-full bg-gradient-to-br from-primary/5 to-transparent opacity-30 blur-xl"></div>
-      <div className="absolute top-20 right-20 w-40 h-40 rounded-full bg-gradient-to-br from-accent-blue/5 to-transparent opacity-30 blur-xl"></div>
+      {/* Floating elements */}
+      <div className="absolute top-1/4 left-1/4 w-20 h-20 rounded-full bg-primary/5 animate-float" style={{ animationDelay: '0s' }}></div>
+      <div className="absolute bottom-1/4 right-1/3 w-24 h-24 rounded-full bg-accent-blue/5 animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 rounded-full bg-accent-pink/5 animate-float" style={{ animationDelay: '2s' }}></div>
     </section>
   );
 };
