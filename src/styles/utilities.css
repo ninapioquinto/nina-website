@@ -1,7 +1,7 @@
 
 @layer utilities {
   .glow-text {
-    text-shadow: 0 0 10px rgba(139, 92, 246, 0.8), 0 0 20px rgba(139, 92, 246, 0.4);
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5);
   }
 
   .glow-border {
@@ -29,13 +29,13 @@
 
   .bg-grid {
     background-image: 
-      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
   .text-gradient {
-    background: linear-gradient(90deg, #9b87f5, #7E69AB, #8B5CF6);
+    background: linear-gradient(90deg, #a855f7, #8b5cf6, #7c3aed);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -62,7 +62,82 @@
     color: rgb(139, 92, 246);
   }
   
-  /* Ensure consistent section backgrounds */
+  /* Luxury card styles */
+  .luxury-card {
+    position: relative;
+    backdrop-filter: blur(20px);
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .luxury-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.3));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    z-index: -1;
+  }
+
+  .luxury-card:hover::before {
+    opacity: 1;
+  }
+
+  .luxury-card-wrapper {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .luxury-card-wrapper.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Premium button styles */
+  .luxury-button {
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+  }
+
+  .luxury-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .luxury-button:hover::before {
+    opacity: 1;
+  }
+
+  /* Luxury scroll indicator */
+  .luxury-scroll-indicator {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(20px);
+    transition: all 0.5s ease;
+  }
+
+  .luxury-scroll-indicator:hover {
+    border-color: rgba(139, 92, 246, 0.6);
+    background: rgba(139, 92, 246, 0.15);
+  }
+
+  /* Sophisticated section overlays */
   .section-overlay {
     position: relative;
     z-index: 1;
@@ -75,16 +150,34 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(10, 10, 14, 0.4);
-    backdrop-filter: blur(5px);
+    background: linear-gradient(135deg, rgba(15, 15, 20, 0.8), rgba(30, 20, 40, 0.6));
+    backdrop-filter: blur(10px);
     z-index: -1;
   }
   
-  /* Fix for background seams */
+  /* Premium background effects */
   .bg-seamless {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  /* Elegant divider styles */
+  .luxury-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+  }
+
+  .luxury-divider-vertical {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+  }
+
+  /* Premium animation delays */
+  .luxury-delay-100 { animation-delay: 0.1s; }
+  .luxury-delay-200 { animation-delay: 0.2s; }
+  .luxury-delay-300 { animation-delay: 0.3s; }
+  .luxury-delay-400 { animation-delay: 0.4s; }
+  .luxury-delay-500 { animation-delay: 0.5s; }
 }
