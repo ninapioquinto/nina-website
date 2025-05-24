@@ -16,7 +16,7 @@ const aiAutomationProjects = [
     id: 3,
     title: "Sales Pipeline Automation",
     description: "Cut support ticket resolution time by 65% using intelligent automation",
-    tech: ["OpenAI", "Make", "Zendesk"],
+    tech: ["OpenAI", "Make", "GoHighLevel"],
     link: "#"
   },
   {
