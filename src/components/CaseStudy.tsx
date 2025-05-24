@@ -1,47 +1,34 @@
-
 import { useEffect, useRef } from 'react';
-
 const CaseStudy = () => {
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      {
-        threshold: 0.1
-      }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     const section = sectionRef.current;
     const elements = section?.querySelectorAll('.reveal');
-
     elements?.forEach(el => {
       observer.observe(el);
     });
-
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <section id="case-study" ref={sectionRef} className="py-24 relative">
+  return <section id="case-study" ref={sectionRef} className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
             Case <span className="text-gradient">Study</span>
           </h2>
-          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
-            How a Local HVAC Company Increased Bookings by 25 Per Month After a CRM Rebuild
-          </p>
+          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">How an HVAC Company Increased Bookings by 15 Per Month After a CRM Rebuild</p>
           
           <div className="grid lg:grid-cols-12 gap-8">
             <div className="lg:col-span-5 reveal">
@@ -193,10 +180,7 @@ const CaseStudy = () => {
                   </p>
                   <div className="text-center">
                     <p className="text-lg font-semibold mb-4">Let's build your custom system.</p>
-                    <a 
-                      href="#contact" 
-                      className="inline-block bg-gradient-to-r from-purple-500 to-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-violet-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    >
+                    <a href="#contact" className="inline-block bg-gradient-to-r from-purple-500 to-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-violet-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                       Book a Discovery Call
                     </a>
                   </div>
@@ -206,8 +190,6 @@ const CaseStudy = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CaseStudy;
