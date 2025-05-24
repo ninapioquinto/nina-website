@@ -1,7 +1,5 @@
-
 import { useRef, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
-import { Play } from 'lucide-react';
 
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -65,21 +63,20 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Enhanced video card */}
+            {/* Enhanced video card with YouTube embed */}
             <div className="reveal luxury-card-wrapper">
               <Card className="luxury-card group relative overflow-hidden border border-purple-200/60 bg-gradient-to-br from-slate-800/90 via-purple-900/50 to-indigo-900/60 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <CardContent className="p-8 relative z-10">
-                  <div className="aspect-video bg-gradient-to-br from-slate-700/90 to-purple-800/70 rounded-xl overflow-hidden border border-purple-200/50 flex items-center justify-center relative group-hover:border-purple-100/70 transition-colors duration-500">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/12 via-transparent to-indigo-600/12 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                    <div className="relative z-10 flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-300/60 to-violet-400/60 flex items-center justify-center backdrop-blur-sm border border-purple-200/60 group-hover:scale-110 group-hover:bg-gradient-to-br group-hover:from-purple-200/70 group-hover:to-violet-300/70 transition-all duration-500">
-                        <Play className="w-10 h-10 text-white group-hover:text-white transition-colors duration-300" />
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/70 px-3 py-1 rounded-lg backdrop-blur-sm border border-purple-200/30">
-                      Introduction Video
-                    </div>
+                  <div className="aspect-video bg-gradient-to-br from-slate-700/90 to-purple-800/70 rounded-xl overflow-hidden border border-purple-200/50 group-hover:border-purple-100/70 transition-colors duration-500">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/bxHF4sSFmr8"
+                      title="About Nina - Introduction Video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
                   </div>
                 </CardContent>
               </Card>
