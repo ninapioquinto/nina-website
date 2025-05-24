@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play } from 'lucide-react';
@@ -88,7 +87,7 @@ const Portfolio = () => {
     setActiveCard(null);
   };
 
-  const renderProjectSection = (title: string, projects: typeof aiAutomationProjects) => {
+  const renderProjectSection = (title: string, projects: typeof aiAutomationProjects, videoUrl?: string) => {
     return (
       <div className="mb-20">
         {/* Luxury section header */}
@@ -105,19 +104,32 @@ const Portfolio = () => {
           </div>
         </div>
         
-        {/* Premium video placeholder */}
+        {/* Video section */}
         <div className="mb-12 reveal">
           <Card className="luxury-card group relative overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900/50 via-purple-900/20 to-indigo-900/30 backdrop-blur-xl">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             <CardContent className="p-8 relative z-10">
-              <div className="aspect-video bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl overflow-hidden border border-white/5 flex items-center justify-center relative group-hover:border-purple-400/20 transition-colors duration-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative z-10 flex flex-col items-center space-y-4">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-600/20 flex items-center justify-center backdrop-blur-sm border border-purple-400/20 group-hover:scale-110 transition-transform duration-500">
-                    <Play className="w-10 h-10 text-purple-300 group-hover:text-purple-200 transition-colors duration-300" />
+              <div className="aspect-video bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl overflow-hidden border border-white/5 group-hover:border-purple-400/20 transition-colors duration-500">
+                {videoUrl ? (
+                  <iframe
+                    className="w-full h-full"
+                    src={videoUrl}
+                    title={`${title} - Demo Video`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="relative z-10 flex items-center justify-center h-full">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="relative z-10 flex flex-col items-center space-y-4">
+                      <div className="w-20 h-20 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-600/20 flex items-center justify-center backdrop-blur-sm border border-purple-400/20 group-hover:scale-110 transition-transform duration-500">
+                        <Play className="w-10 h-10 text-purple-300 group-hover:text-purple-200 transition-colors duration-300" />
+                      </div>
+                      <p className="text-white/60 text-sm font-medium">Demo Video Coming Soon</p>
+                    </div>
                   </div>
-                  <p className="text-white/60 text-sm font-medium">Demo Video Coming Soon</p>
-                </div>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -211,7 +223,7 @@ const Portfolio = () => {
           </div>
           
           {/* Project sections */}
-          {renderProjectSection("AI Automation", aiAutomationProjects)}
+          {renderProjectSection("AI Automation", aiAutomationProjects, "https://www.youtube.com/embed/ay772nwAHt8")}
           {renderProjectSection("CRM Solutions", crmProjects)}
         </div>
       </div>
