@@ -1,11 +1,8 @@
-
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import { CheckCircle } from 'lucide-react';
-
 const MyProcess = () => {
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -16,56 +13,40 @@ const MyProcess = () => {
     }, {
       threshold: 0.1
     });
-    
     const section = sectionRef.current;
     const elements = section?.querySelectorAll('.reveal');
     elements?.forEach(el => {
       observer.observe(el);
     });
-    
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  const steps = [
-    {
-      number: "01",
-      title: "Discovery and Operational Review",
-      description: "We begin with a focused strategy session. I take a clear look at how your business runs across sales, fulfillment, and internal workflows. The goal is to find what's slowing you down, where time is leaking, and where automation can create better flow. This step gives us a real foundation to build on.",
-      testimonial: "She spotted the bottlenecks in our process almost immediately. It made everything feel sharper."
-    },
-    {
-      number: "02",
-      title: "CRM and Automation Blueprint",
-      description: "After the review, I map out a clear and customized plan. This includes the structure of your CRM, the roles of each stage, and where automation and AI can remove manual effort. The blueprint is designed to fit how your business actually runs so every part of it makes sense to you and your team.",
-      testimonial: "It wasn't a cookie-cutter CRM. It was shaped around how we work and what we needed to grow."
-    },
-    {
-      number: "03",
-      title: "Custom System Build with AI and Automation",
-      description: "Once approved, I build the full system using tools like GoHighLevel, ClickUp, or Airtable. This includes custom fields, smart pipelines, and automated actions that reduce repetitive work. I also embed AI where it makes real impact — whether it's routing leads, handling follow-ups, or streamlining internal tasks.",
-      testimonial: "The system runs like a quiet operator in the background. Our team now spends more time closing and less time clicking."
-    },
-    {
-      number: "04",
-      title: "Testing, Final Walkthrough, and Handoff",
-      description: "Before anything goes live, I test every step and walk through the logic to make sure it runs smoothly. I remove any clutter and simplify where needed. You get a complete walkthrough so you and your team can use the system confidently without confusion or overwhelm.",
-      testimonial: "We didn't need hours of training. It just made sense. And it works."
-    }
-  ];
-
-  const benefits = [
-    "A system tailored to your business operations",
-    "Automation that reduces workload and increases speed",
-    "Better data visibility and cleaner handoffs",
-    "Full ownership and a clean setup your team will actually use"
-  ];
-
-  return (
-    <section id="my-process" ref={sectionRef} className="py-20 relative">
+  const steps = [{
+    number: "01",
+    title: "Discovery and Operational Review",
+    description: "We begin with a focused strategy session. I take a clear look at how your business runs across sales, fulfillment, and internal workflows. The goal is to find what's slowing you down, where time is leaking, and where automation can create better flow. This step gives us a real foundation to build on.",
+    testimonial: "She spotted the bottlenecks in our process almost immediately. It made everything feel sharper."
+  }, {
+    number: "02",
+    title: "CRM and Automation Blueprint",
+    description: "After the review, I map out a clear and customized plan. This includes the structure of your CRM, the roles of each stage, and where automation and AI can remove manual effort. The blueprint is designed to fit how your business actually runs so every part of it makes sense to you and your team.",
+    testimonial: "It wasn't a cookie-cutter CRM. It was shaped around how we work and what we needed to grow."
+  }, {
+    number: "03",
+    title: "Custom System Build with AI and Automation",
+    description: "Once approved, I build the full system using tools like GoHighLevel, ClickUp, or Airtable. This includes custom fields, smart pipelines, and automated actions that reduce repetitive work. I also embed AI where it makes real impact — whether it's routing leads, handling follow-ups, or streamlining internal tasks.",
+    testimonial: "The system runs like a quiet operator in the background. Our team now spends more time closing and less time clicking."
+  }, {
+    number: "04",
+    title: "Testing, Final Walkthrough, and Handoff",
+    description: "Before anything goes live, I test every step and walk through the logic to make sure it runs smoothly. I remove any clutter and simplify where needed. You get a complete walkthrough so you and your team can use the system confidently without confusion or overwhelm.",
+    testimonial: "We didn't need hours of training. It just made sense. And it works."
+  }];
+  const benefits = ["A system tailored to your business operations", "Automation that reduces workload and increases speed", "Better data visibility and cleaner handoffs", "Full ownership and a clean setup your team will actually use"];
+  return <section id="my-process" ref={sectionRef} className="py-20 relative">
       {/* Subtle background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -97,8 +78,9 @@ const MyProcess = () => {
 
           {/* Process Steps */}
           <div className="space-y-12 mb-16">
-            {steps.map((step, index) => (
-              <div key={step.number} className="reveal" style={{ animationDelay: `${index * 0.2}s` }}>
+            {steps.map((step, index) => <div key={step.number} className="reveal" style={{
+            animationDelay: `${index * 0.2}s`
+          }}>
                 <Card className="border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 group relative overflow-hidden">
                   {/* Hover effect overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -124,17 +106,12 @@ const MyProcess = () => {
                         </p>
                         
                         {/* Testimonial */}
-                        <div className="bg-gradient-to-r from-purple-500/20 to-violet-500/20 border border-purple-400/30 rounded-lg p-4 backdrop-blur-sm">
-                          <p className="text-purple-200 italic font-medium">
-                            "{step.testimonial}"
-                          </p>
-                        </div>
+                        
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* What You Get Section */}
@@ -152,12 +129,10 @@ const MyProcess = () => {
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-6 w-6 text-purple-400 flex-shrink-0 mt-0.5" />
                       <span className="text-white/85 text-base">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 <div className="text-center">
@@ -170,8 +145,6 @@ const MyProcess = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default MyProcess;
