@@ -1,3 +1,4 @@
+
 import { useRef, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
 
@@ -71,7 +72,7 @@ const About = () => {
                   <div className="aspect-video bg-gradient-to-br from-slate-700/90 to-purple-800/70 rounded-xl overflow-hidden border border-purple-200/50 group-hover:border-purple-100/70 transition-colors duration-500">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/bxHF4sSFmr8"
+                      src="https://www.youtube.com/embed/9sO3W61AnvM"
                       title="About Nina - Introduction Video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
