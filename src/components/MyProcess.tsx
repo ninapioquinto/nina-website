@@ -65,50 +65,50 @@ const MyProcess = () => {
   ];
 
   return (
-    <section id="my-process" ref={sectionRef} className="py-32 relative overflow-hidden">
-      {/* Luxury background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900/40 to-indigo-900/20"></div>
-        <div className="absolute inset-0 bg-grid opacity-20"></div>
-      </div>
+    <section id="my-process" ref={sectionRef} className="py-20 relative">
+      {/* Subtle background overlay */}
+      <div className="absolute inset-0 bg-black/20"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal">
-              <span className="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent">MyProcessBuild™</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
+              <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
+                MyProcessBuild™
+              </span>
             </h2>
             
             {/* Sophisticated divider */}
             <div className="flex items-center justify-center mb-8 reveal">
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
-              <div className="mx-4 w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-violet-500"></div>
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent"></div>
+              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              <div className="mx-4 w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-violet-400"></div>
+              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
             </div>
 
-            <p className="text-xl text-white mb-8 max-w-4xl mx-auto leading-relaxed reveal">
+            <p className="text-xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed reveal">
               A clear and proven system to streamline operations, reduce manual work, and help you scale with custom CRMs and AI-powered automation.
             </p>
             
-            <p className="text-lg text-white/90 max-w-4xl mx-auto leading-relaxed reveal">
+            <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed reveal">
               Most businesses waste time jumping between tools, chasing follow-ups, or fixing tasks that should already be done. This process replaces that with a smarter way to operate. I build custom systems that work quietly in the background, supporting your team and giving you control of your operations without adding complexity.
             </p>
           </div>
 
           {/* Process Steps */}
-          <div className="space-y-16 mb-20">
+          <div className="space-y-12 mb-16">
             {steps.map((step, index) => (
-              <div key={step.number} className={`reveal luxury-card-wrapper ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`} style={{ animationDelay: `${index * 0.2}s` }}>
-                <Card className="luxury-card border border-white/10 bg-gradient-to-br from-slate-900/40 via-purple-900/20 to-indigo-900/20 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div key={step.number} className="reveal" style={{ animationDelay: `${index * 0.2}s` }}>
+                <Card className="border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 group relative overflow-hidden">
+                  {/* Hover effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <CardContent className="p-8 relative z-10">
                     <div className="flex flex-col md:flex-row gap-8 items-start">
                       {/* Step Number */}
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-500/20 border border-purple-400/30 flex items-center justify-center">
-                          <span className="text-2xl font-bold bg-gradient-to-r from-purple-300 to-violet-300 bg-clip-text text-transparent">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500/30 to-violet-500/30 border border-purple-400/40 flex items-center justify-center backdrop-blur-sm">
+                          <span className="text-2xl font-bold text-white">
                             {step.number}
                           </span>
                         </div>
@@ -119,12 +119,12 @@ const MyProcess = () => {
                         <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors duration-300">
                           Step {step.number}: {step.title}
                         </h3>
-                        <p className="text-white/90 mb-6 leading-relaxed text-base">
+                        <p className="text-white/85 mb-6 leading-relaxed text-base">
                           {step.description}
                         </p>
                         
                         {/* Testimonial */}
-                        <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-400/20 rounded-lg p-4">
+                        <div className="bg-gradient-to-r from-purple-500/20 to-violet-500/20 border border-purple-400/30 rounded-lg p-4 backdrop-blur-sm">
                           <p className="text-purple-200 italic font-medium">
                             "{step.testimonial}"
                           </p>
@@ -139,27 +139,29 @@ const MyProcess = () => {
 
           {/* What You Get Section */}
           <div className="reveal">
-            <Card className="luxury-card border border-white/10 bg-gradient-to-br from-slate-900/40 via-purple-900/20 to-indigo-900/20 backdrop-blur-xl group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <Card className="border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/30 group relative overflow-hidden transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-violet-300 bg-clip-text text-transparent">
-                    What You Get
+                  <h3 className="text-3xl font-bold mb-4 text-white">
+                    <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                      What You Get
+                    </span>
                   </h3>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="h-6 w-6 text-purple-300 flex-shrink-0 mt-0.5" />
-                      <span className="text-white/90 text-base">{benefit}</span>
+                      <CheckCircle className="h-6 w-6 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-white/85 text-base">{benefit}</span>
                     </div>
                   ))}
                 </div>
                 
                 <div className="text-center">
-                  <p className="text-lg text-white font-medium">
+                  <p className="text-lg text-white/90 font-medium">
                     This is not just software. This is your business infrastructure — built to support growth, reduce errors, and free up your team's time.
                   </p>
                 </div>
