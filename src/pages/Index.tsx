@@ -82,12 +82,12 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <PoweredBy />
         <About />
         <Services />
-        <MyProcess />
-        <Portfolio />
         <CaseStudy />
+        <Portfolio />
+        <MyProcess />
+        <PoweredBy />
         <MyServices />
         <Certifications />
         <FAQ />
