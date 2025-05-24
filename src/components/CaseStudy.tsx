@@ -56,8 +56,8 @@ const CaseStudy = () => {
                 
                 <div className="space-y-6">
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6">
-                    <div className="text-4xl font-bold text-primary mb-2">65+</div>
-                    <div className="text-sm text-white/70">Monthly bookings (from 40)</div>
+                    <div className="text-4xl font-bold text-primary mb-2">30+</div>
+                    <div className="text-sm text-white/70">Monthly bookings (from 20)</div>
                   </div>
                   
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6">
@@ -80,13 +80,12 @@ const CaseStudy = () => {
                   <p className="text-lg mb-4">
                     The office staff spent hours manually confirming bookings and tracking jobs through spreadsheets and group chats. It was messy and time-consuming.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2 text-white/70 mb-4">
-                    <li>Follow-ups were often missed</li>
-                    <li>Annual maintenance clients were being forgotten</li>
-                    <li>No clear pipeline to track leads, jobs, or customer activity</li>
-                    <li>Technicians had no access to real-time job information</li>
-                    <li>Team relied on messages or printed notes, causing delays</li>
-                  </ul>
+                  <p className="text-lg mb-4">
+                    Follow-ups were often missed. Annual maintenance clients were being forgotten. And there was no clear pipeline to track leads, jobs, or customer activity.
+                  </p>
+                  <p className="text-lg mb-4">
+                    Technicians in the field had no access to real-time job information. They often relied on messages or printed notes, which led to delays and inconsistent service.
+                  </p>
                   <p className="text-lg">
                     The team was working hard, but the lack of structure made everything feel reactive.
                   </p>
@@ -144,8 +143,8 @@ const CaseStudy = () => {
                       <tbody>
                         <tr>
                           <td className="border border-white/10 p-3 text-white/80">Monthly bookings</td>
-                          <td className="border border-white/10 p-3 text-white/70">Around 40</td>
-                          <td className="border border-white/10 p-3 text-primary font-semibold">Over 65</td>
+                          <td className="border border-white/10 p-3 text-white/70">Around 20</td>
+                          <td className="border border-white/10 p-3 text-primary font-semibold">Over 30</td>
                         </tr>
                         <tr className="bg-accent/5">
                           <td className="border border-white/10 p-3 text-white/80">Admin hours per week</td>
