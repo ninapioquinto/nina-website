@@ -52,12 +52,12 @@ const certifications = [
     image: "/lovable-uploads/00eb4f5b-11e4-4836-a00a-65271df6cd00.png"
   },
   {
-    id: 7,
-    title: "ClickUp Expert Certification",
-    organization: "ClickUp",
+    id: 6,
+    title: "Advanced Aptly Inbox",
+    organization: "RUN PMC",
     date: "2024",
-    credentialId: "d3",
-    image: "/lovable-uploads/ecd966d9-efd2-46b9-871a-e2a4fa462fc2.png"
+    credentialId: "APTLY-ADV-2024",
+    image: "/lovable-uploads/e326ff7f-0cb0-4f44-84c8-c05a22677deb.png"
   },
   {
     id: 8,
@@ -69,11 +69,11 @@ const certifications = [
   },
   {
     id: 9,
-    title: "Advanced Aptly Inbox",
-    organization: "RUN PMC",
+    title: "ClickUp Expert Certification",
+    organization: "ClickUp",
     date: "2024",
-    credentialId: "APTLY-ADV-2024",
-    image: "/lovable-uploads/e326ff7f-0cb0-4f44-84c8-c05a22677deb.png"
+    credentialId: "d3",
+    image: "/lovable-uploads/ecd966d9-efd2-46b9-871a-e2a4fa462fc2.png"
   }
 ];
 
