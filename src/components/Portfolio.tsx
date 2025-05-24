@@ -14,7 +14,7 @@ const aiAutomationProjects = [
   },
   {
     id: 3,
-    title: "AI-Powered Support System",
+    title: "Sales Pipeline Automation",
     description: "Cut support ticket resolution time by 65% using intelligent automation",
     tech: ["OpenAI", "Make", "Zendesk"],
     link: "#"
