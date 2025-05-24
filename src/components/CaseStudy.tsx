@@ -40,31 +40,34 @@ const CaseStudy = () => {
             Case <span className="text-gradient">Study</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
-            Agency Onboarding Automation: From Chaos to Clarity
+            How a Local HVAC Company Increased Bookings by 25 Per Month After a CRM Rebuild
           </p>
           
           <div className="grid lg:grid-cols-12 gap-8">
             <div className="lg:col-span-5 reveal">
               <div className="sticky top-32">
-                <h3 className="text-2xl font-bold mb-4">Client Challenge</h3>
+                <h3 className="text-2xl font-bold mb-4">The Client</h3>
                 <p className="text-white/70 mb-6">
-                  A growing digital marketing agency with 35 team members was losing clients due to a chaotic onboarding process that took 3+ weeks and created confusion for both clients and team members.
+                  This local HVAC company was growing, but their backend tools were falling behind. With five field technicians and two office staff, they were doing their best to manage demand. But their outdated CRM created more problems than solutions.
+                </p>
+                <p className="text-white/70 mb-6">
+                  The business was ready for the next stage, but their system was holding them back. They didn't need more tools. They needed one system that supported the entire team and made their day-to-day smoother.
                 </p>
                 
                 <div className="space-y-6">
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6">
-                    <div className="text-4xl font-bold text-primary mb-2">86%</div>
-                    <div className="text-sm text-white/70">Reduction in onboarding time</div>
+                    <div className="text-4xl font-bold text-primary mb-2">65+</div>
+                    <div className="text-sm text-white/70">Monthly bookings (from 40)</div>
                   </div>
                   
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6">
-                    <div className="text-4xl font-bold text-accent-blue mb-2">100%</div>
-                    <div className="text-sm text-white/70">Client visibility into process</div>
+                    <div className="text-4xl font-bold text-accent-blue mb-2">80%</div>
+                    <div className="text-sm text-white/70">Reduction in admin hours</div>
                   </div>
                   
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6">
-                    <div className="text-4xl font-bold text-accent-pink mb-2">24%</div>
-                    <div className="text-sm text-white/70">Increase in client retention</div>
+                    <div className="text-4xl font-bold text-accent-pink mb-2">100%</div>
+                    <div className="text-sm text-white/70">Real-time field team visibility</div>
                   </div>
                 </div>
               </div>
@@ -75,118 +78,129 @@ const CaseStudy = () => {
                 <div className="reveal">
                   <h4 className="text-xl font-semibold mb-3 text-accent-blue">The Problem</h4>
                   <p className="text-lg mb-4">
-                    The agency's manual onboarding process was creating major issues:
+                    The office staff spent hours manually confirming bookings and tracking jobs through spreadsheets and group chats. It was messy and time-consuming.
                   </p>
-                  <ul className="list-disc pl-6 space-y-2 text-white/70">
-                    <li>3+ weeks to fully onboard new clients</li>
-                    <li>Information trapped in emails and spreadsheets</li>
-                    <li>Inconsistent client experience</li>
-                    <li>Team confusion about responsibilities</li>
-                    <li>No visibility for clients into process status</li>
+                  <ul className="list-disc pl-6 space-y-2 text-white/70 mb-4">
+                    <li>Follow-ups were often missed</li>
+                    <li>Annual maintenance clients were being forgotten</li>
+                    <li>No clear pipeline to track leads, jobs, or customer activity</li>
+                    <li>Technicians had no access to real-time job information</li>
+                    <li>Team relied on messages or printed notes, causing delays</li>
                   </ul>
+                  <p className="text-lg">
+                    The team was working hard, but the lack of structure made everything feel reactive.
+                  </p>
                 </div>
                 
                 <div className="reveal">
                   <h4 className="text-xl font-semibold mb-3 text-primary">The Solution</h4>
                   <p className="text-lg mb-4">
-                    I designed and implemented an end-to-end automated system:
+                    I led a complete rebuild of their CRM by first migrating all client, job, and quote data. Once their records were cleaned and organized, I created a streamlined system tailored to how their team actually operated.
                   </p>
-                  <div className="bg-accent/10 rounded-lg p-6 border border-white/5">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Custom GoHighLevel client portal</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Automated document collection</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Client progress dashboard</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Automated team task assignment</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Milestone notification system</span>
-                        </div>
-                        <div className="flex items-center">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-2"></div>
-                          <span>Custom integration with existing tools</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="reveal">
-                  <h4 className="text-xl font-semibold mb-3 text-accent-pink">The Process</h4>
-                  <p className="text-lg mb-4">
-                    Implementation was completed in 6 weeks:
-                  </p>
+                  
                   <div className="space-y-6">
-                    <div className="relative">
-                      <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-primary/30"></div>
-                      <div className="relative pl-12">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-                          <span>1</span>
-                        </div>
-                        <h5 className="text-lg font-medium">Process Mapping & Systems Audit</h5>
-                        <p className="text-white/70">Documenting current workflows and identifying bottlenecks</p>
-                      </div>
+                    <div className="bg-accent/10 rounded-lg p-6 border border-white/5">
+                      <h5 className="text-lg font-medium mb-3 text-primary">For the office team</h5>
+                      <p className="text-white/80">
+                        They now have a clean visual pipeline that shows where every job stands. Bookings and assignments are handled in just a few clicks. All client records, notes, and status updates are in one centralized space.
+                      </p>
                     </div>
                     
-                    <div className="relative">
-                      <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-primary/30"></div>
-                      <div className="relative pl-12">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-                          <span>2</span>
-                        </div>
-                        <h5 className="text-lg font-medium">Custom Portal Development</h5>
-                        <p className="text-white/70">Building client-facing interface and team dashboards</p>
-                      </div>
+                    <div className="bg-accent/10 rounded-lg p-6 border border-white/5">
+                      <h5 className="text-lg font-medium mb-3 text-accent-blue">For the technicians</h5>
+                      <p className="text-white/80">
+                        I built a mobile-friendly interface where they can view job details, update progress, upload photos, and add notes right from their phones. Everyone stays aligned in real time.
+                      </p>
                     </div>
                     
-                    <div className="relative">
-                      <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-primary/30"></div>
-                      <div className="relative pl-12">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-                          <span>3</span>
-                        </div>
-                        <h5 className="text-lg font-medium">Integration & Automation</h5>
-                        <p className="text-white/70">Connecting existing systems and building automation flows</p>
-                      </div>
-                    </div>
-                    
-                    <div className="relative">
-                      <div className="relative pl-12">
-                        <div className="absolute left-0 top-1 h-8 w-8 rounded-full bg-primary/20 border border-primary flex items-center justify-center">
-                          <span>4</span>
-                        </div>
-                        <h5 className="text-lg font-medium">Training & Optimization</h5>
-                        <p className="text-white/70">Team onboarding and iterative improvements</p>
-                      </div>
+                    <div className="bg-accent/10 rounded-lg p-6 border border-white/5">
+                      <h5 className="text-lg font-medium mb-3 text-accent-pink">For the customers</h5>
+                      <p className="text-white/80">
+                        Automated confirmations, reminders, and follow-ups are now sent without anyone on the team lifting a finger. I also added recurring service alerts for annual maintenance clients to increase repeat business and retention.
+                      </p>
                     </div>
                   </div>
+                  
+                  <p className="text-lg mt-6">
+                    The new system was built using GoHighLevel, Make, Google Sheets, and Google Drive. Each piece was customized to fit the team's workflow with zero fluff.
+                  </p>
                 </div>
                 
                 <div className="reveal">
-                  <h4 className="text-xl font-semibold mb-3 text-accent-blue">The Results</h4>
+                  <h4 className="text-xl font-semibold mb-3 text-accent-pink">The Results</h4>
+                  <p className="text-lg mb-6">
+                    In just a few weeks, the company saw a complete shift in how they operated. They booked more jobs, reduced admin hours, and improved communication across the board.
+                  </p>
+                  
+                  <div className="overflow-x-auto mb-6">
+                    <table className="w-full border-collapse border border-white/20 rounded-lg">
+                      <thead>
+                        <tr className="bg-accent/20">
+                          <th className="border border-white/10 p-3 text-left text-white font-semibold">Key Area</th>
+                          <th className="border border-white/10 p-3 text-left text-white font-semibold">Before</th>
+                          <th className="border border-white/10 p-3 text-left text-white font-semibold">After</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td className="border border-white/10 p-3 text-white/80">Monthly bookings</td>
+                          <td className="border border-white/10 p-3 text-white/70">Around 40</td>
+                          <td className="border border-white/10 p-3 text-primary font-semibold">Over 65</td>
+                        </tr>
+                        <tr className="bg-accent/5">
+                          <td className="border border-white/10 p-3 text-white/80">Admin hours per week</td>
+                          <td className="border border-white/10 p-3 text-white/70">More than 20</td>
+                          <td className="border border-white/10 p-3 text-primary font-semibold">Under 4</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-white/10 p-3 text-white/80">Booking confirmations</td>
+                          <td className="border border-white/10 p-3 text-white/70">Often delayed</td>
+                          <td className="border border-white/10 p-3 text-primary font-semibold">Instantly sent through automation</td>
+                        </tr>
+                        <tr className="bg-accent/5">
+                          <td className="border border-white/10 p-3 text-white/80">Field team visibility</td>
+                          <td className="border border-white/10 p-3 text-white/70">Unclear and fragmented</td>
+                          <td className="border border-white/10 p-3 text-primary font-semibold">Real-time access with mobile tools</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
                   <div className="bg-accent/20 border border-white/10 rounded-lg p-6 mb-6">
                     <blockquote className="text-lg italic">
-                      "Luna's system completely transformed our client experience. Onboarding that used to take weeks now happens in days, with complete clarity for both our team and clients. It's been a game-changer for our growth."
+                      "This changed everything. Our team finally feels organized. We're saving time and booking more work without any extra stress."
                     </blockquote>
-                    <div className="mt-3 text-sm text-white/70">— Alex Rivera, Agency Founder</div>
+                    <div className="mt-3 text-sm text-white/70">— HVAC Business Owner</div>
                   </div>
-                  <p className="text-lg">
-                    The agency reduced onboarding time from 3+ weeks to just 4 days. Client satisfaction scores increased by 32% and team confusion was eliminated. The streamlined process allowed the agency to take on 40% more clients without adding staff.
+                </div>
+                
+                <div className="reveal">
+                  <h4 className="text-xl font-semibold mb-3 text-accent-blue">Why It Worked</h4>
+                  <p className="text-lg mb-4">
+                    This was not a one-size-fits-all system. It was a thoughtfully designed CRM tailored to the business's real operations.
                   </p>
+                  <p className="text-lg mb-4">
+                    The office team now has structure and visibility. The field team has clarity and tools that work on the go. And the owner finally has a full picture of what is happening in the business.
+                  </p>
+                  <p className="text-lg font-semibold">
+                    There were no new hires. Just smarter systems that actually work.
+                  </p>
+                </div>
+                
+                <div className="reveal">
+                  <h4 className="text-xl font-semibold mb-3 text-primary">Ready for a System That Grows with You</h4>
+                  <p className="text-lg mb-6">
+                    If your service business is expanding and your backend cannot keep up, I can help you build a custom CRM that reduces the chaos and brings your team together.
+                  </p>
+                  <div className="text-center">
+                    <p className="text-lg font-semibold mb-4">Let's build your custom system.</p>
+                    <a 
+                      href="#contact" 
+                      className="inline-block bg-gradient-to-r from-purple-500 to-violet-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-violet-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      Book a Discovery Call
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
