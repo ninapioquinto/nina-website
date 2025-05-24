@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play } from 'lucide-react';
@@ -20,7 +21,7 @@ const aiAutomationProjects = [
   },
   {
     id: 6,
-    title: "Document Processing System",
+    title: "Lead Capture & Nurture System",
     description: "Automated document management saving 30+ hours per week for accounting team",
     tech: ["Make", "OpenAI", "Google Workspace"],
     link: "#"
