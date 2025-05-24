@@ -1,15 +1,14 @@
-
 import { useRef } from 'react';
 import { CertificationParallax } from './CertificationParallax';
 
 const certifications = [
   {
-    id: 1,
-    title: "Generative AI for Data Engineers",
-    organization: "IBM & Coursera",
+    id: 3,
+    title: "Generative AI in Business",
+    organization: "University of Michigan",
     date: "2025",
-    credentialId: "XED4DH5RB9C",
-    image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png"
+    credentialId: "PZZTETE6QFDS",
+    image: "/lovable-uploads/15357454-e5af-401f-8891-c24484c6ebd6.png"
   },
   {
     id: 2,
@@ -20,20 +19,20 @@ const certifications = [
     image: "/lovable-uploads/5f80490e-9946-4a79-b59d-85573825b7fa.png"
   },
   {
-    id: 3,
-    title: "Generative AI in Business",
-    organization: "University of Michigan",
+    id: 1,
+    title: "Generative AI for Data Engineers",
+    organization: "IBM & Coursera",
     date: "2025",
-    credentialId: "PZZTETE6QFDS",
-    image: "/lovable-uploads/15357454-e5af-401f-8891-c24484c6ebd6.png"
+    credentialId: "XED4DH5RB9C",
+    image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png"
   },
   {
-    id: 4,
-    title: "Make Intermediate",
-    organization: "Make Academy",
+    id: 6,
+    title: "ClickUp Brain Expert",
+    organization: "ClickUp",
     date: "2024",
-    credentialId: "MAKE-INT-2024",
-    image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png"
+    credentialId: "CLK-BRAIN-EXP",
+    image: "/lovable-uploads/00eb4f5b-11e4-4836-a00a-65271df6cd00.png"
   },
   {
     id: 5,
@@ -44,12 +43,12 @@ const certifications = [
     image: "/lovable-uploads/28ec46ce-d366-429a-92f9-7329ce14a6b5.png"
   },
   {
-    id: 6,
-    title: "ClickUp Brain Expert",
-    organization: "ClickUp",
+    id: 4,
+    title: "Make Intermediate",
+    organization: "Make Academy",
     date: "2024",
-    credentialId: "CLK-BRAIN-EXP",
-    image: "/lovable-uploads/00eb4f5b-11e4-4836-a00a-65271df6cd00.png"
+    credentialId: "MAKE-INT-2024",
+    image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png"
   },
   {
     id: 6,
