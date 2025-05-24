@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
 import Services from '../components/Services';
 import MyServices from '../components/MyServices';
+import MyProcess from '../components/MyProcess';
 import Certifications from '../components/Certifications';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
@@ -84,6 +85,7 @@ const Index = () => {
         <PoweredBy />
         <About />
         <Services />
+        <MyProcess />
         <Portfolio />
         <CaseStudy />
         <MyServices />

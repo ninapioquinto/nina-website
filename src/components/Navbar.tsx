@@ -31,6 +31,7 @@ const Navbar = () => {
 
   const links = [
     { href: 'about', label: 'About' },
+    { href: 'my-process', label: 'My Process' },
     { href: 'portfolio', label: 'Work' },
     { href: 'case-study', label: 'Case Study' },
     { href: 'faq', label: 'FAQ' },
