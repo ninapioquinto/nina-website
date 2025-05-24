@@ -23,7 +23,7 @@ const aiAutomationProjects = [
     id: 6,
     title: "Lead Capture & Nurture System",
     description: "Intelligent lead scoring and automated nurture campaigns that increased qualified leads by 55%",
-    tech: ["Make", "OpenAI", "Google Workspace"],
+    tech: ["Make", "OpenAI", "GoHighLevel"],
     link: "#"
   }
 ];
