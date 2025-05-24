@@ -121,7 +121,7 @@ const CaseStudy = () => {
                   </div>
                   
                   <p className="text-lg mt-6">
-                    The new system was built using GoHighLevel, Make, Google Sheets, and Google Drive. Each piece was customized to fit the team's workflow with zero fluff.
+                    The new system was built using GoHighLevel, Make, and Airtable. Each piece was customized to fit the team's workflow with zero fluff.
                   </p>
                 </div>
                 
