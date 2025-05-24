@@ -15,14 +15,14 @@ const aiAutomationProjects = [
   {
     id: 3,
     title: "Sales Pipeline Automation",
-    description: "Cut support ticket resolution time by 65% using intelligent automation",
+    description: "Automated lead qualification and follow-up sequences, increasing conversion rates by 40%",
     tech: ["OpenAI", "Make", "GoHighLevel"],
     link: "#"
   },
   {
     id: 6,
     title: "Lead Capture & Nurture System",
-    description: "Automated document management saving 30+ hours per week for accounting team",
+    description: "Intelligent lead scoring and automated nurture campaigns that increased qualified leads by 55%",
     tech: ["Make", "OpenAI", "Google Workspace"],
     link: "#"
   }
