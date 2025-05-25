@@ -1,9 +1,6 @@
-
 import { useEffect, useRef } from 'react';
-
 const CaseStudy = () => {
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -14,22 +11,18 @@ const CaseStudy = () => {
     }, {
       threshold: 0.1
     });
-    
     const section = sectionRef.current;
     const elements = section?.querySelectorAll('.reveal');
     elements?.forEach(el => {
       observer.observe(el);
     });
-    
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <section id="case-study" ref={sectionRef} className="py-24 relative">
+  return <section id="case-study" ref={sectionRef} className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
@@ -159,12 +152,7 @@ const CaseStudy = () => {
                     </table>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-purple-900/30 to-violet-900/20 border border-purple-400/30 rounded-lg p-6 mb-6 backdrop-blur-sm">
-                    <blockquote className="text-lg italic">
-                      "This changed everything. Our team finally feels organized. We're saving time and booking more work without any extra stress."
-                    </blockquote>
-                    <div className="mt-3 text-sm text-white/70">— HVAC Business Owner</div>
-                  </div>
+                  
                 </div>
                 
                 <div className="reveal">
@@ -197,8 +185,6 @@ const CaseStudy = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CaseStudy;
