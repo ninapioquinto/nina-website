@@ -162,7 +162,7 @@ const Portfolio = () => {
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
-                      {/* Shimmer effect */}
+                      {/* Shimmer effect using Tailwind animation */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 animate-[shimmer_2s_ease-in-out_infinite] translate-x-[-100%]"></div>
                       </div>
@@ -212,14 +212,6 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-      
-      {/* Custom CSS for shimmer animation */}
-      <style jsx>{`
-        @keyframes shimmer {
-          0% { transform: translateX(-100%) skewX(-12deg); }
-          100% { transform: translateX(200%) skewX(-12deg); }
-        }
-      `}</style>
     </section>
   );
 };
