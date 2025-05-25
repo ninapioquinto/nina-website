@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play } from 'lucide-react';
@@ -108,7 +107,7 @@ const Portfolio = () => {
               </div>
             </div>
             
-            {/* Video section */}
+            {/* Video section with Google Drive embed */}
             <div className="mb-12 reveal">
               <Card className="luxury-card group relative overflow-hidden border border-white/20 bg-gradient-to-br from-slate-800/80 via-purple-900/60 to-indigo-900/80 backdrop-blur-xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
@@ -116,10 +115,10 @@ const Portfolio = () => {
                   <div className="aspect-video bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl overflow-hidden border border-white/10 group-hover:border-purple-400/30 transition-colors duration-500">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/embed/ay772nwAHt8"
+                      src="https://drive.google.com/file/d/1UsvmajD3BI3t7aedsciDUXJ_DtMdZ-G2/preview"
                       title="AI Automation - Demo Video"
                       frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allow="autoplay"
                       allowFullScreen
                     />
                   </div>
