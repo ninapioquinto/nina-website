@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -9,52 +8,52 @@ import {
 
 const faqData = [
   {
-    question: "What tools do you specialize in?",
-    answer: "I primarily work with Make (formerly Integromat), Zapier, OpenAI, GoHighLevel, ClickUp, Airtable, and various CRMs. I'm tool-agnostic and learn new systems quickly based on your existing tech stack and needs."
+    question: "Who do you typically work with?",
+    answer: "I work with solopreneurs, lean teams, and small businesses who are ready to eliminate inefficiencies and scale smarter. Whether you're drowning in repetitive tasks or dealing with scattered systems, I help you reclaim time, clarity, and control through custom automation and AI-powered solutions."
   },
   {
-    question: "What kind of businesses do you work with?",
-    answer: "I work with service businesses, agencies, and consultancies that have grown to the point where manual operations are causing bottlenecks. My clients typically have 5-50 team members and have outgrown their initial systems but aren't ready for enterprise solutions."
+    question: "Can we work together if I'm based internationally?",
+    answer: "Absolutely. I've worked with clients across the U.S., Canada, Australia, and the UK. I schedule calls with time zone differences in mind and ensure communication is smooth and aligned, no matter where you're located."
   },
   {
-    question: "How much time will automation actually save my team?",
-    answer: "Most clients see 15-25 hours saved per week within the first month. One client reduced their lead processing time from 4 hours to 15 minutes. The time savings compound as your business grows - what takes your team hours today could be done in minutes automatically."
+    question: "Do you sign NDAs or work with sensitive information?",
+    answer: "Yes. I regularly handle confidential data and am happy to sign NDAs. Discretion and security are a built-in part of how I work—especially with internal systems and proprietary workflows."
   },
   {
-    question: "What's the typical ROI and how quickly will I see results?",
-    answer: "Most clients see a 300-500% ROI within 6 months. You'll start seeing time savings within the first week of implementation. The financial impact becomes clear within 30-60 days as your team focuses on revenue-generating activities instead of manual tasks."
+    question: "What tools and platforms do you use?",
+    answer: "I specialize in Zapier, Make.com, N8n, GoHighLevel, Airtable, and ClickUp. These tools allow me to architect powerful systems quickly, without the overhead of custom code, so you get enterprise-level results at a fraction of the cost."
   },
   {
-    question: "What does your process look like?",
-    answer: "My process starts with a thorough systems audit to understand your current workflows, pain points, and goals. Then, I design a custom automation roadmap, build and integrate solutions in phases, and provide training to your team. Every project includes documentation and 30 days of support."
+    question: "What can I expect from your process?",
+    answer: "My process is strategic, collaborative, and results-driven. We begin with a consultation to align on goals. Then I design, build, and implement solutions tailored to your operations. Every system I create is scalable, efficient, and built with long-term value in mind."
   },
   {
-    question: "How long does implementation typically take?",
-    answer: "Simple automations can be implemented in 1-2 weeks, while comprehensive system overhauls take 4-8 weeks. I work in phases so you start seeing benefits immediately while we build more complex workflows. Most clients are fully operational with their new systems within 6 weeks."
+    question: "Do you offer full CRM buildouts from scratch?",
+    answer: "Yes. If you're starting from zero or switching platforms, I can help you design and build a custom CRM from the ground up. This includes everything from lead pipelines and automations to task management and reporting, all tailored entirely to how your business operates."
   },
   {
-    question: "Will my team be able to manage the automations after you're done?",
-    answer: "Absolutely. I provide comprehensive training and documentation for your team. The systems I build are designed to be manageable by non-technical users. I also offer ongoing support packages and quarterly reviews to ensure continued success."
+    question: "Can you help clean up or organize my existing CRM or database?",
+    answer: "Yes. Many of my clients come to me with messy, outdated, or underutilized tools. I can help you clean, restructure, and optimize your CRM or database so it becomes an asset, not a headache."
   },
   {
-    question: "What if my current systems are too complex or outdated?",
-    answer: "I've worked with businesses using everything from spreadsheets to legacy software. Part of my process involves assessing what to keep, what to upgrade, and what to replace. I can work with your existing systems or recommend modern alternatives that integrate better."
+    question: "What kind of results do your clients typically see?",
+    answer: "Clients often see a 50 to 80 percent reduction in manual work, faster turnaround times, and stronger system reliability within weeks. More importantly, they gain back time to focus on high-value activities, whether that's client relationships, growth, or innovation. My solutions are designed not just to save time but to drive meaningful business outcomes."
   },
   {
-    question: "How do you ensure data security and compliance?",
-    answer: "I follow enterprise-grade security practices and work within your existing compliance requirements. All automations are built with proper access controls, data encryption, and audit trails. I can work with your IT team to ensure everything meets your security standards."
+    question: "How do you price your services?",
+    answer: "I offer flat-rate and packages based on your goals and complexity. No hourly billing, no surprises. Whether you're looking for a quick win or a full system transformation, you'll receive a tailored proposal focused on ROI, not just deliverables."
   },
   {
-    question: "What happens if something breaks or needs updating?",
-    answer: "Every client receives detailed documentation and 30 days of included support. I offer flexible monthly maintenance packages for ongoing optimization and updates. For urgent issues, I provide priority support with response times under 4 hours during business days."
+    question: "How fast can you deliver?",
+    answer: "Most smaller builds and optimizations are completed within a few days. Larger workflows or full CRM implementations typically take 1 to 3 weeks. I move quickly but never at the cost of quality, reliability, or sustainability."
   },
   {
-    question: "Do you offer maintenance/support?",
-    answer: "Yes. After implementation, I offer flexible monthly maintenance packages to ensure your automations remain optimized as your business evolves. I also provide emergency support for critical issues and quarterly system reviews to identify new automation opportunities."
+    question: "Do you provide support after the project is done?",
+    answer: "Yes. Every project includes post-delivery documentation and, if needed, custom training. For continued optimization or support, I offer flexible retainer options so you always have a trusted systems partner by your side."
   },
   {
-    question: "How much does automation cost and is it worth the investment?",
-    answer: "Investment varies based on complexity, typically ranging from $3,000-$15,000 for most projects. When you consider that automating just one full-time equivalent role saves $50,000+ annually, plus the time savings for your existing team, the ROI is compelling. I provide detailed cost-benefit analysis for every proposal."
+    question: "How do I know this will actually work for my business?",
+    answer: "Every business is different, which is why I never offer cookie-cutter solutions. I start by understanding your unique processes, pain points, and goals. From there, I create a tailored system that aligns with your operations and adapts as you grow. Results come from strategic alignment, not guesswork."
   }
 ];
 
