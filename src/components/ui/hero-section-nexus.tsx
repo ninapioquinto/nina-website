@@ -185,9 +185,10 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
 
     return (
       <motion.span
-        className={cn("inline-flex flex-wrap whitespace-pre-wrap relative align-bottom pb-[10px]", mainClassName)}
+        className={cn("inline-block relative overflow-hidden", mainClassName)}
         {...rest}
         layout
+        style={{ minHeight: '1.2em' }}
       >
         <span className="sr-only">{texts[currentTextIndex]}</span>
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
@@ -514,10 +515,10 @@ const InteractiveHeroSection: React.FC = () => {
                     className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tighter"
                 >
                     Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span> — I build
-                    <span className="relative inline-block mx-2 min-w-[180px] h-[60px]">
+                    <span className="relative inline-block mx-2 min-w-[200px] min-h-[1.2em] align-text-top">
                         <RotatingText
                             texts={['intelligent', 'scalable', 'secure', 'efficient']}
-                            mainClassName="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent"
+                            mainClassName="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent absolute inset-0"
                             staggerFrom={"last"}
                             initial={{ y: "-100%", opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
