@@ -134,7 +134,7 @@ const About = () => {
           </div>
 
           {/* Impact metrics */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
             {[
               { metric: "50-80%", label: "Reduction in Manual Work", color: "from-purple-400 to-violet-400" },
               { metric: "Days", label: "Rapid Implementation", color: "from-violet-400 to-indigo-400" },
@@ -151,83 +151,160 @@ const About = () => {
             ))}
           </div>
 
-          {/* Client impact section - Enhanced visibility */}
-          <div className="reveal mb-16">
-            <Card className="border border-purple-400/30 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/50 shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-indigo-500/5"></div>
-              <CardContent className="p-10 relative z-10">
-                <h3 className="text-3xl font-bold mb-8 text-white text-center bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent">
-                  Client Impact
-                </h3>
-                <div className="grid md:grid-cols-2 gap-10 text-gray-100">
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-purple-200 mb-4 flex items-center">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                      What Clients Experience
-                    </h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Streamlined operations and reduced costs</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Elevated day-to-day efficiency</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Improved team coordination</span>
-                      </li>
-                    </ul>
+          {/* Modern Client Impact Section */}
+          <div className="reveal mb-20">
+            <div className="relative group">
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-indigo-600/10 to-violet-600/10 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700"></div>
+              
+              {/* Main card */}
+              <div className="relative bg-gradient-to-br from-slate-800/40 via-purple-900/20 to-indigo-900/30 backdrop-blur-2xl rounded-3xl border border-white/10 group-hover:border-purple-400/30 transition-all duration-700 overflow-hidden">
+                {/* Tech grid overlay */}
+                <div className="absolute inset-0 bg-grid opacity-[0.03]"></div>
+                
+                {/* Glow effect */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+                
+                <div className="relative p-12">
+                  {/* Header with tech accent */}
+                  <div className="text-center mb-12">
+                    <div className="inline-flex items-center gap-3 mb-6">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                      <span className="text-sm uppercase tracking-[0.2em] text-purple-300 font-medium">Client Impact</span>
+                      <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent">
+                      Transforming Business Operations
+                    </h3>
                   </div>
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-semibold text-violet-200 mb-4 flex items-center">
-                      <div className="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
-                      Results Timeline
-                    </h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Noticeable boost in clarity within days</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Faster execution and smoother workflows</span>
-                      </li>
-                      <li className="flex items-start">
-                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">Sustainable long-term growth foundation</span>
-                      </li>
-                    </ul>
+
+                  {/* Content grid */}
+                  <div className="grid lg:grid-cols-2 gap-12">
+                    {/* Left column */}
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-indigo-500/20 border border-purple-400/30 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">What Clients Experience</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">Real transformation in daily operations</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4 ml-12">
+                        {[
+                          "Streamlined operations and reduced costs",
+                          "Elevated day-to-day efficiency",
+                          "Improved team coordination"
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-3 group/item">
+                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full group-hover/item:scale-125 transition-transform duration-300"></div>
+                            <span className="text-gray-200 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right column */}
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500/20 to-violet-500/20 border border-indigo-400/30 flex items-center justify-center">
+                          <div className="w-2 h-2 bg-indigo-400 rounded-full"></div>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-2">Results Timeline</h4>
+                          <p className="text-gray-300 text-sm leading-relaxed">Measurable impact within days</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-4 ml-12">
+                        {[
+                          "Noticeable boost in clarity within days",
+                          "Faster execution and smoother workflows",
+                          "Sustainable long-term growth foundation"
+                        ].map((item, index) => (
+                          <div key={index} className="flex items-center gap-3 group/item">
+                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full group-hover/item:scale-125 transition-transform duration-300"></div>
+                            <span className="text-gray-200 text-sm">{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
-          {/* Call to action - Enhanced visibility */}
+          {/* Modern Call to Action Section */}
           <div className="text-center reveal">
-            <Card className="border border-purple-400/30 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden max-w-4xl mx-auto hover:border-purple-400/50 shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-indigo-500/5"></div>
-              <CardContent className="p-12 relative z-10">
-                <h3 className="text-3xl md:text-4xl font-bold mb-8 text-white bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent">
-                  Ready to Transform Your Operations?
-                </h3>
-                <div className="space-y-6 text-gray-100 leading-relaxed">
-                  <p className="text-lg">
-                    If you're ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let's build your custom system.
-                  </p>
-                  <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 rounded-2xl p-6 border border-purple-400/20">
-                    <p className="text-xl font-semibold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
-                      Let's begin with a personalized discovery call.
+            <div className="relative group max-w-5xl mx-auto">
+              {/* Animated background layers */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-violet-600/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 rounded-3xl"></div>
+              
+              {/* Tech border effect */}
+              <div className="absolute inset-0 rounded-3xl border border-white/10 group-hover:border-purple-400/40 transition-colors duration-700"></div>
+              
+              {/* Main content */}
+              <div className="relative bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-indigo-900/70 backdrop-blur-2xl rounded-3xl overflow-hidden">
+                {/* Top accent line */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-purple-400/80 to-transparent"></div>
+                
+                {/* Grid overlay */}
+                <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
+                
+                <div className="relative p-12 md:p-16">
+                  {/* Header */}
+                  <div className="mb-10">
+                    <div className="inline-flex items-center gap-2 mb-6">
+                      <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+                      <span className="text-xs uppercase tracking-[0.25em] text-purple-300 font-medium">Future-Ready Systems</span>
+                      <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+                    </div>
+                    
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent mb-6 leading-tight">
+                      Ready to Transform <br className="hidden md:block" /> Your Operations?
+                    </h3>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="max-w-2xl mx-auto">
+                    <p className="text-lg text-white/80 mb-10">
+                      If you're ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let's build your custom system.
                     </p>
-                    <p className="text-gray-200">
-                      We'll explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intelligently.
-                    </p>
+                    
+                    {/* Highlighted box */}
+                    <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 backdrop-blur-xl rounded-2xl p-8 border border-white/10 group-hover:border-purple-400/20 transition-colors duration-700 mb-10">
+                      <div className="flex flex-col items-center">
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-xl border border-purple-400/30 flex items-center justify-center mb-6">
+                          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/80 to-indigo-400/80 flex items-center justify-center">
+                            <div className="w-3 h-3 bg-white rounded-full"></div>
+                          </div>
+                        </div>
+                        
+                        <h4 className="text-xl font-bold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
+                          Let's begin with a personalized discovery call
+                        </h4>
+                        
+                        <p className="text-gray-300 text-center">
+                          We'll explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intelligently.
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Tech-inspired button - optional call to action */}
+                    <div className="inline-flex">
+                      <button className="py-3 px-8 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-full border border-purple-400/30 text-white font-medium flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group/btn">
+                        <span>Schedule a Call</span>
+                        <div className="w-6 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent group-hover/btn:w-10 transition-all duration-300"></div>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </div>
