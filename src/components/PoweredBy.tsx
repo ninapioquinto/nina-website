@@ -5,7 +5,7 @@ const LOGOS = [
   { name: 'Zapier', url: '/lovable-uploads/1c7d3271-99e0-4c12-b3f9-0b9e16b4271e.png' },
   { name: 'GoHighLevel', url: '/lovable-uploads/ad381596-e264-4e66-b4a3-54b2ee7d3d58.png' },
   { name: 'Airtable', url: '/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png' },
-  { name: 'n8n', url: '/lovable-uploads/06f6e6cf-8cab-4005-9bde-a44da3bd5411.png' },
+  { name: 'n8n', url: '/lovable-uploads/4eb653f3-93b0-4ded-9590-31b023d045dd.png' },
   { name: 'Monday.com', url: '/lovable-uploads/f453d086-abac-470e-bda5-4137a7c03ffc.png' },
   { name: 'ClickUp', url: '/lovable-uploads/1fffe66c-3cf3-4354-961f-584a332d76ec.png' },
   { name: 'SuiteDash', url: '/lovable-uploads/f7286aae-2fbc-412b-bca6-9b66f6c00429.png' },
