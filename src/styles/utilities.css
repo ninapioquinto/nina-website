@@ -180,4 +180,17 @@
   .luxury-delay-300 { animation-delay: 0.3s; }
   .luxury-delay-400 { animation-delay: 0.4s; }
   .luxury-delay-500 { animation-delay: 0.5s; }
+
+  /* Shine animation for ShinyText component */
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  .animate-shine {
+    animation: shine 5s linear infinite;
+  }
 }
