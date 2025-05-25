@@ -33,21 +33,21 @@ const PoweredBy = () => {
   }, []);
 
   return (
-    <section className="w-full py-12 bg-background/50 backdrop-blur-sm border-y border-white/5">
+    <section className="w-full py-16 bg-white/5 backdrop-blur-lg border-y border-white/20 relative">
       <div className="container mx-auto px-4">
-        <h3 className="text-center text-sm text-white/60 mb-8 font-light tracking-wider">
+        <h3 className="text-center text-lg text-white font-medium mb-12 tracking-wide">
           Powered by the Industry's Leading Tools
         </h3>
         
         <div className="relative">
-          {/* Gradient Masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
+          {/* Enhanced Gradient Masks for better visibility */}
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white/5 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent z-10" />
           
-          {/* Scrolling Container */}
+          {/* Scrolling Container with improved styling */}
           <div 
             ref={scrollRef}
-            className="flex gap-16 overflow-x-hidden whitespace-nowrap py-4 items-center"
+            className="flex gap-12 overflow-x-hidden whitespace-nowrap py-6 items-center"
           >
             {/* Double the logos for seamless loop */}
             {[...LOGOS, ...LOGOS].map((logo, index) => (
@@ -55,11 +55,11 @@ const PoweredBy = () => {
                 key={`${logo.name}-${index}`}
                 className="inline-flex flex-none items-center justify-center group"
               >
-                <div className="w-24 h-12 flex items-center justify-center opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <div className="w-28 h-16 flex items-center justify-center bg-white/10 rounded-lg p-3 backdrop-blur-sm border border-white/10 opacity-80 hover:opacity-100 hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <img
                     src={logo.url}
                     alt={logo.name}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain filter brightness-110 contrast-110"
                   />
                 </div>
               </div>
@@ -67,6 +67,9 @@ const PoweredBy = () => {
           </div>
         </div>
       </div>
+
+      {/* Background decoration for better visual separation */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent-purple/5 pointer-events-none"></div>
     </section>
   );
 };
