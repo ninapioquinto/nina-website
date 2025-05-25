@@ -1,9 +1,9 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import { Github, Instagram, Linkedin, Mail, MessageSquare, Send } from 'lucide-react';
+import { Instagram, Mail, MessageSquare, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Facebook } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -92,8 +92,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-white/50">Email</div>
-                    <a href="mailto:nina@example.com" className="text-white hover:text-primary transition-colors">
-                      nina@example.com
+                    <a href="mailto:nina@automationcrmexpert.com" className="text-white hover:text-primary transition-colors">
+                      nina@automationcrmexpert.com
                     </a>
                   </div>
                 </div>
@@ -124,12 +124,8 @@ const Contact = () => {
                     href="#" 
                     className="h-10 w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Facebook className="h-4 w-4" />
                   </a>
-                </div>
-                
-                <div className="mt-6 text-white/50 text-sm">
-                  22k+ Instagram followers
                 </div>
               </div>
             </div>

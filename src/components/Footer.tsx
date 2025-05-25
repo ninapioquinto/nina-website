@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 mb-8 md:mb-0">
             <a
-              href="mailto:nina@example.com"
+              href="mailto:nina@automationcrmexpert.com"
               className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
             >
               <span className="h-8 w-8 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
