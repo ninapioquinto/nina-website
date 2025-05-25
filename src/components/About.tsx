@@ -57,10 +57,35 @@ const About = () => {
               <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-200/80 to-transparent"></div>
             </div>
 
-            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed reveal font-semibold">
-              Systems Engineer with 8+ years of experience crafting intelligent automation solutions 
-              that transform business operations and elevate customer experiences.
-            </p>
+            <div className="text-lg text-white max-w-4xl mx-auto leading-relaxed reveal font-semibold space-y-6">
+              <p>
+                I'm Nina Pioquinto, your strategic partner in building sustainable growth through custom no-code automation systems. I simplify complex operations and craft streamlined workflows so you can focus on what truly drives your business forward.
+              </p>
+              
+              <p>
+                Using AI, data intelligence, and CRM optimization, I create tailored automation solutions aligned with your unique goals and operational challenges. These are not off-the-shelf fixes but scalable systems built to boost productivity and deliver real, measurable outcomes.
+              </p>
+              
+              <p>
+                Service-based businesses integrate my solutions to streamline operations, cut unnecessary costs, and elevate day-to-day efficiency. Many report a noticeable boost in clarity, smoother team coordination, and faster execution often within days of implementation.
+              </p>
+              
+              <p>
+                My process begins with a deep understanding of your current workflows and strategic goals. From there, I design intelligent systems that integrate seamlessly into your operations, bringing clarity, control, and a foundation for growth without the chaos.
+              </p>
+              
+              <p>
+                If you are ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let us build your custom system. With my insight and strategic approach, you will gain systems that work so you can lead with confidence.
+              </p>
+              
+              <p>
+                Let us begin with a personalized discovery call. We will explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intentionally and intelligently.
+              </p>
+              
+              <p className="font-bold text-xl bg-gradient-to-r from-purple-200 via-violet-100 to-indigo-200 bg-clip-text text-transparent">
+                Book your discovery call today and take the first step toward greater clarity, control, and momentum.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
