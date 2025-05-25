@@ -115,7 +115,7 @@ const Portfolio = () => {
             <div className="mb-16 reveal">
               <div className="relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-violet-500/30 to-indigo-500/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <Card className="relative overflow-hidden border border-white/10 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-2xl">
+                <Card className="relative overflow-hidden border border-white/10 bg-gradient-to-br from-slate-800/40 via-purple-900/20 to-indigo-900/30 backdrop-blur-2xl">
                   <CardContent className="p-8">
                     <div className="aspect-video bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative group">
                       {/* Play button overlay */}
@@ -154,7 +154,7 @@ const Portfolio = () => {
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/10 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-2xl transition-all duration-700 group overflow-hidden ${
+                    <Card className={`relative h-full border border-white/10 bg-gradient-to-br from-slate-800/40 via-purple-900/20 to-indigo-900/30 backdrop-blur-2xl transition-all duration-700 group overflow-hidden ${
                       activeCard === project.id 
                         ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' 
                         : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'
