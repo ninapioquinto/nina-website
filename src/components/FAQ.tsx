@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -9,27 +10,19 @@ import {
 const faqData = [
   {
     question: "Who do you typically work with?",
-    answer: "I work with solopreneurs, lean teams, and small businesses who are ready to eliminate inefficiencies and scale smarter. Whether you're drowning in repetitive tasks or dealing with scattered systems, I help you reclaim time, clarity, and control through custom automation and AI-powered solutions."
+    answer: "I partner with solopreneurs, growing teams, and service-based businesses who are ready to eliminate inefficiencies and scale smarter. If you're stuck doing repetitive tasks or working with scattered systems, I help you reclaim your time and create clarity with custom-built automation and operational systems."
   },
   {
-    question: "Can we work together if I'm based internationally?",
-    answer: "Absolutely. I've worked with clients across the U.S., Canada, Australia, and the UK. I schedule calls with time zone differences in mind and ensure communication is smooth and aligned, no matter where you're located."
+    question: "What industries do you specialize in?",
+    answer: "I help service-based businesses in healthcare and pet veterinary streamline their operations with intelligent, client-centered systems. From managing leads to reducing no-shows and automating follow-ups, I design solutions that align with how your business truly operates."
   },
   {
     question: "What tools and platforms do you use?",
-    answer: "I specialize in Zapier, Make.com, N8n, GoHighLevel, Airtable, and ClickUp. These tools allow me to architect powerful systems quickly, without the overhead of custom code, so you get enterprise-level results at a fraction of the cost."
+    answer: "I specialize in Zapier, Make.com, N8n, GoHighLevel, Airtable, and Click. These platforms allow me to create powerful custom systems quickly, without complex code, so you get results faster and at lower cost."
   },
   {
     question: "What can I expect from your process?",
-    answer: "My process is strategic, collaborative, and results-driven. We begin with a consultation to align on goals. Then I design, build, and implement solutions tailored to your operations. Every system I create is scalable, efficient, and built with long-term value in mind."
-  },
-  {
-    question: "Do you offer full CRM buildouts from scratch?",
-    answer: "Yes. If you're starting from zero or switching platforms, I can help you design and build a custom CRM from the ground up. This includes everything from lead pipelines and automations to task management and reporting, all tailored entirely to how your business operates."
-  },
-  {
-    question: "Can you help clean up or organize my existing CRM or database?",
-    answer: "Yes. Many of my clients come to me with messy, outdated, or underutilized tools. I can help you clean, restructure, and optimize your CRM or database so it becomes an asset, not a headache."
+    answer: "My process is collaborative and results-focused. We start with a discovery call to align on your goals. Then, I design, build, and implement a solution tailored to your business. Everything I build is scalable, streamlined, and thoughtfully designed for long-term use."
   },
   {
     question: "What kind of results do your clients typically see?",
@@ -37,19 +30,35 @@ const faqData = [
   },
   {
     question: "How do you price your services?",
-    answer: "I offer flat-rate and packages based on your goals and complexity. No hourly billing, no surprises. Whether you're looking for a quick win or a full system transformation, you'll receive a tailored proposal focused on ROI, not just deliverables."
+    answer: "I offer flat-rate and phased packages based on your goals and project complexity. No hourly billing, no surprises. You'll get a clear proposal that's focused on ROI, not just tasks."
   },
   {
     question: "How fast can you deliver?",
-    answer: "Most smaller builds and optimizations are completed within a few days. Larger workflows or full CRM implementations typically take 1 to 3 weeks. I move quickly but never at the cost of quality, reliability, or sustainability."
+    answer: "Quick wins and smaller automations are often completed in just a few days. Larger workflows or CRM implementations typically take 1 to 3 weeks. I work efficiently without compromising on quality or long-term reliability."
   },
   {
-    question: "Do you provide support after the project is done?",
-    answer: "Yes. Every project includes post-delivery documentation and, if needed, custom training. For continued optimization or support, I offer flexible retainer options so you always have a trusted systems partner by your side."
+    question: "Do you offer full CRM buildouts from scratch?",
+    answer: "Yes. If you're starting from zero or switching platforms, I can help you design and build a custom CRM from the ground up. This includes everything from lead pipelines and automations to task management and reporting, all tailored entirely to how your business operates."
   },
   {
-    question: "How do I know this will actually work for my business?",
-    answer: "Every business is different, which is why I never offer cookie-cutter solutions. I start by understanding your unique processes, pain points, and goals. From there, I create a tailored system that aligns with your operations and adapts as you grow. Results come from strategic alignment, not guesswork."
+    question: "Can you help clean up or organize my existing CRM or database?",
+    answer: "Yes. Whether your tools are messy, outdated, or underused, I can help you clean, reorganize, and optimize them into streamlined assets that support your goals."
+  },
+  {
+    question: "Do you offer support after the project is done?",
+    answer: "Yes. Every project includes post-launch support, clear documentation, and optional training. If you need ongoing support or continuous improvements, I also offer flexible retainers."
+  },
+  {
+    question: "Do you sign NDAs or work with sensitive information?",
+    answer: "Yes. I regularly handle confidential data and am happy to sign NDAs. Security, discretion, and integrity are core to how I work."
+  },
+  {
+    question: "Can we work together if I'm based internationally?",
+    answer: "Yes. I've worked with clients in the U.S., Canada, Australia, the UK, and more. I schedule around time zones and keep communication smooth no matter where you're located."
+  },
+  {
+    question: "What's the best way to get started?",
+    answer: "Book a free discovery call. We'll talk through your current setup, challenges, and goals. Whether you need a quick fix, a full system, or just clarity on your next move, you'll leave the call with a clear direction."
   }
 ];
 
