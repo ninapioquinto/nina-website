@@ -151,45 +151,52 @@ const About = () => {
             ))}
           </div>
 
-          {/* Client impact section */}
+          {/* Client impact section - Enhanced visibility */}
           <div className="reveal mb-16">
-            <Card className="border border-white/10 bg-gradient-to-br from-slate-800/40 via-purple-900/30 to-indigo-900/40 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/30">
-              <CardContent className="p-10">
-                <h3 className="text-2xl font-bold mb-6 text-white text-center">
+            <Card className="border border-purple-400/30 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/50 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-indigo-500/5"></div>
+              <CardContent className="p-10 relative z-10">
+                <h3 className="text-3xl font-bold mb-8 text-white text-center bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent">
                   Client Impact
                 </h3>
-                <div className="grid md:grid-cols-2 gap-8 text-gray-200">
-                  <div>
-                    <h4 className="text-lg font-semibold text-purple-300 mb-3">What Clients Experience</h4>
-                    <ul className="space-y-2">
+                <div className="grid md:grid-cols-2 gap-10 text-gray-100">
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-semibold text-purple-200 mb-4 flex items-center">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                      What Clients Experience
+                    </h4>
+                    <ul className="space-y-3">
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Streamlined operations and reduced costs</span>
+                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Streamlined operations and reduced costs</span>
                       </li>
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Elevated day-to-day efficiency</span>
+                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Elevated day-to-day efficiency</span>
                       </li>
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Improved team coordination</span>
+                        <div className="w-3 h-3 bg-purple-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Improved team coordination</span>
                       </li>
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-purple-300 mb-3">Results Timeline</h4>
-                    <ul className="space-y-2">
+                  <div className="space-y-4">
+                    <h4 className="text-xl font-semibold text-violet-200 mb-4 flex items-center">
+                      <div className="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
+                      Results Timeline
+                    </h4>
+                    <ul className="space-y-3">
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Noticeable boost in clarity within days</span>
+                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Noticeable boost in clarity within days</span>
                       </li>
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Faster execution and smoother workflows</span>
+                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Faster execution and smoother workflows</span>
                       </li>
                       <li className="flex items-start">
-                        <div className="w-2 h-2 bg-violet-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                        <span>Sustainable long-term growth foundation</span>
+                        <div className="w-3 h-3 bg-violet-400 rounded-full mt-1.5 mr-4 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">Sustainable long-term growth foundation</span>
                       </li>
                     </ul>
                   </div>
@@ -198,23 +205,26 @@ const About = () => {
             </Card>
           </div>
 
-          {/* Call to action */}
+          {/* Call to action - Enhanced visibility */}
           <div className="text-center reveal">
-            <Card className="border border-white/10 bg-gradient-to-br from-slate-800/40 via-purple-900/30 to-indigo-900/40 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden max-w-4xl mx-auto hover:border-purple-400/30">
-              <CardContent className="p-10">
-                <h3 className="text-3xl font-bold mb-6 text-white">
+            <Card className="border border-purple-400/30 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden max-w-4xl mx-auto hover:border-purple-400/50 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-indigo-500/5"></div>
+              <CardContent className="p-12 relative z-10">
+                <h3 className="text-3xl md:text-4xl font-bold mb-8 text-white bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent">
                   Ready to Transform Your Operations?
                 </h3>
-                <div className="space-y-6 text-gray-200 leading-relaxed">
+                <div className="space-y-6 text-gray-100 leading-relaxed">
                   <p className="text-lg">
                     If you're ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let's build your custom system.
                   </p>
-                  <p className="text-xl font-semibold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent">
-                    Let's begin with a personalized discovery call.
-                  </p>
-                  <p>
-                    We'll explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intelligently.
-                  </p>
+                  <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 rounded-2xl p-6 border border-purple-400/20">
+                    <p className="text-xl font-semibold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
+                      Let's begin with a personalized discovery call.
+                    </p>
+                    <p className="text-gray-200">
+                      We'll explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intelligently.
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
