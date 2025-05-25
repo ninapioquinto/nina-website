@@ -185,7 +185,7 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
 
     return (
       <motion.span
-        className={cn("inline-block relative overflow-hidden", mainClassName)}
+        className={cn("inline-block relative", mainClassName)}
         {...rest}
         layout
         style={{ minHeight: '1.2em' }}
