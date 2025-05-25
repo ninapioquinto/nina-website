@@ -68,8 +68,8 @@ const About = () => {
             {/* Left column - Introduction */}
             <div className="lg:col-span-5 space-y-6">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group h-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="h-full border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <CardContent className="p-8 relative z-10">
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold mb-4 text-white">
@@ -95,8 +95,8 @@ const About = () => {
             {/* Right column - Video */}
             <div className="lg:col-span-7">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <CardContent className="p-6 relative z-10">
                     <div className="aspect-video bg-gradient-to-br from-slate-700/20 to-purple-800/20 rounded-xl overflow-hidden border border-white/10 group-hover:border-purple-300/30 transition-colors duration-500 shadow-xl">
                       <iframe
@@ -117,8 +117,8 @@ const About = () => {
           {/* Approach and Solutions section */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="h-full border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-2xl font-bold mb-6 text-white">
                     My Approach
@@ -136,8 +136,8 @@ const About = () => {
             </div>
 
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="h-full border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-2xl font-bold mb-6 text-white">
                     Strategic Process
@@ -159,8 +159,8 @@ const About = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             <div className="lg:col-span-2">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group h-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="h-full border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                   <CardContent className="p-8 relative z-10">
                     <h3 className="text-2xl font-bold mb-6 text-white">
                       Client Impact
@@ -179,8 +179,8 @@ const About = () => {
             </div>
 
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 shadow-xl hover:shadow-purple-500/10">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="h-full border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-xl font-bold mb-6 text-white text-center">
                     Key Metrics
@@ -208,8 +208,8 @@ const About = () => {
 
           {/* Call to action with refined design */}
           <div className="text-center reveal">
-            <Card className="luxury-card group border border-white/10 bg-white/5 backdrop-blur-xl hover:border-purple-300/30 transition-all duration-700 max-w-5xl mx-auto shadow-xl hover:shadow-purple-500/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+            <Card className="border border-white/20 bg-gradient-to-br from-slate-800/90 via-purple-900/70 to-indigo-900/80 backdrop-blur-xl transition-all duration-700 group relative overflow-hidden max-w-5xl mx-auto hover:border-purple-400/40 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.4)]">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               <CardContent className="p-10 relative z-10">
                 <h3 className="text-3xl font-bold mb-6 text-white">
                   Ready to Transform Your Operations?
