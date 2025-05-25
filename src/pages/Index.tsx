@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -82,8 +81,8 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <About />
         <Services />
+        <About />
         <CaseStudy />
         <Portfolio />
         <MyProcess />
