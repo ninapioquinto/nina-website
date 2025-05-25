@@ -30,91 +30,75 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="py-32 relative overflow-hidden bg-gradient-to-br from-purple-900/30 via-slate-900/90 to-indigo-900/30">
-      {/* Enhanced background with better contrast for text readability */}
+    <section id="about" ref={sectionRef} className="py-24 relative overflow-hidden">
+      {/* Enhanced background with sophisticated gradients */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/50 to-indigo-900/70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.08)_0%,transparent_70%)]"></div>
-        <div className="absolute inset-0 bg-grid opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/98 via-purple-900/60 to-indigo-900/80"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(139,92,246,0.15)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(99,102,241,0.12)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
       </div>
 
-      {/* Sophisticated decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-gradient-to-br from-purple-500/8 to-violet-600/4 blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 rounded-full bg-gradient-to-tl from-indigo-500/8 to-purple-600/4 blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+      {/* Elegant floating elements */}
+      <div className="absolute top-32 left-16 w-24 h-24 rounded-full bg-gradient-to-br from-purple-500/10 to-violet-600/5 blur-2xl animate-float"></div>
+      <div className="absolute bottom-32 right-16 w-32 h-32 rounded-full bg-gradient-to-tl from-indigo-500/10 to-purple-600/5 blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Enhanced header */}
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
-              About <span className="bg-gradient-to-r from-purple-200 via-violet-100 to-indigo-200 bg-clip-text text-transparent glow-text">Nina</span>
-            </h2>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          {/* Refined header section */}
+          <div className="text-center mb-20 reveal">
+            <div className="inline-flex items-center justify-center mb-6">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
+              <div className="mx-4 px-4 py-1 rounded-full bg-purple-500/10 border border-purple-300/20">
+                <span className="text-sm font-medium text-purple-200">About Nina</span>
+              </div>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
+            </div>
             
-            {/* Sophisticated divider */}
-            <div className="flex items-center justify-center mb-12 reveal">
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-200/80 to-transparent"></div>
-              <div className="mx-4 w-3 h-3 rounded-full bg-gradient-to-r from-purple-200 to-violet-300 animate-pulse-glow"></div>
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-200/80 to-transparent"></div>
-            </div>
-
-            {/* Redesigned intro with better structure */}
-            <div className="max-w-4xl mx-auto reveal">
-              <p className="text-xl text-white leading-relaxed mb-8 font-medium">
-                I'm Nina Pioquinto, your strategic partner in building sustainable growth through 
-                <span className="bg-gradient-to-r from-purple-200 to-violet-200 bg-clip-text text-transparent font-semibold"> custom no-code automation systems</span>.
-              </p>
-              <p className="text-lg text-white/90 leading-relaxed">
-                I simplify complex operations and craft streamlined workflows so you can focus on what truly drives your business forward.
-              </p>
-            </div>
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">
+              Strategic Partner in 
+              <span className="block bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent">
+                Automation Excellence
+              </span>
+            </h2>
           </div>
 
-          {/* Main content grid */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            {/* Left column - What I Do */}
-            <div className="space-y-8">
+          {/* Main content with improved layout */}
+          <div className="grid lg:grid-cols-12 gap-8 mb-16">
+            {/* Left column - Introduction */}
+            <div className="lg:col-span-5 space-y-6">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group border border-purple-200/60 bg-gradient-to-br from-slate-800/85 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                   <CardContent className="p-8 relative z-10">
-                    <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-100 via-violet-100 to-indigo-100 bg-clip-text text-transparent">
-                      What I Do
-                    </h3>
-                    <p className="text-white/90 leading-relaxed mb-4">
-                      Using AI, data intelligence, and CRM optimization, I create tailored automation solutions aligned with your unique goals and operational challenges.
-                    </p>
-                    <p className="text-white/90 leading-relaxed">
-                      These are not off-the-shelf fixes but scalable systems built to boost productivity and deliver real, measurable outcomes.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group border border-purple-200/60 bg-gradient-to-br from-slate-800/85 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <CardContent className="p-8 relative z-10">
-                    <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-100 via-violet-100 to-indigo-100 bg-clip-text text-transparent">
-                      My Process
-                    </h3>
-                    <p className="text-white/90 leading-relaxed mb-4">
-                      My process begins with a deep understanding of your current workflows and strategic goals.
-                    </p>
-                    <p className="text-white/90 leading-relaxed">
-                      From there, I design intelligent systems that integrate seamlessly into your operations, bringing clarity, control, and a foundation for growth without the chaos.
-                    </p>
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold mb-4 text-white">
+                        Nina Pioquinto
+                      </h3>
+                      <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full mb-6"></div>
+                    </div>
+                    
+                    <div className="space-y-5 text-white/90 leading-relaxed">
+                      <p className="text-lg">
+                        Your strategic partner in building sustainable growth through 
+                        <span className="text-purple-200 font-medium"> custom no-code automation systems</span>.
+                      </p>
+                      <p>
+                        I simplify complex operations and craft streamlined workflows so you can focus on what truly drives your business forward.
+                      </p>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
 
-            {/* Right column - Video and Results */}
-            <div className="space-y-8">
+            {/* Right column - Video */}
+            <div className="lg:col-span-7">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group relative overflow-hidden border border-purple-200/60 bg-gradient-to-br from-slate-800/90 via-purple-900/50 to-indigo-900/60 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <CardContent className="p-8 relative z-10">
-                    <div className="aspect-video bg-gradient-to-br from-slate-700/90 to-purple-800/70 rounded-xl overflow-hidden border border-purple-200/50 group-hover:border-purple-100/70 transition-colors duration-500">
+                <Card className="luxury-card group border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="aspect-video bg-gradient-to-br from-slate-700/80 to-purple-800/60 rounded-xl overflow-hidden border border-purple-200/30 group-hover:border-purple-200/50 transition-colors duration-500 shadow-2xl">
                       <iframe
                         className="w-full h-full"
                         src="https://drive.google.com/file/d/1Lez8yjnIjR6x64QNXC1ekf_W_QRIKkFn/preview"
@@ -127,54 +111,125 @@ const About = () => {
                   </CardContent>
                 </Card>
               </div>
+            </div>
+          </div>
 
-              <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group border border-purple-200/60 bg-gradient-to-br from-slate-800/85 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  <CardContent className="p-8 relative z-10">
-                    <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-100 via-violet-100 to-indigo-100 bg-clip-text text-transparent">
-                      Client Results
-                    </h3>
-                    <p className="text-white/90 leading-relaxed mb-6">
-                      Service-based businesses integrate my solutions to streamline operations, cut unnecessary costs, and elevate day-to-day efficiency.
+          {/* Approach and Solutions section */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+            <div className="reveal luxury-card-wrapper">
+              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <CardContent className="p-8 relative z-10">
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    My Approach
+                  </h3>
+                  <div className="space-y-4 text-white/90 leading-relaxed">
+                    <p>
+                      Using AI, data intelligence, and CRM optimization, I create tailored automation solutions aligned with your unique goals and operational challenges.
                     </p>
-                    <div className="grid grid-cols-2 gap-4">
-                      {[
-                        { metric: "50-80%", label: "Less Manual Work" },
-                        { metric: "Days", label: "Implementation" },
-                        { metric: "100%", label: "Custom Built" },
-                        { metric: "24/7", label: "System Reliability" }
-                      ].map((stat, index) => (
-                        <div key={index} className="text-center group/stat">
-                          <div className="text-2xl font-bold bg-gradient-to-r from-purple-200 to-violet-200 bg-clip-text text-transparent group-hover/stat:from-purple-100 group-hover/stat:to-violet-100 transition-all duration-300 mb-1">
-                            {stat.metric}
-                          </div>
-                          <div className="text-white/80 text-sm font-medium">
-                            {stat.label}
-                          </div>
-                        </div>
-                      ))}
+                    <p>
+                      These are not off-the-shelf fixes but scalable systems built to boost productivity and deliver real, measurable outcomes.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="reveal luxury-card-wrapper">
+              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <CardContent className="p-8 relative z-10">
+                  <h3 className="text-2xl font-bold mb-6 text-white">
+                    Strategic Process
+                  </h3>
+                  <div className="space-y-4 text-white/90 leading-relaxed">
+                    <p>
+                      My process begins with a deep understanding of your current workflows and strategic goals.
+                    </p>
+                    <p>
+                      From there, I design intelligent systems that integrate seamlessly into your operations, bringing clarity, control, and a foundation for growth without the chaos.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Results and Impact section */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <div className="lg:col-span-2">
+              <div className="reveal luxury-card-wrapper">
+                <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                  <CardContent className="p-8 relative z-10">
+                    <h3 className="text-2xl font-bold mb-6 text-white">
+                      Client Impact
+                    </h3>
+                    <div className="space-y-4 text-white/90 leading-relaxed">
+                      <p>
+                        Service-based businesses integrate my solutions to streamline operations, cut unnecessary costs, and elevate day-to-day efficiency.
+                      </p>
+                      <p>
+                        Many report a noticeable boost in clarity, smoother team coordination, and faster execution often within days of implementation.
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
               </div>
             </div>
+
+            <div className="reveal luxury-card-wrapper">
+              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <CardContent className="p-8 relative z-10">
+                  <h3 className="text-xl font-bold mb-6 text-white text-center">
+                    Key Metrics
+                  </h3>
+                  <div className="space-y-6">
+                    {[
+                      { metric: "50-80%", label: "Reduction in Manual Work", color: "from-purple-400 to-violet-400" },
+                      { metric: "Days", label: "Rapid Implementation", color: "from-violet-400 to-indigo-400" },
+                      { metric: "100%", label: "Custom Solutions", color: "from-indigo-400 to-purple-400" }
+                    ].map((stat, index) => (
+                      <div key={index} className="text-center group/stat">
+                        <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 group-hover/stat:scale-105 transition-transform duration-300`}>
+                          {stat.metric}
+                        </div>
+                        <div className="text-white/80 text-sm font-medium leading-tight">
+                          {stat.label}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
-          {/* Call to action */}
+          {/* Call to action with refined design */}
           <div className="text-center reveal">
-            <Card className="luxury-card group border border-purple-200/60 bg-gradient-to-br from-slate-800/85 via-purple-900/40 to-indigo-900/50 backdrop-blur-xl hover:border-purple-100/80 transition-all duration-700 max-w-4xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <CardContent className="p-8 relative z-10">
-                <h3 className="text-2xl font-bold mb-6 bg-gradient-to-r from-purple-100 via-violet-100 to-indigo-100 bg-clip-text text-transparent">
+            <Card className="luxury-card group border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700 max-w-5xl mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <CardContent className="p-10 relative z-10">
+                <h3 className="text-3xl font-bold mb-6 text-white">
                   Ready to Transform Your Operations?
                 </h3>
-                <p className="text-white/90 leading-relaxed mb-6">
-                  If you are ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let us build your custom system. With my insight and strategic approach, you will gain systems that work so you can lead with confidence.
-                </p>
-                <p className="text-lg font-semibold bg-gradient-to-r from-purple-200 via-violet-100 to-indigo-200 bg-clip-text text-transparent">
-                  Book your discovery call today and take the first step toward greater clarity, control, and momentum.
-                </p>
+                <div className="space-y-6 text-white/90 leading-relaxed max-w-3xl mx-auto">
+                  <p className="text-lg">
+                    If you are ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let us build your custom system.
+                  </p>
+                  <p>
+                    With my insight and strategic approach, you will gain systems that work so you can lead with confidence.
+                  </p>
+                  <div className="pt-6">
+                    <p className="text-xl font-semibold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
+                      Let us begin with a personalized discovery call.
+                    </p>
+                    <p className="text-white/80">
+                      We will explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intentionally and intelligently.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
