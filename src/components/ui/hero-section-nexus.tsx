@@ -88,63 +88,6 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
   ) => {
     const [currentTextIndex, setCurrentTextIndex] = useState<number>(0);
 
-    const splitIntoCharacters = (text: string): string[] => {
-      // Simple character split that works reliably across environments
-      return text.split('');
-    };
-
-    const elements = useMemo(() => {
-        const currentText: string = texts[currentTextIndex] ?? '';
-        if (splitBy === "characters") {
-            const words = currentText.split(/(\s+)/);
-            let charCount = 0;
-            return words.filter(part => part.length > 0).map((part) => {
-                const isSpace = /^\s+$/.test(part);
-                const chars = isSpace ? [part] : splitIntoCharacters(part);
-                const startIndex = charCount;
-                charCount += chars.length;
-                return { characters: chars, isSpace: isSpace, startIndex: startIndex };
-            });
-        }
-        if (splitBy === "words") {
-            return currentText.split(/(\s+)/).filter(word => word.length > 0).map((word, i) => ({
-                characters: [word], isSpace: /^\s+$/.test(word), startIndex: i
-            }));
-        }
-        if (splitBy === "lines") {
-            return currentText.split('\n').map((line, i) => ({
-                characters: [line], isSpace: false, startIndex: i
-            }));
-        }
-        return currentText.split(splitBy).map((part, i) => ({
-            characters: [part], isSpace: false, startIndex: i
-        }));
-    }, [texts, currentTextIndex, splitBy]);
-
-    const totalElements = useMemo(() => elements.reduce((sum, el) => sum + el.characters.length, 0), [elements]);
-
-    const getStaggerDelay = useCallback(
-      (index: number, total: number): number => {
-        if (total <= 1 || !staggerDuration) return 0;
-        const stagger = staggerDuration;
-        switch (staggerFrom) {
-          case "first": return index * stagger;
-          case "last": return (total - 1 - index) * stagger;
-          case "center":
-            const center = (total - 1) / 2;
-            return Math.abs(center - index) * stagger;
-          case "random": return Math.random() * (total - 1) * stagger;
-          default:
-            if (typeof staggerFrom === 'number') {
-              const fromIndex = Math.max(0, Math.min(staggerFrom, total - 1));
-              return Math.abs(fromIndex - index) * stagger;
-            }
-            return index * stagger;
-        }
-      },
-      [staggerFrom, staggerDuration]
-    );
-
     const handleIndexChange = useCallback(
       (newIndex: number) => {
         setCurrentTextIndex(newIndex);
@@ -188,49 +131,20 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
         className={cn("inline-block relative", mainClassName)}
         {...rest}
         layout
-        style={{ minHeight: '1.2em' }}
+        style={{ minHeight: '1.2em', minWidth: '200px' }}
       >
         <span className="sr-only">{texts[currentTextIndex]}</span>
         <AnimatePresence mode={animatePresenceMode} initial={animatePresenceInitial}>
-          <motion.div
+          <motion.span
             key={currentTextIndex}
-            className={cn(
-               "inline-flex flex-wrap relative",
-               splitBy === "lines" ? "flex-col items-start w-full" : "flex-row items-baseline"
-            )}
-            layout
-            aria-hidden="true"
-            initial="initial"
-            animate="animate"
-            exit="exit"
+            className="absolute inset-0 flex items-center justify-start"
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -20, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-             {elements.map((elementObj, elementIndex) => (
-                <span
-                    key={elementIndex}
-                    className={cn("inline-flex", splitBy === 'lines' ? 'w-full' : '', splitLevelClassName)}
-                    style={{ whiteSpace: 'pre' }}
-                >
-                    {elementObj.characters.map((char, charIndex) => {
-                        const globalIndex = elementObj.startIndex + charIndex;
-                        return (
-                            <motion.span
-                                key={`${char}-${charIndex}`}
-                                initial={initial}
-                                animate={animate}
-                                exit={exit}
-                                transition={{
-                                    ...transition,
-                                    delay: getStaggerDelay(globalIndex, totalElements),
-                                }}
-                                className={cn("inline-block leading-none tracking-tight", elementLevelClassName)}
-                            >
-                                {char === ' ' ? '\u00A0' : char}
-                            </motion.span>
-                        );
-                     })}
-                </span>
-             ))}
-          </motion.div>
+            {texts[currentTextIndex]}
+          </motion.span>
         </AnimatePresence>
       </motion.span>
     );
@@ -518,15 +432,8 @@ const InteractiveHeroSection: React.FC = () => {
                     <span className="relative inline-block mx-2 min-w-[200px] min-h-[1.2em] align-text-top">
                         <RotatingText
                             texts={['intelligent', 'scalable', 'secure', 'efficient']}
-                            mainClassName="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent absolute inset-0"
-                            staggerFrom={"last"}
-                            initial={{ y: "-100%", opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: "110%", opacity: 0 }}
-                            staggerDuration={0.01}
-                            transition={{ type: "spring", damping: 18, stiffness: 250 }}
+                            mainClassName="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent"
                             rotationInterval={2200}
-                            splitBy="characters"
                             auto={true}
                             loop={true}
                         />
