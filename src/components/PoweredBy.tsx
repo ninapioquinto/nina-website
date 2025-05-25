@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 const LOGOS = [
@@ -9,7 +8,6 @@ const LOGOS = [
   { name: 'n8n', url: '/lovable-uploads/06f6e6cf-8cab-4005-9bde-a44da3bd5411.png' },
   { name: 'Monday.com', url: '/lovable-uploads/f453d086-abac-470e-bda5-4137a7c03ffc.png' },
   { name: 'ClickUp', url: '/lovable-uploads/1fffe66c-3cf3-4354-961f-584a332d76ec.png' },
-  { name: 'Pipedrive', url: '/lovable-uploads/3c3218d4-86c2-4939-a16b-e351fed7d177.png' },
   { name: 'SuiteDash', url: '/lovable-uploads/f7286aae-2fbc-412b-bca6-9b66f6c00429.png' },
 ];
 
