@@ -16,10 +16,6 @@ const faqData = [
     answer: "Absolutely. I've worked with clients across the U.S., Canada, Australia, and the UK. I schedule calls with time zone differences in mind and ensure communication is smooth and aligned, no matter where you're located."
   },
   {
-    question: "Do you sign NDAs or work with sensitive information?",
-    answer: "Yes. I regularly handle confidential data and am happy to sign NDAs. Discretion and security are a built-in part of how I work—especially with internal systems and proprietary workflows."
-  },
-  {
     question: "What tools and platforms do you use?",
     answer: "I specialize in Zapier, Make.com, N8n, GoHighLevel, Airtable, and ClickUp. These tools allow me to architect powerful systems quickly, without the overhead of custom code, so you get enterprise-level results at a fraction of the cost."
   },
