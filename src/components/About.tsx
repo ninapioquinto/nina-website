@@ -49,8 +49,8 @@ const About = () => {
           <div className="text-center mb-20 reveal">
             <div className="inline-flex items-center justify-center mb-6">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
-              <div className="mx-4 px-4 py-1 rounded-full bg-purple-500/10 border border-purple-300/20">
-                <span className="text-sm font-medium text-purple-200">About Nina</span>
+              <div className="mx-4 px-4 py-1 rounded-full bg-purple-500/20 border border-purple-300/30">
+                <span className="text-sm font-medium text-purple-100">About Nina</span>
               </div>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
             </div>
@@ -68,8 +68,8 @@ const About = () => {
             {/* Left column - Introduction */}
             <div className="lg:col-span-5 space-y-6">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="luxury-card group h-full border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                   <CardContent className="p-8 relative z-10">
                     <div className="mb-6">
                       <h3 className="text-2xl font-bold mb-4 text-white">
@@ -78,12 +78,12 @@ const About = () => {
                       <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full mb-6"></div>
                     </div>
                     
-                    <div className="space-y-5 text-white/90 leading-relaxed">
-                      <p className="text-lg">
+                    <div className="space-y-5 text-gray-100 leading-relaxed">
+                      <p className="text-lg font-medium">
                         Your strategic partner in building sustainable growth through 
-                        <span className="text-purple-200 font-medium"> custom no-code automation systems</span>.
+                        <span className="text-purple-300 font-semibold"> custom no-code automation systems</span>.
                       </p>
-                      <p>
+                      <p className="text-gray-200">
                         I simplify complex operations and craft streamlined workflows so you can focus on what truly drives your business forward.
                       </p>
                     </div>
@@ -95,10 +95,10 @@ const About = () => {
             {/* Right column - Video */}
             <div className="lg:col-span-7">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="luxury-card group border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                   <CardContent className="p-6 relative z-10">
-                    <div className="aspect-video bg-gradient-to-br from-slate-700/80 to-purple-800/60 rounded-xl overflow-hidden border border-purple-200/30 group-hover:border-purple-200/50 transition-colors duration-500 shadow-2xl">
+                    <div className="aspect-video bg-gradient-to-br from-slate-700/90 to-purple-800/70 rounded-xl overflow-hidden border border-purple-200/40 group-hover:border-purple-200/60 transition-colors duration-500 shadow-2xl">
                       <iframe
                         className="w-full h-full"
                         src="https://drive.google.com/file/d/1Lez8yjnIjR6x64QNXC1ekf_W_QRIKkFn/preview"
@@ -117,13 +117,13 @@ const About = () => {
           {/* Approach and Solutions section */}
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="luxury-card group h-full border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-2xl font-bold mb-6 text-white">
                     My Approach
                   </h3>
-                  <div className="space-y-4 text-white/90 leading-relaxed">
+                  <div className="space-y-4 text-gray-100 leading-relaxed">
                     <p>
                       Using AI, data intelligence, and CRM optimization, I create tailored automation solutions aligned with your unique goals and operational challenges.
                     </p>
@@ -136,13 +136,13 @@ const About = () => {
             </div>
 
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="luxury-card group h-full border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-2xl font-bold mb-6 text-white">
                     Strategic Process
                   </h3>
-                  <div className="space-y-4 text-white/90 leading-relaxed">
+                  <div className="space-y-4 text-gray-100 leading-relaxed">
                     <p>
                       My process begins with a deep understanding of your current workflows and strategic goals.
                     </p>
@@ -159,13 +159,13 @@ const About = () => {
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             <div className="lg:col-span-2">
               <div className="reveal luxury-card-wrapper">
-                <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+                <Card className="luxury-card group h-full border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                   <CardContent className="p-8 relative z-10">
                     <h3 className="text-2xl font-bold mb-6 text-white">
                       Client Impact
                     </h3>
-                    <div className="space-y-4 text-white/90 leading-relaxed">
+                    <div className="space-y-4 text-gray-100 leading-relaxed">
                       <p>
                         Service-based businesses integrate my solutions to streamline operations, cut unnecessary costs, and elevate day-to-day efficiency.
                       </p>
@@ -179,8 +179,8 @@ const About = () => {
             </div>
 
             <div className="reveal luxury-card-wrapper">
-              <Card className="luxury-card group h-full border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+              <Card className="luxury-card group h-full border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
                 <CardContent className="p-8 relative z-10">
                   <h3 className="text-xl font-bold mb-6 text-white text-center">
                     Key Metrics
@@ -195,7 +195,7 @@ const About = () => {
                         <div className={`text-2xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2 group-hover/stat:scale-105 transition-transform duration-300`}>
                           {stat.metric}
                         </div>
-                        <div className="text-white/80 text-sm font-medium leading-tight">
+                        <div className="text-gray-200 text-sm font-medium leading-tight">
                           {stat.label}
                         </div>
                       </div>
@@ -208,13 +208,13 @@ const About = () => {
 
           {/* Call to action with refined design */}
           <div className="text-center reveal">
-            <Card className="luxury-card group border border-purple-200/40 bg-gradient-to-br from-slate-800/90 via-purple-900/30 to-indigo-900/40 backdrop-blur-2xl hover:border-purple-200/60 transition-all duration-700 max-w-5xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/8 via-transparent to-violet-500/8 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
+            <Card className="luxury-card group border border-purple-200/50 bg-slate-800/95 backdrop-blur-2xl hover:border-purple-200/70 transition-all duration-700 max-w-5xl mx-auto shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg"></div>
               <CardContent className="p-10 relative z-10">
                 <h3 className="text-3xl font-bold mb-6 text-white">
                   Ready to Transform Your Operations?
                 </h3>
-                <div className="space-y-6 text-white/90 leading-relaxed max-w-3xl mx-auto">
+                <div className="space-y-6 text-gray-100 leading-relaxed max-w-3xl mx-auto">
                   <p className="text-lg">
                     If you are ready to go beyond short-term fixes and invest in purposeful automation that actually moves the needle, let us build your custom system.
                   </p>
@@ -225,7 +225,7 @@ const About = () => {
                     <p className="text-xl font-semibold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
                       Let us begin with a personalized discovery call.
                     </p>
-                    <p className="text-white/80">
+                    <p className="text-gray-200">
                       We will explore your business, identify key opportunities, and craft a plan to streamline operations and accelerate growth intentionally and intelligently.
                     </p>
                   </div>
