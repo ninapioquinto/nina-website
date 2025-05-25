@@ -2,15 +2,13 @@
 import { useEffect, useRef } from 'react';
 
 const LOGOS = [
-  { name: 'Make (Integromat)', url: '/tools/make-logo.svg' },
-  { name: 'Zapier', url: '/tools/zapier-logo.svg' },
-  { name: 'GoHighLevel', url: '/tools/gohighlevel-logo.svg' },
-  { name: 'Airtable', url: '/tools/airtable-logo.svg' },
-  { name: 'n8n', url: '/tools/n8n-logo.svg' },
-  { name: 'Monday.com', url: '/tools/monday-logo.svg' },
-  { name: 'OpenAI', url: '/tools/openai-logo.svg' },
-  { name: 'Notion', url: '/tools/notion-logo.svg' },
-  { name: 'ClickUp', url: '/tools/clickup-logo.svg' },
+  { name: 'Make (Integromat)', url: '/lovable-uploads/4b10e90b-41e5-44e0-8e3b-68b2fa8cd602.png' },
+  { name: 'Zapier', url: '/lovable-uploads/1c7d3271-99e0-4c12-b3f9-0b9e16b4271e.png' },
+  { name: 'GoHighLevel', url: '/lovable-uploads/ad381596-e264-4e66-b4a3-54b2ee7d3d58.png' },
+  { name: 'Airtable', url: '/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png' },
+  { name: 'n8n', url: '/lovable-uploads/51fbf942-8f61-45e4-ab98-8cb2b5b9f7ff.png' },
+  { name: 'Monday.com', url: '/lovable-uploads/f453d086-abac-470e-bda5-4137a7c03ffc.png' },
+  { name: 'ClickUp', url: '/lovable-uploads/1fffe66c-3cf3-4354-961f-584a332d76ec.png' },
 ];
 
 const PoweredBy = () => {
