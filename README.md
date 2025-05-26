@@ -40,7 +40,7 @@ While I focus on no-code and automation, here’s a peek under the hood:
 I’m passionate about helping service-based businesses scale smarter with automation. Let’s connect!  
 
 - Website: [https://automationcrmexpert.com](https://automationcrmexpert.com)  
-- LinkedIn: [https://www.linkedin.com/in/](https://www.linkedin.com/in/)  
+- LinkedIn: [https://www.linkedin.com/in/](https://www.linkedin.com/in/workwithnina)  
 - Email: [Nina@automationcrmexpert.com](mailto:Nina@automationcrmexpert.com)  
 
 ---
