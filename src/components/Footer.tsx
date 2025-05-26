@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram } from 'lucide-react';
+import { Facebook, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,6 +24,15 @@ const Footer = () => {
                 <Facebook className="h-4 w-4" />
               </span>
               <span>Facebook</span>
+            </a>
+            <a
+              href="#"
+              className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
+            >
+              <span className="h-8 w-8 flex items-center justify-center rounded-full bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
+                <Github className="h-4 w-4" />
+              </span>
+              <span>GitHub</span>
             </a>
           </div>
           <div className="flex flex-col items-center md:items-end gap-2">
