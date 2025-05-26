@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 
 const LOGOS = [
@@ -31,21 +32,21 @@ const PoweredBy = () => {
   }, []);
 
   return (
-    <section className="w-full py-16 bg-white/5 backdrop-blur-lg border-y border-white/20 relative">
+    <section className="w-full py-12 sm:py-16 bg-white/5 backdrop-blur-lg border-y border-white/20 relative">
       <div className="container mx-auto px-4">
-        <h3 className="text-center text-lg text-white font-medium mb-12 tracking-wide">
+        <h3 className="text-center text-base sm:text-lg text-white font-medium mb-8 sm:mb-12 tracking-wide">
           Powered by the Industry's Leading Tools
         </h3>
         
         <div className="relative">
           {/* Enhanced Gradient Masks for better visibility */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white/5 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white/5 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-white/5 to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-white/5 to-transparent z-10" />
           
           {/* Scrolling Container with improved styling */}
           <div 
             ref={scrollRef}
-            className="flex gap-12 overflow-x-hidden whitespace-nowrap py-6 items-center"
+            className="flex gap-6 sm:gap-12 overflow-x-hidden whitespace-nowrap py-4 sm:py-6 items-center"
           >
             {/* Double the logos for seamless loop */}
             {[...LOGOS, ...LOGOS].map((logo, index) => (
@@ -53,7 +54,7 @@ const PoweredBy = () => {
                 key={`${logo.name}-${index}`}
                 className="inline-flex flex-none items-center justify-center group"
               >
-                <div className="w-28 h-16 flex items-center justify-center bg-white/10 rounded-lg p-3 backdrop-blur-sm border border-white/10 opacity-80 hover:opacity-100 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                <div className="w-20 h-12 sm:w-28 sm:h-16 flex items-center justify-center bg-white/10 rounded-lg p-2 sm:p-3 backdrop-blur-sm border border-white/10 opacity-80 hover:opacity-100 hover:bg-white/15 transition-all duration-300 hover:scale-105">
                   <img
                     src={logo.url}
                     alt={logo.name}

@@ -94,28 +94,28 @@ const FAQ = () => {
   }, []);
 
   return (
-    <section id="faq" ref={sectionRef} className="py-24 bg-accent/5 relative bg-grid">
+    <section id="faq" ref={sectionRef} className="py-16 sm:py-24 bg-accent/5 relative bg-grid">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center reveal">
             Frequently Asked <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Questions</span>
           </h2>
-          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
+          <p className="text-center text-base sm:text-lg text-white/70 mb-12 sm:mb-16 max-w-2xl mx-auto reveal">
             Get answers to the most common questions about automation services and working with me
           </p>
           
           <div className="reveal">
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
               {faqData.map((item, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`} 
-                  className="border border-white/10 rounded-lg overflow-hidden bg-accent/20 px-6 group"
+                  className="border border-white/10 rounded-lg overflow-hidden bg-accent/20 px-4 sm:px-6 group"
                 >
-                  <AccordionTrigger className="text-left py-5 hover:no-underline">
-                    <span className="text-lg font-medium group-data-[state=open]:text-primary transition-colors">{item.question}</span>
+                  <AccordionTrigger className="text-left py-4 sm:py-5 hover:no-underline">
+                    <span className="text-base sm:text-lg font-medium group-data-[state=open]:text-primary transition-colors pr-4">{item.question}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/80 pb-5 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
+                  <AccordionContent className="text-white/80 pb-4 sm:pb-5 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up text-sm sm:text-base leading-relaxed">
                     {item.answer}
                   </AccordionContent>
                 </AccordionItem>

@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Navbar = () => {
@@ -40,13 +40,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-background/80 backdrop-blur-md py-3 shadow-md' : 'bg-transparent py-6'
+      scrolled ? 'bg-background/80 backdrop-blur-md py-2 sm:py-3 shadow-md' : 'bg-transparent py-4 sm:py-6'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="text-2xl font-bold bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent"
+            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -56,7 +56,7 @@ const Navbar = () => {
           </a>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {links.map((link) => (
               <button
                 key={link.label}
@@ -68,7 +68,7 @@ const Navbar = () => {
             ))}
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-transparent border border-primary/50 text-white hover:bg-primary/10 glow-border"
+              className="bg-transparent border border-primary/50 text-white hover:bg-primary/10 glow-border text-sm px-4 py-2"
             >
               Let's Connect
             </Button>
@@ -76,21 +76,21 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="lg:hidden text-white p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <Menu className="h-6 w-6" />
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 bg-accent/80 backdrop-blur-md mt-2 rounded-md">
+          <div className="lg:hidden py-4 bg-accent/90 backdrop-blur-md mt-2 rounded-md border border-white/10">
             {links.map((link) => (
               <button
                 key={link.label}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-primary/10"
+                className="block w-full text-left py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-primary/10 transition-colors"
               >
                 {link.label}
               </button>

@@ -74,14 +74,14 @@ export const CertificationParallax = ({
   return (
     <div
       ref={ref}
-      className="min-h-[150vh] py-24 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="min-h-[120vh] sm:min-h-[150vh] py-16 sm:py-24 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <div className="container mx-auto px-4 mb-16">
+      <div className="container mx-auto px-4 mb-12 sm:mb-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center">
             My <span className="text-gradient">Certifications</span>
           </h2>
-          <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-base sm:text-lg text-white/70 mb-12 sm:mb-16 max-w-2xl mx-auto">
             Professional certifications and achievements in AI, automation, and technology
           </p>
         </div>
@@ -94,8 +94,9 @@ export const CertificationParallax = ({
           translateY,
           opacity,
         }}
+        className="relative"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20 px-4 overflow-visible">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 sm:space-x-10 mb-12 sm:mb-20 px-4 overflow-visible">
           {firstRow.map((cert) => (
             <CertificationCard
               cert={cert}
@@ -105,7 +106,7 @@ export const CertificationParallax = ({
           ))}
         </motion.div>
         
-        <motion.div className="flex flex-row space-x-10 mb-20 px-4 overflow-visible">
+        <motion.div className="flex flex-row space-x-6 sm:space-x-10 mb-12 sm:mb-20 px-4 overflow-visible">
           {secondRow.map((cert) => (
             <CertificationCard
               cert={cert}
@@ -115,7 +116,7 @@ export const CertificationParallax = ({
           ))}
         </motion.div>
         
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 px-4 overflow-visible">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-6 sm:space-x-10 px-4 overflow-visible">
           {thirdRow.map((cert) => (
             <CertificationCard
               cert={cert}
@@ -140,12 +141,12 @@ const CertificationCard = ({ cert, translate }: CertificationCardProps) => {
         transition: { duration: 0.3 }
       }}
       key={cert.id}
-      className="w-[400px] h-[300px] relative flex-shrink-0"
+      className="w-[280px] h-[200px] sm:w-[400px] sm:h-[300px] relative flex-shrink-0"
     >
       <Card className="group relative h-full border border-white/10 bg-accent/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/50 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
-        <div className="relative z-20 h-full p-4">
+        <div className="relative z-20 h-full p-3 sm:p-4">
           <div className="w-full h-full rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10">
             <img 
               src={cert.image} 
@@ -160,10 +161,10 @@ const CertificationCard = ({ cert, translate }: CertificationCardProps) => {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
         </div>
         
-        <div className="absolute bottom-4 left-4 right-4 z-30 bg-black/80 backdrop-blur-sm rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+        <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 z-30 bg-black/80 backdrop-blur-sm rounded-lg p-2 sm:p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div className="flex items-center justify-between mb-1">
-            <h3 className="text-sm font-semibold text-white truncate">{cert.title}</h3>
-            <Badge className="h-4 w-4 text-primary flex-shrink-0 ml-2" />
+            <h3 className="text-xs sm:text-sm font-semibold text-white truncate">{cert.title}</h3>
+            <Badge className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0 ml-2" />
           </div>
           <p className="text-xs text-white/70 mb-1">{cert.organization}</p>
           <p className="text-xs text-white/50">
