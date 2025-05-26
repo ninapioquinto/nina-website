@@ -1,9 +1,10 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Instagram, Mail, MessageSquare, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { Facebook } from 'lucide-react';
+import { Facebook, Github } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -73,75 +74,81 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="py-24 relative">
-      <div className="container mx-auto px-4">
+    <section id="contact" ref={sectionRef} className="py-12 sm:py-16 lg:py-24 relative">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 reveal">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 reveal">
                 Let's <span className="text-gradient">Connect</span>
               </h2>
-              <p className="text-lg text-white/70 mb-8 reveal">
+              <p className="text-base sm:text-lg text-white/70 mb-6 sm:mb-8 reveal">
                 Ready to streamline your operations with smart automation? I'd love to hear about your business challenges and how I can help solve them.
               </p>
               
-              <div className="space-y-6 reveal">
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-primary" />
+              <div className="space-y-4 sm:space-y-6 reveal">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="text-sm text-white/50">Email</div>
-                    <a href="mailto:nina@automationcrmexpert.com" className="text-white hover:text-primary transition-colors">
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm text-white/50">Email</div>
+                    <a href="mailto:nina@automationcrmexpert.com" className="text-sm sm:text-base text-white hover:text-primary transition-colors break-all">
                       nina@automationcrmexpert.com
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center">
-                    <MessageSquare className="h-5 w-5 text-primary" />
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="text-sm text-white/50">Schedule a call</div>
-                    <a href="#" className="text-white hover:text-primary transition-colors">
+                  <div className="min-w-0">
+                    <div className="text-xs sm:text-sm text-white/50">Schedule a call</div>
+                    <a href="#" className="text-sm sm:text-base text-white hover:text-primary transition-colors">
                       Book a 30-minute consultation
                     </a>
                   </div>
                 </div>
               </div>
               
-              <div className="mt-12 reveal">
-                <div className="text-sm text-white/50 mb-4">Connect on social</div>
-                <div className="flex gap-4">
+              <div className="mt-8 sm:mt-12 reveal">
+                <div className="text-xs sm:text-sm text-white/50 mb-3 sm:mb-4">Connect on social</div>
+                <div className="flex gap-3 sm:gap-4">
                   <a 
                     href="#" 
-                    className="h-10 w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
                   >
-                    <Instagram className="h-4 w-4" />
+                    <Instagram className="h-3 w-3 sm:h-4 sm:w-4" />
                   </a>
                   <a 
                     href="#" 
-                    className="h-10 w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
                   >
-                    <Facebook className="h-4 w-4" />
+                    <Facebook className="h-3 w-3 sm:h-4 sm:w-4" />
+                  </a>
+                  <a 
+                    href="#" 
+                    className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center hover:bg-primary/20 hover:border-primary/50 transition-all"
+                  >
+                    <Github className="h-3 w-3 sm:h-4 sm:w-4" />
                   </a>
                 </div>
               </div>
             </div>
             
-            <div className="reveal">
-              <div className="bg-accent/20 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-                <h3 className="text-2xl font-medium mb-6">Send me a message</h3>
+            <div className="reveal order-1 lg:order-2">
+              <div className="bg-accent/20 border border-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
+                <h3 className="text-xl sm:text-2xl font-medium mb-4 sm:mb-6">Send me a message</h3>
                 
                 {isSubmitted ? (
-                  <div className="bg-primary/20 border border-primary/30 text-white rounded-lg p-4 flex items-center">
-                    <Send className="h-5 w-5 mr-2" />
-                    <span>Thanks for reaching out! I'll get back to you soon.</span>
+                  <div className="bg-primary/20 border border-primary/30 text-white rounded-lg p-3 sm:p-4 flex items-center">
+                    <Send className="h-4 w-4 sm:h-5 sm:w-5 mr-2 flex-shrink-0" />
+                    <span className="text-sm sm:text-base">Thanks for reaching out! I'll get back to you soon.</span>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit}>
-                    <div className="space-y-4">
+                    <div className="space-y-3 sm:space-y-4">
                       <div>
                         <label htmlFor="name" className="block text-sm mb-1">
                           Name
@@ -153,7 +160,7 @@ const Contact = () => {
                           onChange={handleChange}
                           placeholder="Your name"
                           required
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30"
+                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
                         />
                       </div>
                       
@@ -169,7 +176,7 @@ const Contact = () => {
                           onChange={handleChange}
                           placeholder="Your email"
                           required
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30"
+                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
                         />
                       </div>
                       
@@ -183,7 +190,7 @@ const Contact = () => {
                           value={formState.business}
                           onChange={handleChange}
                           placeholder="Agency, SaaS, Service Business, etc."
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30"
+                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
                         />
                       </div>
                       
@@ -198,25 +205,25 @@ const Contact = () => {
                           onChange={handleChange}
                           placeholder="Tell me about your project or challenge"
                           required
-                          rows={5}
-                          className="w-full bg-accent/30 border border-white/10 rounded-md px-3 py-2 focus:outline-none focus:border-primary/50 placeholder:text-white/30"
+                          rows={4}
+                          className="w-full bg-accent/30 border border-white/10 rounded-md px-3 py-2 focus:outline-none focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base resize-none"
                         />
                       </div>
                       
                       <Button 
                         type="submit" 
                         disabled={isSubmitting} 
-                        className="w-full bg-transparent border border-primary/50 hover:bg-primary/10 text-white group"
+                        className="w-full bg-transparent border border-primary/50 hover:bg-primary/10 text-white group h-10 sm:h-11"
                       >
                         {isSubmitting ? (
                           <div className="flex items-center">
                             <div className="animate-spin mr-2 h-4 w-4 border-t-2 border-r-2 border-white rounded-full"></div>
-                            Sending...
+                            <span className="text-sm sm:text-base">Sending...</span>
                           </div>
                         ) : (
                           <div className="flex items-center justify-center">
-                            Send Message
-                            <Send className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-2px]" />
+                            <span className="text-sm sm:text-base">Send Message</span>
+                            <Send className="ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-2px]" />
                           </div>
                         )}
                       </Button>
