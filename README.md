@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# nina-website
 
-## Project info
+Welcome to my personal website repository, your window into my expertise as an Automation Systems Engineer.
 
-**URL**: https://lovable.dev/projects/f5728a7e-104e-4795-b6a1-e073f39695bb
+---
 
-## How can I edit this code?
+## 🌟 About Me
 
-There are several ways of editing your application.
+I'm Nina, specializing in:
 
-**Use Lovable**
+- Intelligent no-code and low-code automation  
+- CRM and business systems optimization  
+- Streamlining workflows for service-based businesses to scale efficiently  
+- Delivering custom, client-focused solutions with calm confidence and clarity
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f5728a7e-104e-4795-b6a1-e073f39695bb) and start prompting.
+This website reflects my dedication to thoughtful, practical automation that empowers businesses.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🚀 What’s Inside
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- A clean, modern website built to showcase my skills and portfolio  
+- Insights into AI-powered automation and systems engineering  
+- Clear navigation to connect with me and explore my work  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠 Technologies & Tools
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+While I focus on no-code and automation, here’s a peek under the hood:  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- HTML / CSS / JavaScript (for frontend structure and design)  
+- GitHub Pages (for hosting this live site)  
+- Integrations with platforms like Zapier, Make, GoHighLevel, Airtable, and more
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📬 Connect With Me
 
-**Edit a file directly in GitHub**
+I’m passionate about helping service-based businesses scale smarter with automation. Let’s connect!  
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Website: [https://automationcrmexpert.com](https://automationcrmexpert.com)  
+- LinkedIn: [https://www.linkedin.com/in/](https://www.linkedin.com/in/)  
+- Email: [Nina@automationcrmexpert.com](mailto:Nina@automationcrmexpert.com)  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ⚡ How to Use This Repo
 
-## What technologies are used for this project?
+- Clone or fork to explore the site code  
+- Deploy or customize as a base for no-code and automation portfolio websites  
+- Use as inspiration for integrating your own AI and automation projects  
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📄 License
 
-## How can I deploy this project?
+This project is licensed under the [MIT License](LICENSE). Feel free to reuse with attribution.
 
-Simply open [Lovable](https://lovable.dev/projects/f5728a7e-104e-4795-b6a1-e073f39695bb) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+*Thank you for stopping by. I look forward to connecting and building intelligent automation together.*
