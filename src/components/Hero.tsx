@@ -5,7 +5,7 @@ import { useRotatingText } from '../hooks/useRotatingText';
 
 const Hero = () => {
   const rotatingWords = ["intelligent", "scalable", "secure", "efficient"];
-  const { currentWord, isAnimating } = useRotatingText(rotatingWords, 3000);
+  const { currentWord, isAnimating } = useRotatingText(rotatingWords, 2000);
 
   const handleExplore = () => {
     const portfolioSection = document.getElementById('portfolio');
@@ -31,10 +31,10 @@ const Hero = () => {
           {/* Luxury typography with elegant gradients */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tighter">
             Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span> — I build
-            <span className="relative inline-block mx-2 sm:mx-3 min-w-[140px] sm:min-w-[180px] md:min-w-[200px] lg:min-w-[220px] xl:min-w-[240px] h-[1.2em] overflow-hidden">
+            <span className="relative inline-block mx-2 min-w-[120px] sm:min-w-[150px] lg:min-w-[180px] h-[40px] sm:h-[50px] lg:h-[60px]">
               <span 
-                className={`absolute left-0 top-0 w-full transition-all duration-700 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent whitespace-nowrap ${
-                  isAnimating ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'
+                className={`absolute left-0 transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${
+                  isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'
                 }`}
                 style={{
                   textShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
