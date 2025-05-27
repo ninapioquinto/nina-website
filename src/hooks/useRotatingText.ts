@@ -1,26 +1,28 @@
 
 import { useState, useEffect } from 'react';
 
-export const useRotatingText = (words: string[], interval: number = 2000) => {
+export const useRotatingText = (words: string[], interval: number = 3000) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [displayWord, setDisplayWord] = useState(words[0]);
 
   useEffect(() => {
+    if (words.length <= 1) return;
+
     const timer = setInterval(() => {
       setIsAnimating(true);
       
-      // After fade out, change the word
+      // After animation starts, change the word
       setTimeout(() => {
         const nextIndex = (currentIndex + 1) % words.length;
         setCurrentIndex(nextIndex);
         setDisplayWord(words[nextIndex]);
-      }, 300); // Halfway through animation
-      
-      // After changing word, fade in
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 500);
+        
+        // End animation to fade in new word
+        setTimeout(() => {
+          setIsAnimating(false);
+        }, 50);
+      }, 350); // Wait for fade out to complete
     }, interval);
 
     return () => clearInterval(timer);
