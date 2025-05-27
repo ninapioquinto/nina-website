@@ -31,9 +31,9 @@ const Hero = () => {
           {/* Luxury typography with elegant gradients */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tighter">
             Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span> — I build
-            <span className="relative inline-block mx-2 min-w-[120px] sm:min-w-[150px] lg:min-w-[180px] h-[40px] sm:h-[50px] lg:h-[60px]">
+            <span className="relative inline-block mx-1 sm:mx-2 w-[100px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] text-left">
               <span 
-                className={`absolute left-0 transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${
+                className={`absolute left-0 top-0 transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent whitespace-nowrap ${
                   isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'
                 }`}
                 style={{
