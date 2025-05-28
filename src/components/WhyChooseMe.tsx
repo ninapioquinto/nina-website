@@ -1,3 +1,4 @@
+
 'use client'
 import React from 'react';
 import { Activity, MessageCircle } from 'lucide-react';
@@ -7,66 +8,66 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 
 const WhyChooseMe = () => {
   return (
-    <section className="px-4 py-16 md:py-32 relative overflow-hidden">
+    <section className="px-4 py-8 sm:py-16 md:py-32 relative overflow-hidden">
       {/* Tech grid background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       
-      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/20 rounded-2xl md:grid-cols-2 relative z-10">
+      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/20 rounded-2xl grid-cols-1 md:grid-cols-2 relative z-10">
         <div>
-          <div className="p-6 sm:p-12">
-            <span className="text-purple-300 flex items-center gap-2">
-              <Activity className="size-4" />
+          <div className="p-4 sm:p-6 md:p-12">
+            <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
+              <Activity className="size-3 sm:size-4" />
               Certified Expert Delivering Real Results
             </span>
 
-            <p className="mt-8 text-2xl font-semibold text-white">
+            <p className="mt-4 sm:mt-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
               I bring a rare combination of certifications in AI automation, generative AI for data engineering, Make, and Airtable.
             </p>
           </div>
 
           <div aria-hidden className="relative">
             <div className="absolute inset-0 z-10 m-auto size-fit">
-              <div className="rounded-xl bg-black/40 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20">
-                <span className="text-lg">🚀</span> 
-                <span className="text-white">Advanced Automation Systems</span>
+              <div className="rounded-xl bg-black/40 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-2 sm:px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20 mx-auto">
+                <span className="text-base sm:text-lg">🚀</span> 
+                <span className="text-white text-xs sm:text-sm">Advanced Automation Systems</span>
               </div>
               <div className="rounded-xl bg-black/20 absolute inset-2 -bottom-2 mx-auto border border-purple-500/20 px-3 py-4 text-xs font-medium shadow-md shadow-purple-500/10"></div>
             </div>
 
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden h-32 sm:h-40">
               <div className="[background-image:radial-gradient(var(--tw-gradient-stops))] z-1 to-black/40 absolute inset-0 from-transparent to-75%"></div>
               <TechMap />
             </div>
           </div>
         </div>
 
-        <div className="overflow-hidden border-t border-purple-500/20 bg-black/10 p-6 sm:p-12 md:border-0 md:border-l">
+        <div className="overflow-hidden border-t md:border-t-0 border-purple-500/20 bg-black/10 p-4 sm:p-6 md:p-12 md:border-l">
           <div className="relative z-10">
-            <span className="text-purple-300 flex items-center gap-2">
-              <MessageCircle className="size-4" />
+            <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
+              <MessageCircle className="size-3 sm:size-4" />
               Clear and Supportive Collaboration
             </span>
 
-            <p className="my-8 text-2xl font-semibold text-white">
+            <p className="my-4 sm:my-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
               Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way.
             </p>
           </div>
-          <div aria-hidden className="flex flex-col gap-8">
+          <div aria-hidden className="flex flex-col gap-4 sm:gap-8">
             <div>
               <div className="flex items-center gap-2">
-                <span className="flex justify-center items-center size-5 rounded-full border border-purple-500/30">
-                  <span className="size-3 rounded-full bg-purple-500"/>
+                <span className="flex justify-center items-center size-4 sm:size-5 rounded-full border border-purple-500/30">
+                  <span className="size-2 sm:size-3 rounded-full bg-purple-500"/>
                 </span>
                 <span className="text-gray-400 text-xs">Mon 28 May</span>
               </div>
-              <div className="rounded-xl bg-black/30 backdrop-blur-xl mt-1.5 w-3/5 border border-purple-500/20 p-3 text-xs text-white">
+              <div className="rounded-xl bg-black/30 backdrop-blur-xl mt-1.5 w-4/5 sm:w-3/5 border border-purple-500/20 p-2 sm:p-3 text-xs text-white">
                 I need help streamlining my lead management process.
               </div>
             </div>
 
             <div>
-              <div className="rounded-xl mb-1 ml-auto w-3/5 bg-gradient-to-r from-purple-600 to-blue-600 p-3 text-xs text-white">
+              <div className="rounded-xl mb-1 ml-auto w-4/5 sm:w-3/5 bg-gradient-to-r from-purple-600 to-blue-600 p-2 sm:p-3 text-xs text-white">
                 I'll design a custom workflow that automates your lead capture, scoring, and follow-up sequence. This will save you hours weekly and improve conversion rates.
               </div>
               <span className="text-gray-400 block text-right text-xs">Now</span>
@@ -74,20 +75,20 @@ const WhyChooseMe = () => {
           </div>
         </div>
 
-        <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/10">
-          <p className="text-center text-4xl font-semibold lg:text-7xl text-white">
+        <div className="col-span-full border-y border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
+          <p className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-semibold text-white leading-tight">
             <span className="text-gradient">Experienced partner</span> for clients worldwide
           </p>
         </div>
 
         <div className="relative col-span-full">
-          <div className="absolute z-10 max-w-lg px-6 pr-12 pt-6 md:px-12 md:pt-12">
-            <span className="text-purple-300 flex items-center gap-2">
-              <Activity className="size-4" />
+          <div className="absolute z-10 max-w-lg px-4 sm:px-6 pr-6 sm:pr-12 pt-4 sm:pt-6 md:px-12 md:pt-12">
+            <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
+              <Activity className="size-3 sm:size-4" />
               Proven Success Across Industries
             </span>
 
-            <p className="my-8 text-2xl font-semibold text-white">
+            <p className="my-4 sm:my-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
               I have optimized lead management for real estate teams and streamlined operations for business owners. 
               <span className="text-gray-400"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
             </p>
@@ -111,7 +112,7 @@ const svgOptions = {
 const TechMap = () => {
   const viewBox = `0 0 120 60`;
   return (
-    <svg viewBox={viewBox} style={{ background: svgOptions.backgroundColor }} className="w-full h-40">
+    <svg viewBox={viewBox} style={{ background: svgOptions.backgroundColor }} className="w-full h-full">
       {points.map((point, index) => (
         <circle 
           key={index} 
@@ -149,7 +150,7 @@ const chartData = [
 const SuccessChart = () => {
   return (
     <div className="bg-black/20 backdrop-blur-xl border-t border-purple-500/20">
-      <ChartContainer className="h-120 aspect-auto md:h-96" config={chartConfig}>
+      <ChartContainer className="h-48 sm:h-64 md:h-96 aspect-auto" config={chartConfig}>
         <AreaChart
           accessibilityLayer
           data={chartData}
