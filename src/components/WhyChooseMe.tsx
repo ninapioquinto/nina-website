@@ -1,4 +1,3 @@
-
 'use client'
 import React from 'react';
 import { Activity, MessageCircle } from 'lucide-react';
@@ -77,7 +76,7 @@ const WhyChooseMe = () => {
 
         <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/20">
           <p className="text-center text-4xl font-semibold lg:text-7xl text-white">
-            <span className="text-gradient">99.9%</span> Client Success Rate
+            <span className="text-gradient">Experienced partner</span> for clients worldwide
           </p>
         </div>
 
@@ -89,7 +88,7 @@ const WhyChooseMe = () => {
             </span>
 
             <p className="my-8 text-2xl font-semibold text-white">
-              I have optimized lead management for real estate teams and streamlined operations for coaches. 
+              I have optimized lead management for real estate teams and streamlined operations for business owners. 
               <span className="text-gray-400"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
             </p>
           </div>
