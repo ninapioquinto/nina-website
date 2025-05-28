@@ -1,4 +1,3 @@
-
 'use client'
 import React from 'react';
 import { Activity, MessageCircle } from 'lucide-react';
@@ -13,16 +12,25 @@ const WhyChooseMe = () => {
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       
+      <div className="mx-auto max-w-6xl mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-4">
+          Why Clients Choose Me
+        </h2>
+      </div>
+      
       <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/40 rounded-2xl md:grid-cols-2 relative z-10">
         <div>
           <div className="p-6 sm:p-12">
             <span className="text-purple-300 flex items-center gap-2">
               <Activity className="size-4" />
-              Certified Expert Delivering Real Results
+              ✅ Certified expert delivering real results
             </span>
 
             <p className="mt-8 text-2xl font-semibold text-white">
               I bring a rare combination of certifications in AI automation, generative AI for data engineering, Make, and Airtable.
+            </p>
+            <p className="mt-4 text-gray-300">
+              Leveraging top no-code platforms like Zapier, Make, GoHighLevel, Airtable, and n8n, I create custom, scalable systems that streamline your operations and unlock your business's full potential without writing a single line of code.
             </p>
           </div>
 
@@ -46,14 +54,17 @@ const WhyChooseMe = () => {
           <div className="relative z-10">
             <span className="text-purple-300 flex items-center gap-2">
               <MessageCircle className="size-4" />
-              Clear and Supportive Collaboration
+              ✅ Clear and supportive collaboration from start to finish
             </span>
 
             <p className="my-8 text-2xl font-semibold text-white">
               Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way.
             </p>
+            <p className="text-gray-300">
+              keeping you informed and confident throughout the process. My steady and thoughtful approach ensures your project runs smoothly and stress-free.
+            </p>
           </div>
-          <div aria-hidden className="flex flex-col gap-8">
+          <div aria-hidden className="flex flex-col gap-8 mt-8">
             <div>
               <div className="flex items-center gap-2">
                 <span className="flex justify-center items-center size-5 rounded-full border border-purple-500/30">
@@ -76,21 +87,40 @@ const WhyChooseMe = () => {
         </div>
 
         <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/20">
-          <p className="text-center text-4xl font-semibold lg:text-7xl text-white">
-            <span className="text-gradient">99.9%</span> Client Success Rate
-          </p>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="text-purple-300 flex items-center gap-2 mb-4">
+                <Activity className="size-4" />
+                ✅ Strategic partner who sees the bigger picture
+              </span>
+              <p className="text-white text-lg">
+                I do more than execute tasks. I identify hidden bottlenecks and design workflows that future-proof your business. Clients regularly tell me I uncover opportunities they did not even realize existed, helping them save time and boost revenue.
+              </p>
+            </div>
+            <div>
+              <span className="text-purple-300 flex items-center gap-2 mb-4">
+                <Activity className="size-4" />
+                ✅ Experienced partner for clients worldwide
+              </span>
+              <p className="text-white text-lg">
+                I have worked with clients across the US, UK, Australia, and Canada who value my integrity, speed, and dedication to quality. When you work with me, you get a reliable partner committed to delivering clean and user-friendly systems that make your life easier.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="relative col-span-full">
           <div className="absolute z-10 max-w-lg px-6 pr-12 pt-6 md:px-12 md:pt-12">
             <span className="text-purple-300 flex items-center gap-2">
               <Activity className="size-4" />
-              Proven Success Across Industries
+              ✅ Proven success across diverse industries
             </span>
 
             <p className="my-8 text-2xl font-semibold text-white">
-              I have optimized lead management for real estate teams and streamlined operations for coaches. 
-              <span className="text-gray-400"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
+              I have optimized lead management for real estate teams and streamlined operations for coaches and business owners. 
+            </p>
+            <p className="text-gray-400">
+              My systems deliver measurable improvements in efficiency and growth. Clients consistently reclaim hours in their week and gain clarity in their workflows so they can focus on scaling their business.
             </p>
           </div>
           <SuccessChart />
