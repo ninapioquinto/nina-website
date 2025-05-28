@@ -1,12 +1,8 @@
 
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { useRotatingText } from '../hooks/useRotatingText';
 
 const Hero = () => {
-  const rotatingWords = ["intelligent", "scalable", "secure", "efficient"];
-  const { currentWord, isAnimating } = useRotatingText(rotatingWords, 2000);
-
   const handleExplore = () => {
     const portfolioSection = document.getElementById('portfolio');
     portfolioSection?.scrollIntoView({ behavior: 'smooth' });
@@ -28,22 +24,36 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Luxury typography with elegant gradients */}
+          {/* Key metrics above the fold */}
+          <div className="mb-6 sm:mb-8 flex flex-wrap justify-center gap-4 sm:gap-8">
+            <div className="bg-gradient-to-r from-purple-600/10 via-violet-600/10 to-indigo-600/10 border border-purple-400/30 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="text-lg sm:text-xl font-bold text-white">35%</div>
+              <div className="text-xs sm:text-sm text-purple-300">Reduction in No-Shows</div>
+            </div>
+            <div className="bg-gradient-to-r from-purple-600/10 via-violet-600/10 to-indigo-600/10 border border-purple-400/30 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="text-lg sm:text-xl font-bold text-white">50%</div>
+              <div className="text-xs sm:text-sm text-purple-300">Faster Onboarding</div>
+            </div>
+            <div className="bg-gradient-to-r from-purple-600/10 via-violet-600/10 to-indigo-600/10 border border-purple-400/30 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="text-lg sm:text-xl font-bold text-white">15+</div>
+              <div className="text-xs sm:text-sm text-purple-300">Hours Saved Weekly</div>
+            </div>
+          </div>
+
+          {/* Luxury typography with specific business outcomes */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tighter">
             Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span> — I build
-            <span className="relative inline-block mx-2 min-w-[120px] sm:min-w-[150px] lg:min-w-[180px] h-[40px] sm:h-[50px] lg:h-[60px]">
+            <span className="relative inline-block mx-2">
               <span 
-                className={`absolute left-0 transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${
-                  isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'
-                }`}
+                className="bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent"
                 style={{
                   textShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
                 }}
               >
-                {currentWord}
+                profit-boosting
               </span>
             </span>
-            systems that make business operations easier.
+            systems that save you time and retain more clients.
           </h1>
           
           {/* Elegant subtitle with refined spacing */}
