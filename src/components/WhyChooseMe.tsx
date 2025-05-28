@@ -117,7 +117,7 @@ const WhyChooseMe = () => {
             </span>
 
             <p className="my-8 text-2xl font-semibold text-white">
-              I have optimized lead management for real estate teams and streamlined operations for coaches and business owners. 
+              I have optimized lead management for real estate teams and streamlined operations for business owners.
             </p>
             <p className="text-gray-400">
               My systems deliver measurable improvements in efficiency and growth. Clients consistently reclaim hours in their week and gain clarity in their workflows so they can focus on scaling their business.
