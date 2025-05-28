@@ -13,8 +13,8 @@ const WhyChooseMe = () => {
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       
-      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/20 rounded-2xl grid-cols-1 md:grid-cols-2 relative z-10">
-        <div>
+      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/20 rounded-2xl grid-cols-1 md:grid-cols-2 relative z-10 overflow-hidden">
+        <div className="relative">
           <div className="p-4 sm:p-6 md:p-12">
             <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
               <Activity className="size-3 sm:size-4" />
@@ -26,7 +26,7 @@ const WhyChooseMe = () => {
             </p>
           </div>
 
-          <div aria-hidden className="relative">
+          <div aria-hidden className="relative px-4 sm:px-6 md:px-12 pb-4 sm:pb-6 md:pb-12">
             <div className="absolute inset-0 z-10 m-auto size-fit">
               <div className="rounded-xl bg-black/40 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-2 sm:px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20 mx-auto">
                 <span className="text-base sm:text-lg">🚀</span> 
@@ -42,7 +42,7 @@ const WhyChooseMe = () => {
           </div>
         </div>
 
-        <div className="overflow-hidden border-t md:border-t-0 border-purple-500/20 bg-black/10 p-4 sm:p-6 md:p-12 md:border-l">
+        <div className="border-t md:border-t-0 border-purple-500/20 bg-black/10 p-4 sm:p-6 md:p-12 md:border-l">
           <div className="relative z-10">
             <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
               <MessageCircle className="size-3 sm:size-4" />
@@ -56,14 +56,14 @@ const WhyChooseMe = () => {
           <ChatConversation />
         </div>
 
-        <div className="col-span-full border-y border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
-          <p className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-7xl font-semibold text-white leading-tight">
+        <div className="col-span-full border-t border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
+          <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
             <span className="text-gradient">Experienced partner</span> for clients worldwide
           </p>
         </div>
 
         <div className="relative col-span-full">
-          <div className="absolute z-10 max-w-lg px-4 sm:px-6 pr-6 sm:pr-12 pt-4 sm:pt-6 md:px-12 md:pt-12">
+          <div className="absolute z-10 max-w-lg px-4 sm:px-6 md:px-12 pt-4 sm:pt-6 md:pt-12">
             <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
               <Activity className="size-3 sm:size-4" />
               Proven Success Across Industries
@@ -71,7 +71,7 @@ const WhyChooseMe = () => {
 
             <p className="my-4 sm:my-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
               I have optimized lead management for real estate teams and streamlined operations for business owners. 
-              <span className="text-gray-400"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
+              <span className="text-gray-400 block mt-2"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
             </p>
           </div>
           <SuccessChart />
