@@ -12,7 +12,7 @@ const WhyChooseMe = () => {
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       
-      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/40 rounded-2xl md:grid-cols-2 relative z-10">
+      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/20 rounded-2xl md:grid-cols-2 relative z-10">
         <div>
           <div className="p-6 sm:p-12">
             <span className="text-purple-300 flex items-center gap-2">
@@ -27,21 +27,21 @@ const WhyChooseMe = () => {
 
           <div aria-hidden className="relative">
             <div className="absolute inset-0 z-10 m-auto size-fit">
-              <div className="rounded-xl bg-black/60 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20">
+              <div className="rounded-xl bg-black/40 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20">
                 <span className="text-lg">🚀</span> 
                 <span className="text-white">Advanced Automation Systems</span>
               </div>
-              <div className="rounded-xl bg-black/40 absolute inset-2 -bottom-2 mx-auto border border-purple-500/20 px-3 py-4 text-xs font-medium shadow-md shadow-purple-500/10"></div>
+              <div className="rounded-xl bg-black/20 absolute inset-2 -bottom-2 mx-auto border border-purple-500/20 px-3 py-4 text-xs font-medium shadow-md shadow-purple-500/10"></div>
             </div>
 
             <div className="relative overflow-hidden">
-              <div className="[background-image:radial-gradient(var(--tw-gradient-stops))] z-1 to-black/60 absolute inset-0 from-transparent to-75%"></div>
+              <div className="[background-image:radial-gradient(var(--tw-gradient-stops))] z-1 to-black/40 absolute inset-0 from-transparent to-75%"></div>
               <TechMap />
             </div>
           </div>
         </div>
 
-        <div className="overflow-hidden border-t border-purple-500/20 bg-black/20 p-6 sm:p-12 md:border-0 md:border-l">
+        <div className="overflow-hidden border-t border-purple-500/20 bg-black/10 p-6 sm:p-12 md:border-0 md:border-l">
           <div className="relative z-10">
             <span className="text-purple-300 flex items-center gap-2">
               <MessageCircle className="size-4" />
@@ -60,7 +60,7 @@ const WhyChooseMe = () => {
                 </span>
                 <span className="text-gray-400 text-xs">Mon 28 May</span>
               </div>
-              <div className="rounded-xl bg-black/60 backdrop-blur-xl mt-1.5 w-3/5 border border-purple-500/20 p-3 text-xs text-white">
+              <div className="rounded-xl bg-black/30 backdrop-blur-xl mt-1.5 w-3/5 border border-purple-500/20 p-3 text-xs text-white">
                 I need help streamlining my lead management process.
               </div>
             </div>
@@ -74,7 +74,7 @@ const WhyChooseMe = () => {
           </div>
         </div>
 
-        <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/20">
+        <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/10">
           <p className="text-center text-4xl font-semibold lg:text-7xl text-white">
             <span className="text-gradient">Experienced partner</span> for clients worldwide
           </p>
@@ -148,7 +148,7 @@ const chartData = [
 
 const SuccessChart = () => {
   return (
-    <div className="bg-black/40 backdrop-blur-xl border-t border-purple-500/20">
+    <div className="bg-black/20 backdrop-blur-xl border-t border-purple-500/20">
       <ChartContainer className="h-120 aspect-auto md:h-96" config={chartConfig}>
         <AreaChart
           accessibilityLayer
