@@ -1,49 +1,11 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Instagram, Mail, MessageSquare, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Instagram, Mail, MessageSquare, ArrowRight } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 
 const Contact = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    business: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const { toast } = useToast();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({ name: '', email: '', business: '', message: '' });
-      
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -133,97 +95,39 @@ const Contact = () => {
             
             <div className="reveal">
               <div className="bg-accent/20 border border-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
-                <h3 className="text-xl sm:text-2xl font-medium mb-4 sm:mb-6">Send me a message</h3>
+                <h3 className="text-xl sm:text-2xl font-medium mb-4 sm:mb-6">Ready to Work Together?</h3>
                 
-                {isSubmitted ? (
-                  <div className="bg-primary/20 border border-primary/30 text-white rounded-lg p-4 flex items-center">
-                    <Send className="h-5 w-5 mr-2 flex-shrink-0" />
-                    <span className="text-sm sm:text-base">Thanks for reaching out! I'll get back to you soon.</span>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
-                    <div className="space-y-3 sm:space-y-4">
-                      <div>
-                        <label htmlFor="name" className="block text-sm mb-1">
-                          Name
-                        </label>
-                        <Input
-                          id="name"
-                          name="name"
-                          value={formState.name}
-                          onChange={handleChange}
-                          placeholder="Your name"
-                          required
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="email" className="block text-sm mb-1">
-                          Email
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formState.email}
-                          onChange={handleChange}
-                          placeholder="Your email"
-                          required
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="business" className="block text-sm mb-1">
-                          Business Type
-                        </label>
-                        <Input
-                          id="business"
-                          name="business"
-                          value={formState.business}
-                          onChange={handleChange}
-                          placeholder="Agency, SaaS, Service Business, etc."
-                          className="bg-accent/30 border-white/10 focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base"
-                        />
-                      </div>
-                      
-                      <div>
-                        <label htmlFor="message" className="block text-sm mb-1">
-                          Message
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formState.message}
-                          onChange={handleChange}
-                          placeholder="Tell me about your project or challenge"
-                          required
-                          rows={4}
-                          className="w-full bg-accent/30 border border-white/10 rounded-md px-3 py-2 focus:outline-none focus:border-primary/50 placeholder:text-white/30 text-sm sm:text-base resize-none"
-                        />
-                      </div>
-                      
-                      <Button 
-                        type="submit" 
-                        disabled={isSubmitting} 
-                        className="w-full bg-transparent border border-primary/50 hover:bg-primary/10 text-white group py-3"
-                      >
-                        {isSubmitting ? (
-                          <div className="flex items-center justify-center">
-                            <div className="animate-spin mr-2 h-4 w-4 border-t-2 border-r-2 border-white rounded-full"></div>
-                            <span className="text-sm sm:text-base">Sending...</span>
-                          </div>
-                        ) : (
-                          <div className="flex items-center justify-center">
-                            <span className="text-sm sm:text-base">Send Message</span>
-                            <Send className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-[-2px]" />
-                          </div>
-                        )}
+                <div className="space-y-4">
+                  <p className="text-white/80 text-sm sm:text-base">
+                    I work with businesses that are serious about scaling their operations through automation and systems optimization.
+                  </p>
+                  
+                  <p className="text-white/80 text-sm sm:text-base">
+                    Let me learn about your business to see if we're a good fit.
+                  </p>
+                  
+                  <div className="pt-4">
+                    <a href="/work-with-me">
+                      <Button className="w-full bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
+                                       border border-purple-400/40 text-white backdrop-blur-sm
+                                       hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
+                                       hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
+                                       transition-all duration-700 group relative overflow-hidden py-4">
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-violet-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                        <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
+                          Work with Me
+                          <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2 group-hover:scale-110" />
+                        </span>
                       </Button>
-                    </div>
-                  </form>
-                )}
+                    </a>
+                  </div>
+                  
+                  <div className="text-center">
+                    <p className="text-white/50 text-xs sm:text-sm">
+                      Quick qualification form • Takes 2-3 minutes
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
