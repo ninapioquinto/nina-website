@@ -2,9 +2,9 @@
 'use client'
 import React from 'react';
 import { Activity, MessageCircle } from 'lucide-react';
-import DottedMap from 'dotted-map';
-import { Area, AreaChart, CartesianGrid } from 'recharts';
-import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
+import TechMap from './TechMap';
+import SuccessChart from './SuccessChart';
+import ChatConversation from './ChatConversation';
 
 const WhyChooseMe = () => {
   return (
@@ -53,26 +53,7 @@ const WhyChooseMe = () => {
               Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way.
             </p>
           </div>
-          <div aria-hidden className="flex flex-col gap-4 sm:gap-8">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="flex justify-center items-center size-4 sm:size-5 rounded-full border border-purple-500/30">
-                  <span className="size-2 sm:size-3 rounded-full bg-purple-500"/>
-                </span>
-                <span className="text-gray-400 text-xs">Mon 28 May</span>
-              </div>
-              <div className="rounded-xl bg-black/30 backdrop-blur-xl mt-1.5 w-4/5 sm:w-3/5 border border-purple-500/20 p-2 sm:p-3 text-xs text-white">
-                I need help streamlining my lead management process.
-              </div>
-            </div>
-
-            <div>
-              <div className="rounded-xl mb-1 ml-auto w-4/5 sm:w-3/5 bg-gradient-to-r from-purple-600 to-blue-600 p-2 sm:p-3 text-xs text-white">
-                I'll design a custom workflow that automates your lead capture, scoring, and follow-up sequence. This will save you hours weekly and improve conversion rates.
-              </div>
-              <span className="text-gray-400 block text-right text-xs">Now</span>
-            </div>
-          </div>
+          <ChatConversation />
         </div>
 
         <div className="col-span-full border-y border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
@@ -97,104 +78,6 @@ const WhyChooseMe = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-const map = new DottedMap({ height: 55, grid: 'diagonal' });
-const points = map.getPoints();
-
-const svgOptions = {
-  backgroundColor: 'transparent',
-  color: 'rgb(139, 92, 246)', // purple-500
-  radius: 0.15,
-};
-
-const TechMap = () => {
-  const viewBox = `0 0 120 60`;
-  return (
-    <svg viewBox={viewBox} style={{ background: svgOptions.backgroundColor }} className="w-full h-full">
-      {points.map((point, index) => (
-        <circle 
-          key={index} 
-          cx={point.x} 
-          cy={point.y} 
-          r={svgOptions.radius} 
-          fill={svgOptions.color}
-          className="animate-pulse"
-        />
-      ))}
-    </svg>
-  );
-};
-
-const chartConfig = {
-  efficiency: {
-    label: 'Efficiency Gain',
-    color: '#8b5cf6', // purple-500
-  },
-  revenue: {
-    label: 'Revenue Impact',
-    color: '#3b82f6', // blue-500
-  },
-} satisfies ChartConfig;
-
-const chartData = [
-  { month: 'Jan', efficiency: 15, revenue: 25 },
-  { month: 'Feb', efficiency: 35, revenue: 45 },
-  { month: 'Mar', efficiency: 55, revenue: 75 },
-  { month: 'Apr', efficiency: 75, revenue: 95 },
-  { month: 'May', efficiency: 85, revenue: 120 },
-  { month: 'Jun', efficiency: 95, revenue: 150 },
-];
-
-const SuccessChart = () => {
-  return (
-    <div className="bg-black/20 backdrop-blur-xl border-t border-purple-500/20">
-      <ChartContainer className="h-48 sm:h-64 md:h-96 aspect-auto" config={chartConfig}>
-        <AreaChart
-          accessibilityLayer
-          data={chartData}
-          margin={{
-            left: 0,
-            right: 0,
-          }}>
-          <defs>
-            <linearGradient id="fillEfficiency" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="var(--color-efficiency)" stopOpacity={0.8} />
-              <stop offset="55%" stopColor="var(--color-efficiency)" stopOpacity={0.1} />
-            </linearGradient>
-            <linearGradient id="fillRevenue" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="var(--color-revenue)" stopOpacity={0.8} />
-              <stop offset="55%" stopColor="var(--color-revenue)" stopOpacity={0.1} />
-            </linearGradient>
-          </defs>
-          <CartesianGrid vertical={false} className="stroke-purple-500/20" />
-          <ChartTooltip 
-            active 
-            cursor={false} 
-            content={<ChartTooltipContent className="bg-black/80 backdrop-blur-xl border-purple-500/20 text-white" />} 
-          />
-          <Area 
-            strokeWidth={2} 
-            dataKey="revenue" 
-            type="stepBefore" 
-            fill="url(#fillRevenue)" 
-            fillOpacity={0.1} 
-            stroke="var(--color-revenue)" 
-            stackId="a" 
-          />
-          <Area 
-            strokeWidth={2} 
-            dataKey="efficiency" 
-            type="stepBefore" 
-            fill="url(#fillEfficiency)" 
-            fillOpacity={0.1} 
-            stroke="var(--color-efficiency)" 
-            stackId="a" 
-          />
-        </AreaChart>
-      </ChartContainer>
-    </div>
   );
 };
 
