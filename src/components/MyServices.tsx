@@ -55,7 +55,7 @@ const MyServices = () => {
                             key={index}
                             className={`relative group rounded-2xl border transition-all duration-500 ${
                                 service.highlight 
-                                    ? "bg-gradient-to-b from-accent to-accent/80 backdrop-blur-lg border-white/10" 
+                                    ? "bg-black/20 backdrop-blur-lg border-purple-500/30 hover:border-purple-400/50" 
                                     : "bg-accent/20 backdrop-blur-lg border-white/10"
                             } hover:border-primary/30 hover:shadow-[0_8px_40px_-12px_rgba(139,92,246,0.3)]`}
                         >
@@ -66,7 +66,7 @@ const MyServices = () => {
                                     </h3>
                                     <p className={`text-sm pb-6 border-b ${
                                         service.highlight
-                                            ? "text-white/70 border-white/20"
+                                            ? "text-white/70 border-purple-500/20"
                                             : "text-white/70 border-white/10"
                                     }`}>
                                         {service.description}
@@ -81,7 +81,7 @@ const MyServices = () => {
                                         >
                                             <div className={
                                                 service.highlight
-                                                    ? "text-white"
+                                                    ? "text-purple-400"
                                                     : "text-white"
                                             }>
                                                 <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-3.5 h-3.5">
@@ -103,7 +103,7 @@ const MyServices = () => {
                                     <Button
                                         className={`w-full h-12 group relative ${
                                             service.highlight
-                                                ? "bg-white hover:bg-white/90 text-accent border border-white/20"
+                                                ? "bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 border border-purple-400/40 text-white backdrop-blur-sm hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 hover:border-purple-300/60"
                                                 : "bg-white/10 hover:bg-white/20 text-white border border-white/10"
                                         } transition-all duration-300`}
                                         asChild
