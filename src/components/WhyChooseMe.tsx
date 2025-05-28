@@ -1,110 +1,200 @@
 
+'use client'
 import React from 'react';
-import { Check, Award, Users, Globe, Target, Handshake, Star, Zap } from 'lucide-react';
+import { Activity, MessageCircle } from 'lucide-react';
+import DottedMap from 'dotted-map';
+import { Area, AreaChart, CartesianGrid } from 'recharts';
+import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 
 const WhyChooseMe = () => {
-  const features = [
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Certified expert delivering real results",
-      description: "I bring a rare combination of certifications in AI automation, generative AI for data engineering, Make, and Airtable. Leveraging top no-code platforms like Zapier, Make, GoHighLevel, Airtable, and n8n, I create custom, scalable systems that streamline your operations and unlock your business's full potential without writing a single line of code."
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Strategic partner who sees the bigger picture",
-      description: "I do more than execute tasks. I identify hidden bottlenecks and design workflows that future-proof your business. Clients regularly tell me I uncover opportunities they did not even realize existed, helping them save time and boost revenue."
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Clear and supportive collaboration from start to finish",
-      description: "Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way, keeping you informed and confident throughout the process. My steady and thoughtful approach ensures your project runs smoothly and stress-free."
-    },
-    {
-      icon: <Star className="w-6 h-6" />,
-      title: "Proven success across diverse industries",
-      description: "I have optimized lead management for real estate teams and streamlined operations for coaches and business owners. My systems deliver measurable improvements in efficiency and growth. Clients consistently reclaim hours in their week and gain clarity in their workflows so they can focus on scaling their business."
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Experienced partner for clients worldwide",
-      description: "I have worked with clients across the US, UK, Australia, and Canada who value my integrity, speed, and dedication to quality. When you work with me, you get a reliable partner committed to delivering clean and user-friendly systems that make your life easier."
-    }
-  ];
-
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="px-4 py-16 md:py-32 relative overflow-hidden">
       {/* Tech grid background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20 reveal">
-          <div className="inline-flex items-center gap-2 bg-purple-500/10 backdrop-blur-md border border-purple-500/20 rounded-full px-6 py-2 mb-6">
-            <Zap className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-300 text-sm font-medium">Why Choose Me</span>
+      <div className="mx-auto grid max-w-5xl border border-purple-500/20 backdrop-blur-xl bg-black/40 rounded-2xl md:grid-cols-2 relative z-10">
+        <div>
+          <div className="p-6 sm:p-12">
+            <span className="text-purple-300 flex items-center gap-2">
+              <Activity className="size-4" />
+              Certified Expert Delivering Real Results
+            </span>
+
+            <p className="mt-8 text-2xl font-semibold text-white">
+              I bring a rare combination of certifications in AI automation, generative AI for data engineering, Make, and Airtable.
+            </p>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Built for <span className="text-gradient">Excellence</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Delivering exceptional results through certified expertise, strategic thinking, and unwavering commitment to your success.
+
+          <div aria-hidden className="relative">
+            <div className="absolute inset-0 z-10 m-auto size-fit">
+              <div className="rounded-xl bg-black/60 backdrop-blur-xl z-[1] relative flex size-fit w-fit items-center gap-2 border border-purple-500/30 px-3 py-1 text-xs font-medium shadow-md shadow-purple-500/20">
+                <span className="text-lg">🚀</span> 
+                <span className="text-white">Advanced Automation Systems</span>
+              </div>
+              <div className="rounded-xl bg-black/40 absolute inset-2 -bottom-2 mx-auto border border-purple-500/20 px-3 py-4 text-xs font-medium shadow-md shadow-purple-500/10"></div>
+            </div>
+
+            <div className="relative overflow-hidden">
+              <div className="[background-image:radial-gradient(var(--tw-gradient-stops))] z-1 to-black/60 absolute inset-0 from-transparent to-75%"></div>
+              <TechMap />
+            </div>
+          </div>
+        </div>
+
+        <div className="overflow-hidden border-t border-purple-500/20 bg-black/20 p-6 sm:p-12 md:border-0 md:border-l">
+          <div className="relative z-10">
+            <span className="text-purple-300 flex items-center gap-2">
+              <MessageCircle className="size-4" />
+              Clear and Supportive Collaboration
+            </span>
+
+            <p className="my-8 text-2xl font-semibold text-white">
+              Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way.
+            </p>
+          </div>
+          <div aria-hidden className="flex flex-col gap-8">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="flex justify-center items-center size-5 rounded-full border border-purple-500/30">
+                  <span className="size-3 rounded-full bg-purple-500"/>
+                </span>
+                <span className="text-gray-400 text-xs">Mon 28 May</span>
+              </div>
+              <div className="rounded-xl bg-black/60 backdrop-blur-xl mt-1.5 w-3/5 border border-purple-500/20 p-3 text-xs text-white">
+                I need help streamlining my lead management process.
+              </div>
+            </div>
+
+            <div>
+              <div className="rounded-xl mb-1 ml-auto w-3/5 bg-gradient-to-r from-purple-600 to-blue-600 p-3 text-xs text-white">
+                I'll design a custom workflow that automates your lead capture, scoring, and follow-up sequence. This will save you hours weekly and improve conversion rates.
+              </div>
+              <span className="text-gray-400 block text-right text-xs">Now</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-span-full border-y border-purple-500/20 p-12 bg-black/20">
+          <p className="text-center text-4xl font-semibold lg:text-7xl text-white">
+            <span className="text-gradient">99.9%</span> Client Success Rate
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className={`luxury-card-wrapper reveal luxury-delay-${(index + 1) * 100}`}
-            >
-              <div className="group relative h-full">
-                {/* Animated border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-700 opacity-0 group-hover:opacity-100" />
-                
-                {/* Main card */}
-                <div className="relative h-full bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-700 group-hover:bg-black/60">
-                  {/* Icon with tech styling */}
-                  <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-md border border-purple-500/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-                      <Check className="w-8 h-8 text-purple-400 relative z-10" />
-                    </div>
-                    
-                    {/* Floating icon */}
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:rotate-12 transition-transform duration-500">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                    {feature.description}
-                  </p>
+        <div className="relative col-span-full">
+          <div className="absolute z-10 max-w-lg px-6 pr-12 pt-6 md:px-12 md:pt-12">
+            <span className="text-purple-300 flex items-center gap-2">
+              <Activity className="size-4" />
+              Proven Success Across Industries
+            </span>
 
-                  {/* Tech accent line */}
-                  <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-b-2xl scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Bottom CTA with tech styling */}
-        <div className="text-center mt-20 reveal">
-          <div className="relative inline-block">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-xl animate-pulse-glow" />
-            <div className="relative bg-black/60 backdrop-blur-xl border border-purple-500/30 rounded-full px-8 py-4 flex items-center gap-4">
-              <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full animate-pulse shadow-lg shadow-green-400/50" />
-              <span className="text-white font-medium">Ready to transform your business operations</span>
-              <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full" />
-            </div>
+            <p className="my-8 text-2xl font-semibold text-white">
+              I have optimized lead management for real estate teams and streamlined operations for coaches. 
+              <span className="text-gray-400"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
+            </p>
           </div>
+          <SuccessChart />
         </div>
       </div>
     </section>
+  );
+};
+
+const map = new DottedMap({ height: 55, grid: 'diagonal' });
+const points = map.getPoints();
+
+const svgOptions = {
+  backgroundColor: 'transparent',
+  color: 'rgb(139, 92, 246)', // purple-500
+  radius: 0.15,
+};
+
+const TechMap = () => {
+  const viewBox = `0 0 120 60`;
+  return (
+    <svg viewBox={viewBox} style={{ background: svgOptions.backgroundColor }} className="w-full h-40">
+      {points.map((point, index) => (
+        <circle 
+          key={index} 
+          cx={point.x} 
+          cy={point.y} 
+          r={svgOptions.radius} 
+          fill={svgOptions.color}
+          className="animate-pulse"
+        />
+      ))}
+    </svg>
+  );
+};
+
+const chartConfig = {
+  efficiency: {
+    label: 'Efficiency Gain',
+    color: '#8b5cf6', // purple-500
+  },
+  revenue: {
+    label: 'Revenue Impact',
+    color: '#3b82f6', // blue-500
+  },
+} satisfies ChartConfig;
+
+const chartData = [
+  { month: 'Jan', efficiency: 15, revenue: 25 },
+  { month: 'Feb', efficiency: 35, revenue: 45 },
+  { month: 'Mar', efficiency: 55, revenue: 75 },
+  { month: 'Apr', efficiency: 75, revenue: 95 },
+  { month: 'May', efficiency: 85, revenue: 120 },
+  { month: 'Jun', efficiency: 95, revenue: 150 },
+];
+
+const SuccessChart = () => {
+  return (
+    <div className="bg-black/40 backdrop-blur-xl border-t border-purple-500/20">
+      <ChartContainer className="h-120 aspect-auto md:h-96" config={chartConfig}>
+        <AreaChart
+          accessibilityLayer
+          data={chartData}
+          margin={{
+            left: 0,
+            right: 0,
+          }}>
+          <defs>
+            <linearGradient id="fillEfficiency" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="var(--color-efficiency)" stopOpacity={0.8} />
+              <stop offset="55%" stopColor="var(--color-efficiency)" stopOpacity={0.1} />
+            </linearGradient>
+            <linearGradient id="fillRevenue" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="var(--color-revenue)" stopOpacity={0.8} />
+              <stop offset="55%" stopColor="var(--color-revenue)" stopOpacity={0.1} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid vertical={false} className="stroke-purple-500/20" />
+          <ChartTooltip 
+            active 
+            cursor={false} 
+            content={<ChartTooltipContent className="bg-black/80 backdrop-blur-xl border-purple-500/20 text-white" />} 
+          />
+          <Area 
+            strokeWidth={2} 
+            dataKey="revenue" 
+            type="stepBefore" 
+            fill="url(#fillRevenue)" 
+            fillOpacity={0.1} 
+            stroke="var(--color-revenue)" 
+            stackId="a" 
+          />
+          <Area 
+            strokeWidth={2} 
+            dataKey="efficiency" 
+            type="stepBefore" 
+            fill="url(#fillEfficiency)" 
+            fillOpacity={0.1} 
+            stroke="var(--color-efficiency)" 
+            stackId="a" 
+          />
+        </AreaChart>
+      </ChartContainer>
+    </div>
   );
 };
 
