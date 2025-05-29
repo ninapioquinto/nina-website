@@ -8,8 +8,8 @@ const points = map.getPoints();
 
 const svgOptions = {
   backgroundColor: 'transparent',
-  color: 'rgb(168, 85, 247)', // brighter purple-500
-  radius: 0.2,
+  color: 'rgb(217, 119, 255)', // much brighter purple/magenta
+  radius: 0.25,
 };
 
 const TechMap = () => {
@@ -23,8 +23,11 @@ const TechMap = () => {
           cy={point.y} 
           r={svgOptions.radius} 
           fill={svgOptions.color}
-          opacity={0.8}
-          className="animate-pulse"
+          opacity={1}
+          className="animate-pulse drop-shadow-sm"
+          style={{
+            filter: 'drop-shadow(0 0 2px rgba(217, 119, 255, 0.6))'
+          }}
         />
       ))}
     </svg>
