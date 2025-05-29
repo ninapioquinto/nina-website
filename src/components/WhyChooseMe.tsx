@@ -63,16 +63,21 @@ const WhyChooseMe = () => {
         </div>
 
         <div className="relative col-span-full">
-          <div className="absolute z-10 max-w-lg px-4 sm:px-6 md:px-12 pt-4 sm:pt-6 md:pt-12">
-            <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base">
+          {/* Fixed positioning for text content */}
+          <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-r from-black/60 via-black/40 to-transparent">
+            <span className="text-purple-300 flex items-center gap-2 text-sm sm:text-base mb-3 sm:mb-4">
               <Activity className="size-3 sm:size-4" />
               Proven Success Across Industries
             </span>
 
-            <p className="my-4 sm:my-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
-              I have optimized lead management for real estate teams and streamlined operations for business owners. 
-              <span className="text-gray-400 block mt-2"> Clients consistently reclaim hours in their week and gain clarity in their workflows.</span>
-            </p>
+            <div className="max-w-lg">
+              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed mb-2">
+                I have optimized lead management for real estate teams and streamlined operations for business owners.
+              </p>
+              <p className="text-gray-300 text-sm sm:text-base">
+                Clients consistently reclaim hours in their week and gain clarity in their workflows.
+              </p>
+            </div>
           </div>
           <SuccessChart />
         </div>
