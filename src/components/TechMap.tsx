@@ -8,8 +8,8 @@ const points = map.getPoints();
 
 const svgOptions = {
   backgroundColor: 'transparent',
-  color: 'rgb(139, 92, 246)', // purple-500
-  radius: 0.15,
+  color: 'rgb(168, 85, 247)', // brighter purple-500
+  radius: 0.2,
 };
 
 const TechMap = () => {
@@ -23,6 +23,7 @@ const TechMap = () => {
           cy={point.y} 
           r={svgOptions.radius} 
           fill={svgOptions.color}
+          opacity={0.8}
           className="animate-pulse"
         />
       ))}
