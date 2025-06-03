@@ -10,6 +10,7 @@ const LOGOS = [
   { name: 'Monday.com', url: '/lovable-uploads/f453d086-abac-470e-bda5-4137a7c03ffc.png' },
   { name: 'ClickUp', url: '/lovable-uploads/1fffe66c-3cf3-4354-961f-584a332d76ec.png' },
   { name: 'SuiteDash', url: '/lovable-uploads/f7286aae-2fbc-412b-bca6-9b66f6c00429.png' },
+  { name: 'Zoho', url: '/lovable-uploads/58da3295-08c3-4d16-9214-f7d1bd815361.png' },
 ];
 
 const PoweredBy = () => {
