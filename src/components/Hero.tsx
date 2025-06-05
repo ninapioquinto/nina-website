@@ -41,14 +41,14 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Luxury typography with elegant gradients */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tighter">
-            Hi! I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span>, and I build
-            <span className="relative inline-block mx-2 min-w-[120px] sm:min-w-[150px] lg:min-w-[180px] h-[40px] sm:h-[50px] lg:h-[60px]">
+            Hi! I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span>, and I build{' '}
+            <span className="relative inline-block mx-1 min-w-[140px] sm:min-w-[170px] lg:min-w-[200px] h-[40px] sm:h-[50px] lg:h-[60px]">
               <span className={`absolute left-0 transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'}`} style={{
                 textShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
               }}>
                 {currentWord}
               </span>
-            </span>
+            </span>{' '}
             CRM and automation systems for service-based businesses.
           </h1>
           
