@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { useRotatingText } from '../hooks/useRotatingText';
 
 const Hero = () => {
-  const rotatingWords = ["custom", "bespoke", "tailored", "scalable", "AI-powered", "optimized"];
+  const rotatingWords = ["custom", "bespoke", "tailored", "scalable", "AI-powered", "optimized", "done-for-you"];
   const {
     currentWord,
     isAnimating
