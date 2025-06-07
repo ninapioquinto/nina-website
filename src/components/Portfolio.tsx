@@ -1,43 +1,36 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play, Code, Zap, Bot } from 'lucide-react';
 
 // AI Automation projects
-const aiAutomationProjects = [
-  {
-    id: 1,
-    title: "Client Onboarding Automation",
-    description: "Reduced onboarding time from 2 weeks to 2 days with zero manual data entry",
-    tech: ["Zapier", "Airtable", "Make"],
-    link: "#",
-    icon: Code,
-    gradient: "from-purple-500/20 to-violet-600/20"
-  },
-  {
-    id: 3,
-    title: "Sales Pipeline Automation",
-    description: "Automated lead qualification and follow-up sequences, increasing conversion rates by 40%",
-    tech: ["OpenAI", "Make", "GoHighLevel"],
-    link: "#",
-    icon: Zap,
-    gradient: "from-indigo-500/20 to-purple-600/20"
-  },
-  {
-    id: 6,
-    title: "Lead Capture & Nurture System",
-    description: "Intelligent lead scoring and automated nurture campaigns that increased qualified leads by 55%",
-    tech: ["Make", "OpenAI", "GoHighLevel"],
-    link: "#",
-    icon: Bot,
-    gradient: "from-violet-500/20 to-indigo-600/20"
-  }
-];
-
+const aiAutomationProjects = [{
+  id: 1,
+  title: "Client Onboarding Automation",
+  description: "Reduced onboarding time from 2 weeks to 2 days with zero manual data entry",
+  tech: ["Zapier", "Airtable", "Make"],
+  link: "#",
+  icon: Code,
+  gradient: "from-purple-500/20 to-violet-600/20"
+}, {
+  id: 3,
+  title: "Sales Pipeline Automation",
+  description: "Automated lead qualification and follow-up sequences, increasing conversion rates by 40%",
+  tech: ["OpenAI", "Make", "GoHighLevel"],
+  link: "#",
+  icon: Zap,
+  gradient: "from-indigo-500/20 to-purple-600/20"
+}, {
+  id: 6,
+  title: "Lead Capture & Nurture System",
+  description: "Intelligent lead scoring and automated nurture campaigns that increased qualified leads by 55%",
+  tech: ["Make", "OpenAI", "GoHighLevel"],
+  link: "#",
+  icon: Bot,
+  gradient: "from-violet-500/20 to-indigo-600/20"
+}];
 const Portfolio = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeCard, setActiveCard] = useState<number | null>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -48,30 +41,24 @@ const Portfolio = () => {
     }, {
       threshold: 0.1
     });
-    
     const section = sectionRef.current;
     const elements = section?.querySelectorAll('.reveal');
     elements?.forEach(el => {
       observer.observe(el);
     });
-    
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
   const handleMouseEnter = (id: number) => {
     setActiveCard(id);
   };
-
   const handleMouseLeave = () => {
     setActiveCard(null);
   };
-
-  return (
-    <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
+  return <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
       {/* Modern tech background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/85 to-indigo-900/95"></div>
@@ -119,44 +106,30 @@ const Portfolio = () => {
                   <CardContent className="p-8">
                     <div className="bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative">
                       <div style={{
-                        position: 'relative',
+                      position: 'relative',
+                      width: '100%',
+                      height: 0,
+                      paddingTop: '56.2500%',
+                      paddingBottom: 0,
+                      overflow: 'hidden',
+                      borderRadius: '8px',
+                      willChange: 'transform'
+                    }}>
+                        <iframe loading="lazy" style={{
+                        position: 'absolute',
                         width: '100%',
-                        height: 0,
-                        paddingTop: '56.2500%',
-                        paddingBottom: 0,
-                        overflow: 'hidden',
-                        borderRadius: '8px',
-                        willChange: 'transform'
-                      }}>
-                        <iframe 
-                          loading="lazy" 
-                          style={{
-                            position: 'absolute',
-                            width: '100%',
-                            height: '100%',
-                            top: 0,
-                            left: 0,
-                            border: 'none',
-                            padding: 0,
-                            margin: 0
-                          }}
-                          src="https://www.canva.com/design/DAGjrrLHWDc/ctNAVv6rmt6FCrfK-U1F1Q/view?embed" 
-                          allowFullScreen
-                          allow="fullscreen"
-                          title="AI Automation Portfolio - Demo Video"
-                        />
+                        height: '100%',
+                        top: 0,
+                        left: 0,
+                        border: 'none',
+                        padding: 0,
+                        margin: 0
+                      }} src="https://www.canva.com/design/DAGjrrLHWDc/ctNAVv6rmt6FCrfK-U1F1Q/view?embed" allowFullScreen allow="fullscreen" title="AI Automation Portfolio - Demo Video" />
                       </div>
                     </div>
                     
                     <div className="mt-4 text-center">
-                      <a 
-                        href="https://www.canva.com/design/DAGjrrLHWDc/ctNAVv6rmt6FCrfK-U1F1Q/view?utm_content=DAGjrrLHWDc&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
-                        target="_blank" 
-                        rel="noopener"
-                        className="text-purple-300 hover:text-purple-200 text-sm font-medium transition-colors duration-300"
-                      >
-                        Automation Portfolio by Ma Charisse Nina Pioquinto
-                      </a>
+                      
                     </div>
                   </CardContent>
                 </Card>
@@ -166,23 +139,14 @@ const Portfolio = () => {
             {/* Enhanced projects grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiAutomationProjects.map((project, index) => {
-                const IconComponent = project.icon;
-                return (
-                  <div 
-                    key={project.id} 
-                    className="reveal luxury-card-wrapper" 
-                    style={{ animationDelay: `${index * 0.15}s` }}
-                    onMouseEnter={() => handleMouseEnter(project.id)} 
-                    onMouseLeave={handleMouseLeave}
-                  >
+              const IconComponent = project.icon;
+              return <div key={project.id} className="reveal luxury-card-wrapper" style={{
+                animationDelay: `${index * 0.15}s`
+              }} onMouseEnter={() => handleMouseEnter(project.id)} onMouseLeave={handleMouseLeave}>
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${
-                      activeCard === project.id 
-                        ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' 
-                        : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'
-                    }`}>
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'}`}>
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
@@ -197,12 +161,7 @@ const Portfolio = () => {
                             <IconComponent className="w-6 h-6 text-purple-300" />
                           </div>
                           
-                          <a 
-                            href={project.link} 
-                            className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-400/40 ${
-                              activeCard === project.id ? 'scale-110' : ''
-                            }`}
-                          >
+                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
                             <ArrowUpRight className="w-4 h-4 text-purple-300" />
                           </a>
                         </div>
@@ -218,26 +177,18 @@ const Portfolio = () => {
                       
                       <CardContent className="relative z-10 pt-0">
                         <div className="flex flex-wrap gap-2">
-                          {project.tech.map((tech, i) => (
-                            <span 
-                              key={i} 
-                              className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300"
-                            >
+                          {project.tech.map((tech, i) => <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
                               {tech}
-                            </span>
-                          ))}
+                            </span>)}
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Portfolio;
