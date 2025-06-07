@@ -12,16 +12,60 @@ interface VideoCardProps {
   uploadTime: string;
   category: string;
   videoUrl?: string;
+  embedCode?: string;
 }
 
-const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime, category, videoUrl }: VideoCardProps) => {
+const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime, category, videoUrl, embedCode }: VideoCardProps) => {
   const [isLiked, setIsLiked] = useState(false);
+  const [showEmbed, setShowEmbed] = useState(false);
 
   const handleVideoClick = () => {
-    if (videoUrl) {
+    if (embedCode) {
+      setShowEmbed(true);
+    } else if (videoUrl) {
       window.open(videoUrl, '_blank');
     }
   };
+
+  if (showEmbed && embedCode) {
+    return (
+      <div className="group">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border border-purple-400/20 mb-6">
+          <div dangerouslySetInnerHTML={{ __html: embedCode }} />
+          
+          <button 
+            onClick={() => setShowEmbed(false)}
+            className="absolute top-4 right-4 bg-black/70 text-white text-sm px-3 py-1 rounded-lg font-medium backdrop-blur-sm hover:bg-black/90 transition-all duration-300"
+          >
+            Show Thumbnail
+          </button>
+        </div>
+        
+        <div className="space-y-3 px-2">
+          <h3 className="text-white font-semibold text-xl leading-relaxed line-clamp-2">
+            {title}
+          </h3>
+          <p className="text-muted-foreground text-base line-clamp-2 leading-relaxed">
+            {description}
+          </p>
+          <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2">
+              <Eye className="w-4 h-4" />
+              <span>{views}</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Clock className="w-4 h-4" />
+              <span>{uploadTime}</span>
+            </div>
+            <div className="flex items-center space-x-2 text-primary">
+              <Play className="w-4 h-4" />
+              <span>Playing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="group cursor-pointer" onClick={handleVideoClick}>
@@ -38,7 +82,9 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
           <div className="w-20 h-20 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-full flex items-center justify-center backdrop-blur-xl border border-white/30">
-            {videoUrl ? (
+            {embedCode ? (
+              <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+            ) : videoUrl ? (
               <ExternalLink className="w-8 h-8 text-white" />
             ) : (
               <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
@@ -88,10 +134,19 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
             <Clock className="w-4 h-4" />
             <span>{uploadTime}</span>
           </div>
-          {videoUrl && (
+          {(videoUrl || embedCode) && (
             <div className="flex items-center space-x-2 text-primary">
-              <ExternalLink className="w-4 h-4" />
-              <span>Watch Video</span>
+              {embedCode ? (
+                <>
+                  <Play className="w-4 h-4" />
+                  <span>Watch Video</span>
+                </>
+              ) : (
+                <>
+                  <ExternalLink className="w-4 h-4" />
+                  <span>Watch Video</span>
+                </>
+              )}
             </div>
           )}
         </div>
