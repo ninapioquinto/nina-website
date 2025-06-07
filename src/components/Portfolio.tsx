@@ -106,30 +106,48 @@ const Portfolio = () => {
                   <CardContent className="p-8">
                     <div className="bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative">
                       <div style={{
-                      position: 'relative',
-                      width: '100%',
-                      height: 0,
-                      paddingTop: '56.2500%',
-                      paddingBottom: 0,
-                      overflow: 'hidden',
-                      borderRadius: '8px',
-                      willChange: 'transform'
-                    }}>
-                        <iframe loading="lazy" style={{
-                        position: 'absolute',
+                        position: 'relative',
                         width: '100%',
-                        height: '100%',
-                        top: 0,
-                        left: 0,
-                        border: 'none',
-                        padding: 0,
-                        margin: 0
-                      }} src="https://www.canva.com/design/DAGjrrLHWDc/ctNAVv6rmt6FCrfK-U1F1Q/view?embed" allowFullScreen allow="fullscreen" title="AI Automation Portfolio - Demo Video" />
+                        height: 0,
+                        paddingTop: '56.2500%',
+                        paddingBottom: 0,
+                        boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)',
+                        marginTop: '1.6em',
+                        marginBottom: '0.9em',
+                        overflow: 'hidden',
+                        borderRadius: '8px',
+                        willChange: 'transform'
+                      }}>
+                        <iframe 
+                          loading="lazy" 
+                          style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '100%',
+                            top: 0,
+                            left: 0,
+                            border: 'none',
+                            padding: 0,
+                            margin: 0
+                          }}
+                          src="https://www.canva.com/design/DAGps-6p9LM/gU-wTNM5tXciPEfPJhaYzA/watch?embed" 
+                          allowFullScreen 
+                          allow="fullscreen"
+                          title="Automation Portfolio (Video)"
+                        />
                       </div>
                     </div>
                     
                     <div className="mt-4 text-center">
-                      
+                      <a 
+                        href="https://www.canva.com/design/DAGps-6p9LM/gU-wTNM5tXciPEfPJhaYzA/watch?utm_content=DAGps-6p9LM&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                        target="_blank" 
+                        rel="noopener"
+                        className="text-purple-300 hover:text-purple-200 transition-colors duration-300"
+                      >
+                        Automation Portfolio (Video)
+                      </a>
+                      <span className="text-white/60"> by Ma Charisse Nina Pioquinto</span>
                     </div>
                   </CardContent>
                 </Card>
