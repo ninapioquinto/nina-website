@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play, Code, Zap, Bot } from 'lucide-react';
@@ -28,9 +29,11 @@ const aiAutomationProjects = [{
   icon: Bot,
   gradient: "from-violet-500/20 to-indigo-600/20"
 }];
+
 const Portfolio = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [activeCard, setActiveCard] = useState<number | null>(null);
+  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -52,13 +55,17 @@ const Portfolio = () => {
       });
     };
   }, []);
+  
   const handleMouseEnter = (id: number) => {
     setActiveCard(id);
   };
+  
   const handleMouseLeave = () => {
     setActiveCard(null);
   };
-  return <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
+  
+  return (
+    <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
       {/* Modern tech background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/85 to-indigo-900/95"></div>
@@ -156,14 +163,21 @@ const Portfolio = () => {
             {/* Enhanced projects grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiAutomationProjects.map((project, index) => {
-              const IconComponent = project.icon;
-              return <div key={project.id} className="reveal luxury-card-wrapper" style={{
-                animationDelay: `${index * 0.15}s`
-              }} onMouseEnter={() => handleMouseEnter(project.id)} onMouseLeave={handleMouseLeave}>
+                const IconComponent = project.icon;
+                return (
+                  <div 
+                    key={project.id} 
+                    className="reveal luxury-card-wrapper" 
+                    style={{
+                      animationDelay: `${index * 0.15}s`
+                    }} 
+                    onMouseEnter={() => handleMouseEnter(project.id)} 
+                    onMouseLeave={handleMouseLeave}
+                  >
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]}`}>
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'}`}>
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
@@ -194,18 +208,23 @@ const Portfolio = () => {
                       
                       <CardContent className="relative z-10 pt-0">
                         <div className="flex flex-wrap gap-2">
-                          {project.tech.map((tech, i) => <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
+                          {project.tech.map((tech, i) => (
+                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
                               {tech}
-                            </span>)}
+                            </span>
+                          ))}
                         </div>
                       </CardContent>
                     </Card>
-                  </div>;
-            })}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Portfolio;
