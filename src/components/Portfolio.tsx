@@ -70,6 +70,10 @@ const Portfolio = () => {
     setActiveCard(null);
   };
 
+  const handleVideoClick = () => {
+    window.open('https://drive.google.com/file/d/19Lzcb_IYyR-wwfRZx_KOyGOXFmi3CTga/view?usp=sharing', '_blank');
+  };
+
   return (
     <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
       {/* Modern tech background */}
@@ -117,7 +121,10 @@ const Portfolio = () => {
                 <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-violet-500/30 to-indigo-500/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                 <Card className="relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/30 group transition-all duration-500">
                   <CardContent className="p-8">
-                    <div className="aspect-video bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative group">
+                    <div 
+                      className="aspect-video bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative group cursor-pointer"
+                      onClick={handleVideoClick}
+                    >
                       {/* Play button overlay */}
                       <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                         <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
@@ -126,7 +133,7 @@ const Portfolio = () => {
                       </div>
                       
                       <iframe
-                        className="w-full h-full"
+                        className="w-full h-full pointer-events-none"
                         src="https://drive.google.com/file/d/19Lzcb_IYyR-wwfRZx_KOyGOXFmi3CTga/preview"
                         title="AI Automation - Demo Video"
                         frameBorder="0"
