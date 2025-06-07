@@ -147,7 +147,6 @@ const Portfolio = () => {
                       >
                         Automation Portfolio (Video)
                       </a>
-                      <span className="text-white/60"> by Ma Charisse Nina Pioquinto</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -164,7 +163,7 @@ const Portfolio = () => {
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'}`}>
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]}`}>
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
