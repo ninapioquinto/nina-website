@@ -1,5 +1,5 @@
 
-import { Play, Eye, Clock, Heart } from 'lucide-react';
+import { Play, Eye, Clock, Heart, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
 interface VideoCardProps {
@@ -11,13 +11,20 @@ interface VideoCardProps {
   views: string;
   uploadTime: string;
   category: string;
+  videoUrl?: string;
 }
 
-const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime, category }: VideoCardProps) => {
+const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime, category, videoUrl }: VideoCardProps) => {
   const [isLiked, setIsLiked] = useState(false);
 
+  const handleVideoClick = () => {
+    if (videoUrl) {
+      window.open(videoUrl, '_blank');
+    }
+  };
+
   return (
-    <div className="group cursor-pointer">
+    <div className="group cursor-pointer" onClick={handleVideoClick}>
       <div className="relative overflow-hidden rounded-3xl aspect-video mb-6 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border border-purple-400/20">
         <img
           src={thumbnail}
@@ -31,7 +38,11 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
           <div className="w-20 h-20 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-full flex items-center justify-center backdrop-blur-xl border border-white/30">
-            <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+            {videoUrl ? (
+              <ExternalLink className="w-8 h-8 text-white" />
+            ) : (
+              <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
+            )}
           </div>
         </div>
         
@@ -77,6 +88,12 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
             <Clock className="w-4 h-4" />
             <span>{uploadTime}</span>
           </div>
+          {videoUrl && (
+            <div className="flex items-center space-x-2 text-primary">
+              <ExternalLink className="w-4 h-4" />
+              <span>Watch Video</span>
+            </div>
+          )}
         </div>
       </div>
     </div>
