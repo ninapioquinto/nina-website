@@ -1,20 +1,18 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { useRotatingText } from '../hooks/useRotatingText';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
   const rotatingWords = ["custom", "bespoke", "tailored", "scalable", "AI-powered", "optimized", "done-for-you"];
   const {
     currentWord,
     isAnimating
   } = useRotatingText(rotatingWords, 3000);
 
-  const handleExplore = () => {
-    const portfolioSection = document.getElementById('portfolio');
-    portfolioSection?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const handleWatchVideo = () => {
+    navigate('/watch-my-video');
   };
 
   return (
@@ -55,15 +53,15 @@ const Hero = () => {
           {/* Elegant subtitle with refined spacing */}
           <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">Systems Engineer • AI Automation • CRM Optimization</p>
           
-          {/* Sophisticated CTA button */}
-          <Button onClick={handleExplore} size="lg" className="luxury-button text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
+          {/* Updated CTA button */}
+          <Button onClick={handleWatchVideo} size="lg" className="luxury-button text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-6 bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
                      border border-purple-400/40 text-white backdrop-blur-sm
                      hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
                      hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
                      transition-all duration-700 group relative overflow-hidden w-full sm:w-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-violet-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
             <span className="relative z-10 flex items-center justify-center">
-              Explore My Work 
+              Watch My Video 
               <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2 group-hover:scale-110" />
             </span>
           </Button>
