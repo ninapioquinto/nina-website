@@ -32,7 +32,7 @@ const WatchMyVideo = () => {
       id: '3',
       title: 'Make.com Workflows That Save 10+ Hours Per Week',
       description: 'Discover the exact Make.com workflows I use to automate repetitive tasks and save my clients over 10 hours per week.',
-      thumbnail: '/placeholder.svg',
+      thumbnail: '/lovable-uploads/d256a201-95cd-4943-8289-22321c38e900.png',
       duration: '15:20',
       views: '3.1K views',
       uploadTime: '1 week ago',
