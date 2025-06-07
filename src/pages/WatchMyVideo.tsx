@@ -36,7 +36,8 @@ const WatchMyVideo = () => {
       duration: '15:20',
       views: '3.1K views',
       uploadTime: '1 week ago',
-      category: 'Automation'
+      category: 'Automation',
+      videoUrl: 'https://drive.google.com/file/d/1Lez8yjnIjR6x64QNXC1ekf_W_QRIKkFn/view?usp=sharing'
     }
   ];
 
