@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play, Code, Zap, Bot } from 'lucide-react';
@@ -143,17 +142,6 @@ const Portfolio = () => {
                           title="Automation Portfolio (Video)"
                         />
                       </div>
-                    </div>
-                    
-                    <div className="mt-4 text-center">
-                      <a 
-                        href="https://www.canva.com/design/DAGps-6p9LM/gU-wTNM5tXciPEfPJhaYzA/watch?utm_content=DAGps-6p9LM&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
-                        target="_blank" 
-                        rel="noopener"
-                        className="text-purple-300 hover:text-purple-200 transition-colors duration-300"
-                      >
-                        Automation Portfolio (Video)
-                      </a>
                     </div>
                   </CardContent>
                 </Card>
