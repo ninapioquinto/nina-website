@@ -97,7 +97,11 @@ export default {
         "pulse-glow": {
           "0%, 100%": { opacity: "0.6" },
           "50%": { opacity: "1" }
-        }
+        },
+        "moving-banner": {
+          from: { backgroundPosition: "0% 0" },
+          to: { backgroundPosition: "100% 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -107,7 +111,8 @@ export default {
         "fade-in-left": "fade-in-left 0.6s ease-out forwards",
         "glow": "glow 3s infinite ease-in-out",
         "float": "float 6s infinite ease-in-out",
-        "pulse-glow": "pulse-glow 4s infinite ease-in-out"
+        "pulse-glow": "pulse-glow 4s infinite ease-in-out",
+        "moving-banner": "moving-banner 20s linear infinite",
       },
     },
   },

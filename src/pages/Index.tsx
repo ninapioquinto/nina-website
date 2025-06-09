@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
 import PoweredBy from '../components/PoweredBy';
+import { Banner } from '../components/ui/banner';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -83,6 +84,13 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
+        <Banner
+          id="new-features"
+          variant="rainbow"
+          message="🚀 New CRM automations and AI features launching soon! Watch my latest videos to stay updated."
+          height="3.5rem"
+          className="bg-gradient-to-r from-purple-600/10 via-violet-600/10 to-indigo-600/10 border-y border-purple-400/20 text-white/90"
+        />
         <Services />
         <About />
         <CaseStudy />
