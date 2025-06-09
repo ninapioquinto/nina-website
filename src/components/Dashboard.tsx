@@ -1,97 +1,119 @@
 
-import { TrendingUp, Users, DollarSign, Activity, Download } from 'lucide-react';
+import { TrendingUp, Users, Clock, Target, Calendar, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 
 const Dashboard = () => {
-  const stats = [
+  const caseStudyMetrics = [
     {
-      title: "Total Revenue",
-      value: "$45,231.89",
-      change: "+20.1% from last month",
-      icon: DollarSign,
-      trend: "up"
+      title: "No-Show Reduction",
+      value: "35%",
+      change: "Fewer missed appointments",
+      icon: Target,
+      trend: "up",
+      description: "Automated reminders reduced patient no-shows significantly"
     },
     {
-      title: "Subscriptions",
-      value: "+2350",
-      change: "+180.1% from last month",
+      title: "Onboarding Speed",
+      value: "50%",
+      change: "Faster patient processing",
+      icon: Clock,
+      trend: "up",
+      description: "Streamlined intake process cut onboarding time in half"
+    },
+    {
+      title: "Patient Reactivation",
+      value: "20%",
+      change: "Inactive patients returned",
       icon: Users,
-      trend: "up"
+      trend: "up",
+      description: "1 in 5 inactive patients rebooked through automation"
     },
     {
-      title: "Sales",
-      value: "+12,234",
-      change: "+19% from last month",
+      title: "Operational Efficiency",
+      value: "60%",
+      change: "Workload reduction",
       icon: TrendingUp,
-      trend: "up"
-    },
-    {
-      title: "Active Now",
-      value: "+573",
-      change: "+201 since last hour",
-      icon: Activity,
-      trend: "up"
+      trend: "up",
+      description: "Front desk team freed up for higher-value tasks"
     }
   ];
 
-  const recentSales = [
-    { name: "Olivia Martin", email: "olivia.martin@email.com", amount: "+$1,999.00" },
-    { name: "Jackson Lee", email: "jackson.lee@email.com", amount: "+$39.00" },
-    { name: "Isabella Nguyen", email: "isabella.nguyen@email.com", amount: "+$299.00" },
-    { name: "William Kim", email: "will@email.com", amount: "+$99.00" },
-    { name: "Sofia Davis", email: "sofia.davis@email.com", amount: "+$39.00" }
+  const automationResults = [
+    { 
+      system: "Smart Patient Onboarding", 
+      impact: "Eliminated manual intake bottlenecks",
+      metric: "100% automated"
+    },
+    { 
+      system: "Appointment Reminders", 
+      impact: "Reduced no-shows by 35%",
+      metric: "24/7 active"
+    },
+    { 
+      system: "Reactivation Campaigns", 
+      impact: "Brought back 20% of inactive patients",
+      metric: "6-month cycle"
+    },
+    { 
+      system: "Missed Call Recovery", 
+      impact: "Instant response to missed opportunities",
+      metric: "<30 seconds"
+    },
+    { 
+      system: "AI Chat Assistant", 
+      impact: "24/7 patient support and booking",
+      metric: "Always online"
+    }
   ];
 
-  const chartData = [2000, 1800, 4500, 5600, 1200, 3000, 1200, 4000, 2200, 1800, 5000];
+  const timelineData = [
+    { month: "Month 1", patients: 850, efficiency: 65 },
+    { month: "Month 2", patients: 920, efficiency: 72 },
+    { month: "Month 3", patients: 1150, efficiency: 85 },
+    { month: "Month 4", patients: 1280, efficiency: 90 },
+    { month: "Month 5", patients: 1350, efficiency: 92 },
+    { month: "Month 6", patients: 1420, efficiency: 95 }
+  ];
 
   return (
     <section id="dashboard" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
-            Dashboard Overview
+            Real Results from Our Dental Clinic Case Study
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Real-time insights and analytics to track your business performance
+          <p className="text-lg text-white/80 max-w-3xl mx-auto">
+            See how custom CRM automation transformed operations, improved patient experience, and delivered measurable growth within 90 days.
           </p>
         </div>
 
-        <div className="mb-8 flex justify-between items-center">
+        <div className="mb-8 flex justify-center">
           <div className="flex space-x-4">
             <Button variant="outline" className="text-white border-white/20 bg-transparent hover:bg-white/10">
-              Overview
+              90-Day Results
             </Button>
             <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/10">
-              Analytics
+              Before vs After
             </Button>
             <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/10">
-              Reports
-            </Button>
-            <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/10">
-              Notifications
-            </Button>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="text-white/80 text-sm">Jan 20, 2023 - Feb 09, 2023</span>
-            <Button variant="outline" className="text-white border-white/20 bg-transparent hover:bg-white/10">
-              <Download className="w-4 h-4 mr-2" />
-              Download
+              ROI Analysis
             </Button>
           </div>
         </div>
 
-        {/* Stats Grid */}
+        {/* Key Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
-            <Card key={stat.title} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+          {caseStudyMetrics.map((metric, index) => (
+            <Card key={metric.title} className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium text-white/80">{stat.title}</CardTitle>
-                <stat.icon className="h-4 w-4 text-purple-400" />
+                <CardTitle className="text-sm font-medium text-white/80">{metric.title}</CardTitle>
+                <metric.icon className="h-4 w-4 text-purple-400" />
               </CardHeader>
               <CardContent>
-                <div className="text-2xl font-bold text-white">{stat.value}</div>
-                <p className="text-xs text-green-400 mt-1">{stat.change}</p>
+                <div className="text-3xl font-bold text-white mb-1">{metric.value}</div>
+                <p className="text-xs text-green-400 mb-2">{metric.change}</p>
+                <p className="text-xs text-white/60">{metric.description}</p>
               </CardContent>
             </Card>
           ))}
@@ -99,60 +121,93 @@ const Dashboard = () => {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Chart Section */}
+          {/* Growth Chart Section */}
           <div className="lg:col-span-2">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Overview</CardTitle>
+                <CardTitle className="text-white">Patient Volume & Efficiency Growth</CardTitle>
+                <p className="text-sm text-white/60">6-month transformation timeline</p>
               </CardHeader>
               <CardContent>
                 <div className="h-80 flex items-end justify-between space-x-2">
-                  {chartData.map((height, index) => (
-                    <div
-                      key={index}
-                      className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t flex-1 transition-all duration-300 hover:from-purple-500 hover:to-purple-300"
-                      style={{ height: `${(height / 6000) * 100}%` }}
-                    />
+                  {timelineData.map((data, index) => (
+                    <div key={index} className="flex-1 flex flex-col items-center space-y-2">
+                      <div className="flex flex-col items-center space-y-1 w-full">
+                        <div
+                          className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t w-full transition-all duration-300 hover:from-purple-500 hover:to-purple-300"
+                          style={{ height: `${(data.patients / 1500) * 200}px` }}
+                        />
+                        <div
+                          className="bg-gradient-to-t from-violet-600 to-violet-400 rounded-t w-full transition-all duration-300 hover:from-violet-500 hover:to-violet-300"
+                          style={{ height: `${(data.efficiency / 100) * 100}px` }}
+                        />
+                      </div>
+                      <div className="text-xs text-white/60 text-center">
+                        <div>{data.month}</div>
+                        <div className="text-purple-300">{data.patients}</div>
+                        <div className="text-violet-300">{data.efficiency}%</div>
+                      </div>
+                    </div>
                   ))}
                 </div>
                 <div className="flex justify-between mt-4 text-sm text-white/60">
-                  <span>$0</span>
-                  <span>$1500</span>
-                  <span>$3000</span>
-                  <span>$4500</span>
-                  <span>$6000</span>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-purple-600 to-purple-400 rounded"></div>
+                    <span>Patients Served</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-violet-600 to-violet-400 rounded"></div>
+                    <span>Operational Efficiency</span>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          {/* Recent Sales */}
+          {/* Automation Systems */}
           <div>
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Recent Sales</CardTitle>
-                <p className="text-sm text-white/60">You made 265 sales this month.</p>
+                <CardTitle className="text-white">Automated Systems Deployed</CardTitle>
+                <p className="text-sm text-white/60">Custom solutions that drive results.</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {recentSales.map((sale, index) => (
-                    <div key={index} className="flex items-center space-x-4">
-                      <div className="w-9 h-9 rounded-full bg-gradient-to-r from-purple-400 to-violet-400 flex items-center justify-center">
-                        <span className="text-white text-sm font-semibold">
-                          {sale.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
+                  {automationResults.map((system, index) => (
+                    <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-white/5 border border-white/10">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                       <div className="flex-1 space-y-1">
-                        <p className="text-sm font-medium text-white">{sale.name}</p>
-                        <p className="text-sm text-white/60">{sale.email}</p>
+                        <p className="text-sm font-medium text-white">{system.system}</p>
+                        <p className="text-xs text-white/70">{system.impact}</p>
+                        <div className="text-xs font-medium text-purple-300">{system.metric}</div>
                       </div>
-                      <div className="text-sm font-medium text-white">{sale.amount}</div>
                     </div>
                   ))}
                 </div>
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="mt-12 text-center">
+          <Card className="bg-gradient-to-br from-purple-900/30 to-violet-900/20 border border-purple-400/30 backdrop-blur-sm">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to achieve similar results for your business?
+              </h3>
+              <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                Every business is unique, but the principles remain the same: streamline operations, 
+                improve customer experience, and free your team to focus on growth.
+              </p>
+              <Button 
+                className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white px-8 py-3"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Start Your Transformation
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

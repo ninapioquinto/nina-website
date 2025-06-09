@@ -6,7 +6,6 @@ import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
 import Services from '../components/Services';
-import MyServices from '../components/MyServices';
 import MyProcess from '../components/MyProcess';
 import Certifications from '../components/Certifications';
 import WhyChooseMe from '../components/WhyChooseMe';
@@ -83,15 +82,14 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <Dashboard />
-        <Services />
         <About />
-        <CaseStudy />
-        <Portfolio />
+        <Services />
         <MyProcess />
+        <Portfolio />
+        <CaseStudy />
+        <Dashboard />
         <PoweredBy />
         <WhyChooseMe />
-        <MyServices />
         <Certifications />
         <FAQ />
         <Contact />
