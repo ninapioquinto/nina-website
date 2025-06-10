@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Download, Calendar, CheckCircle, X, Bot, MessageSquare, Mail, Clock, Target, Users, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -255,26 +254,26 @@ const WatchMyVideo = () => {
             </Card>
 
             {/* Final CTA Section */}
-            <Card className="luxury-card bg-gradient-to-br from-purple-600/30 via-violet-600/30 to-indigo-600/30 border border-purple-400/50 rounded-3xl backdrop-blur-xl">
+            <Card className="luxury-card bg-white/5 border-white/20 rounded-3xl backdrop-blur-xl">
               <CardContent className="p-12 text-center">
                 <h3 className="text-4xl font-bold text-white mb-8">
                   ✅ Get the Executive Assistant AI Agent
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-purple-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">🚀 Fully customizable</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-purple-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">📘 Setup guide included</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-purple-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">🔗 Telegram bot integration instructions provided</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-purple-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">📥 Instant download</span>
                   </div>
                 </div>
