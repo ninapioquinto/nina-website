@@ -262,19 +262,19 @@ const WatchMyVideo = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-primary" />
+                    <CheckCircle className="w-6 h-6 text-purple-400" />
                     <span className="text-white/90 font-medium">🚀 Fully customizable</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-primary" />
+                    <CheckCircle className="w-6 h-6 text-purple-400" />
                     <span className="text-white/90 font-medium">📘 Setup guide included</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-primary" />
+                    <CheckCircle className="w-6 h-6 text-purple-400" />
                     <span className="text-white/90 font-medium">🔗 Telegram bot integration instructions provided</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-primary" />
+                    <CheckCircle className="w-6 h-6 text-purple-400" />
                     <span className="text-white/90 font-medium">📥 Instant download</span>
                   </div>
                 </div>
