@@ -119,7 +119,7 @@ const WatchMyVideo = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {features.map((feature, index) => (
                     <div key={index} className="flex items-start space-x-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-                      <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <feature.icon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                       <span className="text-white/90 leading-relaxed">{feature.text}</span>
                     </div>
@@ -150,8 +150,8 @@ const WatchMyVideo = () => {
                     </div>
                   ))}
                 </div>
-                <div className="text-center p-6 rounded-2xl bg-gradient-to-r from-green-500/20 via-emerald-500/20 to-teal-500/20 border border-green-400/30">
-                  <p className="text-xl font-semibold text-green-300">You'll go from download to delegation in under 30 minutes.</p>
+                <div className="text-center p-6 rounded-2xl bg-gradient-to-r from-primary/20 via-purple-600/20 to-violet-600/20 border border-primary/30">
+                  <p className="text-xl font-semibold text-white">You'll go from download to delegation in under 30 minutes.</p>
                 </div>
               </CardContent>
             </Card>
@@ -168,7 +168,7 @@ const WatchMyVideo = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {targetAudience.map((audience, index) => (
                     <div key={index} className="flex items-center space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
                       <span className="text-white/90">{audience}</span>
                     </div>
                   ))}
@@ -223,23 +223,23 @@ const WatchMyVideo = () => {
             </Card>
 
             {/* Custom Solution Section */}
-            <Card className="luxury-card bg-gradient-to-br from-purple-600/20 via-violet-600/20 to-indigo-600/20 border border-purple-400/40 rounded-3xl mb-16 backdrop-blur-xl">
+            <Card className="luxury-card bg-white/5 border-white/20 rounded-3xl mb-16 backdrop-blur-xl">
               <CardHeader>
                 <CardTitle className="text-3xl font-bold text-white mb-4">
                   🧠 Ready for a Fully Integrated System?
                 </CardTitle>
-                <p className="text-white/80 text-xl">I help founders and teams build customized automation layers using tools like:</p>
+                <p className="text-white text-xl leading-relaxed">I help founders and teams build customized automation layers using tools like:</p>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   {tools.map((tool, index) => (
                     <div key={index} className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20 hover:bg-white/15 transition-all duration-300">
                       <Zap className="w-6 h-6 text-primary flex-shrink-0" />
-                      <span className="text-white/90 font-medium">{tool}</span>
+                      <span className="text-white font-medium">{tool}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-white/80 mb-8 text-lg leading-relaxed">
+                <p className="text-white/90 mb-8 text-lg leading-relaxed">
                   If you need a business-grade solution that grows with your ops — not just a starter template — let's talk.
                 </p>
                 <div className="text-center">
@@ -262,19 +262,19 @@ const WatchMyVideo = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">🚀 Fully customizable</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">📘 Setup guide included</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">🔗 Telegram bot integration instructions provided</span>
                   </div>
                   <div className="flex items-center space-x-4 p-4 rounded-xl bg-white/10 border border-white/20">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
+                    <CheckCircle className="w-6 h-6 text-primary" />
                     <span className="text-white/90 font-medium">📥 Instant download</span>
                   </div>
                 </div>
