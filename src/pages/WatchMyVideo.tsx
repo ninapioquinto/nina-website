@@ -1,5 +1,4 @@
-
-import { ArrowLeft, Download, Calendar, CheckCircle, X, Bot, MessageSquare, Mail, Clock, Target, Users, Zap, Brain, Cpu, Network, Code, Sparkles } from 'lucide-react';
+import { ArrowLeft, Download, Calendar, CheckCircle, X, Bot, MessageSquare, Mail, Clock, Target, Users, Zap, Brain, Cpu, Network, Code, Sparkles, Hash, Workflow, Database, Shield, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -10,11 +9,11 @@ import StarryBackground from '../components/StarryBackground';
 
 const WatchMyVideo = () => {
   const features = [
-    { icon: MessageSquare, text: "Understands voice or text input from Telegram", gradient: "from-blue-400 to-cyan-400" },
-    { icon: Target, text: "Chooses the correct task (email, meeting, blog, search, contact)", gradient: "from-purple-400 to-pink-400" },
-    { icon: Zap, text: "Triggers prebuilt automation using LangChain + n8n tools", gradient: "from-yellow-400 to-orange-400" },
-    { icon: Bot, text: "Delivers results in Telegram with smart, contextual responses", gradient: "from-green-400 to-emerald-400" },
-    { icon: Clock, text: "Remembers conversations for multi-step workflows", gradient: "from-indigo-400 to-purple-400" }
+    { icon: Mic, text: "Understands voice or text input from Telegram", gradient: "from-blue-400 to-cyan-400", position: "top-left" },
+    { icon: Target, text: "Chooses the correct task (email, meeting, blog, search, contact)", gradient: "from-purple-400 to-pink-400", position: "top-center" },
+    { icon: Zap, text: "Triggers prebuilt automation using LangChain + n8n tools", gradient: "from-yellow-400 to-orange-400", position: "top-right" },
+    { icon: Bot, text: "Delivers results in Telegram with smart, contextual responses", gradient: "from-green-400 to-emerald-400", position: "bottom-left" },
+    { icon: Clock, text: "Remembers conversations for multi-step workflows", gradient: "from-indigo-400 to-purple-400", position: "bottom-right" }
   ];
 
   const setupSteps = [
@@ -75,6 +74,23 @@ const WatchMyVideo = () => {
     { name: "Voice agents, web search, analytics, and more", icon: Cpu }
   ];
 
+  const getPositionClasses = (position: string) => {
+    switch (position) {
+      case "top-left":
+        return "absolute top-0 left-0";
+      case "top-center":
+        return "absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8";
+      case "top-right":
+        return "absolute top-0 right-0";
+      case "bottom-left":
+        return "absolute bottom-0 left-0";
+      case "bottom-right":
+        return "absolute bottom-0 right-0";
+      default:
+        return "";
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <StarryBackground />
@@ -97,7 +113,9 @@ const WatchMyVideo = () => {
               <div className="text-center mb-12 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-600/20 to-violet-600/20 blur-3xl rounded-full"></div>
                 <div className="relative">
-                  <div className="text-6xl mb-6 animate-float">🤖</div>
+                  <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-purple-600 rounded-2xl flex items-center justify-center">
+                    <Bot className="w-8 h-8 text-white" />
+                  </div>
                   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent leading-tight">
                     Meet Your AI Executive Assistant
                   </h1>
@@ -120,9 +138,9 @@ const WatchMyVideo = () => {
               </div>
             </div>
 
-            {/* What It Does Section - Hexagonal Layout */}
+            {/* What It Does Section - Improved Circular Layout */}
             <div className="mb-20 relative">
-              <div className="text-center mb-12">
+              <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
                   <Brain className="w-10 h-10 mr-4 text-primary" />
                   AI-Powered Automation Flow
@@ -130,30 +148,133 @@ const WatchMyVideo = () => {
                 <p className="text-white/80 text-xl">Your Executive Assistant doesn't just listen. It takes action.</p>
               </div>
               
-              <div className="relative">
-                {/* Central AI Brain */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-r from-primary to-purple-600 flex items-center justify-center animate-pulse">
-                    <Bot className="w-12 h-12 text-white" />
+              <div className="relative max-w-5xl mx-auto">
+                {/* Central Hub */}
+                <div className="flex items-center justify-center mb-20">
+                  <div className="relative">
+                    {/* Central AI Brain */}
+                    <div className="w-32 h-32 rounded-full bg-gradient-to-r from-primary via-purple-600 to-violet-600 flex items-center justify-center shadow-2xl border-4 border-white/20 backdrop-blur-sm">
+                      <div className="w-24 h-24 rounded-full bg-black/20 flex items-center justify-center">
+                        <Cpu className="w-12 h-12 text-white animate-pulse" />
+                      </div>
+                    </div>
+                    
+                    {/* Orbiting Connection Lines */}
+                    <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+                      <div className="w-full h-full border-2 border-dashed border-primary/30 rounded-full"></div>
+                    </div>
+                    <div className="absolute inset-4 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
+                      <div className="w-full h-full border border-dashed border-purple-400/20 rounded-full"></div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Feature Cards in Circular Layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-16">
-                  {features.map((feature, index) => (
-                    <div key={index} className="relative group">
-                      <div className={`p-6 rounded-2xl bg-gradient-to-br ${feature.gradient}/10 border border-white/20 backdrop-blur-sm hover:border-primary/30 transition-all duration-500 hover:scale-105`}>
-                        <div className="flex items-start space-x-4">
-                          <div className={`p-3 rounded-xl bg-gradient-to-r ${feature.gradient} bg-opacity-20`}>
-                            <feature.icon className="w-6 h-6 text-white" />
+                {/* Feature Cards in Organized Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+                  {/* Top row - 3 cards */}
+                  <div className="lg:col-span-1">
+                    <div className="relative group transform hover:scale-105 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative p-8 rounded-2xl bg-black/40 border border-blue-400/30 backdrop-blur-xl hover:border-blue-300/50 transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="p-4 rounded-xl bg-gradient-to-r from-blue-400 to-cyan-400 bg-opacity-20 border border-blue-400/30">
+                            <Mic className="w-8 h-8 text-blue-300" />
                           </div>
-                          <span className="text-white/90 leading-relaxed flex-1">{feature.text}</span>
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
                         </div>
+                        <p className="text-white/90 leading-relaxed font-medium">
+                          Understands voice or text input from Telegram
+                        </p>
                       </div>
-                      {/* Connection Line to Center */}
-                      <div className="absolute top-1/2 left-1/2 w-16 h-0.5 bg-gradient-to-r from-primary/50 to-transparent transform -translate-y-1/2 opacity-30"></div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="lg:col-span-1">
+                    <div className="relative group transform hover:scale-105 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative p-8 rounded-2xl bg-black/40 border border-purple-400/30 backdrop-blur-xl hover:border-purple-300/50 transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="p-4 rounded-xl bg-gradient-to-r from-purple-400 to-pink-400 bg-opacity-20 border border-purple-400/30">
+                            <Target className="w-8 h-8 text-purple-300" />
+                          </div>
+                          <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <p className="text-white/90 leading-relaxed font-medium">
+                          Chooses the correct task (email, meeting, blog, search, contact)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-span-1">
+                    <div className="relative group transform hover:scale-105 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative p-8 rounded-2xl bg-black/40 border border-yellow-400/30 backdrop-blur-xl hover:border-yellow-300/50 transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="p-4 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-400 bg-opacity-20 border border-yellow-400/30">
+                            <Zap className="w-8 h-8 text-yellow-300" />
+                          </div>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <p className="text-white/90 leading-relaxed font-medium">
+                          Triggers prebuilt automation using LangChain + n8n tools
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom row - 2 cards centered */}
+                  <div className="lg:col-start-1 lg:col-end-2 lg:translate-x-1/2">
+                    <div className="relative group transform hover:scale-105 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative p-8 rounded-2xl bg-black/40 border border-green-400/30 backdrop-blur-xl hover:border-green-300/50 transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="p-4 rounded-xl bg-gradient-to-r from-green-400 to-emerald-400 bg-opacity-20 border border-green-400/30">
+                            <Bot className="w-8 h-8 text-green-300" />
+                          </div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <p className="text-white/90 leading-relaxed font-medium">
+                          Delivers results in Telegram with smart, contextual responses
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="lg:col-start-2 lg:col-end-4 lg:-translate-x-1/2">
+                    <div className="relative group transform hover:scale-105 transition-all duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                      <div className="relative p-8 rounded-2xl bg-black/40 border border-indigo-400/30 backdrop-blur-xl hover:border-indigo-300/50 transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-400 to-purple-400 bg-opacity-20 border border-indigo-400/30">
+                            <Clock className="w-8 h-8 text-indigo-300" />
+                          </div>
+                          <div className="w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <p className="text-white/90 leading-relaxed font-medium">
+                          Remembers conversations for multi-step workflows
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Connection Lines */}
+                <div className="absolute inset-0 pointer-events-none">
+                  <svg className="w-full h-full" viewBox="0 0 800 600">
+                    <defs>
+                      <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="rgba(139, 92, 246, 0.3)" />
+                        <stop offset="100%" stopColor="rgba(168, 85, 247, 0.1)" />
+                      </linearGradient>
+                    </defs>
+                    {/* Animated connection lines radiating from center */}
+                    <line x1="400" y1="300" x2="200" y2="150" stroke="url(#line-gradient)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" />
+                    <line x1="400" y1="300" x2="400" y2="100" stroke="url(#line-gradient)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{animationDelay: '0.5s'}} />
+                    <line x1="400" y1="300" x2="600" y2="150" stroke="url(#line-gradient)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{animationDelay: '1s'}} />
+                    <line x1="400" y1="300" x2="250" y2="450" stroke="url(#line-gradient)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{animationDelay: '1.5s'}} />
+                    <line x1="400" y1="300" x2="550" y2="450" stroke="url(#line-gradient)" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" style={{animationDelay: '2s'}} />
+                  </svg>
                 </div>
               </div>
             </div>
@@ -162,7 +283,7 @@ const WatchMyVideo = () => {
             <div className="mb-20">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
-                  <Cpu className="w-10 h-10 mr-4 text-primary" />
+                  <Hash className="w-10 h-10 mr-4 text-primary" />
                   Quick Setup Protocol
                 </h2>
                 <p className="text-white/80 text-xl">From download to delegation in under 30 minutes</p>
