@@ -55,9 +55,7 @@ const MyProcess = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
-              <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
-                MyProcessBuild™
-              </span>
+              <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">The Maven System Method™</span>
             </h2>
             
             {/* Sophisticated divider */}
