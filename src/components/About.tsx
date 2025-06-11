@@ -74,9 +74,7 @@ const About = () => {
                   Nina Pioquinto
                 </h3>
                 <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full mb-6"></div>
-                <p className="text-lg text-gray-200 leading-relaxed mb-6">
-                  Your strategic partner in building sustainable growth through intelligent automation systems.
-                </p>
+                <p className="text-lg text-gray-200 leading-relaxed mb-6">Automation Systems Engineer specializing in strategic automation for businesses ready to simplify operations and scale with confidence.</p>
               </div>
 
               <div className="space-y-6">
