@@ -1,11 +1,54 @@
 
 import { useState, useEffect, useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as z from 'zod';
 import { Button } from './ui/button';
-import { Instagram, Mail, MessageSquare, ArrowRight } from 'lucide-react';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
+import { Instagram, Mail, MessageSquare, ArrowRight, Send } from 'lucide-react';
 import { Facebook } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+
+const contactFormSchema = z.object({
+  name: z.string().min(2, 'Name must be at least 2 characters'),
+  email: z.string().email('Please enter a valid email address'),
+  businessType: z.string().min(2, 'Please enter your business type'),
+  message: z.string().min(10, 'Message must be at least 10 characters'),
+});
+
+type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      businessType: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      console.log('Contact form submitted:', data);
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you within 24 hours.",
+      });
+      form.reset();
+      setIsSubmitting(false);
+    }, 1500);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -95,38 +138,114 @@ const Contact = () => {
             
             <div className="reveal">
               <div className="bg-accent/20 border border-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
-                <h3 className="text-xl sm:text-2xl font-medium mb-4 sm:mb-6">Ready to Work Together?</h3>
+                <h3 className="text-xl sm:text-2xl font-medium mb-4 sm:mb-6">Send me a message</h3>
                 
-                <div className="space-y-4">
-                  <p className="text-white/80 text-sm sm:text-base">
-                    I work with businesses that are serious about scaling their operations through automation and systems optimization.
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Your name" 
+                              {...field} 
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Email</FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="email"
+                              placeholder="Your email" 
+                              {...field} 
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="businessType"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Business Type</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Agency, SaaS, Service Business, etc." 
+                              {...field} 
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-white">Message</FormLabel>
+                          <FormControl>
+                            <Textarea 
+                              placeholder="Tell me about your project or challenge"
+                              {...field} 
+                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15 min-h-[120px]"
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
+                               border border-purple-400/40 text-white backdrop-blur-sm
+                               hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
+                               hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
+                               transition-all duration-700 group relative overflow-hidden py-4"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-violet-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+                      <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
+                        {isSubmitting ? (
+                          <>
+                            <div className="animate-spin mr-2 h-4 w-4 border-t-2 border-r-2 border-white rounded-full"></div>
+                            Sending...
+                          </>
+                        ) : (
+                          <>
+                            Send Message
+                            <Send className="ml-2 transition-transform duration-500 group-hover:translate-x-2 group-hover:scale-110" />
+                          </>
+                        )}
+                      </span>
+                    </Button>
+                  </form>
+                </Form>
+                
+                <div className="text-center mt-4">
+                  <p className="text-white/50 text-xs sm:text-sm">
+                    I'll get back to you within 24 hours
                   </p>
-                  
-                  <p className="text-white/80 text-sm sm:text-base">
-                    Let me learn about your business to see if we're a good fit.
-                  </p>
-                  
-                  <div className="pt-4">
-                    <a href="/work-with-me">
-                      <Button className="w-full bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
-                                       border border-purple-400/40 text-white backdrop-blur-sm
-                                       hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
-                                       hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
-                                       transition-all duration-700 group relative overflow-hidden py-4">
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/0 via-violet-600/20 to-purple-600/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                        <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
-                          Work with Me
-                          <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2 group-hover:scale-110" />
-                        </span>
-                      </Button>
-                    </a>
-                  </div>
-                  
-                  <div className="text-center">
-                    <p className="text-white/50 text-xs sm:text-sm">
-                      Quick qualification form • Takes 2-3 minutes
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
