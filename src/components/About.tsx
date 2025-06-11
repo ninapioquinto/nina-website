@@ -1,10 +1,7 @@
-
 import { useRef, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
-
 const About = () => {
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -15,22 +12,18 @@ const About = () => {
     }, {
       threshold: 0.1
     });
-    
     const section = sectionRef.current;
     const elements = section?.querySelectorAll('.reveal');
     elements?.forEach(el => {
       observer.observe(el);
     });
-    
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <section id="about" ref={sectionRef} className="py-24 relative overflow-hidden">
+  return <section id="about" ref={sectionRef} className="py-24 relative overflow-hidden">
       {/* Enhanced background with sophisticated gradients */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/98 via-purple-900/60 to-indigo-900/80"></div>
@@ -41,7 +34,9 @@ const About = () => {
 
       {/* Elegant floating elements */}
       <div className="absolute top-32 left-16 w-24 h-24 rounded-full bg-gradient-to-br from-purple-500/10 to-violet-600/5 blur-2xl animate-float"></div>
-      <div className="absolute bottom-32 right-16 w-32 h-32 rounded-full bg-gradient-to-tl from-indigo-500/10 to-purple-600/5 blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-32 right-16 w-32 h-32 rounded-full bg-gradient-to-tl from-indigo-500/10 to-purple-600/5 blur-2xl animate-float" style={{
+      animationDelay: '2s'
+    }}></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -55,9 +50,7 @@ const About = () => {
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">
-              Strategic Partner in Automation Excellence
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">The AI Automation &amp; CRM Maven</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               I build custom no-code automation systems that simplify operations and drive sustainable growth for service-based businesses.
             </p>
@@ -69,14 +62,7 @@ const About = () => {
             <div className="reveal">
               <div className="relative group">
                 <div className="aspect-video bg-gradient-to-br from-slate-700/20 to-purple-800/20 rounded-2xl overflow-hidden border border-white/10 group-hover:border-purple-300/30 transition-colors duration-500 shadow-2xl">
-                  <iframe
-                    className="w-full h-full"
-                    src="https://drive.google.com/file/d/1Lez8yjnIjR6x64QNXC1ekf_W_QRIKkFn/preview"
-                    title="About Nina - Introduction Video"
-                    frameBorder="0"
-                    allow="autoplay"
-                    allowFullScreen
-                  />
+                  <iframe className="w-full h-full" src="https://drive.google.com/file/d/1Lez8yjnIjR6x64QNXC1ekf_W_QRIKkFn/preview" title="About Nina - Introduction Video" frameBorder="0" allow="autoplay" allowFullScreen />
                 </div>
               </div>
             </div>
@@ -135,20 +121,26 @@ const About = () => {
 
           {/* Impact metrics */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {[
-              { metric: "50-80%", label: "Reduction in Manual Work", color: "from-purple-400 to-violet-400" },
-              { metric: "Days", label: "Rapid Implementation", color: "from-violet-400 to-indigo-400" },
-              { metric: "100%", label: "Custom Solutions", color: "from-indigo-400 to-purple-400" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center reveal group">
+            {[{
+            metric: "50-80%",
+            label: "Reduction in Manual Work",
+            color: "from-purple-400 to-violet-400"
+          }, {
+            metric: "Days",
+            label: "Rapid Implementation",
+            color: "from-violet-400 to-indigo-400"
+          }, {
+            metric: "100%",
+            label: "Custom Solutions",
+            color: "from-indigo-400 to-purple-400"
+          }].map((stat, index) => <div key={index} className="text-center reveal group">
                 <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-3 group-hover:scale-105 transition-transform duration-300`}>
                   {stat.metric}
                 </div>
                 <div className="text-gray-300 font-medium">
                   {stat.label}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Modern Client Impact Section */}
@@ -193,16 +185,10 @@ const About = () => {
                       </div>
                       
                       <div className="space-y-4 ml-12">
-                        {[
-                          "Streamlined operations and reduced costs",
-                          "Elevated day-to-day efficiency",
-                          "Improved team coordination"
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-center gap-3 group/item">
+                        {["Streamlined operations and reduced costs", "Elevated day-to-day efficiency", "Improved team coordination"].map((item, index) => <div key={index} className="flex items-center gap-3 group/item">
                             <div className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full group-hover/item:scale-125 transition-transform duration-300"></div>
                             <span className="text-gray-200 text-sm">{item}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
 
@@ -219,16 +205,10 @@ const About = () => {
                       </div>
                       
                       <div className="space-y-4 ml-12">
-                        {[
-                          "Noticeable boost in clarity within days",
-                          "Faster execution and smoother workflows",
-                          "Sustainable long-term growth foundation"
-                        ].map((item, index) => (
-                          <div key={index} className="flex items-center gap-3 group/item">
+                        {["Noticeable boost in clarity within days", "Faster execution and smoother workflows", "Sustainable long-term growth foundation"].map((item, index) => <div key={index} className="flex items-center gap-3 group/item">
                             <div className="w-1.5 h-1.5 bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full group-hover/item:scale-125 transition-transform duration-300"></div>
                             <span className="text-gray-200 text-sm">{item}</span>
-                          </div>
-                        ))}
+                          </div>)}
                       </div>
                     </div>
                   </div>
@@ -308,8 +288,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
