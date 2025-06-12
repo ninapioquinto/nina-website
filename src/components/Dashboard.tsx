@@ -1,4 +1,3 @@
-
 import { TrendingUp, Users, Clock, Target, Calendar, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -195,24 +194,33 @@ const Dashboard = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <Card className="bg-gradient-to-br from-purple-900/30 to-violet-900/20 border border-purple-400/30 backdrop-blur-sm">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">
+        <div className="mt-12">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-600 via-violet-600 to-purple-700 p-12 text-center">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 bg-white/5 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to achieve similar results for your business?
               </h3>
-              <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+              <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Every business is unique, but the principles remain the same: streamline operations, 
                 improve customer experience, and free your team to focus on growth.
               </p>
               <Button 
-                className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white px-8 py-3"
+                size="lg"
+                className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 hover:border-white/50 px-12 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Start Your Transformation
               </Button>
-            </CardContent>
-          </Card>
+            </div>
+            
+            {/* Decorative elements */}
+            <div className="absolute top-4 left-4 w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
+            <div className="absolute bottom-4 right-4 w-32 h-32 rounded-full bg-white/5 blur-xl"></div>
+          </div>
         </div>
       </div>
     </section>
