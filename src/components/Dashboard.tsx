@@ -6,74 +6,79 @@ import { Button } from './ui/button';
 const Dashboard = () => {
   const caseStudyMetrics = [
     {
-      title: "No-Show Reduction",
-      value: "35%",
-      change: "Fewer missed appointments",
-      icon: Target,
-      trend: "up",
-      description: "Automated reminders reduced patient no-shows significantly"
-    },
-    {
-      title: "Onboarding Speed",
-      value: "50%",
-      change: "Faster patient processing",
+      title: "Client Onboarding Speed",
+      value: "45%",
+      change: "Faster processing time",
       icon: Clock,
       trend: "up",
-      description: "Streamlined intake process cut onboarding time in half"
+      description: "New clients complete setup and begin their journey almost twice as fast"
     },
     {
-      title: "Patient Reactivation",
-      value: "20%",
-      change: "Inactive patients returned",
-      icon: Users,
-      trend: "up",
-      description: "1 in 5 inactive patients rebooked through automation"
-    },
-    {
-      title: "Operational Efficiency",
+      title: "Manual Admin Reduction",
       value: "60%",
-      change: "Workload reduction",
+      change: "Workload eliminated",
+      icon: Target,
+      trend: "up",
+      description: "Automated workflows replaced repetitive tasks and form handoffs"
+    },
+    {
+      title: "Lead Response Time",
+      value: "30%",
+      change: "Faster responses",
       icon: TrendingUp,
       trend: "up",
-      description: "Front desk team freed up for higher-value tasks"
+      description: "Faster responses led to more conversions and smoother first impressions"
+    },
+    {
+      title: "System Integration",
+      value: "100%",
+      change: "Centralized operations",
+      icon: Users,
+      trend: "up",
+      description: "All client messages, updates, and documents flow through one system"
     }
   ];
 
   const automationResults = [
     { 
-      system: "Smart Patient Onboarding", 
-      impact: "Eliminated manual intake bottlenecks",
-      metric: "100% automated"
+      system: "Centralized CRM Dashboard", 
+      impact: "Complete visibility of leads and funding stages",
+      metric: "Real-time updates"
     },
     { 
-      system: "Appointment Reminders", 
-      impact: "Reduced no-shows by 35%",
+      system: "Automated Lead Capture & Nurture", 
+      impact: "Instant qualification and follow-up sequences",
       metric: "24/7 active"
     },
     { 
-      system: "Reactivation Campaigns", 
-      impact: "Brought back 20% of inactive patients",
-      metric: "6-month cycle"
+      system: "Smart Client Portal", 
+      impact: "Self-service credit repair and funding tracking",
+      metric: "Always accessible"
     },
     { 
-      system: "Missed Call Recovery", 
-      impact: "Instant response to missed opportunities",
-      metric: "<30 seconds"
+      system: "Course Delivery System", 
+      impact: "Reduced support requests with self-paced learning",
+      metric: "On-demand access"
     },
     { 
-      system: "AI Chat Assistant", 
-      impact: "24/7 patient support and booking",
-      metric: "Always online"
+      system: "Pipeline & Task Automation", 
+      impact: "Smart triggers for every client journey stage",
+      metric: "Zero manual oversight"
+    },
+    { 
+      system: "Funding Tracker", 
+      impact: "Live dashboard with complete transparency",
+      metric: "Real-time progress"
     }
   ];
 
   const timelineData = [
-    { month: "Month 1", patients: 850, efficiency: 65 },
-    { month: "Month 2", patients: 920, efficiency: 72 },
-    { month: "Month 3", patients: 1150, efficiency: 85 },
-    { month: "Month 4", patients: 1280, efficiency: 90 },
-    { month: "Month 5", patients: 1350, efficiency: 92 },
-    { month: "Month 6", patients: 1420, efficiency: 95 }
+    { month: "Week 1", efficiency: 20, leads: 15 },
+    { month: "Week 2", efficiency: 35, leads: 25 },
+    { month: "Month 1", efficiency: 55, leads: 40 },
+    { month: "Month 2", efficiency: 75, leads: 65 },
+    { month: "Month 3", efficiency: 85, leads: 80 },
+    { month: "30 Days", efficiency: 95, leads: 100 }
   ];
 
   return (
@@ -81,17 +86,17 @@ const Dashboard = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
-            Real Results from Our Dental Clinic Case Study
+            Real Results from Our Credit Repair & Funding Case Study
           </h2>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            See how custom CRM automation transformed operations, improved patient experience, and delivered measurable growth within 90 days.
+            See how custom GoHighLevel CRM automation transformed operations, streamlined client onboarding, and delivered measurable growth within 30 days.
           </p>
         </div>
 
         <div className="mb-8 flex justify-center">
           <div className="flex space-x-4">
             <Button variant="outline" className="text-white border-white/20 bg-transparent hover:bg-white/10">
-              90-Day Results
+              30-Day Results
             </Button>
             <Button variant="ghost" className="text-white/60 hover:text-white hover:bg-white/10">
               Before vs After
@@ -125,8 +130,8 @@ const Dashboard = () => {
           <div className="lg:col-span-2">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Patient Volume & Efficiency Growth</CardTitle>
-                <p className="text-sm text-white/60">6-month transformation timeline</p>
+                <CardTitle className="text-white">Operational Efficiency & Lead Management Growth</CardTitle>
+                <p className="text-sm text-white/60">30-day transformation timeline</p>
               </CardHeader>
               <CardContent>
                 <div className="h-80 flex items-end justify-between space-x-2">
@@ -135,17 +140,17 @@ const Dashboard = () => {
                       <div className="flex flex-col items-center space-y-1 w-full">
                         <div
                           className="bg-gradient-to-t from-purple-600 to-purple-400 rounded-t w-full transition-all duration-300 hover:from-purple-500 hover:to-purple-300"
-                          style={{ height: `${(data.patients / 1500) * 200}px` }}
+                          style={{ height: `${(data.efficiency / 100) * 200}px` }}
                         />
                         <div
                           className="bg-gradient-to-t from-violet-600 to-violet-400 rounded-t w-full transition-all duration-300 hover:from-violet-500 hover:to-violet-300"
-                          style={{ height: `${(data.efficiency / 100) * 100}px` }}
+                          style={{ height: `${(data.leads / 100) * 150}px` }}
                         />
                       </div>
                       <div className="text-xs text-white/60 text-center">
                         <div>{data.month}</div>
-                        <div className="text-purple-300">{data.patients}</div>
-                        <div className="text-violet-300">{data.efficiency}%</div>
+                        <div className="text-purple-300">{data.efficiency}%</div>
+                        <div className="text-violet-300">{data.leads}%</div>
                       </div>
                     </div>
                   ))}
@@ -153,11 +158,11 @@ const Dashboard = () => {
                 <div className="flex justify-between mt-4 text-sm text-white/60">
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-gradient-to-r from-purple-600 to-purple-400 rounded"></div>
-                    <span>Patients Served</span>
+                    <span>Operational Efficiency</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-gradient-to-r from-violet-600 to-violet-400 rounded"></div>
-                    <span>Operational Efficiency</span>
+                    <span>Lead Management</span>
                   </div>
                 </div>
               </CardContent>
@@ -168,8 +173,8 @@ const Dashboard = () => {
           <div>
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Automated Systems Deployed</CardTitle>
-                <p className="text-sm text-white/60">Custom solutions that drive results.</p>
+                <CardTitle className="text-white">Custom Systems Deployed</CardTitle>
+                <p className="text-sm text-white/60">GoHighLevel solutions that drive results</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
