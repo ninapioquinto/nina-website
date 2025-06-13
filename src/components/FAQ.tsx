@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -9,56 +8,28 @@ import {
 
 const faqData = [
   {
-    question: "Who do you typically work with?",
-    answer: "I partner with solopreneurs, growing teams, and service-based businesses who are ready to eliminate inefficiencies and scale smarter. If you're stuck doing repetitive tasks or working with scattered systems, I help you reclaim your time and create clarity with custom-built automation and operational systems."
+    question: "What services do you offer?",
+    answer: "I design and implement custom AI automation systems and handle CRM buildout and optimization for service-based businesses. Using tools like n8n, Make.com, Zapier, Airtable, GoHighLevel, Zoho, and AI agents, I streamline operations, eliminate manual tasks, and develop intelligent systems tailored to your business goals."
   },
   {
-    question: "What industries do you specialize in?",
-    answer: "I help service-based businesses in healthcare and pet veterinary streamline their operations with intelligent, client-centered systems. From managing leads to reducing no-shows and automating follow-ups, I design solutions that align with how your business truly operates."
+    question: "How do you ensure the systems you build align with my business needs?",
+    answer: "Every solution begins with a deep understanding of your workflows, goals, and pain points. I don't just automate tasks; I design systems that reflect how your business operates. This ensures the outcome is purposeful, scalable, and aligned with your long-term objectives."
   },
   {
-    question: "What tools and platforms do you use?",
-    answer: "I specialize in Zapier, Make.com, N8n, GoHighLevel, Airtable, and Click. These platforms allow me to create powerful custom systems quickly, without complex code, so you get results faster and at lower cost."
+    question: "Can you improve or integrate with our existing systems?",
+    answer: "Yes. I can audit, optimize, or expand your current systems. Whether you're using Airtable, Zoho, GoHighLevel, Make, n8n, Zapier, or other platforms, I ensure everything works together smoothly and reliably, whether you need a full rebuild or improved integration."
   },
   {
-    question: "What can I expect from your process?",
-    answer: "My process is collaborative and results-focused. We start with a discovery call to align on your goals. Then, I design, build, and implement a solution tailored to your business. Everything I build is scalable, streamlined, and thoughtfully designed for long-term use."
+    question: "What is your process for new clients?",
+    answer: "We begin with a discovery consultation to understand your operations, challenges, and goals. I then map out a recommended solution and send a clear proposal outlining the scope, structure, and investment. Once approved, I move into build, testing, and delivery with full transparency at every stage."
   },
   {
-    question: "What kind of results do your clients typically see?",
-    answer: "Clients often see a 50 to 80 percent reduction in manual work, faster turnaround times, and stronger system reliability within weeks. More importantly, they gain back time to focus on high-value activities, whether that's client relationships, growth, or innovation. My solutions are designed not just to save time but to drive meaningful business outcomes."
+    question: "What types of businesses do you work with?",
+    answer: "I primarily work with service-based businesses such as consultants, coaches, wellness providers, credit repair and funding. If your business relies on structured workflows, lead handling, or client management, I can help you build systems that improve efficiency and drive results."
   },
   {
-    question: "How do you price your services?",
-    answer: "I offer flat-rate and phased packages based on your goals and project complexity. No hourly billing, no surprises. You'll get a clear proposal that's focused on ROI, not just tasks."
-  },
-  {
-    question: "How fast can you deliver?",
-    answer: "Quick wins and smaller automations are often completed in just a few days. Larger workflows or CRM implementations typically take 1 to 3 weeks. I work efficiently without compromising on quality or long-term reliability."
-  },
-  {
-    question: "Do you offer full CRM buildouts from scratch?",
-    answer: "Yes. If you're starting from zero or switching platforms, I can help you design and build a custom CRM from the ground up. This includes everything from lead pipelines and automations to task management and reporting, all tailored entirely to how your business operates."
-  },
-  {
-    question: "Can you help clean up or organize my existing CRM or database?",
-    answer: "Yes. Whether your tools are messy, outdated, or underused, I can help you clean, reorganize, and optimize them into streamlined assets that support your goals."
-  },
-  {
-    question: "Do you offer support after the project is done?",
-    answer: "Yes. Every project includes post-launch support, clear documentation, and optional training. If you need ongoing support or continuous improvements, I also offer flexible retainers."
-  },
-  {
-    question: "Do you sign NDAs or work with sensitive information?",
-    answer: "Yes. I regularly handle confidential data and am happy to sign NDAs. Security, discretion, and integrity are core to how I work."
-  },
-  {
-    question: "Can we work together if I'm based internationally?",
-    answer: "Yes. I've worked with clients in the U.S., Canada, Australia, the UK, and more. I schedule around time zones and keep communication smooth no matter where you're located."
-  },
-  {
-    question: "What's the best way to get started?",
-    answer: "Book a free discovery call. We'll talk through your current setup, challenges, and goals. Whether you need a quick fix, a full system, or just clarity on your next move, you'll leave the call with a clear direction."
+    question: "What's the next step if I'm interested in working with you?",
+    answer: "You can book a discovery call to discuss your goals, current systems, and what you'd like to improve or automate. This conversation helps identify the best solution for your business and ensures we're aligned on strategy, scope, and direction before moving forward."
   }
 ];
 
