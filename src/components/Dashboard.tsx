@@ -195,22 +195,22 @@ const Dashboard = () => {
 
         {/* Bottom CTA */}
         <div className="mt-12">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-600 via-violet-600 to-purple-700 p-12 text-center">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-800/80 via-purple-900/40 to-slate-800/80 backdrop-blur-sm border border-purple-500/20 p-12 text-center">
             {/* Subtle background pattern */}
-            <div className="absolute inset-0 bg-white/5 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1)_0%,transparent_70%)]"></div>
+            <div className="absolute inset-0 bg-white/[0.02] bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)]"></div>
             
             {/* Content */}
             <div className="relative z-10">
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to achieve similar results for your business?
               </h3>
-              <p className="text-lg text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Every business is unique, but the principles remain the same: streamline operations, 
                 improve customer experience, and free your team to focus on growth.
               </p>
               <Button 
                 size="lg"
-                className="bg-white/20 backdrop-blur-sm text-white border-white/30 hover:bg-white/30 hover:border-white/50 px-12 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
+                className="bg-white/10 backdrop-blur-sm text-white border-white/20 hover:bg-white/20 hover:border-white/30 px-12 py-4 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Start Your Transformation
@@ -218,8 +218,8 @@ const Dashboard = () => {
             </div>
             
             {/* Decorative elements */}
-            <div className="absolute top-4 left-4 w-24 h-24 rounded-full bg-white/10 blur-xl"></div>
-            <div className="absolute bottom-4 right-4 w-32 h-32 rounded-full bg-white/5 blur-xl"></div>
+            <div className="absolute top-4 left-4 w-24 h-24 rounded-full bg-white/[0.03] blur-xl"></div>
+            <div className="absolute bottom-4 right-4 w-32 h-32 rounded-full bg-purple-500/[0.08] blur-xl"></div>
           </div>
         </div>
       </div>
