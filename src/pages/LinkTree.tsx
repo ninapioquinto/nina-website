@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Instagram, Github, ArrowRight } from "lucide-react";
@@ -101,7 +102,7 @@ const LinkTree = () => {
             "
               variant="outline"
             >
-              <a href="mailto:ninapioquintoo@gmail.com">Contact Me</a>
+              <a href="mailto:nina@automationcrmexpert.com">Contact Me</a>
             </Button>
           </div>
         </div>
