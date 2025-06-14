@@ -1,3 +1,4 @@
+
 import { ArrowLeft, Download, Calendar, CheckCircle, X, Bot, MessageSquare, Mail, Clock, Target, Users, Zap, Brain, Cpu, Network, Code, Sparkles, Hash, Workflow, Database, Shield, Mic, Search, FileText, User, Settings, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -99,7 +100,7 @@ const WatchMyVideo = () => {
                     <Bot className="w-8 h-8 text-white" />
                   </div>
                   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent leading-tight">
-                    Meet Your AI Executive Assistant
+                    AI Executive Assistant
                   </h1>
                   <div className="flex items-center justify-center space-x-2 mb-8">
                     <Sparkles className="w-6 h-6 text-primary animate-pulse" />
