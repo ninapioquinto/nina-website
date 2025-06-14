@@ -15,11 +15,10 @@ const tiktokSvg = (
 
 const LinkTree = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-violet-900 via-indigo-900 to-zinc-900 px-4 py-10">
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-10">
       <div className="w-full max-w-md flex flex-col items-center gap-7 p-8 rounded-3xl bg-background/80 border border-white/10 shadow-xl backdrop-blur-lg glass-effect">
         {/* Avatar and username */}
         <Avatar className="w-24 h-24 mb-3 shadow-lg border-2 border-violet-600/30 bg-gradient-to-tr from-violet-700/40 via-background to-indigo-900/30">
-          {/* Replace AvatarImage src with your actual logo if desired */}
           {/* <AvatarImage src="/lovable-uploads/your-avatar.png" alt="Nina Pioquinto" /> */}
           <AvatarFallback className="text-4xl font-bold tracking-tight text-violet-300 bg-violet-800/50">N</AvatarFallback>
         </Avatar>
@@ -91,7 +90,6 @@ const LinkTree = () => {
             "
             variant="outline"
             onClick={() => {
-              // If on home, scroll to #contact; else, go home then scroll to #contact
               if (window.location.pathname === "/") {
                 const contactSection = document.getElementById("contact");
                 if (contactSection) {
