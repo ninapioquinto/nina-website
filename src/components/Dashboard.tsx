@@ -1,3 +1,4 @@
+
 import { TrendingUp, Users, Clock, Target, Calendar, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -29,12 +30,33 @@ const Dashboard = () => {
       description: "Faster responses led to more conversions and smoother first impressions"
     },
     {
-      title: "System Integration",
-      value: "100%",
-      change: "Centralized operations",
+      title: "Win Rate Achievement",
+      value: "45%",
+      change: "Qualified leads converted",
       icon: Users,
       trend: "up",
-      description: "All client messages, updates, and documents flow through one system"
+      description: "Enabled by faster onboarding, consistent nurturing, and smarter tracking"
+    }
+  ];
+
+  const revenueResults = [
+    {
+      title: "Opportunity Value Captured",
+      value: "$112,000",
+      description: "Through improved visibility and timely follow-ups",
+      period: "30 days"
+    },
+    {
+      title: "Revenue Generated",
+      value: "$53,000", 
+      description: "From newly closed deals",
+      period: "30 days"
+    },
+    {
+      title: "System ROI",
+      value: "847%",
+      description: "Return on automation investment",
+      period: "First month"
     }
   ];
 
@@ -72,12 +94,12 @@ const Dashboard = () => {
   ];
 
   const timelineData = [
-    { month: "Week 1", efficiency: 20, leads: 15 },
-    { month: "Week 2", efficiency: 35, leads: 25 },
-    { month: "Month 1", efficiency: 55, leads: 40 },
-    { month: "Month 2", efficiency: 75, leads: 65 },
-    { month: "Month 3", efficiency: 85, leads: 80 },
-    { month: "30 Days", efficiency: 95, leads: 100 }
+    { month: "Week 1", efficiency: 20, leads: 15, revenue: 8 },
+    { month: "Week 2", efficiency: 35, leads: 25, revenue: 18 },
+    { month: "Month 1", efficiency: 55, leads: 40, revenue: 35 },
+    { month: "Month 2", efficiency: 75, leads: 65, revenue: 58 },
+    { month: "Month 3", efficiency: 85, leads: 80, revenue: 78 },
+    { month: "30 Days", efficiency: 95, leads: 100, revenue: 100 }
   ];
 
   return (
@@ -90,6 +112,27 @@ const Dashboard = () => {
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
             See how custom GoHighLevel CRM automation transformed operations, streamlined client onboarding, and delivered measurable growth within 30 days.
           </p>
+        </div>
+
+        {/* Revenue Results Section */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-bold text-center mb-8 bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+            Revenue Results Unlocked in 30 Days
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {revenueResults.map((result, index) => (
+              <Card key={result.title} className="bg-gradient-to-br from-purple-900/30 to-violet-900/20 border-purple-400/30 backdrop-blur-sm text-center">
+                <CardContent className="p-6">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-2">
+                    {result.value}
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">{result.title}</h4>
+                  <p className="text-white/70 text-sm mb-1">{result.description}</p>
+                  <p className="text-purple-300 text-xs font-medium">{result.period}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         <div className="mb-8 flex justify-center">
@@ -129,7 +172,7 @@ const Dashboard = () => {
           <div className="lg:col-span-2">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-white">Operational Efficiency & Lead Management Growth</CardTitle>
+                <CardTitle className="text-white">Operational Efficiency & Revenue Growth</CardTitle>
                 <p className="text-sm text-white/60">30-day transformation timeline</p>
               </CardHeader>
               <CardContent>
@@ -145,11 +188,16 @@ const Dashboard = () => {
                           className="bg-gradient-to-t from-violet-600 to-violet-400 rounded-t w-full transition-all duration-300 hover:from-violet-500 hover:to-violet-300"
                           style={{ height: `${(data.leads / 100) * 150}px` }}
                         />
+                        <div
+                          className="bg-gradient-to-t from-green-600 to-green-400 rounded-t w-full transition-all duration-300 hover:from-green-500 hover:to-green-300"
+                          style={{ height: `${(data.revenue / 100) * 120}px` }}
+                        />
                       </div>
                       <div className="text-xs text-white/60 text-center">
                         <div>{data.month}</div>
                         <div className="text-purple-300">{data.efficiency}%</div>
                         <div className="text-violet-300">{data.leads}%</div>
+                        <div className="text-green-300">{data.revenue}%</div>
                       </div>
                     </div>
                   ))}
@@ -162,6 +210,10 @@ const Dashboard = () => {
                   <div className="flex items-center space-x-2">
                     <div className="w-3 h-3 bg-gradient-to-r from-violet-600 to-violet-400 rounded"></div>
                     <span>Lead Management</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-3 h-3 bg-gradient-to-r from-green-600 to-green-400 rounded"></div>
+                    <span>Revenue Growth</span>
                   </div>
                 </div>
               </CardContent>
