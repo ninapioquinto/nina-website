@@ -1,6 +1,5 @@
 
-import { Bot, CheckCircle, Download, Calendar } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Bot, CheckCircle, Download } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 
 export const FinalCTA = () => {
@@ -42,10 +41,6 @@ export const FinalCTA = () => {
                             <Download className="w-6 h-6 mr-3" />
                             Download the AI Assistant
                         </Button>
-                        <Link to="/work-with-me" className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-primary/50 px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-sm">
-                            <Calendar className="w-6 h-6 mr-3" />
-                            Book a Discovery Call
-                        </Link>
                     </div>
                 </div>
             </div>
