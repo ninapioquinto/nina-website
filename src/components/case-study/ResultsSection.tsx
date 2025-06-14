@@ -1,4 +1,3 @@
-
 const ResultsSection = () => {
   const revenueResults = [
     {
@@ -14,7 +13,7 @@ const ResultsSection = () => {
     {
       value: "45%",
       title: "Win Rate",
-      description: "Across qualified leads—enabled by faster onboarding, consistent nurturing, and smarter tracking"
+      description: "Across qualified leads, this was made possible through faster onboarding, consistent nurturing, and smarter tracking."
     }
   ];
 
