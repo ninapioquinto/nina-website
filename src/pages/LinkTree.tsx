@@ -1,10 +1,27 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Instagram, Github, Tiktok } from "lucide-react";
+import { Instagram, Github } from "lucide-react";
 import React from "react";
 import StarryBackground from "@/components/StarryBackground";
 import Particles from "@/components/Particles";
+
+const TiktokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 const LinkTree = () => {
   return (
@@ -42,7 +59,7 @@ const LinkTree = () => {
               className="text-violet-400 hover:text-violet-200 hover:scale-110 transition-all duration-300"
               aria-label="TikTok"
             >
-              <Tiktok className="w-7 h-7" />
+              <TiktokIcon className="w-7 h-7" />
             </a>
             {/* GitHub */}
             <a
