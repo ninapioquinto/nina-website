@@ -1,19 +1,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Instagram, Github } from "lucide-react";
+import { Instagram, Github, Tiktok } from "lucide-react";
 import React from "react";
 import StarryBackground from "@/components/StarryBackground";
 import Particles from "@/components/Particles";
-
-const tiktokSvg = (
-  <svg viewBox="0 0 20 20" fill="none" className="w-6 h-6">
-    <circle cx="10" cy="10" r="10" fill="#000" />
-    <path d="M13.5 7.5V12a3.5 3.5 0 11-3.5-3.45V7.11a5 5 0 105 4.89V7.5h-1.5z" fill="#fff"/>
-    <path d="M13.5 3V12a3.5 3.5 0 01-7 0V8a1 1 0 012 0v4a1.5 1.5 0 003 0V3h2z" fill="#25F4EE"/>
-    <path d="M13.5 5.5V12a3.5 3.5 0 01-7 0V8a1 1 0 012 0v4a1.5 1.5 0 003 0V5.5h2z" fill="#FE2C55"/>
-  </svg>
-);
 
 const LinkTree = () => {
   return (
@@ -32,36 +23,36 @@ const LinkTree = () => {
             <span className="block text-sm text-muted-foreground mt-1 tracking-wide">@automationcrmexpert</span>
           </div>
           {/* Socials row */}
-          <div className="flex flex-row gap-6 mt-1 mb-1">
+          <div className="flex flex-row gap-8 mt-1 mb-1">
             {/* Instagram */}
             <a
               href="https://www.instagram.com/automationcrmexpert"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-br from-pink-500/80 to-purple-700/80 hover:scale-110 transition-transform shadow hover:shadow-pink-400/40 p-2"
+              className="text-violet-400 hover:text-violet-200 hover:scale-110 transition-all duration-300"
               aria-label="Instagram"
             >
-              <Instagram className="w-6 h-6 text-white drop-shadow" />
+              <Instagram className="w-7 h-7" />
             </a>
             {/* TikTok */}
             <a
               href="https://www.tiktok.com/@automationcrmexpert"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-br from-black/80 to-violet-950/90 hover:scale-110 transition-transform shadow hover:shadow-white/20 p-2"
+              className="text-violet-400 hover:text-violet-200 hover:scale-110 transition-all duration-300"
               aria-label="TikTok"
             >
-              {tiktokSvg}
+              <Tiktok className="w-7 h-7" />
             </a>
             {/* GitHub */}
             <a
               href="https://github.com/ninapioquinto"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-br from-gray-600/90 to-zinc-900/80 hover:scale-110 transition-transform shadow hover:shadow-indigo-400/30 p-2"
+              className="text-violet-400 hover:text-violet-200 hover:scale-110 transition-all duration-300"
               aria-label="GitHub"
             >
-              <Github className="w-6 h-6 text-white drop-shadow" />
+              <Github className="w-7 h-7" />
             </a>
           </div>
           {/* Action buttons */}
