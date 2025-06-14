@@ -17,7 +17,7 @@ export const EnterpriseSolutions = ({ tools }: EnterpriseSolutionsProps) => {
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
                     <Network className="w-10 h-10 mr-4 text-primary" />
-                    Enterprise-Grade Solutions
+                    Scalable AI Automation & CRM Solutions
                 </h2>
                 <p className="text-white text-xl leading-relaxed mb-8">
                     Need more than a starter kit? I build custom automation systems using:
