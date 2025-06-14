@@ -44,7 +44,7 @@ const CaseStudy = () => {
               <div className="sticky top-32">
                 <h3 className="text-2xl font-bold mb-4">The Client</h3>
                 <p className="text-white/70 mb-6">
-                  This growing credit repair and funding business was in the early stages of growth, eager to scale. But their fragmented setup was slowing them down. Managing operations across a basic website, SuiteDash CRM, Typeform, and manual processes created unnecessary friction.
+                  This growing credit repair and funding business was in the early stages of expansion, eager to scale. But their fragmented setup was slowing them down. Managing operations across a basic website, SuiteDash CRM, Typeform, and manual processes created unnecessary friction.
                 </p>
                 <p className="text-white/70 mb-6">
                   As new leads increased and client needs evolved, the lack of a streamlined system led to missed opportunities, inconsistent follow-ups, and administrative overwhelm.
@@ -136,6 +136,33 @@ const CaseStudy = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="reveal">
+                  <h4 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">Revenue Results Unlocked</h4>
+                  <p className="text-lg mb-6">
+                    In just 30 days of using the new system:
+                  </p>
+                  
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
+                    <div className="bg-gradient-to-br from-purple-900/20 to-violet-900/10 rounded-lg p-6 border border-purple-400/20 text-center">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-2">$112,000</div>
+                      <p className="text-white/80 font-medium mb-2">Opportunity Value Captured</p>
+                      <p className="text-white/60 text-sm">Through improved visibility and timely follow-ups</p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-purple-900/20 to-violet-900/10 rounded-lg p-6 border border-purple-400/20 text-center">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-2">$53,000</div>
+                      <p className="text-white/80 font-medium mb-2">Revenue Generated</p>
+                      <p className="text-white/60 text-sm">From newly closed deals</p>
+                    </div>
+                    
+                    <div className="bg-gradient-to-br from-purple-900/20 to-violet-900/10 rounded-lg p-6 border border-purple-400/20 text-center">
+                      <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-2">45%</div>
+                      <p className="text-white/80 font-medium mb-2">Win Rate</p>
+                      <p className="text-white/60 text-sm">Across qualified leads—enabled by faster onboarding, consistent nurturing, and smarter tracking</p>
+                    </div>
+                  </div>
+                </div>
                 
                 <div className="reveal">
                   <h4 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">Outcomes in 30 Days</h4>
@@ -170,13 +197,13 @@ const CaseStudy = () => {
                 <div className="reveal">
                   <h4 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">Final Thoughts</h4>
                   <p className="text-lg mb-4">
-                    This project gave the client more than automation. It gave them a system that reflects their vision and supports their business every step of the way.
+                    This project gave the client more than automation—it gave them control.
                   </p>
                   <p className="text-lg mb-4">
-                    By thoughtfully designing a tailored GoHighLevel CRM, I helped this credit repair and funding team eliminate overwhelm, centralize their operations, and create a more scalable, client-friendly business model.
+                    By thoughtfully designing a tailored GoHighLevel CRM, I helped this credit repair and funding team eliminate overwhelm, centralize their operations, and build a business model that scales without chaos.
                   </p>
                   <p className="text-lg font-semibold">
-                    They now operate with clarity, confidence, and the ability to grow without chaos.
+                    They now operate with clarity, confidence, and a system that supports both their growth goals and their clients' journey—every step of the way.
                   </p>
                 </div>
                 
