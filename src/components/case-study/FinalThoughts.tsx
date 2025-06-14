@@ -1,17 +1,18 @@
 
+
 const FinalThoughts = () => {
   return (
     <>
       <div className="reveal">
         <h4 className="text-xl font-semibold mb-3 bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">Final Thoughts</h4>
         <p className="text-lg mb-4">
-          This project gave the client more than automation—it gave them control.
+          This project gave the client more than automation. It gave them control.
         </p>
         <p className="text-lg mb-4">
           By thoughtfully designing a tailored GoHighLevel CRM, I helped this credit repair and funding team eliminate overwhelm, centralize their operations, and build a business model that scales without chaos.
         </p>
         <p className="text-lg font-semibold">
-          They now operate with clarity, confidence, and a system that supports both their growth goals and their clients' journey—every step of the way.
+          They now operate with clarity and confidence, supported by a system that aligns with their growth goals and enhances every step of the client journey.
         </p>
       </div>
       
@@ -28,3 +29,4 @@ const FinalThoughts = () => {
 };
 
 export default FinalThoughts;
+
