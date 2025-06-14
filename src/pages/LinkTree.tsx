@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Instagram, Github, ArrowRight } from "lucide-react";
@@ -92,6 +91,7 @@ const LinkTree = () => {
               </a>
             </Button>
             <Button
+              asChild
               className="
               w-full text-base font-medium py-4 px-4 rounded-full
               border-2 border-violet-400/40
@@ -100,20 +100,8 @@ const LinkTree = () => {
               transition hover:scale-105 luxury-button
             "
               variant="outline"
-              onClick={() => {
-                if (window.location.pathname === "/") {
-                  const contactSection = document.getElementById("contact");
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" });
-                  } else {
-                    window.location.href = "/#contact";
-                  }
-                } else {
-                  window.location.href = "/#contact";
-                }
-              }}
             >
-              Contact Me
+              <a href="mailto:ninapioquintoo@gmail.com">Contact Me</a>
             </Button>
           </div>
         </div>
