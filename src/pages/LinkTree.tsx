@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Instagram, Github } from "lucide-react";
+import { Instagram, Github, ArrowRight } from "lucide-react";
 import React from "react";
 import StarryBackground from "@/components/StarryBackground";
 import Particles from "@/components/Particles";
@@ -77,13 +77,10 @@ const LinkTree = () => {
             <Button
               asChild
               className="
-              w-full text-base font-medium py-4 px-4 rounded-full
-              bg-gradient-to-r from-violet-600/80 via-blue-700/70 to-indigo-800/80
-              text-white shadow hover:brightness-110 hover:scale-105 transition
-              border border-violet-400/40 hover:border-violet-400/80
-              backdrop-blur-md luxury-button
-            "
-              variant="secondary"
+                w-full text-base font-medium py-3 rounded-lg
+                shadow-lg shadow-primary/20 hover:shadow-primary/40
+                transition-transform duration-300 hover:scale-105
+              "
             >
               <a
                 href="/"
@@ -91,6 +88,7 @@ const LinkTree = () => {
                 rel="noopener noreferrer"
               >
                 Visit My Website
+                <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
             <Button
