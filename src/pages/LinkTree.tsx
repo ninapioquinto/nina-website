@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Instagram, Github } from "lucide-react";
@@ -15,8 +14,8 @@ const tiktokSvg = (
 
 const LinkTree = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-10">
-      <div className="w-full max-w-md flex flex-col items-center gap-7 p-8 rounded-3xl bg-background/80 border border-white/10 shadow-xl backdrop-blur-lg glass-effect">
+    <div className="flex justify-center px-4">
+      <div className="w-full max-w-md flex flex-col items-center gap-7 p-8 rounded-3xl bg-background/80 border border-white/10 shadow-xl backdrop-blur-lg">
         {/* Avatar and username */}
         <Avatar className="w-24 h-24 mb-3 shadow-lg border-2 border-violet-600/30 bg-gradient-to-tr from-violet-700/40 via-background to-indigo-900/30">
           {/* <AvatarImage src="/lovable-uploads/your-avatar.png" alt="Nina Pioquinto" /> */}
@@ -105,11 +104,6 @@ const LinkTree = () => {
             Contact Me
           </Button>
         </div>
-      </div>
-      {/* Optional bottom text */}
-      <div className="mt-10 text-center">
-        <p className="text-lg font-medium text-gray-300 tracking-wide">Automation CRM Expert</p>
-        <p className="text-xs text-gray-400 mt-1">automationcrmexpert.com/links</p>
       </div>
     </div>
   );

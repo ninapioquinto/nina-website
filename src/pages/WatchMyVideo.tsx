@@ -2,10 +2,7 @@ import { ArrowLeft, Download, Calendar, CheckCircle, X, Bot, MessageSquare, Mail
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import Particles from '../components/Particles';
-import StarryBackground from '../components/StarryBackground';
+
 const WatchMyVideo = () => {
   const features = [{
     icon: Mic,
@@ -87,14 +84,7 @@ const WatchMyVideo = () => {
     name: "Voice agents, web search, analytics, and more",
     icon: Cpu
   }];
-  return <div className="min-h-screen relative overflow-hidden">
-      <StarryBackground />
-      <Particles />
-      <div className="relative z-10">
-        <Navbar />
-        
-        <main className="pt-24 pb-16">
-          <div className="container mx-auto px-4 max-w-6xl">
+  return <div className="container mx-auto px-4 max-w-6xl">
             {/* Header Section */}
             <div className="mb-20">
               <Link to="/" className="inline-flex items-center text-white/80 hover:text-primary transition-all duration-300 mb-8 group">
@@ -358,7 +348,7 @@ const WatchMyVideo = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <Button className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl glow-border">
+                    <Button className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border">
                       <Download className="w-6 h-6 mr-3" />
                       Download the AI Assistant + Guide
                     </Button>
@@ -370,11 +360,6 @@ const WatchMyVideo = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </main>
-        
-        <Footer />
-      </div>
-    </div>;
+          </div>;
 };
 export default WatchMyVideo;

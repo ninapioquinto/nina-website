@@ -12,11 +12,13 @@ import LinkTree from "./pages/LinkTree";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Particles from "./components/Particles";
+import StarryBackground from "./components/StarryBackground";
 
 const queryClient = new QueryClient();
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => (
   <>
+    <StarryBackground />
     <Particles />
     <div className="relative z-10">
       <Navbar />
@@ -38,7 +40,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} />
           <Route path="/watch-my-video" element={<PageWrapper><WatchMyVideo /></PageWrapper>} />
-          <Route path="/links" element={<LinkTree />} />
+          <Route path="/links" element={<PageWrapper><LinkTree /></PageWrapper>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
         </Routes>
