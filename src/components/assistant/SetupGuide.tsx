@@ -18,7 +18,7 @@ export const SetupGuide = ({ setupSteps }: SetupGuideProps) => {
                     <Hash className="w-10 h-10 mr-4 text-primary" />
                     Quick Setup Protocol
                 </h2>
-                <p className="text-white/80 text-xl">From download to delegation in under 30 minutes</p>
+                <p className="text-white/80 text-xl">Get set up and delegating in no time</p>
             </div>
             
             <div className="relative">
