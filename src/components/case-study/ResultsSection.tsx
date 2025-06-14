@@ -49,7 +49,7 @@ const ResultsSection = () => {
           In just 30 days of using the new system:
         </p>
         
-        <div className="grid md:grid-cols-3 gap-6 mb-6">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           {revenueResults.map((result, index) => (
             <div key={index} className="bg-gradient-to-br from-purple-900/20 to-violet-900/10 rounded-lg p-6 border border-purple-400/20 text-center">
               <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mb-2">{result.value}</div>
@@ -57,6 +57,21 @@ const ResultsSection = () => {
               <p className="text-white/60 text-sm">{result.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Dashboard Image */}
+        <div className="mb-8">
+          <div className="relative rounded-xl overflow-hidden border border-purple-400/20 bg-gradient-to-br from-purple-900/10 to-violet-900/5">
+            <img 
+              src="/lovable-uploads/c8e73d17-1196-4860-8426-c39f2a31cb45.png" 
+              alt="GoHighLevel CRM Dashboard showing $112K opportunity value, $53K revenue generated, and detailed analytics"
+              className="w-full h-auto"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+          </div>
+          <p className="text-sm text-white/60 text-center mt-3">
+            Live dashboard view showing real-time opportunity tracking, revenue metrics, and pipeline analytics
+          </p>
         </div>
       </div>
       
