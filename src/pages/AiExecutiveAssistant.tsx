@@ -20,7 +20,8 @@ const AiExecutiveAssistant = () => {
   }, {
     icon: Zap,
     text: "Triggers prebuilt automation using LangChain + n8n tools",
-    gradient: "from-yellow-400 to-orange-400"
+    gradient: "from-yellow-400 to-orange-400",
+    glow: "from-yellow-500/30 to-orange-500/30"
   }, {
     icon: Bot,
     text: "Delivers results in Telegram with smart, contextual responses",

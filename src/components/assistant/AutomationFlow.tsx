@@ -1,10 +1,10 @@
-
 import { Brain, Cpu } from 'lucide-react';
 
 interface Feature {
     icon: React.ElementType;
     text: string;
     gradient: string;
+    glow?: string;
 }
 
 interface AutomationFlowProps {
@@ -47,7 +47,7 @@ export const AutomationFlow = ({ features }: AutomationFlowProps) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                     {features.slice(0, 3).map((feature, index) => (
                         <div key={index} className="relative group transform hover:scale-105 transition-all duration-500">
-                            <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient.replace('400', '500/20')} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-r ${feature.glow || feature.gradient.replace('400', '500/20')} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
                             <div className="relative p-8 rounded-2xl bg-black/40 border border-white/20 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 h-full">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.gradient} bg-opacity-20 border border-white/30`}>
@@ -66,7 +66,7 @@ export const AutomationFlow = ({ features }: AutomationFlowProps) => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     {features.slice(3, 5).map((feature, index) => (
                         <div key={index + 3} className="relative group transform hover:scale-105 transition-all duration-500">
-                            <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient.replace('400', '500/20')} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-r ${feature.glow || feature.gradient.replace('400', '500/20')} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
                             <div className="relative p-8 rounded-2xl bg-black/40 border border-white/20 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 h-full">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.gradient} bg-opacity-20 border border-white/30`}>
