@@ -33,7 +33,7 @@ export const AssistantHeader = () => {
                     
                     <Button className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border">
                         <Download className="w-5 h-5 mr-3" />
-                        Download the AI Assistant + Setup Guide
+                        Download the AI Assistant
                     </Button>
                 </div>
             </div>
