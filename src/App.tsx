@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import WorkWithMe from "./pages/WorkWithMe";
-import WatchMyVideo from "./pages/WatchMyVideo";
+import AiExecutiveAssistant from "./pages/AiExecutiveAssistant";
 import NotFound from "./pages/NotFound";
 import LinkTree from "./pages/LinkTree";
 import Navbar from "./components/Navbar";
@@ -40,7 +39,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           {/* The routes below are temporarily disabled. */}
           {/* <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} /> */}
-          <Route path="/watch-my-video" element={<PageWrapper><WatchMyVideo /></PageWrapper>} />
+          <Route path="/ai-executive-assistant" element={<PageWrapper><AiExecutiveAssistant /></PageWrapper>} />
           <Route path="/links" element={<LinkTree />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />

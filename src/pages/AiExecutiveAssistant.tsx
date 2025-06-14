@@ -8,7 +8,7 @@ import { UseCases } from '../components/assistant/UseCases';
 import { EnterpriseSolutions } from '../components/assistant/EnterpriseSolutions';
 import { FinalCTA } from '../components/assistant/FinalCTA';
 
-const WatchMyVideo = () => {
+const AiExecutiveAssistant = () => {
   const features = [{
     icon: Mic,
     text: "Understands voice or text input from Telegram",
@@ -105,4 +105,4 @@ const WatchMyVideo = () => {
     </div>
   );
 };
-export default WatchMyVideo;
+export default AiExecutiveAssistant;
