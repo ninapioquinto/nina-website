@@ -32,7 +32,7 @@ const LinkTree = () => {
         <div className="w-full max-w-md flex flex-col items-center gap-7 p-8 rounded-3xl bg-violet-950/30 border border-violet-400/20 shadow-xl backdrop-blur-lg animate-glow">
           {/* Avatar and username */}
           <Avatar className="w-24 h-24 mb-3 shadow-lg border-2 border-violet-600/30 bg-gradient-to-tr from-violet-700/40 via-background to-indigo-900/30">
-            {/* <AvatarImage src="/lovable-uploads/your-avatar.png" alt="Nina Pioquinto" /> */}
+            <AvatarImage src="/lovable-uploads/f33f1f05-555a-4043-8f47-babb6b1a2f95.png" alt="Nina Pioquinto" />
             <AvatarFallback className="text-4xl font-bold tracking-tight text-violet-300 bg-violet-800/50">N</AvatarFallback>
           </Avatar>
           <div className="text-center">
