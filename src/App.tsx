@@ -40,7 +40,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           {/* The routes below are temporarily disabled. */}
           {/* <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} /> */}
-          {/* <Route path="/watch-my-video" element={<PageWrapper><WatchMyVideo /></PageWrapper>} /> */}
+          <Route path="/watch-my-video" element={<PageWrapper><WatchMyVideo /></PageWrapper>} />
           <Route path="/links" element={<LinkTree />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
