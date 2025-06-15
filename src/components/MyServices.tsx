@@ -28,7 +28,7 @@ const services = [
             "Advanced setup with custom workflows",
             "Full data migration & cleaning",
             "System Handover with Documentation",
-            "End-to-end implementation.",
+            "End-to-end implementation",
             "Custom integrations & automations",
         ],
         ctaText: "Get started",
