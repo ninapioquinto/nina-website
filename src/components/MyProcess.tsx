@@ -37,7 +37,7 @@ const MyProcess = () => {
   }, {
     number: "03",
     title: "Custom System Build with AI and Automation",
-    description: "Once approved, I build the full system using tools like GoHighLevel, ClickUp, or Airtable. This includes custom fields, smart pipelines, and automated actions that reduce repetitive work. I also embed AI where it makes real impact — whether it's routing leads, handling follow-ups, or streamlining internal tasks.",
+    description: "Once approved, I build the full system using tools like GoHighLevel, Zoho, or Airtable. This includes custom fields, smart pipelines, and automated actions that reduce repetitive work. I also embed AI where it makes real impact, whether it's routing leads, handling follow-ups, or streamlining internal tasks.",
     testimonial: "The system runs like a quiet operator in the background. Our team now spends more time closing and less time clicking."
   }, {
     number: "04",
