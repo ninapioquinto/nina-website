@@ -3,6 +3,15 @@ import { Bot, CheckCircle, Download } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 
 export const FinalCTA = () => {
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/ai-executive-assistant.json';
+        link.download = 'ai-executive-assistant.json';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-600/10 to-violet-600/10 blur-3xl rounded-3xl"></div>
@@ -37,7 +46,10 @@ export const FinalCTA = () => {
                     </div>
                     
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                        <Button className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border">
+                        <Button 
+                            onClick={handleDownload}
+                            className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
+                        >
                             <Download className="w-6 h-6 mr-3" />
                             Download the AI Assistant
                         </Button>
