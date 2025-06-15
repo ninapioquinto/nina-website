@@ -29,6 +29,18 @@ export const submitContactForm = async (data: ContactSubmission) => {
     console.log('[Diagnostic] Current session:', session);
     console.log('[Diagnostic] Current user:', session.session?.user || 'No user (anonymous)');
 
+    // Test if we can call our debug function
+    try {
+      const { data: debugInfo, error: debugError } = await supabase.rpc('debug_current_context');
+      if (debugError) {
+        console.error('[Diagnostic] Debug function error:', debugError);
+      } else {
+        console.log('[Diagnostic] Debug context info:', debugInfo);
+      }
+    } catch (err) {
+      console.log('[Diagnostic] Debug function not available yet:', err);
+    }
+
     // LOG the input object we're actually sending to Supabase insert
     const submission = {
       name: data.name,
@@ -46,9 +58,9 @@ export const submitContactForm = async (data: ContactSubmission) => {
     console.log('- message:', data.message, 'type:', typeof data.message, 'length:', data.message?.length);
 
     // Check if any field is null, undefined, or empty
-    const requiredFields = ['name', 'email', 'business_type', 'message'];
+    const requiredFields: (keyof typeof submission)[] = ['name', 'email', 'business_type', 'message'];
     for (const field of requiredFields) {
-      const value = submission[field as keyof typeof submission];
+      const value = submission[field];
       if (!value || value.trim() === '') {
         console.error(`[Diagnostic] Field [${field}] is missing, null, undefined, or empty:`, value);
         throw new Error(`Field ${field} is required and cannot be empty`);
@@ -79,8 +91,12 @@ export const submitContactForm = async (data: ContactSubmission) => {
         console.error('[Diagnostic] Checking if this is an anonymous user issue...');
         
         // Try to get more info about the current role/context
-        const { data: roleCheck } = await supabase.rpc('current_user');
-        console.error('[Diagnostic] Current database role:', roleCheck);
+        try {
+          const { data: roleCheck } = await supabase.rpc('current_user');
+          console.error('[Diagnostic] Current database role:', roleCheck);
+        } catch (rpcError) {
+          console.error('[Diagnostic] Could not check current user role:', rpcError);
+        }
       }
       
       throw new Error(`Database error: ${error.message} (Code: ${error.code})`);
