@@ -11,8 +11,12 @@ export type ContactSubmission = {
 
 export const submitContactForm = async (data: ContactSubmission) => {
   console.log('Attempting to submit contact form with data:', data);
+  console.log('Supabase client session:', await supabase.auth.getSession());
   
   try {
+    // First, let's check if we can connect to the table at all
+    console.log('Testing connection to contact_submissions table...');
+    
     const { data: result, error } = await supabase
       .from('contact_submissions')
       .insert([
@@ -27,6 +31,10 @@ export const submitContactForm = async (data: ContactSubmission) => {
 
     if (error) {
       console.error('Supabase error details:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
+      console.error('Error details:', error.details);
+      console.error('Error hint:', error.hint);
       throw new Error(`Database error: ${error.message}`);
     }
 
