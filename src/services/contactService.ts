@@ -1,6 +1,4 @@
 
-import { supabase } from '@/integrations/supabase/client';
-
 export type ContactSubmission = {
   name: string;
   email: string;
@@ -10,22 +8,16 @@ export type ContactSubmission = {
 };
 
 export const submitContactForm = async (data: ContactSubmission) => {
-  const { data: result, error } = await supabase
-    .from('contact_submissions')
-    .insert([
-      {
-        name: data.name,
-        email: data.email,
-        business_type: data.business_type,
-        message: data.message,
-      }
-    ])
-    .select();
-
-  if (error) {
-    console.error('Error submitting contact form:', error);
-    throw new Error('Failed to submit contact form');
-  }
-
-  return result;
+  // For now, we'll just log the submission and simulate success
+  console.log('Contact form submission:', data);
+  
+  // Simulate API delay
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  
+  // Return a mock successful response
+  return [{
+    ...data,
+    id: Date.now().toString(),
+    created_at: new Date().toISOString()
+  }];
 };
