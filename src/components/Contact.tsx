@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,6 +9,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Instagram, Mail, MessageSquare, ArrowRight, Send } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { submitContactForm } from '@/services/contactService';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -38,16 +38,30 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Contact form submitted:', data);
+    try {
+      await submitContactForm({
+        name: data.name,
+        email: data.email,
+        business_type: data.businessType,
+        message: data.message,
+      });
+
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you within 24 hours.",
       });
+      
       form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   useEffect(() => {
