@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -25,7 +26,7 @@ const services = [
             "CRM platform selection consulting",
             "Advanced setup with custom workflows",
             "Full data migration & cleaning",
-            "Comprehensive team training",
+            "System Handover with Documentation",
             "90 days of priority support",
             "Custom integrations & automations",
         ],
