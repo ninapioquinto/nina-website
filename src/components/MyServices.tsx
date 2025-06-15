@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -27,7 +28,7 @@ const services = [
             "Advanced setup with custom workflows",
             "Full data migration & cleaning",
             "System Handover with Documentation",
-            "90 days of priority support",
+            "End-to-end implementation.",
             "Custom integrations & automations",
         ],
         ctaText: "Get started",
