@@ -10,62 +10,55 @@ export type ContactSubmission = {
 };
 
 export const submitContactForm = async (data: ContactSubmission) => {
-  console.log('Attempting to submit contact form with data:', data);
-  
+  // Diagnostic logging for debugging POST
+  console.log('=== [Diagnostic] Attempting contact form submit with:', data);
   try {
-    // First, let's test if we can connect to Supabase at all
-    console.log('Testing Supabase connection...');
+    // Test connection
     const { data: testData, error: testError } = await supabase
       .from('contact_submissions')
       .select('count', { count: 'exact', head: true });
-    
     if (testError) {
-      console.error('Supabase connection test failed:', testError);
+      console.error('[Diagnostic] Supabase connection test failed:', testError);
     } else {
-      console.log('Supabase connection test successful');
+      console.log('[Diagnostic] Supabase connection test successful');
     }
-
-    // Check what user session we have
     const { data: session } = await supabase.auth.getSession();
-    console.log('Current session:', session);
+    console.log('[Diagnostic] Current session:', session);
 
-    // Now attempt the actual insert
-    console.log('Attempting to insert contact submission...');
+    // LOG the input object we're actually sending to Supabase insert
+    const submission = {
+      name: data.name,
+      email: data.email,
+      business_type: data.business_type,
+      message: data.message,
+    };
+    console.log('[Diagnostic] Row to insert:', submission);
+
+    // ACTUAL INSERT
     const { data: result, error } = await supabase
       .from('contact_submissions')
-      .insert({
-        name: data.name,
-        email: data.email,
-        business_type: data.business_type,
-        message: data.message,
-      })
+      .insert(submission)
       .select()
       .single();
 
     if (error) {
-      console.error('Supabase insert error:', {
-        code: error.code,
-        message: error.message,
-        details: error.details,
-        hint: error.hint,
-        fullError: error
-      });
-      
-      // If it's an RLS error, let's try to understand what's wrong
+      console.error('[Diagnostic] Supabase insert error:', error);
       if (error.code === '42501' || error.message?.includes('row-level security')) {
-        console.error('RLS Policy violation detected. This means either:');
-        console.error('1. No INSERT policy exists for anonymous users');
-        console.error('2. The policy WITH CHECK condition is failing');
-        console.error('3. RLS is enabled but no policies are active');
+        console.error('[Diagnostic] RLS Policy violation detected. Investigating fields:');
+        // Log explicitly which keys are missing
+        for (const key of ['name', 'email', 'business_type', 'message']) {
+          if (!submission[key]) {
+            console.error(`[Diagnostic] Field [${key}] is missing or falsy:`, submission[key]);
+          }
+        }
       }
-      
       throw new Error(`Database error: ${error.message} (Code: ${error.code})`);
     }
 
-    console.log('Contact form submitted successfully:', result);
+    console.log('[Diagnostic] Contact form submitted successfully:', result);
     return result;
   } catch (error) {
-    console.error('Error in submitContactForm:', error);
+    console.error('[Diagnostic] Error in submitContactForm:', error);
     throw error;
   }
 };
