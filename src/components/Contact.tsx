@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -117,8 +116,8 @@ const Contact = () => {
   // Show thank you message after successful submission
   if (isSubmitted) {
     return (
-      <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative">
-        <div className="container mx-auto px-4">
+      <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative min-h-screen flex items-center">
+        <div className="container mx-auto px-4 w-full">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-accent/20 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
               <div className="flex justify-center mb-6">
