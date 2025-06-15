@@ -25,6 +25,10 @@ export const submitContactForm = async (data: ContactSubmission) => {
       console.log('Supabase connection test successful');
     }
 
+    // Check what user session we have
+    const { data: session } = await supabase.auth.getSession();
+    console.log('Current session:', session);
+
     // Now attempt the actual insert
     console.log('Attempting to insert contact submission...');
     const { data: result, error } = await supabase
@@ -46,6 +50,15 @@ export const submitContactForm = async (data: ContactSubmission) => {
         hint: error.hint,
         fullError: error
       });
+      
+      // If it's an RLS error, let's try to understand what's wrong
+      if (error.code === '42501' || error.message?.includes('row-level security')) {
+        console.error('RLS Policy violation detected. This means either:');
+        console.error('1. No INSERT policy exists for anonymous users');
+        console.error('2. The policy WITH CHECK condition is failing');
+        console.error('3. RLS is enabled but no policies are active');
+      }
+      
       throw new Error(`Database error: ${error.message} (Code: ${error.code})`);
     }
 
