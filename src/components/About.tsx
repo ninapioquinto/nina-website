@@ -1,3 +1,4 @@
+
 import { useRef, useEffect } from 'react';
 import { Card, CardContent } from './ui/card';
 const About = () => {
@@ -115,30 +116,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Impact metrics */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {[{
-            metric: "50-80%",
-            label: "Reduction in Manual Work",
-            color: "from-purple-400 to-violet-400"
-          }, {
-            metric: "Days",
-            label: "Rapid Implementation",
-            color: "from-violet-400 to-indigo-400"
-          }, {
-            metric: "100%",
-            label: "Custom Solutions",
-            color: "from-indigo-400 to-purple-400"
-          }].map((stat, index) => <div key={index} className="text-center reveal group">
-                <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-3 group-hover:scale-105 transition-transform duration-300`}>
-                  {stat.metric}
-                </div>
-                <div className="text-gray-300 font-medium">
-                  {stat.label}
-                </div>
-              </div>)}
           </div>
 
           {/* Modern Client Impact Section */}
