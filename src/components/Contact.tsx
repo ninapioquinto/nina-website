@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -6,7 +7,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
-import { Instagram, Mail, MessageSquare, ArrowRight, Send } from 'lucide-react';
+import { Instagram, Mail, MessageSquare, Send } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '@/services/contactService';
@@ -40,6 +41,7 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      console.log('Calling submitContactForm service...');
       const result = await submitContactForm({
         name: data.name,
         email: data.email,
@@ -61,7 +63,8 @@ const Contact = () => {
       let errorMessage = "There was an error sending your message. Please try again.";
       
       if (error.message) {
-        errorMessage = error.message;
+        // Show more specific error for debugging
+        errorMessage = `Error: ${error.message}`;
       }
       
       toast({
