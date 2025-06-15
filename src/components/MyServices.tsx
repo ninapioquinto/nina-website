@@ -20,7 +20,7 @@ const services = [
         highlight: true
     },
     {
-        name: "CRM OPTIMIZATION",
+        name: "CRM BUILD-OUT",
         description: "Complete CRM setup, optimization and training",
         features: [
             "CRM platform selection consulting",
