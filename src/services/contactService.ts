@@ -40,7 +40,12 @@ export const submitContactForm = async (data: ContactSubmission) => {
       .single();
 
     if (error) {
-      console.error('Supabase error:', error);
+      console.error('Supabase error details:', {
+        message: error.message,
+        details: error.details,
+        hint: error.hint,
+        code: error.code
+      });
       throw new Error(`Failed to submit contact form: ${error.message}`);
     }
 

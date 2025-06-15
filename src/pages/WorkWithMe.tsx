@@ -9,6 +9,7 @@ import { ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import StarryBackground from '@/components/StarryBackground';
 import Particles from '@/components/Particles';
+import { submitContactForm } from '@/services/contactService';
 
 const WorkWithMe = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -75,19 +76,48 @@ const WorkWithMe = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
+    try {
+      // Prepare the data for submission
+      const submissionData = {
+        name: formData.name,
+        email: formData.email,
+        business_type: formData.businessType,
+        message: `Company: ${formData.company}
+Role: ${formData.role}
+Monthly Revenue: ${formData.monthlyRevenue}
+Team Size: ${formData.teamSize}
+Challenges: ${formData.challenges.join(', ')}
+Current Tools: ${formData.currentTools}
+Project Budget: ${formData.projectBudget}
+Timeline: ${formData.timeline}
+Project Description: ${formData.projectDescription}
+Previous Consultant Experience: ${formData.hasWorkedWithConsultants}
+Decision Maker: ${formData.decisionMaker}
+Urgency: ${formData.urgency}`
+      };
+
+      console.log('Submitting form data:', submissionData);
       
+      await submitContactForm(submissionData);
+      
+      setIsSubmitted(true);
       toast({
         title: "Application submitted!",
         description: "I'll review your information and get back to you within 24 hours.",
       });
-    }, 2000);
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission failed",
+        description: error instanceof Error ? error.message : "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const isStepValid = () => {
