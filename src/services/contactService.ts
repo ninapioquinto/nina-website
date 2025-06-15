@@ -14,6 +14,11 @@ export const submitContactForm = async (data: ContactSubmission) => {
   console.log('Data to submit:', data);
   
   try {
+    // Check current session/user state
+    const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+    console.log('Current session:', session);
+    console.log('Session error:', sessionError);
+    
     // Validate required fields
     const requiredFields = ['name', 'email', 'business_type', 'message'] as const;
     for (const field of requiredFields) {
@@ -31,6 +36,13 @@ export const submitContactForm = async (data: ContactSubmission) => {
     };
 
     console.log('Submitting to Supabase:', submission);
+
+    // Try to ensure we have an anonymous session
+    if (!session) {
+      console.log('No session found, trying to sign in anonymously...');
+      const { data: anonData, error: anonError } = await supabase.auth.signInAnonymously();
+      console.log('Anonymous signin result:', { anonData, anonError });
+    }
 
     // Insert the contact submission
     const { data: result, error } = await supabase
