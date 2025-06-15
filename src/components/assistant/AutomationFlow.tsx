@@ -1,3 +1,4 @@
+
 import { Brain, Cpu } from 'lucide-react';
 
 interface Feature {
@@ -47,13 +48,19 @@ export const AutomationFlow = ({ features }: AutomationFlowProps) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                     {features.slice(0, 3).map((feature, index) => (
                         <div key={index} className="relative group transform hover:scale-105 transition-all duration-500">
-                            <div className={`absolute inset-0 bg-gradient-to-r ${feature.glow || feature.gradient.replace('400', '500/20')} rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-r ${
+                                index === 2 
+                                    ? 'from-yellow-400/40 via-orange-400/40 to-red-400/40' 
+                                    : feature.glow || feature.gradient.replace('400', '500/20')
+                            } rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}></div>
                             <div className="relative p-8 rounded-2xl bg-black/40 border border-white/20 backdrop-blur-xl hover:border-primary/50 transition-all duration-500 h-full">
                                 <div className="flex items-center space-x-4 mb-4">
                                     <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.gradient} bg-opacity-20 border border-white/30`}>
                                         <feature.icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                                    <div className={`w-2 h-2 rounded-full animate-pulse ${
+                                        index === 2 ? 'bg-yellow-400' : 'bg-primary'
+                                    }`}></div>
                                 </div>
                                 <p className="text-white/90 leading-relaxed font-medium">
                                     {feature.text}
