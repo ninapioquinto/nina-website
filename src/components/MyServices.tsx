@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -21,7 +20,7 @@ const services = [
     },
     {
         name: "CRM BUILD-OUT",
-        description: "Complete CRM setup, optimization and training",
+        description: "Complete CRM setup and optimization",
         features: [
             "CRM platform selection consulting",
             "Advanced setup with custom workflows",
