@@ -1,3 +1,4 @@
+
 const ResultsSection = () => {
   const revenueResults = [
     {
@@ -62,7 +63,7 @@ const ResultsSection = () => {
         <div className="mb-8">
           <div className="relative rounded-xl overflow-hidden border border-purple-400/20 bg-gradient-to-br from-purple-900/10 to-violet-900/5">
             <img 
-              src="/lovable-uploads/c8e73d17-1196-4860-8426-c39f2a31cb45.png" 
+              src="/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png" 
               alt="GoHighLevel CRM Dashboard showing $112K opportunity value, $53K revenue generated, and detailed analytics"
               className="w-full h-auto"
             />
