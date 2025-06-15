@@ -58,7 +58,7 @@ export const submitContactForm = async (data: ContactSubmission) => {
     console.log('- message:', data.message, 'type:', typeof data.message, 'length:', data.message?.length);
 
     // Check if any field is null, undefined, or empty
-    const requiredFields: (keyof typeof submission)[] = ['name', 'email', 'business_type', 'message'];
+    const requiredFields = ['name', 'email', 'business_type', 'message'] as const;
     for (const field of requiredFields) {
       const value = submission[field];
       if (!value || value.trim() === '') {
@@ -92,7 +92,7 @@ export const submitContactForm = async (data: ContactSubmission) => {
         
         // Try to get more info about the current role/context
         try {
-          const { data: roleCheck } = await supabase.rpc('current_user');
+          const { data: roleCheck } = await supabase.rpc('debug_current_context');
           console.error('[Diagnostic] Current database role:', roleCheck);
         } catch (rpcError) {
           console.error('[Diagnostic] Could not check current user role:', rpcError);

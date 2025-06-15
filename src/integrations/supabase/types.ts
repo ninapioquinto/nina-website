@@ -41,7 +41,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      debug_current_context: {
+        Args: Record<PropertyKey, never>
+        Returns: {
+          db_role: string
+          user_id: string
+          session_info: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never
