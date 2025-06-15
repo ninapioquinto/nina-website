@@ -7,7 +7,7 @@ import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
-import { Instagram, Mail, MessageSquare, Send } from 'lucide-react';
+import { Instagram, Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Facebook } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '@/services/contactService';
@@ -24,6 +24,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
@@ -51,6 +52,9 @@ const Contact = () => {
 
       console.log('Form submitted successfully:', result);
 
+      // Set submitted state to show thank you message
+      setIsSubmitted(true);
+      
       toast({
         title: "Message sent!",
         description: "Thank you for your message. I'll get back to you within 24 hours.",
@@ -75,6 +79,11 @@ const Contact = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const resetForm = () => {
+    setIsSubmitted(false);
+    form.reset();
   };
 
   useEffect(() => {
@@ -104,6 +113,48 @@ const Contact = () => {
       });
     };
   }, []);
+
+  // Show thank you message after successful submission
+  if (isSubmitted) {
+    return (
+      <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-accent/20 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
+              <div className="flex justify-center mb-6">
+                <div className="h-16 w-16 rounded-full bg-green-500/20 border border-green-400/40 flex items-center justify-center">
+                  <CheckCircle className="h-8 w-8 text-green-400" />
+                </div>
+              </div>
+              
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+                Thank You!
+              </h2>
+              
+              <p className="text-lg text-white/80 mb-6">
+                We received your inquiry and appreciate you reaching out. I'll review your message and get back to you within 24 hours.
+              </p>
+              
+              <p className="text-sm text-white/60 mb-8">
+                In the meantime, feel free to connect with me on social media or explore more about my services.
+              </p>
+              
+              <Button 
+                onClick={resetForm}
+                className="bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
+                         border border-purple-400/40 text-white backdrop-blur-sm
+                         hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
+                         hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
+                         transition-all duration-700"
+              >
+                Send Another Message
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative">
