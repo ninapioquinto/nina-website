@@ -36,15 +36,18 @@ const Contact = () => {
   });
 
   const onSubmit = async (data: ContactFormData) => {
+    console.log('Form submission started with data:', data);
     setIsSubmitting(true);
     
     try {
-      await submitContactForm({
+      const result = await submitContactForm({
         name: data.name,
         email: data.email,
         business_type: data.businessType,
         message: data.message,
       });
+
+      console.log('Form submitted successfully:', result);
 
       toast({
         title: "Message sent!",
@@ -52,11 +55,18 @@ const Contact = () => {
       });
       
       form.reset();
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (error: any) {
+      console.error('Form submission error:', error);
+      
+      let errorMessage = "There was an error sending your message. Please try again.";
+      
+      if (error.message) {
+        errorMessage = error.message;
+      }
+      
       toast({
         title: "Error",
-        description: "There was an error sending your message. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
     } finally {
