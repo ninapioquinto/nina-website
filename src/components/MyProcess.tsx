@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import { CheckCircle } from 'lucide-react';
+
 const MyProcess = () => {
   const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -135,7 +136,7 @@ const MyProcess = () => {
                 
                 <div className="text-center">
                   <p className="text-lg text-white/90 font-medium">
-                    This is not just software. This is your business infrastructure — built to support growth, reduce errors, and free up your team's time.
+                    This is not just software. This is your business infrastructure, built to support growth, reduce errors, and free up your team's time.
                   </p>
                 </div>
               </CardContent>
@@ -145,4 +146,5 @@ const MyProcess = () => {
       </div>
     </section>;
 };
+
 export default MyProcess;
