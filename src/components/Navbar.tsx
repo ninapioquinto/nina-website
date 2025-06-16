@@ -46,13 +46,19 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <a 
             href="#" 
-            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent"
+            className="relative inline-block"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            Nina
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+            
+            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent leading-tight tracking-tight">
+              Nina
+            </span>
+            
+            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
           </a>
           
           {/* Desktop Navigation */}
