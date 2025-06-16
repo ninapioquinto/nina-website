@@ -5,8 +5,10 @@ import { Activity, MessageCircle } from 'lucide-react';
 import TechMap from './TechMap';
 import SuccessChart from './SuccessChart';
 import ChatConversation from './ChatConversation';
+
 const WhyChooseMe = () => {
-  return <section className="px-4 py-8 sm:py-16 md:py-32 relative overflow-hidden">
+  return (
+    <section className="px-4 py-8 sm:py-16 md:py-32 relative overflow-hidden">
       {/* Tech grid background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
@@ -19,9 +21,21 @@ const WhyChooseMe = () => {
               Certified Expert Delivering Real Results
             </span>
 
-            <p className="mt-4 sm:mt-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
-              I bring a rare combination of certifications in AI automation, generative AI for data engineering, Make, and Airtable.
-            </p>
+            <div className="mt-4 sm:mt-8">
+              <div className="relative inline-block">
+                <div className="absolute -top-4 left-0 w-12 h-px bg-gradient-to-r from-purple-400/60 to-transparent"></div>
+                
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
+                  I bring a rare combination of{' '}
+                  <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                    certifications
+                  </span>{' '}
+                  in AI automation, generative AI for data engineering, Make, and Airtable.
+                </h3>
+                
+                <div className="absolute -bottom-4 left-0 w-16 h-px bg-gradient-to-r from-purple-400/40 to-transparent"></div>
+              </div>
+            </div>
           </div>
 
           <div aria-hidden className="relative px-4 sm:px-6 md:px-12 pb-4 sm:pb-6 md:pb-12">
@@ -47,17 +61,40 @@ const WhyChooseMe = () => {
               Clear and Supportive Collaboration
             </span>
 
-            <p className="my-4 sm:my-8 text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed">
-              Working with me means you will never be left guessing. I communicate complex automation strategies in a straightforward way.
-            </p>
+            <div className="my-4 sm:my-8">
+              <div className="relative inline-block">
+                <div className="absolute -top-4 left-0 w-12 h-px bg-gradient-to-r from-purple-400/60 to-transparent"></div>
+                
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
+                  Working with me means you will never be left guessing. I communicate{' '}
+                  <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                    complex automation strategies
+                  </span>{' '}
+                  in a straightforward way.
+                </h3>
+                
+                <div className="absolute -bottom-4 left-0 w-16 h-px bg-gradient-to-r from-purple-400/40 to-transparent"></div>
+              </div>
+            </div>
           </div>
           <ChatConversation />
         </div>
 
         <div className="col-span-full border-t border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
-          <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
-            <span className="text-gradient">Trusted partner</span> for clients worldwide
-          </p>
+          <div className="text-center">
+            <div className="relative inline-block">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              
+              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                  Trusted partner
+                </span>{' '}
+                for clients worldwide
+              </h3>
+              
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+            </div>
+          </div>
         </div>
 
         <div className="relative col-span-full">
@@ -69,9 +106,20 @@ const WhyChooseMe = () => {
             </span>
 
             <div className="max-w-lg">
-              <p className="text-lg sm:text-xl md:text-2xl font-semibold text-white leading-relaxed mb-2">
-                I have optimized lead management for real estate teams and streamlined operations for business owners.
-              </p>
+              <div className="relative inline-block mb-2">
+                <div className="absolute -top-4 left-0 w-12 h-px bg-gradient-to-r from-purple-400/60 to-transparent"></div>
+                
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
+                  I have optimized{' '}
+                  <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                    lead management
+                  </span>{' '}
+                  for real estate teams and streamlined operations for business owners.
+                </h3>
+                
+                <div className="absolute -bottom-4 left-0 w-16 h-px bg-gradient-to-r from-purple-400/40 to-transparent"></div>
+              </div>
+              
               <p className="text-gray-300 text-sm sm:text-base">
                 Clients consistently reclaim hours in their week and gain clarity in their workflows.
               </p>
@@ -80,6 +128,8 @@ const WhyChooseMe = () => {
           <SuccessChart />
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default WhyChooseMe;

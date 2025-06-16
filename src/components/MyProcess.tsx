@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import { CheckCircle } from 'lucide-react';
@@ -25,6 +26,7 @@ const MyProcess = () => {
       });
     };
   }, []);
+  
   const steps = [{
     number: "01",
     title: "Discovery and Operational Review",
@@ -46,8 +48,11 @@ const MyProcess = () => {
     description: "Before anything goes live, I test every step and walk through the logic to make sure it runs smoothly. I remove any clutter and simplify where needed. You get a complete walkthrough so you and your team can use the system confidently without confusion or overwhelm.",
     testimonial: "We didn't need hours of training. It just made sense. And it works."
   }];
+  
   const benefits = ["A system tailored to your business operations", "Automation that reduces workload and increases speed", "Better data visibility and cleaner handoffs", "Full ownership and a clean setup your team will actually use"];
-  return <section id="my-process" ref={sectionRef} className="py-20 relative">
+  
+  return (
+    <section id="my-process" ref={sectionRef} className="py-20 relative">
       {/* Subtle background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -55,9 +60,17 @@ const MyProcess = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
-              <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">The Maven System Method™</span>
-            </h2>
+            <div className="relative inline-block">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6 reveal">
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                  The Maven System Method™
+                </span>
+              </h2>
+              
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+            </div>
             
             {/* Sophisticated divider */}
             <div className="flex items-center justify-center mb-8 reveal">
@@ -77,9 +90,10 @@ const MyProcess = () => {
 
           {/* Process Steps */}
           <div className="space-y-12 mb-16">
-            {steps.map((step, index) => <div key={step.number} className="reveal" style={{
-            animationDelay: `${index * 0.2}s`
-          }}>
+            {steps.map((step, index) => (
+              <div key={step.number} className="reveal" style={{
+                animationDelay: `${index * 0.2}s`
+              }}>
                 <Card className="border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 group relative overflow-hidden">
                   {/* Hover effect overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -103,14 +117,12 @@ const MyProcess = () => {
                         <p className="text-white/85 mb-6 leading-relaxed text-base">
                           {step.description}
                         </p>
-                        
-                        {/* Testimonial */}
-                        
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </div>)}
+              </div>
+            ))}
           </div>
 
           {/* What You Get Section */}
@@ -120,18 +132,27 @@ const MyProcess = () => {
               
               <CardContent className="p-8 relative z-10">
                 <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold mb-4 text-white">
-                    <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
-                      What You Get
-                    </span>
-                  </h3>
+                  <div className="relative inline-block">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+                    
+                    <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight mb-4">
+                      What You{' '}
+                      <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                        Get
+                      </span>
+                    </h3>
+                    
+                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+                  </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-3">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-6 w-6 text-purple-400 flex-shrink-0 mt-0.5" />
                       <span className="text-white/85 text-base">{benefit}</span>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
                 
                 <div className="text-center">
@@ -144,7 +165,8 @@ const MyProcess = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default MyProcess;

@@ -96,9 +96,23 @@ const Services = () => {
     <section id="services-section" className="py-24 bg-black/30 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Operational systems built for <span className="text-gradient">clarity, performance, and scale.</span>
-          </h2>
+          <div className="text-center mb-8">
+            <div className="relative inline-block">
+              {/* Decorative accent line above */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+                Operational systems built for{' '}
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                  clarity, performance, and scale.
+                </span>
+              </h2>
+              
+              {/* Decorative accent line below */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+            </div>
+          </div>
+          
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
             AI agents designed to automate your operations and elevate the customer experience
           </p>

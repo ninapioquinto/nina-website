@@ -1,5 +1,4 @@
 
-
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
@@ -42,9 +41,19 @@ const MyServices = () => {
         <section id="my-services" className="py-20 relative overflow-hidden backdrop-blur-sm bg-black/10">
             <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto mb-16 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6 reveal">
-                        My <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Services</span>
-                    </h2>
+                    <div className="relative inline-block">
+                        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+                        
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6 reveal">
+                            My{' '}
+                            <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                                Services
+                            </span>
+                        </h2>
+                        
+                        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+                    </div>
+                    
                     <p className="text-lg text-white/80 max-w-2xl mx-auto mb-16 reveal">
                         I specialize in implementing AI automation solutions and optimizing CRM systems to streamline your business operations
                     </p>
