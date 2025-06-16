@@ -117,8 +117,8 @@ const Contact = () => {
   // Show thank you message after successful submission
   if (isSubmitted) {
     return (
-      <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative">
-        <div className="container mx-auto px-4">
+      <section id="contact" ref={sectionRef} className="min-h-screen py-16 sm:py-24 relative flex items-center">
+        <div className="container mx-auto px-4 w-full">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-accent/20 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
               <div className="flex justify-center mb-6">
@@ -230,7 +230,7 @@ const Contact = () => {
                             <Input 
                               placeholder="Your name" 
                               {...field} 
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
                             />
                           </FormControl>
                           <FormMessage />
@@ -249,7 +249,7 @@ const Contact = () => {
                               type="email"
                               placeholder="Your email" 
                               {...field} 
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
                             />
                           </FormControl>
                           <FormMessage />
@@ -267,7 +267,7 @@ const Contact = () => {
                             <Input 
                               placeholder="Agency, SaaS, Service Business, etc." 
                               {...field} 
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15"
+                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
                             />
                           </FormControl>
                           <FormMessage />
@@ -285,7 +285,7 @@ const Contact = () => {
                             <Textarea 
                               placeholder="Tell me about your project or challenge"
                               {...field} 
-                              className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:bg-white/15 min-h-[120px]"
+                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent min-h-[120px]"
                             />
                           </FormControl>
                           <FormMessage />
