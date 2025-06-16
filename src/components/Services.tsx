@@ -97,7 +97,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center reveal">
-            Grow Smarter, <span className="text-gradient">Not Harder</span>
+            Operational systems built for <span className="text-gradient">clarity, performance, and scale.</span>
           </h2>
           <p className="text-center text-lg text-white/70 mb-16 max-w-2xl mx-auto reveal">
             AI agents designed to automate your operations and elevate the customer experience
