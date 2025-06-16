@@ -5,10 +5,8 @@ import { Activity, MessageCircle } from 'lucide-react';
 import TechMap from './TechMap';
 import SuccessChart from './SuccessChart';
 import ChatConversation from './ChatConversation';
-
 const WhyChooseMe = () => {
-  return (
-    <section className="px-4 py-8 sm:py-16 md:py-32 relative overflow-hidden">
+  return <section className="px-4 py-8 sm:py-16 md:py-32 relative overflow-hidden">
       {/* Tech grid background */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
@@ -57,16 +55,9 @@ const WhyChooseMe = () => {
         </div>
 
         <div className="col-span-full border-t border-purple-500/20 p-6 sm:p-8 md:p-12 bg-black/10">
-          <div className="text-center mb-8">
-            <h2 className="font-inter text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight reveal">
-              <span className="text-gradient">Trusted partner</span> for clients worldwide
-            </h2>
-            <div className="flex items-center justify-center mt-6">
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              <div className="mx-4 w-1.5 h-1.5 rounded-full bg-white/60"></div>
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-            </div>
-          </div>
+          <p className="text-center text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+            <span className="text-gradient">Trusted partner</span> for clients worldwide
+          </p>
         </div>
 
         <div className="relative col-span-full">
@@ -89,8 +80,6 @@ const WhyChooseMe = () => {
           <SuccessChart />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyChooseMe;

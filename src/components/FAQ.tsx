@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -69,16 +68,9 @@ const FAQ = () => {
     <section id="faq" ref={sectionRef} className="py-16 sm:py-24 bg-accent/5 relative bg-grid">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-inter text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight mb-6 reveal">
-              Frequently Asked <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Questions</span>
-            </h2>
-            <div className="flex items-center justify-center mb-8">
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              <div className="mx-4 w-1.5 h-1.5 rounded-full bg-white/60"></div>
-              <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-            </div>
-          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-center reveal">
+            Frequently Asked <span className="bg-gradient-to-r from-[#9b87f5] via-[#7E69AB] to-[#8B5CF6] bg-clip-text text-transparent">Questions</span>
+          </h2>
           <p className="text-center text-base sm:text-lg text-white/70 mb-12 sm:mb-16 max-w-2xl mx-auto reveal">
             Get answers to the most common questions about automation services and working with me
           </p>
