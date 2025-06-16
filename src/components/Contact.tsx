@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -113,52 +114,42 @@ const Contact = () => {
     };
   }, []);
 
-  // Show thank you message after successful submission - completely clean design
+  // Show thank you message after successful submission - completely clean with no black elements
   if (isSubmitted) {
     return (
-      <section 
-        id="contact" 
-        ref={sectionRef} 
-        className="min-h-screen py-16 sm:py-24 relative flex items-center justify-center"
-        style={{ background: 'transparent' }}
-      >
-        <div className="container mx-auto px-4 w-full max-w-2xl">
-          <div className="text-center">
-            <div className="bg-gradient-to-br from-purple-900/20 via-violet-900/20 to-indigo-900/20 
-                          border border-purple-400/20 rounded-xl p-8 backdrop-blur-lg relative">
-              <div className="flex justify-center mb-6">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 
-                              border border-green-400/30 flex items-center justify-center">
-                  <CheckCircle className="h-8 w-8 text-green-400" />
-                </div>
-              </div>
-              
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-                Thank You!
-              </h2>
-              
-              <p className="text-lg text-white/80 mb-6">
-                We received your inquiry and appreciate you reaching out. I'll review your message and get back to you within 24 hours.
-              </p>
-              
-              <p className="text-sm text-white/60 mb-8">
-                In the meantime, feel free to connect with me on social media or explore more about my services.
-              </p>
-              
-              <Button 
-                onClick={resetForm}
-                className="bg-gradient-to-r from-purple-600/30 via-violet-600/30 to-indigo-600/30 
-                         border border-purple-400/50 text-white backdrop-blur-sm
-                         hover:from-purple-600/40 hover:via-violet-600/40 hover:to-indigo-600/40 
-                         hover:border-purple-300/70 hover:shadow-[0_0_40px_rgba(139,92,246,0.6)]
-                         transition-all duration-700"
-              >
-                Send Another Message
-              </Button>
+      <div className="min-h-screen w-full flex items-center justify-center p-4" style={{ background: 'transparent' }}>
+        <div className="w-full max-w-2xl text-center">
+          <div className="flex justify-center mb-6">
+            <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 
+                          border border-green-400/30 flex items-center justify-center">
+              <CheckCircle className="h-8 w-8 text-green-400" />
             </div>
           </div>
+          
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+            Thank You!
+          </h2>
+          
+          <p className="text-lg text-white/80 mb-6">
+            We received your inquiry and appreciate you reaching out. I'll review your message and get back to you within 24 hours.
+          </p>
+          
+          <p className="text-sm text-white/60 mb-8">
+            In the meantime, feel free to connect with me on social media or explore more about my services.
+          </p>
+          
+          <Button 
+            onClick={resetForm}
+            className="bg-gradient-to-r from-purple-600/30 via-violet-600/30 to-indigo-600/30 
+                     border border-purple-400/50 text-white backdrop-blur-sm
+                     hover:from-purple-600/40 hover:via-violet-600/40 hover:to-indigo-600/40 
+                     hover:border-purple-300/70 hover:shadow-[0_0_40px_rgba(139,92,246,0.6)]
+                     transition-all duration-700"
+          >
+            Send Another Message
+          </Button>
         </div>
-      </section>
+      </div>
     );
   }
 
