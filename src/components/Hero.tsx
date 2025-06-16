@@ -52,7 +52,7 @@ const Hero = () => {
                   {currentWord}
                 </span>
               </span>{' '}
-              CRM and automation systems for service-based businesses.
+              AI automation and CRM systems for service-based businesses.
             </h1>
             
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
