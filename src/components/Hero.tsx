@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { useRotatingText } from '../hooks/useRotatingText';
@@ -38,18 +39,24 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Luxury typography with elegant gradients */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight tracking-tighter">
-            Hi! I'm <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent glow-text">Nina</span>, and I build{' '}
-            <span className="inline-block mx-2">
-              <span className={`inline-block transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'}`} style={{
-                textShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
-              }}>
-                {currentWord}
-              </span>
-            </span>{' '}
-            CRM and automation systems for service-based businesses.
-          </h1>
+          {/* Updated hero headline with elegant styling */}
+          <div className="relative inline-block mb-4 sm:mb-6">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tighter text-white">
+              Hi! I'm <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">Nina</span>, and I build{' '}
+              <span className="inline-block mx-2">
+                <span className={`inline-block transition-all duration-500 ease-in-out bg-gradient-to-r from-purple-300 via-violet-400 to-indigo-300 bg-clip-text text-transparent ${isAnimating ? 'opacity-0 -translate-y-4 scale-95' : 'opacity-100 translate-y-0 scale-100'}`} style={{
+                  textShadow: '0 0 30px rgba(139, 92, 246, 0.6)'
+                }}>
+                  {currentWord}
+                </span>
+              </span>{' '}
+              CRM and automation systems for service-based businesses.
+            </h1>
+            
+            <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+          </div>
           
           {/* Elegant subtitle with refined spacing */}
           <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed px-4 sm:px-0">Systems Engineer • AI Automation • CRM Optimization</p>

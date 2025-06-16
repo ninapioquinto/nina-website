@@ -139,15 +139,28 @@ const Contact = () => {
     <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
+          {/* Updated contact header with elegant typography */}
+          <div className="text-center mb-16">
+            <div className="relative inline-block">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3 sm:mb-4 reveal">
+                Let's{' '}
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                  Connect
+                </span>
+              </h2>
+              
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+            </div>
+            
+            <p className="text-center text-base sm:text-lg text-white/70 mb-12 sm:mb-16 max-w-2xl mx-auto reveal">
+              Ready to streamline your operations with smart automation? I'd love to hear about your business challenges and how I can help solve them.
+            </p>
+          </div>
+          
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 reveal">
-                Let's <span className="text-gradient">Connect</span>
-              </h2>
-              <p className="text-base sm:text-lg text-white/70 mb-6 sm:mb-8 reveal">
-                Ready to streamline your operations with smart automation? I'd love to hear about your business challenges and how I can help solve them.
-              </p>
-              
               <div className="space-y-4 sm:space-y-6 reveal">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-accent/30 border border-white/10 flex items-center justify-center flex-shrink-0">

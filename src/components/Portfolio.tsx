@@ -74,16 +74,20 @@ const Portfolio = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          {/* Modern header design */}
+          {/* Updated header design with elegant typography */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-400/20 mb-6 reveal">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-violet-500 animate-pulse"></div>
-              <span className="text-sm text-purple-300 font-medium">Portfolio</span>
+            <div className="relative inline-block">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3 sm:mb-4 reveal">
+                Featured{' '}
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                  Projects
+                </span>
+              </h2>
+              
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
-              Featured <span className="bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">Projects</span>
-            </h2>
             
             <p className="text-xl text-white/80 mb-16 max-w-3xl mx-auto leading-relaxed reveal">
               Innovative automation solutions that drive real business transformation
