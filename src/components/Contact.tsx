@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -114,15 +113,22 @@ const Contact = () => {
     };
   }, []);
 
-  // Show thank you message after successful submission
+  // Show thank you message after successful submission - completely clean design
   if (isSubmitted) {
     return (
-      <section id="contact" ref={sectionRef} className="min-h-screen py-16 sm:py-24 relative flex items-center justify-center overflow-hidden">
+      <section 
+        id="contact" 
+        ref={sectionRef} 
+        className="min-h-screen py-16 sm:py-24 relative flex items-center justify-center"
+        style={{ background: 'transparent' }}
+      >
         <div className="container mx-auto px-4 w-full max-w-2xl">
           <div className="text-center">
-            <div className="bg-purple-900/30 border border-purple-400/30 rounded-xl p-8 backdrop-blur-lg relative overflow-hidden">
+            <div className="bg-gradient-to-br from-purple-900/20 via-violet-900/20 to-indigo-900/20 
+                          border border-purple-400/20 rounded-xl p-8 backdrop-blur-lg relative">
               <div className="flex justify-center mb-6">
-                <div className="h-16 w-16 rounded-full bg-green-500/20 border border-green-400/40 flex items-center justify-center">
+                <div className="h-16 w-16 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 
+                              border border-green-400/30 flex items-center justify-center">
                   <CheckCircle className="h-8 w-8 text-green-400" />
                 </div>
               </div>
