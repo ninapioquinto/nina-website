@@ -230,7 +230,7 @@ const Contact = () => {
                             <Input 
                               placeholder="Your name" 
                               {...field} 
-                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
+                              className="border-white/20 text-white placeholder:text-white/50 focus:border-white/40 bg-white/5 focus:bg-white/10"
                             />
                           </FormControl>
                           <FormMessage />
@@ -249,7 +249,7 @@ const Contact = () => {
                               type="email"
                               placeholder="Your email" 
                               {...field} 
-                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
+                              className="border-white/20 text-white placeholder:text-white/50 focus:border-white/40 bg-white/5 focus:bg-white/10"
                             />
                           </FormControl>
                           <FormMessage />
@@ -267,7 +267,7 @@ const Contact = () => {
                             <Input 
                               placeholder="Agency, SaaS, Service Business, etc." 
                               {...field} 
-                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent"
+                              className="border-white/20 text-white placeholder:text-white/50 focus:border-white/40 bg-white/5 focus:bg-white/10"
                             />
                           </FormControl>
                           <FormMessage />
@@ -285,7 +285,7 @@ const Contact = () => {
                             <Textarea 
                               placeholder="Tell me about your project or challenge"
                               {...field} 
-                              className="bg-transparent border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:bg-transparent min-h-[120px]"
+                              className="border-white/20 text-white placeholder:text-white/50 focus:border-white/40 bg-white/5 focus:bg-white/10 min-h-[120px]"
                             />
                           </FormControl>
                           <FormMessage />
