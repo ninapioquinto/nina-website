@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -9,7 +8,6 @@ import { Textarea } from './ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from './ui/form';
 import { Instagram, Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
 import { Facebook } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 import { submitContactForm } from '@/services/contactService';
 
 const contactFormSchema = z.object({
@@ -25,7 +23,6 @@ const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -52,30 +49,15 @@ const Contact = () => {
 
       console.log('Form submitted successfully:', result);
 
-      // Set submitted state to show thank you message
+      // Set submitted state to show thank you message - NO TOAST
       setIsSubmitted(true);
-      
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you within 24 hours.",
-      });
       
       form.reset();
     } catch (error: any) {
       console.error('Form submission error:', error);
       
-      let errorMessage = "There was an error sending your message. Please try again.";
-      
-      if (error.message) {
-        // Show more specific error for debugging
-        errorMessage = `Error: ${error.message}`;
-      }
-      
-      toast({
-        title: "Error",
-        description: errorMessage,
-        variant: "destructive",
-      });
+      // Even on error, don't show toast - just log it
+      console.error('Failed to submit form');
     } finally {
       setIsSubmitting(false);
     }
