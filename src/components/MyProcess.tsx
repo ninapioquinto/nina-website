@@ -47,7 +47,8 @@ const MyProcess = () => {
     testimonial: "We didn't need hours of training. It just made sense. And it works."
   }];
   const benefits = ["A system tailored to your business operations", "Automation that reduces workload and increases speed", "Better data visibility and cleaner handoffs", "Full ownership and a clean setup your team will actually use"];
-  return <section id="my-process" ref={sectionRef} className="py-20 relative">
+  return (
+    <section id="my-process" ref={sectionRef} className="py-20 relative">
       {/* Subtle background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -55,15 +56,15 @@ const MyProcess = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 reveal text-white">
+            <h2 className="font-inter text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight mb-6 reveal">
               <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">The Maven System Method™</span>
             </h2>
             
             {/* Sophisticated divider */}
             <div className="flex items-center justify-center mb-8 reveal">
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
-              <div className="mx-4 w-2 h-2 rounded-full bg-gradient-to-r from-purple-400 to-violet-400"></div>
-              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              <div className="mx-4 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-400 to-violet-400"></div>
+              <div className="w-12 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
             </div>
 
             <p className="text-xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed reveal">
@@ -144,7 +145,8 @@ const MyProcess = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default MyProcess;

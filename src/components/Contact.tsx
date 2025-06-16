@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -141,9 +142,16 @@ const Contact = () => {
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
             <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 reveal">
-                Let's <span className="text-gradient">Connect</span>
-              </h2>
+              <div className="text-left mb-8">
+                <h2 className="font-inter text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-tight mb-6 reveal">
+                  Let's <span className="text-gradient">Connect</span>
+                </h2>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-px bg-gradient-to-r from-transparent via-white/40 to-white/10"></div>
+                  <div className="mx-4 w-1.5 h-1.5 rounded-full bg-white/60"></div>
+                  <div className="w-12 h-px bg-gradient-to-r from-white/10 via-white/40 to-transparent"></div>
+                </div>
+              </div>
               <p className="text-base sm:text-lg text-white/70 mb-6 sm:mb-8 reveal">
                 Ready to streamline your operations with smart automation? I'd love to hear about your business challenges and how I can help solve them.
               </p>
