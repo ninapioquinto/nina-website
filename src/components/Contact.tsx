@@ -117,10 +117,10 @@ const Contact = () => {
   // Show thank you message after successful submission
   if (isSubmitted) {
     return (
-      <section id="contact" ref={sectionRef} className="min-h-screen py-16 sm:py-24 relative flex items-center justify-center">
+      <section id="contact" ref={sectionRef} className="min-h-screen py-16 sm:py-24 relative flex items-center justify-center overflow-hidden">
         <div className="container mx-auto px-4 w-full max-w-2xl">
           <div className="text-center">
-            <div className="bg-purple-900/30 border border-purple-400/30 rounded-xl p-8 backdrop-blur-lg relative">
+            <div className="bg-purple-900/30 border border-purple-400/30 rounded-xl p-8 backdrop-blur-lg relative overflow-hidden">
               <div className="flex justify-center mb-6">
                 <div className="h-16 w-16 rounded-full bg-green-500/20 border border-green-400/40 flex items-center justify-center">
                   <CheckCircle className="h-8 w-8 text-green-400" />
@@ -157,7 +157,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative">
+    <section id="contact" ref={sectionRef} className="py-16 sm:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
@@ -231,16 +231,11 @@ const Contact = () => {
                               placeholder="Your name" 
                               {...field} 
                               className="text-white placeholder:text-white/50 
-                                       bg-transparent border-0 outline-0 ring-0
-                                       focus:outline-0 focus:ring-0 focus:border-0
-                                       focus-visible:outline-0 focus-visible:ring-0 focus-visible:ring-offset-0
-                                       hover:bg-transparent transition-all duration-300"
-                              style={{ 
-                                border: 'none', 
-                                outline: 'none', 
-                                boxShadow: 'none',
-                                background: 'transparent'
-                              }}
+                                       bg-white/5 border border-purple-400/20 rounded-lg
+                                       focus:border-purple-400/50 focus:shadow-[0_0_20px_rgba(139,92,246,0.3)]
+                                       focus:bg-white/10 focus-visible:ring-0 focus-visible:ring-offset-0
+                                       hover:border-purple-400/30 hover:bg-white/10 
+                                       transition-all duration-300"
                             />
                           </FormControl>
                           <FormMessage />
@@ -260,16 +255,11 @@ const Contact = () => {
                               placeholder="Your email" 
                               {...field} 
                               className="text-white placeholder:text-white/50 
-                                       bg-transparent border-0 outline-0 ring-0
-                                       focus:outline-0 focus:ring-0 focus:border-0
-                                       focus-visible:outline-0 focus-visible:ring-0 focus-visible:ring-offset-0
-                                       hover:bg-transparent transition-all duration-300"
-                              style={{ 
-                                border: 'none', 
-                                outline: 'none', 
-                                boxShadow: 'none',
-                                background: 'transparent'
-                              }}
+                                       bg-white/5 border border-purple-400/20 rounded-lg
+                                       focus:border-purple-400/50 focus:shadow-[0_0_20px_rgba(139,92,246,0.3)]
+                                       focus:bg-white/10 focus-visible:ring-0 focus-visible:ring-offset-0
+                                       hover:border-purple-400/30 hover:bg-white/10 
+                                       transition-all duration-300"
                             />
                           </FormControl>
                           <FormMessage />
@@ -288,16 +278,11 @@ const Contact = () => {
                               placeholder="Agency, SaaS, Service Business, etc." 
                               {...field} 
                               className="text-white placeholder:text-white/50 
-                                       bg-transparent border-0 outline-0 ring-0
-                                       focus:outline-0 focus:ring-0 focus:border-0
-                                       focus-visible:outline-0 focus-visible:ring-0 focus-visible:ring-offset-0
-                                       hover:bg-transparent transition-all duration-300"
-                              style={{ 
-                                border: 'none', 
-                                outline: 'none', 
-                                boxShadow: 'none',
-                                background: 'transparent'
-                              }}
+                                       bg-white/5 border border-purple-400/20 rounded-lg
+                                       focus:border-purple-400/50 focus:shadow-[0_0_20px_rgba(139,92,246,0.3)]
+                                       focus:bg-white/10 focus-visible:ring-0 focus-visible:ring-offset-0
+                                       hover:border-purple-400/30 hover:bg-white/10 
+                                       transition-all duration-300"
                             />
                           </FormControl>
                           <FormMessage />
@@ -316,16 +301,11 @@ const Contact = () => {
                               placeholder="Tell me about your project or challenge"
                               {...field} 
                               className="text-white placeholder:text-white/50 
-                                       bg-transparent border-0 outline-0 ring-0 min-h-[120px]
-                                       focus:outline-0 focus:ring-0 focus:border-0
-                                       focus-visible:outline-0 focus-visible:ring-0 focus-visible:ring-offset-0
-                                       hover:bg-transparent transition-all duration-300"
-                              style={{ 
-                                border: 'none', 
-                                outline: 'none', 
-                                boxShadow: 'none',
-                                background: 'transparent'
-                              }}
+                                       bg-white/5 border border-purple-400/20 rounded-lg min-h-[120px]
+                                       focus:border-purple-400/50 focus:shadow-[0_0_20px_rgba(139,92,246,0.3)]
+                                       focus:bg-white/10 focus-visible:ring-0 focus-visible:ring-offset-0
+                                       hover:border-purple-400/30 hover:bg-white/10 
+                                       transition-all duration-300"
                             />
                           </FormControl>
                           <FormMessage />
