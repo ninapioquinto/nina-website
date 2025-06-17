@@ -1,6 +1,7 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
-import { ArrowUpRight, Play, Code, Zap, Bot } from 'lucide-react';
+import { ArrowUpRight, Play, Code, Zap, Bot, Target, Users, BarChart3 } from 'lucide-react';
 
 // AI Automation projects
 const aiAutomationProjects = [{
@@ -27,6 +28,33 @@ const aiAutomationProjects = [{
   link: "#",
   icon: Bot,
   gradient: "from-violet-500/20 to-indigo-600/20"
+}];
+
+// GoHighLevel projects
+const goHighLevelProjects = [{
+  id: 7,
+  title: "Multi-Location CRM Setup",
+  description: "Configured comprehensive CRM system for franchise business with 12 locations",
+  tech: ["GoHighLevel", "Custom Fields", "Workflows"],
+  link: "#",
+  icon: Target,
+  gradient: "from-green-500/20 to-emerald-600/20"
+}, {
+  id: 8,
+  title: "Sales Funnel Optimization",
+  description: "Built high-converting sales funnels that increased lead-to-customer conversion by 65%",
+  tech: ["GoHighLevel", "Landing Pages", "Email Sequences"],
+  link: "#",
+  icon: Users,
+  gradient: "from-blue-500/20 to-cyan-600/20"
+}, {
+  id: 9,
+  title: "Reputation Management System",
+  description: "Automated review collection and management system boosting 5-star reviews by 80%",
+  tech: ["GoHighLevel", "SMS Campaigns", "Review Funnels"],
+  link: "#",
+  icon: BarChart3,
+  gradient: "from-orange-500/20 to-yellow-600/20"
 }];
 
 const Portfolio = () => {
@@ -202,6 +230,82 @@ const Portfolio = () => {
                         <div className="flex flex-wrap gap-2">
                           {project.tech.map((tech, i) => (
                             <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* GoHighLevel Section */}
+          <div className="mb-20">
+            {/* Enhanced section header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-3 mb-6 reveal">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-green-500/20 to-emerald-600/20 border border-green-400/30 flex items-center justify-center backdrop-blur-sm">
+                  <Target className="w-4 h-4 text-green-300" />
+                </div>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
+                  GoHighLevel
+                </h3>
+              </div>
+            </div>
+            
+            {/* Enhanced projects grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {goHighLevelProjects.map((project, index) => {
+                const IconComponent = project.icon;
+                return (
+                  <div 
+                    key={project.id} 
+                    className="reveal luxury-card-wrapper" 
+                    style={{
+                      animationDelay: `${index * 0.15}s`
+                    }} 
+                    onMouseEnter={() => handleMouseEnter(project.id)} 
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    {/* Glow effect */}
+                    <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
+                    
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-green-400/30 ${activeCard === project.id ? 'border-green-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(34,197,94,0.4)]' : 'hover:border-green-400/30 hover:shadow-[0_8px_25px_-8px_rgba(34,197,94,0.3)]'}`}>
+                      {/* Animated background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      
+                      {/* Shimmer effect using Tailwind animation */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 animate-[shimmer_2s_ease-in-out_infinite] translate-x-[-100%]"></div>
+                      </div>
+                      
+                      <CardHeader className="relative z-10 pb-4">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-green-400/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
+                            <IconComponent className="w-6 h-6 text-green-300" />
+                          </div>
+                          
+                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-green-500/20 hover:border-green-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
+                            <ArrowUpRight className="w-4 h-4 text-green-300" />
+                          </a>
+                        </div>
+                        
+                        <CardTitle className="text-xl font-bold text-white group-hover:text-green-100 transition-colors duration-300 leading-tight">
+                          {project.title}
+                        </CardTitle>
+                        
+                        <CardDescription className="text-white/70 group-hover:text-white/90 transition-colors duration-300 leading-relaxed">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      
+                      <CardContent className="relative z-10 pt-0">
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech, i) => (
+                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-200 border border-green-400/20 group-hover:border-green-400/40 group-hover:bg-green-500/30 transition-all duration-300">
                               {tech}
                             </span>
                           ))}
