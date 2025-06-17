@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { ArrowUpRight, Play, Code, Zap, Bot, Target, Users, BarChart3 } from 'lucide-react';
@@ -288,7 +287,7 @@ const Portfolio = () => {
                             padding: 0,
                             margin: 0
                           }}
-                          src="https://www.canva.com/design/DAGps-6p9LM/gU-wTNM5tXciPEfPJhaYzA/watch?embed" 
+                          src="https://www.canva.com/design/DAGjrzyQtW0/4ec3UsFFa-AIFbF5ige9tg/watch?embed" 
                           allowFullScreen 
                           allow="fullscreen"
                           title="GoHighLevel Portfolio (Video)"
