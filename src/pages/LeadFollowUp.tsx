@@ -1,4 +1,5 @@
-import { ArrowRight, Clock, Zap, Target, Users, CheckCircle, Star } from 'lucide-react';
+
+import { ArrowRight, Clock, Zap, Target, Users, CheckCircle, Star, Bot, Brain, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import Particles from '../components/Particles';
@@ -21,24 +22,26 @@ const LeadFollowUp = () => {
           {/* Hero Section */}
           <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                Never Lose a <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Hot Lead</span> Again.
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-purple-600 rounded-2xl flex items-center justify-center">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
+                Never Lose a Hot Lead Again.
               </h1>
-              <h2 className="text-2xl md:text-3xl font-medium mb-6 text-white/90">
-                Build a Follow-Up System That Works While You Sleep.
-              </h2>
-              <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center space-x-2 mb-8">
+                <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+                <h2 className="text-2xl md:text-3xl font-medium text-white/90">
+                  Build a Follow-Up System That Works While You Sleep.
+                </h2>
+                <Sparkles className="w-6 h-6 text-primary animate-pulse" />
+              </div>
+              <p className="text-xl text-white/70 mb-10 max-w-3xl mx-auto leading-relaxed">
                 I'll automate your lead follow-up within 72 hours so you close more deals and waste less time. 
                 No missed leads. No manual chasing. Just more clients.
               </p>
               <Button 
                 onClick={handleScrollToContact}
-                size="lg" 
-                className="luxury-button text-lg px-10 py-6 bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
-                           border border-purple-400/40 text-white backdrop-blur-sm
-                           hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
-                           hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
-                           transition-all duration-700 group"
+                className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
               >
                 Let's Build Your Custom Follow-Up System
                 <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
@@ -50,44 +53,50 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8">
-                  The Real Reason You're <span className="text-red-400">Losing Sales?</span>
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-red-400 via-pink-500 to-rose-400 bg-clip-text text-transparent">
+                  The Real Reason You're Losing Sales?
                 </h2>
                 <p className="text-xl text-white/80 mb-12">
                   Your leads aren't getting followed up fast enough.
                 </p>
-                <p className="text-lg text-white/70 mb-12 max-w-3xl mx-auto">
+                <p className="text-lg text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
                   Even if you're running ads, getting DMs, or capturing inquiries, chances are some of your 
                   hottest leads are quietly slipping through the cracks.
                 </p>
                 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                  <Card className="luxury-card bg-accent/20 border-red-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="text-4xl mb-4">💸</div>
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-white" />
+                      </div>
                       <h3 className="text-lg font-semibold text-red-400 mb-2">Delayed follow-ups</h3>
                       <p className="text-white/70">Lost revenue</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-red-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="text-4xl mb-4">😓</div>
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                        <Users className="w-6 h-6 text-white" />
+                      </div>
                       <h3 className="text-lg font-semibold text-red-400 mb-2">Manual chasing</h3>
                       <p className="text-white/70">Burnout</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-red-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="text-4xl mb-4">📉</div>
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center">
+                        <Target className="w-6 h-6 text-white" />
+                      </div>
                       <h3 className="text-lg font-semibold text-red-400 mb-2">Inconsistent systems</h3>
                       <p className="text-white/70">Missed growth</p>
                     </CardContent>
                   </Card>
                 </div>
                 
-                <p className="text-2xl font-semibold text-purple-400">Let's fix that. Fast.</p>
+                <p className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Let's fix that. Fast.</p>
               </div>
             </div>
           </section>
@@ -97,58 +106,66 @@ const LeadFollowUp = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                      INTRODUCING: The Lead Follow-Up Fix
-                    </span>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
+                    INTRODUCING: The Lead Follow-Up Fix
                   </h2>
-                  <p className="text-xl text-white/80 mb-8">
+                  <p className="text-xl text-white/80 mb-8 leading-relaxed">
                     A done-for-you automation system built in 72 hours that ensures every lead gets 
                     followed up with in under 5 minutes, automatically.
                   </p>
-                  <p className="text-lg text-white/70 mb-12">
+                  <p className="text-lg text-white/70 mb-12 leading-relaxed">
                     This isn't a bot. It's a revenue system that works 24/7 to move leads forward.
                   </p>
                 </div>
                 
-                <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                <Card className="bg-white/5 border border-white/20 backdrop-blur-xl">
                   <CardContent className="p-12">
-                    <h3 className="text-2xl font-bold mb-8 text-center">You'll walk away with:</h3>
+                    <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">You'll walk away with:</h3>
                     <div className="space-y-6">
                       <div className="flex items-start gap-4">
-                        <Zap className="text-purple-400 mt-1 flex-shrink-0" size={24} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Zap className="text-white" size={20} />
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-lg">Fully automated follow-up workflow</h4>
+                          <h4 className="font-semibold text-lg text-white">Fully automated follow-up workflow</h4>
                           <p className="text-white/70">(email, SMS, or DM, your choice)</p>
                         </div>
                       </div>
                       
                       <div className="flex items-start gap-4">
-                        <Target className="text-purple-400 mt-1 flex-shrink-0" size={24} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Target className="text-white" size={20} />
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-lg">Smart filters to prioritize high-quality leads</h4>
+                          <h4 className="font-semibold text-lg text-white">Smart filters to prioritize high-quality leads</h4>
                         </div>
                       </div>
                       
                       <div className="flex items-start gap-4">
-                        <Users className="text-purple-400 mt-1 flex-shrink-0" size={24} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Users className="text-white" size={20} />
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-lg">CRM tagging + lead tracking</h4>
+                          <h4 className="font-semibold text-lg text-white">CRM tagging + lead tracking</h4>
                           <p className="text-white/70">(optional)</p>
                         </div>
                       </div>
                       
                       <div className="flex items-start gap-4">
-                        <CheckCircle className="text-purple-400 mt-1 flex-shrink-0" size={24} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="text-white" size={20} />
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-lg">Reminder triggers or alerts for manual touchpoints</h4>
+                          <h4 className="font-semibold text-lg text-white">Reminder triggers or alerts for manual touchpoints</h4>
                         </div>
                       </div>
                       
                       <div className="flex items-start gap-4">
-                        <Clock className="text-purple-400 mt-1 flex-shrink-0" size={24} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Clock className="text-white" size={20} />
+                        </div>
                         <div>
-                          <h4 className="font-semibold text-lg">Delivered + tested in 3 days, flat fee</h4>
+                          <h4 className="font-semibold text-lg text-white">Delivered + tested in 3 days, flat fee</h4>
                         </div>
                       </div>
                     </div>
@@ -162,30 +179,30 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">This is for you if:</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">This is for you if:</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <CheckCircle className="text-green-400 mx-auto mb-4" size={32} />
                       <p className="text-white/80">You're generating leads but not closing enough</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <CheckCircle className="text-green-400 mx-auto mb-4" size={32} />
                       <p className="text-white/80">You reply manually to every DM, email, or form entry</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <CheckCircle className="text-green-400 mx-auto mb-4" size={32} />
                       <p className="text-white/80">You feel like you're "leaving money on the table"</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <CheckCircle className="text-green-400 mx-auto mb-4" size={32} />
                       <p className="text-white/80">You want more consistency, less chaos</p>
@@ -200,30 +217,30 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">Results Clients See</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">Results Clients See</h2>
                 <div className="grid md:grid-cols-2 gap-8">
-                  <Card className="luxury-card bg-gradient-to-br from-green-500/20 to-emerald-500/20 border-green-500/20 backdrop-blur-sm">
+                  <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 backdrop-blur-xl hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       <div className="text-3xl font-bold text-green-400 mb-2">+40%</div>
                       <p className="text-white/80">increase in lead-to-call conversions</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border-blue-500/20 backdrop-blur-sm">
+                  <Card className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 backdrop-blur-xl hover:from-blue-500/20 hover:to-cyan-500/20 transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       <div className="text-3xl font-bold text-blue-400 mb-2">5-10 hours</div>
                       <p className="text-white/80">saved every week</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-gradient-to-br from-purple-500/20 to-violet-500/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-gradient-to-br from-purple-500/10 to-violet-500/10 border border-purple-500/20 backdrop-blur-xl hover:from-purple-500/20 hover:to-violet-500/20 transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       <div className="text-2xl font-bold text-purple-400 mb-2">Increased</div>
                       <p className="text-white/80">client trust with fast, professional replies</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-gradient-to-br from-orange-500/20 to-red-500/20 border-orange-500/20 backdrop-blur-sm">
+                  <Card className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20 backdrop-blur-xl hover:from-orange-500/20 hover:to-red-500/20 transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       <div className="text-2xl font-bold text-orange-400 mb-2">Less pressure</div>
                       <p className="text-white/80">on you or your team</p>
@@ -238,16 +255,16 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">What Clients Say</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">What Clients Say</h2>
                 <div className="grid md:grid-cols-3 gap-8">
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <div className="flex mb-4">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="text-yellow-400 fill-current" size={20} />
                         ))}
                       </div>
-                      <p className="text-white/80 mb-6 italic">
+                      <p className="text-white/80 mb-6 italic leading-relaxed">
                         "I didn't realize how many leads we were missing until Nina set up the automation. 
                         We closed two new clients within a week."
                       </p>
@@ -255,14 +272,14 @@ const LeadFollowUp = () => {
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <div className="flex mb-4">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="text-yellow-400 fill-current" size={20} />
                         ))}
                       </div>
-                      <p className="text-white/80 mb-6 italic">
+                      <p className="text-white/80 mb-6 italic leading-relaxed">
                         "This was the easiest ROI decision. Since the system was set up, we've been able to 
                         respond to leads faster and close deals more efficiently."
                       </p>
@@ -270,14 +287,14 @@ const LeadFollowUp = () => {
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8">
                       <div className="flex mb-4">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="text-yellow-400 fill-current" size={20} />
                         ))}
                       </div>
-                      <p className="text-white/80 mb-6 italic">
+                      <p className="text-white/80 mb-6 italic leading-relaxed">
                         "I used to miss DMs from potential clients all the time. After the follow-up system 
                         was set up, I booked three discovery calls in one week without lifting a finger."
                       </p>
@@ -293,22 +310,26 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">Simple. Fast. Flat Fee.</h2>
-                <Card className="luxury-card bg-gradient-to-br from-purple-500/20 to-violet-500/20 border-purple-500/30 backdrop-blur-sm">
+                <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">Simple. Fast. Flat Fee.</h2>
+                <Card className="bg-white/5 border border-white/20 backdrop-blur-xl">
                   <CardContent className="p-12">
-                    <div className="text-6xl font-bold text-purple-400 mb-4">$500</div>
+                    <div className="text-6xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent mb-4">$500</div>
                     <p className="text-xl text-white/80 mb-8">Done-for-you setup starts at</p>
                     <div className="space-y-4 text-left max-w-md mx-auto">
                       <div className="flex items-center gap-3">
-                        <Clock className="text-green-400" size={20} />
-                        <span>Delivered in 72 hours</span>
+                        <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
+                          <Clock className="text-white" size={14} />
+                        </div>
+                        <span className="text-white/90">Delivered in 72 hours</span>
                       </div>
                       <div className="flex items-center gap-3">
-                        <Target className="text-green-400" size={20} />
-                        <span>ROI in weeks (often days)</span>
+                        <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center">
+                          <Target className="text-white" size={14} />
+                        </div>
+                        <span className="text-white/90">ROI in weeks (often days)</span>
                       </div>
                     </div>
-                    <p className="text-white/70 mt-8">
+                    <p className="text-white/70 mt-8 leading-relaxed">
                       Custom pricing available for multi-channel, CRM-integrated builds.
                     </p>
                   </CardContent>
@@ -321,39 +342,45 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">Why Work With Me?</h2>
-                <p className="text-xl text-white/80 mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">Why Work With Me?</h2>
+                <p className="text-xl text-white/80 mb-12 leading-relaxed">
                   You're not just hiring an automator. You're partnering with a Systems Engineer who:
                 </p>
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <Zap className="text-purple-400 mx-auto mb-4" size={32} />
-                      <p className="text-white/80">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center">
+                        <Zap className="text-white" size={24} />
+                      </div>
+                      <p className="text-white/80 leading-relaxed">
                         Builds automations that grow businesses, not just connect tools
                       </p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <Users className="text-purple-400 mx-auto mb-4" size={32} />
-                      <p className="text-white/80">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center">
+                        <Users className="text-white" size={24} />
+                      </div>
+                      <p className="text-white/80 leading-relaxed">
                         Understands service-based founders (because I work with them daily)
                       </p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="luxury-card bg-accent/20 border-purple-500/20 backdrop-blur-sm">
+                  <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <Target className="text-purple-400 mx-auto mb-4" size={32} />
-                      <p className="text-white/80">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center">
+                        <Target className="text-white" size={24} />
+                      </div>
+                      <p className="text-white/80 leading-relaxed">
                         Values clarity, speed, and thoughtful strategy
                       </p>
                     </CardContent>
                   </Card>
                 </div>
-                <p className="text-lg text-purple-400 font-semibold">
+                <p className="text-lg bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent font-semibold">
                   This isn't my first Zap. It's my zone of genius.
                 </p>
               </div>
@@ -364,26 +391,29 @@ const LeadFollowUp = () => {
           <section id="contact" className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Fix Your Follow-Up?</h2>
-                <p className="text-xl text-white/80 mb-8">
-                  No more missed leads. No more second-guessing. Let's turn your traffic into clients, automatically.
-                </p>
-                <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-lg p-6 mb-10 backdrop-blur-sm">
-                  <p className="text-lg font-semibold text-red-400 mb-2">⚡ Limited Availability</p>
-                  <p className="text-white/80">Spots open this week. Limited to 2 builds only.</p>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-600/10 to-violet-600/10 blur-3xl rounded-3xl"></div>
+                  <div className="relative p-12 rounded-3xl bg-white/5 border border-white/20 backdrop-blur-xl">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">Ready to Fix Your Follow-Up?</h2>
+                    <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                      No more missed leads. No more second-guessing. Let's turn your traffic into clients, automatically.
+                    </p>
+                    <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6 mb-10 backdrop-blur-sm">
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <Zap className="text-red-400" size={20} />
+                        <p className="text-lg font-semibold text-red-400">Limited Availability</p>
+                      </div>
+                      <p className="text-white/80">Spots open this week. Limited to 2 builds only.</p>
+                    </div>
+                    <Button 
+                      onClick={handleScrollToContact}
+                      className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
+                    >
+                      Let's Build Your Custom Follow-Up System
+                      <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
+                    </Button>
+                  </div>
                 </div>
-                <Button 
-                  onClick={handleScrollToContact}
-                  size="lg" 
-                  className="luxury-button text-lg px-10 py-6 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600
-                             text-white
-                             hover:from-purple-500 hover:via-violet-500 hover:to-indigo-500 
-                             hover:shadow-[0_0_40px_rgba(139,92,246,0.6)]
-                             transition-all duration-700 group"
-                >
-                  Let's Build Your Custom Follow-Up System
-                  <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
-                </Button>
               </div>
             </div>
           </section>
