@@ -21,7 +21,7 @@ const LeadFollowUp = () => {
       <Particles />
       <div className="relative z-10">
         <Navbar />
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen">
           {/* Hero Section */}
           <section className="min-h-screen flex items-center pt-16 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-indigo-900/20 to-violet-900/30"></div>
