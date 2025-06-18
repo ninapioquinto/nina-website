@@ -53,50 +53,78 @@ const LeadFollowUp = () => {
           <section className="py-24 relative">
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-red-400 via-pink-500 to-rose-400 bg-clip-text text-transparent">
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
                   The Real Reason You're Losing Sales?
                 </h2>
-                <p className="text-xl text-white/80 mb-12">
-                  Your leads aren't getting followed up fast enough.
-                </p>
-                <p className="text-lg text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-                  Even if you're running ads, getting DMs, or capturing inquiries, chances are some of your 
-                  hottest leads are quietly slipping through the cracks.
-                </p>
+                <div className="text-xl text-white/80 mb-12 space-y-4">
+                  <p>It's not your offer.</p>
+                  <p>It's not your content.</p>
+                  <p>It's not even your ads.</p>
+                </div>
+                
+                <div className="mb-12">
+                  <p className="text-2xl font-semibold text-white mb-6">The real bottleneck is this:</p>
+                  <p className="text-xl text-white/80 mb-8 leading-relaxed">
+                    Your leads aren't getting followed up fast enough—and it's costing you more than you realize.
+                  </p>
+                  <p className="text-lg text-white/70 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Even if you're running ads, getting DMs, or capturing inquiries through your forms, some of your 
+                    warmest leads are quietly slipping through the cracks. No system, no process, no sale.
+                  </p>
+                  <p className="text-xl font-semibold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent mb-12">
+                    Let's break it down:
+                  </p>
+                </div>
                 
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
                   <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center">
                         <Clock className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-red-400 mb-2">Delayed follow-ups</h3>
-                      <p className="text-white/70">Lost revenue</p>
+                      <h3 className="text-lg font-semibold text-purple-400 mb-4">Delayed Follow-Ups = Lost Revenue</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        People don't wait around. Leads that aren't contacted within the first 5–10 minutes cool off fast—or worse, 
+                        they go straight to your competitor. Every delayed response is a potential client walking away, unseen and unheard.
+                      </p>
                     </CardContent>
                   </Card>
                   
                   <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-xl flex items-center justify-center">
                         <Users className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-red-400 mb-2">Manual chasing</h3>
-                      <p className="text-white/70">Burnout</p>
+                      <h3 className="text-lg font-semibold text-violet-400 mb-4">Manual Chasing = Burnout</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        Manually tracking leads across emails, DMs, forms, and spreadsheets? That's a full-time job in itself. 
+                        And as your business grows, that mental load compounds—stealing your focus from higher-level work and draining your energy.
+                      </p>
                     </CardContent>
                   </Card>
                   
                   <Card className="bg-white/5 border border-white/20 backdrop-blur-xl hover:bg-white/10 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center">
+                      <div className="w-12 h-12 mx-auto mb-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
                         <Target className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-lg font-semibold text-red-400 mb-2">Inconsistent systems</h3>
-                      <p className="text-white/70">Missed growth</p>
+                      <h3 className="text-lg font-semibold text-indigo-400 mb-4">Inconsistent Systems = Missed Growth</h3>
+                      <p className="text-white/70 leading-relaxed">
+                        If your backend depends on memory, reminders, or random tools, you'll always be patching leaks instead of building momentum. 
+                        Without a system, there's no scale. Growth requires consistency—and consistency starts with automation.
+                      </p>
                     </CardContent>
                   </Card>
                 </div>
                 
-                <p className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Let's fix that. Fast.</p>
+                <div className="mb-8">
+                  <p className="text-lg text-white/80 mb-4">
+                    If you want to stop losing leads, save hours every week, and finally feel confident in your follow-up process…
+                  </p>
+                  <p className="text-2xl font-semibold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                    Let's fix that. Fast.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
