@@ -1,9 +1,6 @@
-
 import { ArrowRight, Clock, Zap, Target, Users, CheckCircle, Star } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import StarryBackground from '../components/StarryBackground';
 
@@ -20,13 +17,9 @@ const LeadFollowUp = () => {
       <StarryBackground />
       <Particles />
       <div className="relative z-10">
-        <Navbar />
         <div className="min-h-screen">
           {/* Hero Section */}
-          <section className="min-h-screen flex items-center pt-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-indigo-900/20 to-violet-900/30"></div>
-            <div className="absolute inset-0 bg-grid opacity-30"></div>
-            
+          <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10 text-center">
               <div className="max-w-4xl mx-auto">
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
@@ -397,7 +390,6 @@ const LeadFollowUp = () => {
             </div>
           </section>
         </div>
-        <Footer />
       </div>
     </>
   );
