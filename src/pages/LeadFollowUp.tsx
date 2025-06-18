@@ -19,32 +19,30 @@ const LeadFollowUp = () => {
       <div className="relative z-10">
         <div className="min-h-screen">
           {/* Hero Section */}
-          <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-            <div className="container mx-auto px-4 relative z-10 text-center">
-              <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-                  Never Lose a <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Hot Lead</span> Again.
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-medium mb-6 text-white/90">
-                  Build a Follow-Up System That Works While You Sleep.
-                </h2>
-                <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto">
-                  I'll automate your lead follow-up within 72 hours so you close more deals and waste less time. 
-                  No missed leads. No manual chasing. Just more clients.
-                </p>
-                <Button 
-                  onClick={handleScrollToContact}
-                  size="lg" 
-                  className="luxury-button text-lg px-10 py-6 bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
-                             border border-purple-400/40 text-white backdrop-blur-sm
-                             hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
-                             hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
-                             transition-all duration-700 group"
-                >
-                  Let's Build Your Custom Follow-Up System
-                  <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
-                </Button>
-              </div>
+          <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                Never Lose a <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Hot Lead</span> Again.
+              </h1>
+              <h2 className="text-2xl md:text-3xl font-medium mb-6 text-white/90">
+                Build a Follow-Up System That Works While You Sleep.
+              </h2>
+              <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto">
+                I'll automate your lead follow-up within 72 hours so you close more deals and waste less time. 
+                No missed leads. No manual chasing. Just more clients.
+              </p>
+              <Button 
+                onClick={handleScrollToContact}
+                size="lg" 
+                className="luxury-button text-lg px-10 py-6 bg-gradient-to-r from-purple-600/20 via-violet-600/20 to-indigo-600/20 
+                           border border-purple-400/40 text-white backdrop-blur-sm
+                           hover:from-purple-600/30 hover:via-violet-600/30 hover:to-indigo-600/30 
+                           hover:border-purple-300/60 hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]
+                           transition-all duration-700 group"
+              >
+                Let's Build Your Custom Follow-Up System
+                <ArrowRight className="ml-2 transition-transform duration-500 group-hover:translate-x-2" />
+              </Button>
             </div>
           </section>
 

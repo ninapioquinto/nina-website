@@ -42,7 +42,7 @@ const App = () => (
           {/* The routes below are temporarily disabled. */}
           {/* <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} /> */}
           <Route path="/ai-executive-assistant" element={<PageWrapper><AiExecutiveAssistant /></PageWrapper>} />
-          <Route path="/lead-follow-up" element={<PageWrapper><LeadFollowUp /></PageWrapper>} />
+          <Route path="/lead-follow-up" element={<LeadFollowUp />} />
           <Route path="/links" element={<LinkTree />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
