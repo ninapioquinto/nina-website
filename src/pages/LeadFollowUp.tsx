@@ -1,4 +1,3 @@
-
 import { ArrowRight, Clock, Zap, Target, Users, CheckCircle, Star, Bot, Brain, Sparkles, TrendingUp, Shield, Rocket } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import Particles from '../components/Particles';
@@ -223,26 +222,94 @@ const LeadFollowUp = () => {
             </div>
           </section>
 
-          {/* Who It's For Section - Simplified */}
+          {/* Who It's For Section - Updated */}
           <section className="py-32 relative">
             <div className="container mx-auto px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-white via-purple-200 to-violet-300 bg-clip-text text-transparent">
-                  This is for you if:
-                </h2>
+              <div className="max-w-5xl mx-auto text-center">
+                <div className="text-center mb-16">
+                  <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 mb-8 shadow-2xl shadow-purple-500/20 glow-border">
+                    <Target className="w-5 h-5 text-purple-400" />
+                    <span className="text-purple-300 font-medium">Perfect For</span>
+                  </div>
+                  
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-violet-300 bg-clip-text text-transparent">
+                    Who This Is For
+                  </h2>
+                  
+                  <p className="text-xl text-white/80 mb-12 leading-relaxed max-w-4xl mx-auto">
+                    This service was designed for busy, growth-driven founders who are tired of watching good leads go cold and great opportunities slip away.
+                  </p>
+                  
+                  <p className="text-lg text-purple-300 mb-16 font-medium">It's for you if:</p>
+                </div>
                 
-                <div className="grid md:grid-cols-2 gap-8 text-left">
-                  {[
-                    "You're generating leads but not closing enough",
-                    "You reply manually to every DM, email, or form entry",
-                    "You feel like you're 'leaving money on the table'",
-                    "You want more consistency, less chaos"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-4 p-6 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-300 shadow-lg shadow-purple-500/5 glow-border">
-                      <CheckCircle className="text-purple-400 flex-shrink-0" size={24} />
-                      <p className="text-white/90 text-lg">{item}</p>
+                <div className="space-y-8">
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
+                        <CheckCircle className="text-white" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-3">You're generating leads, but not closing enough.</h3>
+                        <p className="text-white/70 leading-relaxed">
+                          You've got visibility. You're showing up. People are inquiring. But somewhere between "I'm interested" and "I'm in," the momentum fizzles. You're not sure what's breaking… but you know something is.
+                        </p>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/25">
+                        <CheckCircle className="text-white" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-3">You're replying manually to every DM, email, or form.</h3>
+                        <p className="text-white/70 leading-relaxed">
+                          Whether it's late-night replies or juggling multiple platforms, you're constantly reacting instead of scaling. You're stuck in the inbox, not in your zone of genius. You want to stay high-level, not be your own assistant.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-indigo-500/25">
+                        <CheckCircle className="text-white" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-3">You feel like you're leaving money on the table.</h3>
+                        <p className="text-white/70 leading-relaxed">
+                          There's this nagging feeling that you're losing clients simply because you didn't follow up fast enough or forgot to follow up at all. You've built something valuable… but without systems, it's leaking revenue.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
+                        <CheckCircle className="text-white" size={20} />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-3">You want consistency, not chaos.</h3>
+                        <p className="text-white/70 leading-relaxed">
+                          You crave structure, the kind that lets you trust your backend and focus on what you do best. You don't need more tools. You need a solution that actually works without babysitting it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="text-center mt-16">
+                  <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-12 shadow-2xl shadow-purple-500/20 glow-border">
+                    <p className="text-xl text-white/90 mb-6 leading-relaxed">
+                      If any of that sounds familiar, this is your sign to stop duct-taping your operations and start scaling with systems that support you.
+                    </p>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                      This is for the business owner who's ready to lead, not chase.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
