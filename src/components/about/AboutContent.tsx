@@ -6,6 +6,7 @@ const AboutContent = () => {
     <div className="reveal space-y-8">
       <div>
         <h3 className="text-2xl font-bold mb-4 text-white">
+          Nina Pioquinto<br />
           Certified Automation Systems Engineer
         </h3>
         <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full mb-6"></div>
