@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import WorkWithMe from "./pages/WorkWithMe";
 import AiExecutiveAssistant from "./pages/AiExecutiveAssistant";
-import LeadFollowUp from "./pages/LeadFollowUp";
 import NotFound from "./pages/NotFound";
 import LinkTree from "./pages/LinkTree";
 import Navbar from "./components/Navbar";
@@ -42,7 +41,6 @@ const App = () => (
           {/* The routes below are temporarily disabled. */}
           {/* <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} /> */}
           <Route path="/ai-executive-assistant" element={<PageWrapper><AiExecutiveAssistant /></PageWrapper>} />
-          <Route path="/lead-follow-up" element={<LeadFollowUp />} />
           <Route path="/links" element={<LinkTree />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
