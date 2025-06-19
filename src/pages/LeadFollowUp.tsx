@@ -1,3 +1,4 @@
+
 import { ArrowRight, Clock, Zap, Target, Users, CheckCircle, Star, Bot, Brain, Sparkles, TrendingUp, Shield, Rocket } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import Particles from '../components/Particles';
@@ -319,25 +320,110 @@ const LeadFollowUp = () => {
           <section className="py-32 relative">
             <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-violet-900/10"></div>
             <div className="container mx-auto px-4 relative">
-              <div className="max-w-5xl mx-auto text-center">
-                <h2 className="text-4xl md:text-5xl font-bold mb-20 bg-gradient-to-r from-white via-purple-200 to-violet-300 bg-clip-text text-transparent">
-                  Results Clients See
-                </h2>
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-16">
+                  <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 mb-8 shadow-2xl shadow-purple-500/20 glow-border">
+                    <Target className="w-5 h-5 text-purple-400" />
+                    <span className="text-purple-300 font-medium">The Results Clients Are Seeing</span>
+                  </div>
+                  
+                  <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-purple-200 to-violet-300 bg-clip-text text-transparent">
+                    🎯 The Results Clients Are Seeing
+                  </h2>
+                  
+                  <p className="text-xl md:text-2xl text-white/80 mb-12 leading-relaxed max-w-4xl mx-auto">
+                    These aren't just automations — they're growth catalysts.
+                  </p>
+                  
+                  <p className="text-lg text-white/70 mb-16 leading-relaxed">
+                    Here's what happens when your follow-up system finally works for you:
+                  </p>
+                </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {[
-                    { number: "+40%", text: "increase in lead-to-call conversions", gradient: "from-purple-500 to-violet-500" },
-                    { number: "5-10 hours", text: "saved every week", gradient: "from-violet-500 to-indigo-500" },
-                    { number: "Increased", text: "client trust with fast, professional replies", gradient: "from-indigo-500 to-purple-500" },
-                    { number: "Less pressure", text: "on you or your team", gradient: "from-purple-500 to-violet-500" }
-                  ].map((result, index) => (
-                    <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
-                      <div className={`text-4xl md:text-5xl font-bold bg-gradient-to-r ${result.gradient} bg-clip-text text-transparent mb-4`}>
-                        {result.number}
+                <div className="space-y-12">
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
+                        <TrendingUp className="text-white" size={32} />
                       </div>
-                      <p className="text-white/80">{result.text}</p>
+                      <div>
+                        <h3 className="text-3xl font-bold text-white mb-4">📈 +40% Increase in Lead-to-Call Conversions</h3>
+                        <p className="text-white/80 leading-relaxed text-lg mb-6">
+                          When every lead gets followed up within minutes (not hours), more of them book. You stop losing high-intent prospects to delays or distractions — and start turning interest into action, effortlessly.
+                        </p>
+                        <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-500/20 rounded-2xl p-6 shadow-lg shadow-purple-500/10 glow-border">
+                          <p className="text-purple-200 italic text-lg">
+                            "We didn't change our offer, just the speed of our follow-up. And suddenly, our calendar was full."
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-violet-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-indigo-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/25">
+                        <Clock className="text-white" size={32} />
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold text-white mb-4">⏳ 5–10 Hours Saved Every Week</h3>
+                        <p className="text-white/80 leading-relaxed text-lg mb-6">
+                          No more chasing leads manually or rewriting the same message 20 times. You get hours of your life back — time you can reinvest into client work, strategy, or simply breathing.
+                        </p>
+                        <div className="bg-gradient-to-r from-violet-500/10 to-indigo-500/10 border border-violet-500/20 rounded-2xl p-6 shadow-lg shadow-violet-500/10 glow-border">
+                          <p className="text-violet-200 italic text-lg">
+                            "It felt like we hired an ops assistant overnight, without actually hiring one."
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-indigo-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-indigo-500/25">
+                        <Users className="text-white" size={32} />
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold text-white mb-4">🤝 Stronger Trust with Clients and Prospects</h3>
+                        <p className="text-white/80 leading-relaxed text-lg mb-6">
+                          People trust businesses that move fast and communicate well. Automated, professional responses make you look polished and prepared — even if you're out of office or deep in client work.
+                        </p>
+                        <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6 shadow-lg shadow-indigo-500/10 glow-border">
+                          <p className="text-indigo-200 italic text-lg">
+                            "Clients have literally said, 'You're so on top of things.' And it's all thanks to the follow-up flow Luna built."
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] shadow-2xl shadow-purple-500/10 glow-border">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-violet-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
+                        <Brain className="text-white" size={32} />
+                      </div>
+                      <div>
+                        <h3 className="text-3xl font-bold text-white mb-4">🧘‍♀️ Less Pressure on You or Your Team</h3>
+                        <p className="text-white/80 leading-relaxed text-lg mb-6">
+                          You no longer have to be the glue holding it all together. With a reliable system running in the background, you can scale your business without scaling your stress. Your team breathes easier too.
+                        </p>
+                        <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 border border-purple-500/20 rounded-2xl p-6 shadow-lg shadow-purple-500/10 glow-border">
+                          <p className="text-purple-200 italic text-lg">
+                            "It's like we finally have breathing room. We're not playing catch-up anymore."
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="text-center mt-16">
+                  <div className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 backdrop-blur-xl border border-purple-500/20 rounded-3xl p-12 shadow-2xl shadow-purple-500/20 glow-border">
+                    <p className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
+                      This is what operations should feel like: clear, calm, and converting.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
