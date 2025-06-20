@@ -11,7 +11,7 @@ export function WhatICanBuild() {
                         Custom Systems That Keep Your Business Running Smoothly
                     </h2>
                     <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                        I design CRM systems and AI automations that clean up backend chaos, reduce manual work, and help business owners run their operations with more clarity and control.
+                        Backend systems built to organize workflows, automate repetitive tasks, and support business owners in running smoother, more efficient operations.
                     </p>
                 </div>
                 
