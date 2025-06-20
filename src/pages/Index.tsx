@@ -85,7 +85,6 @@ const Index = () => {
         <Navbar />
         <Hero />
         <WhatICanBuild />
-        <Services />
         <About />
         <Portfolio />
         <CaseStudy />
@@ -94,6 +93,7 @@ const Index = () => {
         <MyProcess />
         <PoweredBy />
         <MyServices />
+        <Services />
         <FAQ />
         <Contact />
         <Footer />
