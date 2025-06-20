@@ -8,10 +8,10 @@ export function WhatICanBuild() {
             <div className="mx-auto max-w-3xl lg:max-w-6xl px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-                        What I Can Build for You
+                        Custom Systems That Keep Your Business Running Smoothly
                     </h2>
                     <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                        Smart backend systems that remove busywork, organize your operations, and give you time to grow.
+                        I design CRM systems and AI automations that clean up backend chaos, reduce manual work, and help business owners run their operations with more clarity and control.
                     </p>
                 </div>
                 
@@ -28,8 +28,8 @@ export function WhatICanBuild() {
                                     </svg>
                                     <span className="mx-auto block w-fit text-5xl font-semibold text-white">CRM</span>
                                 </div>
-                                <h3 className="mt-6 text-center text-2xl font-semibold text-white">A CRM that makes your business feel easier to run</h3>
-                                <p className="mt-4 text-center text-white/70">I build custom CRM systems that align with how you work. Everything is in one place so you stay organized, focused, and in control.</p>
+                                <h3 className="mt-6 text-center text-2xl font-semibold text-white">Custom CRMs for service-based businesses</h3>
+                                <p className="mt-4 text-center text-white/70">I work with business owners across different industries who need a better way to manage client data, track workflows, and reduce operational clutter. The CRMs I build are tailored to each business so everything is organized, easy to access, and simple to manage.</p>
                             </CardContent>
                         </Card>
                         
@@ -39,8 +39,8 @@ export function WhatICanBuild() {
                                     <Cog className="m-auto h-16 w-16 text-primary animate-spin-slow" strokeWidth={1} />
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h3 className="text-lg font-medium text-white">Automations that handle repetitive tasks for you</h3>
-                                    <p className="text-white/70">I set up workflows that quietly do the work in the background. You spend less time fixing, reminding, and repeating, and more time leading your business.</p>
+                                    <h3 className="text-lg font-medium text-white">Automations that quietly handle repetitive tasks</h3>
+                                    <p className="text-white/70">In one project, I automated an onboarding process from task creation to client emails. The team now saves hours every week and their process runs more consistently without needing constant oversight.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -79,8 +79,8 @@ export function WhatICanBuild() {
                                     </svg>
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
-                                    <h3 className="text-lg font-medium text-white">Operational systems that flow smoothly</h3>
-                                    <p className="text-white/70">No more tool overload or messy processes. I create systems that make your day-to-day smoother and easier to manage as your business grows.</p>
+                                    <h3 className="text-lg font-medium text-white">Backend systems that support growth without the chaos</h3>
+                                    <p className="text-white/70">Many of the businesses I support are growing quickly or restructuring how they work. I build systems that create order, improve delegation, and keep things moving without falling apart during busy seasons.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -92,8 +92,8 @@ export function WhatICanBuild() {
                                         <Database className="m-auto size-5 text-primary" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h3 className="text-lg font-medium text-white">Built inside the tools you already use</h3>
-                                        <p className="text-white/70">Whether it's GoHighLevel, Zoho, Airtable, Zapier, Make, or n8n, I work with your current tools so the setup feels familiar and effortless.</p>
+                                        <h3 className="text-lg font-medium text-white">Built inside tools my clients already use</h3>
+                                        <p className="text-white/70">I work inside platforms like GoHighLevel, Zoho, Airtable, n8n, Zapier, and Make. There is no need to change systems. I improve what's already in place so everything works better together.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-lg relative -mb-6 -mr-6 mt-6 h-fit border-l border-t border-white/10 p-6 py-6 sm:ml-6">
@@ -127,14 +127,14 @@ export function WhatICanBuild() {
                                         <Clock className="m-auto size-6 text-primary" strokeWidth={1} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h3 className="text-lg font-medium text-white">5 to 10 hours of your time back every week</h3>
-                                        <p className="text-white/70">Manual work slows down your growth. I help you take that time back so you can focus on what matters most without the stress of a messy backend.</p>
+                                        <h3 className="text-lg font-medium text-white">Real time savings that create space to grow</h3>
+                                        <p className="text-white/70">The systems I build typically save 10 to 20 hours per week. Clients use that time to focus on strategic work, improve client delivery, or finally step out of day-to-day operations with peace of mind.</p>
                                     </div>
                                 </div>
                                 <div className="relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px before:bg-white/10 sm:-my-6 sm:-mr-6">
                                     <div className="relative flex h-full flex-col justify-center space-y-6 py-6">
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
-                                            <span className="block h-fit rounded border border-white/20 bg-white/10 px-2 py-1 text-xs text-white">5-10 hrs</span>
+                                            <span className="block h-fit rounded border border-white/20 bg-white/10 px-2 py-1 text-xs text-white">10-20 hrs</span>
                                             <div className="ring-background size-7 ring-4">
                                                 <div className="size-full rounded-full bg-gradient-to-r from-primary to-purple-600"></div>
                                             </div>
