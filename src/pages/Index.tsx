@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
@@ -16,7 +15,6 @@ import Footer from '../components/Footer';
 import Particles from '../components/Particles';
 import Loader from '../components/Loader';
 import PoweredBy from '../components/PoweredBy';
-import { WhatICanBuild } from '../components/ui/features-8';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -84,7 +82,7 @@ const Index = () => {
       <div className="relative z-10">
         <Navbar />
         <Hero />
-        <WhatICanBuild />
+        <Services />
         <About />
         <Portfolio />
         <CaseStudy />
@@ -93,7 +91,6 @@ const Index = () => {
         <MyProcess />
         <PoweredBy />
         <MyServices />
-        <Services />
         <FAQ />
         <Contact />
         <Footer />
