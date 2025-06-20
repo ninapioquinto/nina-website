@@ -102,6 +102,10 @@ export default {
           from: { backgroundPosition: "0% 0" },
           to: { backgroundPosition: "100% 0" },
         },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -113,6 +117,7 @@ export default {
         "float": "float 6s infinite ease-in-out",
         "pulse-glow": "pulse-glow 4s infinite ease-in-out",
         "moving-banner": "moving-banner 20s linear infinite",
+        "spin-slow": "spin-slow 8s linear infinite",
       },
     },
   },
