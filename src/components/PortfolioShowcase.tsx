@@ -1,4 +1,3 @@
-
 import PortfolioCard from './PortfolioCard';
 
 const PortfolioShowcase = () => {
@@ -68,7 +67,7 @@ const PortfolioShowcase = () => {
   return (
     <section id="portfolio" className="py-32 relative">
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
             <div className="relative inline-block">
@@ -90,7 +89,7 @@ const PortfolioShowcase = () => {
           </div>
 
           {/* Portfolio Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
             {portfolioItems.map((item) => (
               <PortfolioCard
                 key={item.id}
