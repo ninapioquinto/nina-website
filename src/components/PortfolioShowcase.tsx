@@ -105,6 +105,29 @@ const PortfolioShowcase = () => {
               />
             ))}
           </div>
+
+          {/* Call to Action */}
+          <div className="text-center mt-20">
+            <div className="bg-gradient-to-r from-purple-900/20 to-indigo-900/20 border border-purple-400/20 rounded-3xl p-8 max-w-2xl mx-auto">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Ready to Transform Your Business Operations?
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                These are just examples of what's possible. Let's discuss how I can build custom solutions for your specific needs.
+              </p>
+              <button 
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-colors"
+              >
+                Get Started Today
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
