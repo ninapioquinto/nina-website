@@ -1,5 +1,6 @@
-
 import PortfolioCard from '../components/PortfolioCard';
+import StarryBackground from '../components/StarryBackground';
+import Particles from '../components/Particles';
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -66,9 +67,12 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
+      <StarryBackground />
+      <Particles />
+      
       {/* Hero Section */}
-      <section className="pt-12 pb-20 px-4">
+      <section className="pt-12 pb-20 px-4 relative z-10">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-indigo-300 bg-clip-text text-transparent">
