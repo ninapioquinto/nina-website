@@ -2,10 +2,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,20 +25,36 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsOpen(false);
+  };
+
+  const navigateToPage = (path: string) => {
+    navigate(path);
+    setIsOpen(false);
   };
 
   const links = [
-    { href: 'about', label: 'About' },
-    { href: 'my-process', label: 'My Process' },
-    { href: 'portfolio', label: 'Work' },
-    { href: 'case-study', label: 'Case Study' },
-    { href: 'faq', label: 'FAQ' },
-    { href: 'contact', label: 'Contact' }
+    { href: 'about', label: 'About', type: 'section' },
+    { href: 'my-process', label: 'My Process', type: 'section' },
+    { href: 'portfolio', label: 'Work', type: 'section' },
+    { href: '/video', label: 'Videos', type: 'page' },
+    { href: 'case-study', label: 'Case Study', type: 'section' },
+    { href: 'faq', label: 'FAQ', type: 'section' },
+    { href: 'contact', label: 'Contact', type: 'section' }
   ];
 
   return (
@@ -49,7 +68,11 @@ const Navbar = () => {
             className="relative inline-block"
             onClick={(e) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              if (location.pathname !== '/') {
+                navigate('/');
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
             }}
           >
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
@@ -66,7 +89,7 @@ const Navbar = () => {
             {links.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => link.type === 'page' ? navigateToPage(link.href) : scrollToSection(link.href)}
                 className="text-sm font-medium text-white/80 hover:text-white hover:text-glow transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
               >
                 {link.label}
@@ -95,7 +118,7 @@ const Navbar = () => {
             {links.map((link) => (
               <button
                 key={link.label}
-                onClick={() => scrollToSection(link.href)}
+                onClick={() => link.type === 'page' ? navigateToPage(link.href) : scrollToSection(link.href)}
                 className="block w-full text-left py-3 px-4 text-sm font-medium text-white/80 hover:text-white hover:bg-primary/10 transition-colors"
               >
                 {link.label}
