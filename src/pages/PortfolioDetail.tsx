@@ -1,9 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Target, Users, Calendar, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
 import StarryBackground from '../components/StarryBackground';
 import Particles from '../components/Particles';
+import PortfolioHeader from '../components/portfolio-detail/PortfolioHeader';
+import ProjectMeta from '../components/portfolio-detail/ProjectMeta';
+import WorkflowSteps from '../components/portfolio-detail/WorkflowSteps';
+import TechnologiesSection from '../components/portfolio-detail/TechnologiesSection';
+import OutcomesSection from '../components/portfolio-detail/OutcomesSection';
+import ChallengesSolutions from '../components/portfolio-detail/ChallengesSolutions';
+import CallToAction from '../components/portfolio-detail/CallToAction';
 
 const PortfolioDetail = () => {
   const { id } = useParams();
@@ -153,60 +159,30 @@ const PortfolioDetail = () => {
       
       <div className="relative z-10 pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          {/* Back Button */}
+          {/* Back Button - Updated with purple theme */}
           <Button 
             onClick={() => navigate('/portfolio')} 
             variant="outline" 
-            className="mb-8 border-white/20 text-white hover:bg-white/10"
+            className="mb-8 border-purple-400/20 text-purple-200 hover:bg-purple-500/10 hover:border-purple-300/30"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
           </Button>
 
           {/* Project Header */}
-          <div className="mb-12">
-            <div className="mb-6">
-              <Badge variant="secondary" className="bg-purple-500/20 text-purple-200 border-purple-400/20 mb-4">
-                {project.category}
-              </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                {project.title}
-              </h1>
-              <p className="text-xl text-white/80 leading-relaxed">
-                {project.description}
-              </p>
-              {project.role && (
-                <p className="text-lg text-purple-300 mt-2 font-medium">
-                  Role: {project.role}
-                </p>
-              )}
-            </div>
+          <PortfolioHeader 
+            category={project.category}
+            title={project.title}
+            description={project.description}
+            role={project.role}
+          />
 
-            {/* Project Meta */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center gap-3">
-                <Users className="w-5 h-5 text-blue-400" />
-                <div>
-                  <p className="text-white/60 text-sm">Client</p>
-                  <p className="text-blue-400 font-medium">{project.client}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Target className="w-5 h-5 text-green-400" />
-                <div>
-                  <p className="text-white/60 text-sm">Result</p>
-                  <p className="text-green-400 font-medium">{project.results}</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-purple-400" />
-                <div>
-                  <p className="text-white/60 text-sm">Duration</p>
-                  <p className="text-purple-400 font-medium">{project.duration}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Project Meta */}
+          <ProjectMeta 
+            client={project.client}
+            results={project.results}
+            duration={project.duration}
+          />
 
           {/* Project Image */}
           <div className="mb-12">
@@ -231,21 +207,7 @@ const PortfolioDetail = () => {
 
             {/* Solution/Workflow Steps */}
             {project.workflowSteps ? (
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-6">The Solution: How the System Works</h2>
-                <div className="space-y-6">
-                  {project.workflowSteps.map((step, index) => (
-                    <div key={index} className="border-l-4 border-purple-400/40 pl-6 py-4 bg-gradient-to-r from-purple-900/10 to-transparent rounded-r-lg">
-                      <h3 className="text-xl font-bold text-white mb-3">
-                        {index + 1}. {step.step}
-                      </h3>
-                      <p className="text-white/80 leading-relaxed">
-                        {step.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </section>
+              <WorkflowSteps steps={project.workflowSteps} />
             ) : (
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6">Project Overview</h2>
@@ -256,94 +218,26 @@ const PortfolioDetail = () => {
             )}
 
             {/* Technologies */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
-              <div className="flex flex-wrap gap-3">
-                {project.technologies.map((tech, index) => (
-                  <span 
-                    key={index}
-                    className="px-4 py-2 text-sm font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </section>
+            <TechnologiesSection technologies={project.technologies} />
 
             {/* Outcomes */}
             {project.outcomes && (
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-6">Outcome</h2>
-                <ul className="space-y-3">
-                  {project.outcomes.map((outcome, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
-                      <p className="text-white/80">{outcome}</p>
-                    </li>
-                  ))}
-                </ul>
-                {project.projectSummary && (
-                  <div className="mt-6 p-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-400/20 rounded-xl">
-                    <p className="text-blue-200 font-medium italic">
-                      {project.projectSummary}
-                    </p>
-                  </div>
-                )}
-              </section>
+              <OutcomesSection 
+                outcomes={project.outcomes}
+                projectSummary={project.projectSummary}
+              />
             )}
 
             {/* Challenges & Solutions (for other projects) */}
             {!project.workflowSteps && (
-              <div className="grid md:grid-cols-2 gap-8">
-                <section>
-                  <h2 className="text-2xl font-bold text-white mb-6">Challenges</h2>
-                  <ul className="space-y-3">
-                    {project.challenges.map((challenge, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
-                        <p className="text-white/80">{challenge}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-
-                <section>
-                  <h2 className="text-2xl font-bold text-white mb-6">Solutions</h2>
-                  <ul className="space-y-3">
-                    {project.solutions.map((solution, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
-                        <p className="text-white/80">{solution}</p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              </div>
+              <ChallengesSolutions 
+                challenges={project.challenges}
+                solutions={project.solutions}
+              />
             )}
 
             {/* Call to Action */}
-            <section className="text-center bg-gradient-to-r from-purple-900/20 to-indigo-900/20 border border-purple-400/20 rounded-3xl p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Interested in Similar Results?
-              </h2>
-              <p className="text-white/80 mb-6">
-                Let's discuss how I can build custom solutions for your specific needs.
-              </p>
-              <Button 
-                onClick={() => {
-                  const element = document.getElementById('contact');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    window.location.href = '/#contact';
-                  }
-                }}
-                className="bg-primary hover:bg-primary/90"
-              >
-                Get Started
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Button>
-            </section>
+            <CallToAction />
           </div>
         </div>
       </div>
