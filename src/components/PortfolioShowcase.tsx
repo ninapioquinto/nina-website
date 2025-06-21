@@ -1,4 +1,3 @@
-
 import PortfolioCard from './PortfolioCard';
 
 const PortfolioShowcase = () => {
@@ -15,13 +14,13 @@ const PortfolioShowcase = () => {
     },
     {
       id: "2",
-      title: "AI Automation Workflow",
-      description: "Automated a complete client onboarding process using AI tools and workflow automation, eliminating manual data entry and reducing onboarding time from 2 weeks to 2 days.",
+      title: "GHL Voice AI Agent – AI-Powered Voice Booking and Contact Sync",
+      description: "Created a fully automated voice-to-booking workflow that connects incoming calls to CRM actions using AI, enabling 24/7 voice-to-calendar bookings without manual appointment setters.",
       image: "/lovable-uploads/4b10e90b-41e5-44e0-8e3b-68b2fa8cd602.png",
-      category: "Automation",
-      technologies: ["Make", "OpenAI", "Airtable"],
-      results: "2 weeks to 2 days onboarding",
-      client: "Growing Consultancy"
+      category: "Voice Automation",
+      technologies: ["Make (Integromat)", "OpenAI GPT-4o", "GoHighLevel", "Retell AI"],
+      results: "24/7 automated voice bookings",
+      client: "GoHighLevel Users"
     },
     {
       id: "3",

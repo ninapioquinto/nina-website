@@ -15,7 +15,7 @@ const PortfolioDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Portfolio data (same as in Portfolio.tsx for consistency)
+  // Portfolio data (same as in PortfolioShowcase.tsx for consistency)
   const portfolioItems = [
     {
       id: "1",
@@ -58,23 +58,46 @@ const PortfolioDetail = () => {
         "Responded faster using AI-generated, well-formatted replies",
         "Delivered consistent customer experiences with less team involvement"
       ],
-      projectSummary: "This project demonstrates how AI can handle repetitive support operations while maintaining a high standard of care.",
-      challenges: ["Overloaded support inboxes", "Important requests getting buried", "Manual email classification taking too much time"],
-      solutions: ["AI-powered email classification using GPT-4o", "Automated priority tagging system", "Smart routing to Slack and AI response generation"]
+      projectSummary: "This project demonstrates how AI can handle repetitive support operations while maintaining a high standard of care."
     },
     {
       id: "2",
-      title: "AI Automation Workflow",
-      description: "Automated a complete client onboarding process using AI tools and workflow automation, eliminating manual data entry and reducing onboarding time from 2 weeks to 2 days.",
-      fullDescription: "This automation project revolutionized the client onboarding experience by implementing AI-driven document processing, automated data validation, and intelligent workflow routing. The system uses machine learning to extract information from various document types and automatically populates client profiles, generates contracts, and initiates appropriate workflows based on client type and requirements.",
+      title: "GHL Voice AI Agent – AI-Powered Voice Booking and Contact Sync",
+      description: "Created a fully automated voice-to-booking workflow that connects incoming calls to CRM actions using AI, enabling 24/7 voice-to-calendar bookings without manual appointment setters.",
+      fullDescription: "The client needed a way to automate appointment bookings from voice calls. Their goal was to eliminate the need for manual appointment setters and ensure that every lead interaction was captured accurately in GoHighLevel. They wanted a system that could understand natural speech, extract booking details, and sync everything with their CRM.",
       image: "/lovable-uploads/4b10e90b-41e5-44e0-8e3b-68b2fa8cd602.png",
-      category: "Automation",
-      technologies: ["Make", "OpenAI", "Airtable"],
-      results: "2 weeks to 2 days onboarding",
-      client: "Growing Consultancy",
-      duration: "2 months",
-      challenges: ["Complex document processing requirements", "Variable client data formats", "Ensuring accuracy in automated processes"],
-      solutions: ["AI-powered OCR and NLP", "Flexible data mapping system", "Multi-stage validation process"]
+      category: "Voice Automation",
+      technologies: ["Make (Integromat)", "OpenAI GPT-4o", "GoHighLevel", "Retell AI"],
+      results: "24/7 automated voice bookings",
+      client: "GoHighLevel Users",
+      duration: "3 months",
+      role: "Automation Systems Engineer",
+      challenge: "The client needed a way to automate appointment bookings from voice calls. Their goal was to eliminate the need for manual appointment setters and ensure that every lead interaction was captured accurately in GoHighLevel. They wanted a system that could understand natural speech, extract booking details, and sync everything with their CRM.",
+      workflowSteps: [
+        {
+          step: "Webhook Voice Trigger",
+          description: "Listens for incoming calls via Retell AI and captures caller data including email, phone number, and spoken booking preferences."
+        },
+        {
+          step: "AI Time Extraction with GPT-4o",
+          description: "GPT-4o interprets the caller's preferred time using natural language and converts phrases like 'next Tuesday at 3 PM' into precise ISO 8601 format for scheduling."
+        },
+        {
+          step: "GoHighLevel Contact Lookup",
+          description: "Searches the GHL database for existing contacts by email or phone. If a contact exists, it updates the record. If not, it creates a new contact with enriched data like company name and website."
+        },
+        {
+          step: "CRM Enrichment and Custom Fields",
+          description: "Maps relevant information such as WhatsApp replies, service interests, and other qualifying data into GHL custom fields. Prepares the contact record for pipeline automation, segmentation, or nurture flows."
+        }
+      ],
+      outcomes: [
+        "Enables voice-to-calendar bookings 24/7",
+        "Automatically creates or updates GHL contacts with clean data",
+        "Delivers precise booking times without manual interpretation",
+        "Removes the need for human appointment setters completely"
+      ],
+      projectSummary: "This solution gives the client a scalable and intelligent front line for lead handling, turning voice conversations into revenue-ready opportunities."
     },
     {
       id: "3",
@@ -159,7 +182,7 @@ const PortfolioDetail = () => {
       
       <div className="relative z-10 pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          {/* Back Button - Updated with purple theme */}
+          {/* Back Button */}
           <Button 
             onClick={() => navigate('/portfolio')} 
             variant="outline" 
@@ -229,7 +252,7 @@ const PortfolioDetail = () => {
             )}
 
             {/* Challenges & Solutions (for other projects) */}
-            {!project.workflowSteps && (
+            {!project.workflowSteps && project.challenges && project.solutions && (
               <ChallengesSolutions 
                 challenges={project.challenges}
                 solutions={project.solutions}
