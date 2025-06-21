@@ -15,13 +15,44 @@ const PortfolioDetail = () => {
       id: "1",
       title: "AutoSupport AI – Intelligent Email Triage",
       description: "Designed an intelligent email triage system using AI to automatically identify, prioritize, and route customer emails in real time, saving 90% of manual sorting time.",
-      fullDescription: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. I designed an intelligent email triage system that uses AI to automatically identify, prioritize, and route customer emails in real time. The system watches the support inbox, uses GPT-4o to classify emails, assigns priority levels, and automatically routes messages through Slack or AI-generated responses. This solution saved approximately 90% of time previously spent manually sorting support emails while maintaining high standards of customer care.",
+      fullDescription: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. The client needed a solution to filter, classify, and prioritize incoming emails with precision and speed. I designed an intelligent email triage system that uses AI to automatically identify, prioritize, and route customer emails in real time.",
       image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
       category: "AI Automation",
       technologies: ["n8n", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
       results: "90% time saved on email sorting",
       client: "Customer Support Team",
       duration: "2 months",
+      role: "Automation Systems Engineer",
+      challenge: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. The client needed a solution to filter, classify, and prioritize incoming emails with precision and speed.",
+      workflowSteps: [
+        {
+          step: "Trigger & Intake",
+          description: "The workflow watches the client's support inbox and detects new unread emails from specific senders."
+        },
+        {
+          step: "Classification Using GPT-4o",
+          description: "Each email is analyzed to determine if it's a legitimate customer support message. If not, it's discarded from the flow."
+        },
+        {
+          step: "Priority Tagging",
+          description: "Relevant support emails are classified into three levels: High Priority (Escalations and urgent concerns), Medium Priority (Standard questions or neutral tone inquiries), Low Priority (Positive sentiments like compliments or follow-ups)."
+        },
+        {
+          step: "Automated Routing",
+          description: "For high priority messages, the system checks if the customer needs information from the knowledge base or if the message should be escalated internally. Based on that, the message is either routed to a Slack channel for immediate internal action or sent to Relevance AI for an answer and formatted into a branded HTML email using GPT."
+        },
+        {
+          step: "Customer Acknowledgment",
+          description: "A clean, professional email response is sent back to the customer. It confirms receipt, sets expectations, and either provides answers or lets them know a support agent is handling the case."
+        }
+      ],
+      outcomes: [
+        "Saved approximately 90% of time previously spent manually sorting support emails",
+        "Escalated critical issues instantly through Slack",
+        "Responded faster using AI-generated, well-formatted replies",
+        "Delivered consistent customer experiences with less team involvement"
+      ],
+      projectSummary: "This project demonstrates how AI can handle repetitive support operations while maintaining a high standard of care.",
       challenges: ["Overloaded support inboxes", "Important requests getting buried", "Manual email classification taking too much time"],
       solutions: ["AI-powered email classification using GPT-4o", "Automated priority tagging system", "Smart routing to Slack and AI response generation"]
     },
@@ -144,6 +175,11 @@ const PortfolioDetail = () => {
               <p className="text-xl text-white/80 leading-relaxed">
                 {project.description}
               </p>
+              {project.role && (
+                <p className="text-lg text-purple-300 mt-2 font-medium">
+                  Role: {project.role}
+                </p>
+              )}
             </div>
 
             {/* Project Meta */}
@@ -183,13 +219,41 @@ const PortfolioDetail = () => {
 
           {/* Project Details */}
           <div className="space-y-12">
-            {/* Full Description */}
-            <section>
-              <h2 className="text-3xl font-bold text-white mb-6">Project Overview</h2>
-              <p className="text-white/80 text-lg leading-relaxed">
-                {project.fullDescription}
-              </p>
-            </section>
+            {/* Challenge Section */}
+            {project.challenge && (
+              <section>
+                <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
+                <p className="text-white/80 text-lg leading-relaxed">
+                  {project.challenge}
+                </p>
+              </section>
+            )}
+
+            {/* Solution/Workflow Steps */}
+            {project.workflowSteps ? (
+              <section>
+                <h2 className="text-3xl font-bold text-white mb-6">The Solution: How the System Works</h2>
+                <div className="space-y-6">
+                  {project.workflowSteps.map((step, index) => (
+                    <div key={index} className="border-l-4 border-purple-400/40 pl-6 py-4 bg-gradient-to-r from-purple-900/10 to-transparent rounded-r-lg">
+                      <h3 className="text-xl font-bold text-white mb-3">
+                        {index + 1}. {step.step}
+                      </h3>
+                      <p className="text-white/80 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : (
+              <section>
+                <h2 className="text-3xl font-bold text-white mb-6">Project Overview</h2>
+                <p className="text-white/80 text-lg leading-relaxed">
+                  {project.fullDescription}
+                </p>
+              </section>
+            )}
 
             {/* Technologies */}
             <section>
@@ -206,32 +270,56 @@ const PortfolioDetail = () => {
               </div>
             </section>
 
-            {/* Challenges & Solutions */}
-            <div className="grid md:grid-cols-2 gap-8">
+            {/* Outcomes */}
+            {project.outcomes && (
               <section>
-                <h2 className="text-2xl font-bold text-white mb-6">Challenges</h2>
+                <h2 className="text-3xl font-bold text-white mb-6">Outcome</h2>
                 <ul className="space-y-3">
-                  {project.challenges.map((challenge, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
-                      <p className="text-white/80">{challenge}</p>
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-bold text-white mb-6">Solutions</h2>
-                <ul className="space-y-3">
-                  {project.solutions.map((solution, index) => (
+                  {project.outcomes.map((outcome, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
-                      <p className="text-white/80">{solution}</p>
+                      <p className="text-white/80">{outcome}</p>
                     </li>
                   ))}
                 </ul>
+                {project.projectSummary && (
+                  <div className="mt-6 p-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-400/20 rounded-xl">
+                    <p className="text-blue-200 font-medium italic">
+                      {project.projectSummary}
+                    </p>
+                  </div>
+                )}
               </section>
-            </div>
+            )}
+
+            {/* Challenges & Solutions (for other projects) */}
+            {!project.workflowSteps && (
+              <div className="grid md:grid-cols-2 gap-8">
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-6">Challenges</h2>
+                  <ul className="space-y-3">
+                    {project.challenges.map((challenge, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-red-400 mt-2 flex-shrink-0"></div>
+                        <p className="text-white/80">{challenge}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+
+                <section>
+                  <h2 className="text-2xl font-bold text-white mb-6">Solutions</h2>
+                  <ul className="space-y-3">
+                    {project.solutions.map((solution, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+                        <p className="text-white/80">{solution}</p>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </div>
+            )}
 
             {/* Call to Action */}
             <section className="text-center bg-gradient-to-r from-purple-900/20 to-indigo-900/20 border border-purple-400/20 rounded-3xl p-8">
