@@ -1,9 +1,8 @@
-
 import { useEffect, useState, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import PortfolioShowcase from '../components/PortfolioShowcase';
+import Portfolio from '../components/Portfolio';
 import CaseStudy from '../components/CaseStudy';
 import Services from '../components/Services';
 import MyProcess from '../components/MyProcess';
@@ -85,7 +84,7 @@ const Index = () => {
         <Hero />
         <Services />
         <About />
-        <PortfolioShowcase />
+        <Portfolio />
         <CaseStudy />
         <WhyChooseMe />
         <Certifications />
