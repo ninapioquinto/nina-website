@@ -5,13 +5,13 @@ const PortfolioShowcase = () => {
   const portfolioItems = [
     {
       id: "1",
-      title: "Custom CRM System Implementation",
-      description: "Built a comprehensive CRM system for a service-based business that reduced manual work by 15 hours per week and streamlined client management processes.",
+      title: "AutoSupport AI – Intelligent Email Triage",
+      description: "Designed an intelligent email triage system using AI to automatically identify, prioritize, and route customer emails in real time, saving 90% of manual sorting time.",
       image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
-      category: "CRM Systems",
-      technologies: ["GoHighLevel", "Zapier", "Custom Workflows"],
-      results: "15 hours saved per week",
-      client: "Service Business"
+      category: "AI Automation",
+      technologies: ["n8n", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
+      results: "90% time saved on email sorting",
+      client: "Customer Support Team"
     },
     {
       id: "2",

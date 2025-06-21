@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Target, Users, Calendar, ExternalLink } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -14,17 +13,17 @@ const PortfolioDetail = () => {
   const portfolioItems = [
     {
       id: "1",
-      title: "Custom CRM System Implementation",
-      description: "Built a comprehensive CRM system for a service-based business that reduced manual work by 15 hours per week and streamlined client management processes.",
-      fullDescription: "This project involved creating a complete customer relationship management system from scratch, integrating multiple third-party tools and creating custom workflows. The solution included automated lead capture, client onboarding processes, and comprehensive reporting dashboards. The system was designed to scale with the business and included advanced features like automated follow-ups, task management, and integration with existing business tools.",
+      title: "AutoSupport AI – Intelligent Email Triage",
+      description: "Designed an intelligent email triage system using AI to automatically identify, prioritize, and route customer emails in real time, saving 90% of manual sorting time.",
+      fullDescription: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. I designed an intelligent email triage system that uses AI to automatically identify, prioritize, and route customer emails in real time. The system watches the support inbox, uses GPT-4o to classify emails, assigns priority levels, and automatically routes messages through Slack or AI-generated responses. This solution saved approximately 90% of time previously spent manually sorting support emails while maintaining high standards of customer care.",
       image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
-      category: "CRM Systems",
-      technologies: ["GoHighLevel", "Zapier", "Custom Workflows"],
-      results: "15 hours saved per week",
-      client: "Service Business",
-      duration: "3 months",
-      challenges: ["Integrating multiple disconnected systems", "Maintaining data integrity during migration", "Training staff on new processes"],
-      solutions: ["Custom API integrations", "Phased migration approach", "Comprehensive training program"]
+      category: "AI Automation",
+      technologies: ["n8n", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
+      results: "90% time saved on email sorting",
+      client: "Customer Support Team",
+      duration: "2 months",
+      challenges: ["Overloaded support inboxes", "Important requests getting buried", "Manual email classification taking too much time"],
+      solutions: ["AI-powered email classification using GPT-4o", "Automated priority tagging system", "Smart routing to Slack and AI response generation"]
     },
     {
       id: "2",
