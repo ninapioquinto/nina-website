@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
 import { ArrowUpRight, Target, Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface PortfolioCardProps {
   id: string;
@@ -15,6 +16,7 @@ interface PortfolioCardProps {
 }
 
 const PortfolioCard = ({ 
+  id,
   title, 
   description, 
   image, 
@@ -23,8 +25,17 @@ const PortfolioCard = ({
   results, 
   client 
 }: PortfolioCardProps) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/portfolio/${id}`);
+  };
+
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-purple-400/30">
+    <Card 
+      className="group hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-purple-400/30 cursor-pointer"
+      onClick={handleCardClick}
+    >
       {/* Project Image */}
       <div className="relative overflow-hidden">
         <img 
