@@ -50,7 +50,7 @@ const Navbar = () => {
   const links = [
     { href: 'about', label: 'About', type: 'section' },
     { href: 'my-process', label: 'My Process', type: 'section' },
-    { href: 'portfolio', label: 'Portfolio', type: 'section' },
+    { href: '/portfolio', label: 'Portfolio', type: 'page' },
     { href: 'case-study', label: 'Case Study', type: 'section' },
     { href: 'faq', label: 'FAQ', type: 'section' },
     { href: 'contact', label: 'Contact', type: 'section' }

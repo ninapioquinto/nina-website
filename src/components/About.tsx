@@ -1,7 +1,6 @@
 
 import { useRef, useEffect } from 'react';
 import AboutHeader from './about/AboutHeader';
-import AboutVideo from './about/AboutVideo';
 import AboutContent from './about/AboutContent';
 import ClientImpactSection from './about/ClientImpactSection';
 import CallToActionSection from './about/CallToActionSection';
@@ -54,8 +53,7 @@ const About = () => {
           <AboutHeader />
 
           {/* Main content grid */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <AboutVideo />
+          <div className="grid lg:grid-cols-1 gap-12 mb-16">
             <AboutContent />
           </div>
 
