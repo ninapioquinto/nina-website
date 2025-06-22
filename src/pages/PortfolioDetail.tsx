@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -145,17 +144,46 @@ const PortfolioDetail = () => {
     },
     {
       id: "4",
-      title: "GoHighLevel Integration Solution",
-      description: "Developed custom integrations with GoHighLevel for better client management, including automated lead scoring and nurture campaigns that increased qualified leads by 55%.",
-      fullDescription: "This project focused on maximizing the potential of GoHighLevel by creating sophisticated automation workflows, custom fields, and advanced segmentation strategies. The solution included predictive lead scoring algorithms, personalized nurture sequences, and comprehensive analytics dashboards that provide actionable insights for sales and marketing teams.",
+      title: "SalesFlow AI Agent – Instant Personalized Follow-Ups for Sales Calls",
+      description: "Built an AI-powered workflow that generates personalized follow-ups seconds after a prospect books a call, using real company insights and testimonials to deliver high-quality messages.",
+      fullDescription: "Sales teams were spending too much time writing follow-up emails after discovery calls. The messages often felt templated or lacked relevance. The client needed a way to instantly deliver personalized, high-quality messages using real company insights and testimonials.",
       image: "/lovable-uploads/f33f1f05-555a-4043-8f47-babb6b1a2f95.png",
-      category: "Integrations",
-      technologies: ["GoHighLevel", "API Integration", "Custom Fields"],
-      results: "55% increase in qualified leads",
-      client: "Marketing Agency",
+      category: "Sales Automation",
+      technologies: ["n8n", "GPT-4.1", "Google Sheets", "Tavily", "LangChain", "Agent Stack"],
+      results: "Instant personalized follow-ups in seconds",
+      client: "Sales Team",
       duration: "2.5 months",
-      challenges: ["Complex lead qualification criteria", "Integration with existing marketing tools", "Scaling personalization efforts"],
-      solutions: ["Machine learning-based scoring", "Unified API architecture", "Template-based personalization system"]
+      role: "Automation Systems Engineer",
+      challenge: "Sales teams were spending too much time writing follow-up emails after discovery calls. The messages often felt templated or lacked relevance. The client needed a way to instantly deliver personalized, high-quality messages using real company insights and testimonials.",
+      workflowSteps: [
+        {
+          step: "Trigger and Data Collection",
+          description: "The workflow starts when a call is booked. It pulls prospect details from Google Sheets, including name, company, and project info."
+        },
+        {
+          step: "Company Research with AI",
+          description: "Using Tavily, the system gathers a brief company overview, current tech stack, and recent updates based on the prospect's website and business type."
+        },
+        {
+          step: "Smart Product Recommendations",
+          description: "The business type and project goals are matched to relevant products using a structured product sheet, identifying up to three fitting solutions."
+        },
+        {
+          step: "Personalized Messaging with GPT-4",
+          description: "A sales writing AI crafts a short email, subject line, and SMS using the data and a testimonial from a similar company. Email: Friendly, relevant, and backed by proof. Subject: Casual and direct. SMS: Conversational and timely."
+        },
+        {
+          step: "CRM Sync and Team Visibility",
+          description: "All outputs are saved back into the team's Google Sheet for use in outreach or syncing with the CRM."
+        }
+      ],
+      outcomes: [
+        "Removed the need for manual follow-up writing",
+        "Improved message quality through personalized AI copy",
+        "Reduced response time to seconds after booking",
+        "Maintained a consistent, high-touch sales experience at scale"
+      ],
+      projectSummary: "This workflow shows how automation and AI can streamline outbound efforts without losing the human touch."
     },
     {
       id: "5",

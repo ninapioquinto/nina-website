@@ -1,4 +1,3 @@
-
 import PortfolioCard from './PortfolioCard';
 
 const PortfolioShowcase = () => {
@@ -35,13 +34,13 @@ const PortfolioShowcase = () => {
     },
     {
       id: "4",
-      title: "GoHighLevel Integration Solution",
-      description: "Developed custom integrations with GoHighLevel for better client management, including automated lead scoring and nurture campaigns that increased qualified leads by 55%.",
+      title: "SalesFlow AI Agent – Instant Personalized Follow-Ups for Sales Calls",
+      description: "Built an AI-powered workflow that generates personalized follow-ups seconds after a prospect books a call, using real company insights and testimonials to deliver high-quality messages.",
       image: "/lovable-uploads/f33f1f05-555a-4043-8f47-babb6b1a2f95.png",
-      category: "Integrations",
-      technologies: ["GoHighLevel", "API Integration", "Custom Fields"],
-      results: "55% increase in qualified leads",
-      client: "Marketing Agency"
+      category: "Sales Automation",
+      technologies: ["n8n", "GPT-4.1", "Google Sheets", "Tavily", "LangChain", "Agent Stack"],
+      results: "Instant personalized follow-ups in seconds",
+      client: "Sales Team"
     },
     {
       id: "5",
