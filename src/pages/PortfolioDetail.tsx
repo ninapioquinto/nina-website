@@ -187,17 +187,46 @@ const PortfolioDetail = () => {
     },
     {
       id: "5",
-      title: "Data Migration & System Unification",
-      description: "Successfully migrated a business from multiple spreadsheets and disconnected tools to a unified system without losing any data, creating a single source of truth.",
-      fullDescription: "A critical data migration project that consolidated information from over 15 different systems and spreadsheets into a centralized platform. The project required careful data mapping, extensive validation processes, and the creation of new data governance policies to ensure ongoing data quality and consistency across the organization.",
+      title: "AI Email Concierge – Intelligent Inbox Management for Busy Teams",
+      description: "Designed a fully automated email management system that intelligently classifies incoming messages, drafts context-aware responses, and notifies the right people without delay.",
+      fullDescription: "Managing a shared inbox across multiple departments often leads to chaos. Important emails from customers, sales leads, or finance teams can easily be buried under newsletters, promotional offers, and internal back-and-forth. The client needed an automated way to sort, label, and respond to emails quickly while keeping key messages visible to the right teams.",
       image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png",
-      category: "Data Management",
-      technologies: ["Airtable", "Data Migration Tools", "API Connectors"],
-      results: "100% data integrity maintained",
-      client: "E-commerce Business",
-      duration: "3.5 months",
-      challenges: ["Inconsistent data formats", "Legacy system limitations", "Minimizing business disruption"],
-      solutions: ["Advanced data cleaning algorithms", "Parallel system operation", "Staged migration approach"]
+      category: "Email Automation",
+      technologies: ["n8n", "OpenAI GPT-4o", "Gmail", "Slack"],
+      results: "Reduced manual inbox management time significantly",
+      client: "Busy Teams",
+      duration: "2 months",
+      role: "Automation Systems Engineer",
+      challenge: "Managing a shared inbox across multiple departments often leads to chaos. Important emails from customers, sales leads, or finance teams can easily be buried under newsletters, promotional offers, and internal back-and-forth. The client needed an automated way to sort, label, and respond to emails quickly while keeping key messages visible to the right teams.",
+      workflowSteps: [
+        {
+          step: "Real-Time Email Trigger",
+          description: "The workflow checks for new unread Gmail messages every minute and starts processing them immediately."
+        },
+        {
+          step: "AI Classification",
+          description: "Using a GPT-powered classifier, each email is sorted into one of five categories: Internal, Customer Support, Promotions, Admin and Finance, Sales Opportunities."
+        },
+        {
+          step: "Smart Response Handling",
+          description: "Based on category, the system routes each email to a dedicated AI agent that performs tasks such as writing internal team replies, responding to support questions or escalating to human agents, summarizing promotions and evaluating relevance, extracting and summarizing finance-related data, drafting replies for sales leads and alerting the sales team via Slack."
+        },
+        {
+          step: "Automated Labeling and Drafting",
+          description: "Each message is labeled in Gmail and, if a reply is needed, a draft is created automatically with a structured, professional tone."
+        },
+        {
+          step: "Slack Notifications",
+          description: "Sales inquiries and high-value opportunities are sent to Slack to ensure fast internal response and follow-up."
+        }
+      ],
+      outcomes: [
+        "Reduced time spent manually managing the inbox",
+        "Ensured high-priority emails were surfaced to the right team members",
+        "Delivered consistent, professional replies using AI",
+        "Allowed internal teams to stay focused while inbox operations ran in the background"
+      ],
+      projectSummary: "This automation is a strong example of how AI can support operational efficiency by handling repetitive communication tasks with accuracy and intelligence."
     },
     {
       id: "6",

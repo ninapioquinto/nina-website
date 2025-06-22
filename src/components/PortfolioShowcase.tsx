@@ -44,13 +44,13 @@ const PortfolioShowcase = () => {
     },
     {
       id: "5",
-      title: "Data Migration & System Unification",
-      description: "Successfully migrated a business from multiple spreadsheets and disconnected tools to a unified system without losing any data, creating a single source of truth.",
+      title: "AI Email Concierge – Intelligent Inbox Management for Busy Teams",
+      description: "Designed a fully automated email management system that intelligently classifies incoming messages, drafts context-aware responses, and notifies the right people without delay.",
       image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png",
-      category: "Data Management",
-      technologies: ["Airtable", "Data Migration Tools", "API Connectors"],
-      results: "100% data integrity maintained",
-      client: "E-commerce Business"
+      category: "Email Automation",
+      technologies: ["n8n", "OpenAI GPT-4o", "Gmail", "Slack"],
+      results: "Reduced manual inbox management time significantly",
+      client: "Busy Teams"
     },
     {
       id: "6",
