@@ -54,13 +54,13 @@ const PortfolioShowcase = () => {
     },
     {
       id: "6",
-      title: "Automated Sales Pipeline",
-      description: "Created an intelligent sales pipeline with automated follow-ups and lead qualification that resulted in 20 hours saved weekly and improved conversion rates.",
+      title: "LeadGen AI (Social Edition) – Intelligent Social Content Extraction and Analysis",
+      description: "Developed a content automation system that processes social media URLs, gathers public post and profile information, enriches it with AI-generated transcripts, and logs everything in Google Sheets.",
       image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png",
-      category: "Sales Automation",
-      technologies: ["n8n", "CRM Integration", "Email Automation"],
-      results: "20 hours saved weekly",
-      client: "SaaS Startup"
+      category: "Content Intelligence",
+      technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
+      results: "Reduced turnaround time from hours to under a minute",
+      client: "Marketing Teams"
     }
   ];
 

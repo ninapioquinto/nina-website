@@ -230,17 +230,47 @@ const PortfolioDetail = () => {
     },
     {
       id: "6",
-      title: "Automated Sales Pipeline",
-      description: "Created an intelligent sales pipeline with automated follow-ups and lead qualification that resulted in 20 hours saved weekly and improved conversion rates.",
-      fullDescription: "This comprehensive sales automation solution transformed the entire sales process from lead capture to deal closure. The system includes intelligent lead routing, automated follow-up sequences, dynamic content personalization, and advanced analytics that help sales teams focus on high-value activities while ensuring no leads fall through the cracks.",
+      title: "LeadGen AI (Social Edition) – Intelligent Social Content Extraction and Analysis",
+      description: "Developed a content automation system that processes social media URLs, gathers public post and profile information, enriches it with AI-generated transcripts, and logs everything in Google Sheets.",
+      fullDescription: "Marketing and research teams were spending too much time manually collecting content and engagement data from LinkedIn, Instagram, YouTube, and X. Visiting each link, copying data, and updating spreadsheets slowed down workflows and limited how quickly teams could act on insights. The client needed a fast and reliable way to turn social media links into structured data automatically.",
       image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png",
-      category: "Sales Automation",
-      technologies: ["n8n", "CRM Integration", "Email Automation"],
-      results: "20 hours saved weekly",
-      client: "SaaS Startup",
+      category: "Content Intelligence",
+      technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
+      results: "Reduced turnaround time from hours to under a minute",
+      client: "Marketing Teams",
       duration: "2 months",
-      challenges: ["Complex sales process requirements", "Multiple stakeholder involvement", "Integration with existing tech stack"],
-      solutions: ["Modular automation design", "Stakeholder workflow mapping", "API-first integration approach"]
+      role: "AI Automation Developer",
+      challenge: "Marketing and research teams were spending too much time manually collecting content and engagement data from LinkedIn, Instagram, YouTube, and X. Visiting each link, copying data, and updating spreadsheets slowed down workflows and limited how quickly teams could act on insights. The client needed a fast and reliable way to turn social media links into structured data automatically.",
+      workflowSteps: [
+        {
+          step: "Chat-Based Trigger",
+          description: "The workflow begins when a user submits a social media link through chat."
+        },
+        {
+          step: "Platform Detection with GPT-4o",
+          description: "The system identifies whether the link is from LinkedIn, Instagram, YouTube, or X and sends it to the matching workflow."
+        },
+        {
+          step: "Content Collection via Apify",
+          description: "Each platform uses a custom Apify actor to gather public post-level data: LinkedIn (Author details, post content, reactions), Instagram (Reels metadata, captions, hashtags, view counts), YouTube (Video titles, channels, stats, thumbnails), X (Tweet text, author profiles, follower counts, engagement)."
+        },
+        {
+          step: "AI Transcription and Enrichment",
+          description: "If the content is a video or audio clip, it is processed using GPT-4o to generate a readable transcript that is saved alongside other metadata."
+        },
+        {
+          step: "Real-Time Logging to Google Sheets",
+          description: "Data is sent to a shared Google Sheet with platform-specific tabs. The system checks for existing entries and updates them, ensuring clean and accurate records."
+        }
+      ],
+      outcomes: [
+        "Eliminated manual data collection and formatting",
+        "Centralized content across four major social platforms in one workspace",
+        "Enabled teams to access post-level data and video transcripts with a single link",
+        "Reduced turnaround time from hours to under a minute",
+        "Supported influencer research, brand monitoring, and competitive analysis"
+      ],
+      projectSummary: "This build highlights how automation and AI can turn social content into structured intelligence without manual effort."
     }
   ];
 
