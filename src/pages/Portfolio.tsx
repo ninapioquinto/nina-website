@@ -1,66 +1,67 @@
+
 import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
   const portfolioItems = [
     {
       id: "1",
-      title: "Custom CRM System Implementation",
-      description: "Built a comprehensive CRM system for a service-based business that reduced manual work by 15 hours per week and streamlined client management processes.",
+      title: "AutoSupport AI – Intelligent Email Triage",
+      description: "Designed an intelligent email triage system using AI to automatically identify, prioritize, and route customer emails in real time, saving 90% of manual sorting time.",
       image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
-      category: "CRM Systems",
-      technologies: ["GoHighLevel", "Zapier", "Custom Workflows"],
-      results: "15 hours saved per week",
-      client: "Service Business"
+      category: "AI Automation",
+      technologies: ["Make (Integromat)", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
+      results: "90% time saved on email sorting",
+      client: "Customer Support Team"
     },
     {
       id: "2",
-      title: "AI Automation Workflow",
-      description: "Automated a complete client onboarding process using AI tools and workflow automation, eliminating manual data entry and reducing onboarding time from 2 weeks to 2 days.",
+      title: "GHL Voice AI Agent – AI-Powered Voice Booking and Contact Sync",
+      description: "Created a fully automated voice-to-booking workflow that connects incoming calls to CRM actions using AI, enabling 24/7 voice-to-calendar bookings without manual appointment setters.",
       image: "/lovable-uploads/4b10e90b-41e5-44e0-8e3b-68b2fa8cd602.png",
-      category: "Automation",
-      technologies: ["Make", "OpenAI", "Airtable"],
-      results: "2 weeks to 2 days onboarding",
-      client: "Growing Consultancy"
+      category: "Voice Automation",
+      technologies: ["Make (Integromat)", "OpenAI GPT-4o", "GoHighLevel", "Retell AI"],
+      results: "24/7 automated voice bookings",
+      client: "GoHighLevel Users"
     },
     {
       id: "3",
-      title: "Business Process Optimization",
-      description: "Streamlined operations for a growing consulting firm by implementing automated workflows and data management systems that improved efficiency and client satisfaction.",
+      title: "Social Media AutoPilot – AI-Powered Content Distribution Engine",
+      description: "Built a fully automated system that transforms any article link into a complete multi-platform content campaign, eliminating manual repurposing and enabling consistent weekly publishing.",
       image: "/lovable-uploads/58da3295-08c3-4d16-9214-f7d1bd815361.png",
-      category: "Process Optimization",
-      technologies: ["Zoho", "Custom APIs", "Workflow Design"],
-      results: "40% efficiency increase",
-      client: "Consulting Firm"
+      category: "Content Automation",
+      technologies: ["Make.com", "OpenAI GPT-4o", "Perplexity AI", "DALL·E 3", "Google Sheets"],
+      results: "Consistent weekly publishing across 4 platforms",
+      client: "Content Creator"
     },
     {
       id: "4",
-      title: "GoHighLevel Integration Solution",
-      description: "Developed custom integrations with GoHighLevel for better client management, including automated lead scoring and nurture campaigns that increased qualified leads by 55%.",
+      title: "SalesFlow AI Agent – Instant Personalized Follow-Ups for Sales Calls",
+      description: "Built an AI-powered workflow that generates personalized follow-ups seconds after a prospect books a call, using real company insights and testimonials to deliver high-quality messages.",
       image: "/lovable-uploads/f33f1f05-555a-4043-8f47-babb6b1a2f95.png",
-      category: "Integrations",
-      technologies: ["GoHighLevel", "API Integration", "Custom Fields"],
-      results: "55% increase in qualified leads",
-      client: "Marketing Agency"
+      category: "Sales Automation",
+      technologies: ["n8n", "GPT-4.1", "Google Sheets", "Tavily", "LangChain", "Agent Stack"],
+      results: "Instant personalized follow-ups in seconds",
+      client: "Sales Team"
     },
     {
       id: "5",
-      title: "Data Migration & System Unification",
-      description: "Successfully migrated a business from multiple spreadsheets and disconnected tools to a unified system without losing any data, creating a single source of truth.",
+      title: "AI Email Concierge – Intelligent Inbox Management for Busy Teams",
+      description: "Designed a fully automated email management system that intelligently classifies incoming messages, drafts context-aware responses, and notifies the right people without delay.",
       image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png",
-      category: "Data Management",
-      technologies: ["Airtable", "Data Migration Tools", "API Connectors"],
-      results: "100% data integrity maintained",
-      client: "E-commerce Business"
+      category: "Email Automation",
+      technologies: ["n8n", "OpenAI GPT-4o", "Gmail", "Slack"],
+      results: "Reduced manual inbox management time significantly",
+      client: "Busy Teams"
     },
     {
       id: "6",
-      title: "Automated Sales Pipeline",
-      description: "Created an intelligent sales pipeline with automated follow-ups and lead qualification that resulted in 20 hours saved weekly and improved conversion rates.",
+      title: "LeadGen AI (Social Edition) – Intelligent Social Content Extraction and Analysis",
+      description: "Developed a content automation system that processes social media URLs, gathers public post and profile information, enriches it with AI-generated transcripts, and logs everything in Google Sheets.",
       image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png",
-      category: "Sales Automation",
-      technologies: ["n8n", "CRM Integration", "Email Automation"],
-      results: "20 hours saved weekly",
-      client: "SaaS Startup"
+      category: "Content Intelligence",
+      technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
+      results: "Reduced turnaround time from hours to under a minute",
+      client: "Marketing Teams"
     }
   ];
 
