@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -101,17 +102,46 @@ const PortfolioDetail = () => {
     },
     {
       id: "3",
-      title: "Business Process Optimization",
-      description: "Streamlined operations for a growing consulting firm by implementing automated workflows and data management systems that improved efficiency and client satisfaction.",
-      fullDescription: "A comprehensive business process overhaul that analyzed existing workflows, identified bottlenecks, and implemented automated solutions across multiple departments. The project included redesigning client communication processes, automating project management workflows, and creating unified reporting systems that provide real-time insights into business performance.",
+      title: "Social Media AutoPilot – AI-Powered Content Distribution Engine",
+      description: "Built a fully automated system that transforms any article link into a complete multi-platform content campaign, eliminating manual repurposing and enabling consistent weekly publishing.",
+      fullDescription: "Publishing consistently across multiple platforms was draining time and energy. My client wanted to turn long-form articles into engaging social content, but the manual effort required for writing summaries, designing visuals, and customizing posts for each platform made it unsustainable.",
       image: "/lovable-uploads/58da3295-08c3-4d16-9214-f7d1bd815361.png",
-      category: "Process Optimization",
-      technologies: ["Zoho", "Custom APIs", "Workflow Design"],
-      results: "40% efficiency increase",
-      client: "Consulting Firm",
-      duration: "4 months",
-      challenges: ["Resistance to change from staff", "Complex interdepartmental dependencies", "Maintaining service quality during transition"],
-      solutions: ["Gradual implementation approach", "Cross-departmental workshops", "Continuous monitoring and adjustment"]
+      category: "Content Automation",
+      technologies: ["Make.com", "OpenAI GPT-4o", "Perplexity AI", "DALL·E 3", "Google Sheets"],
+      results: "Consistent weekly publishing across 4 platforms",
+      client: "Content Creator",
+      duration: "2.5 months",
+      role: "Automation Systems Engineer",
+      challenge: "Publishing consistently across multiple platforms was draining time and energy. My client wanted to turn long-form articles into engaging social content, but the manual effort required for writing summaries, designing visuals, and customizing posts for each platform made it unsustainable.",
+      workflowSteps: [
+        {
+          step: "Trigger and Intake",
+          description: "The workflow monitors a Google Sheet. When a new link is added, the automation starts instantly."
+        },
+        {
+          step: "Summarization with Perplexity AI",
+          description: "The article is summarized into a clear, concise format used as the base for all content."
+        },
+        {
+          step: "Visual Creation with DALL·E 3",
+          description: "A custom image is generated from the summary. It is designed to match the article's tone and style, without using text or overlays."
+        },
+        {
+          step: "Content Writing with GPT-4o",
+          description: "Each platform receives tailored content: Medium (Full article with a strong, clickable title), LinkedIn (Professional post with context and a call to action), Instagram (Captivating caption with emojis and hashtags), Facebook (Relatable short-form post linking back to the article)."
+        },
+        {
+          step: "Automated Publishing",
+          description: "The posts and images are instantly published across all connected platforms using Make.com."
+        }
+      ],
+      outcomes: [
+        "Eliminated the need for manual repurposing",
+        "Enabled consistent weekly publishing across four platforms",
+        "Delivered custom-tailored content with minimal team input",
+        "Created a scalable system that turns articles into branded campaigns"
+      ],
+      projectSummary: "This project shows how AI automation can streamline content workflows while keeping quality and engagement high."
     },
     {
       id: "4",

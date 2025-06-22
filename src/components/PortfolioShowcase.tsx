@@ -1,3 +1,4 @@
+
 import PortfolioCard from './PortfolioCard';
 
 const PortfolioShowcase = () => {
@@ -24,13 +25,13 @@ const PortfolioShowcase = () => {
     },
     {
       id: "3",
-      title: "Business Process Optimization",
-      description: "Streamlined operations for a growing consulting firm by implementing automated workflows and data management systems that improved efficiency and client satisfaction.",
+      title: "Social Media AutoPilot – AI-Powered Content Distribution Engine",
+      description: "Built a fully automated system that transforms any article link into a complete multi-platform content campaign, eliminating manual repurposing and enabling consistent weekly publishing.",
       image: "/lovable-uploads/58da3295-08c3-4d16-9214-f7d1bd815361.png",
-      category: "Process Optimization",
-      technologies: ["Zoho", "Custom APIs", "Workflow Design"],
-      results: "40% efficiency increase",
-      client: "Consulting Firm"
+      category: "Content Automation",
+      technologies: ["Make.com", "OpenAI GPT-4o", "Perplexity AI", "DALL·E 3", "Google Sheets"],
+      results: "Consistent weekly publishing across 4 platforms",
+      client: "Content Creator"
     },
     {
       id: "4",
