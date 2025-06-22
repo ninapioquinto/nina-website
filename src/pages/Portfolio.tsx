@@ -1,4 +1,3 @@
-
 import PortfolioCard from '../components/PortfolioCard';
 
 const Portfolio = () => {
@@ -62,6 +61,16 @@ const Portfolio = () => {
       technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
       results: "Reduced turnaround time from hours to under a minute",
       client: "Marketing Teams"
+    },
+    {
+      id: "7",
+      title: "Tool Experience Gallery",
+      description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
+      image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+      category: "Workflow Automation",
+      technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
+      results: "Faster internal processes and reduced manual delays",
+      client: "Various Clients"
     }
   ];
 
