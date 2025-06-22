@@ -24,7 +24,7 @@ const PortfolioDetail = () => {
       fullDescription: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. The client needed a solution to filter, classify, and prioritize incoming emails with precision and speed. I designed an intelligent email triage system that uses AI to automatically identify, prioritize, and route customer emails in real time.",
       image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
       category: "AI Automation",
-      technologies: ["n8n", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
+      technologies: ["Make (Integromat)", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
       results: "90% time saved on email sorting",
       client: "Customer Support Team",
       duration: "2 months",
@@ -365,14 +365,6 @@ const PortfolioDetail = () => {
               <OutcomesSection 
                 outcomes={project.outcomes}
                 projectSummary={project.projectSummary}
-              />
-            )}
-
-            {/* Challenges & Solutions (for other projects) */}
-            {!project.workflowSteps && project.challenges && project.solutions && (
-              <ChallengesSolutions 
-                challenges={project.challenges}
-                solutions={project.solutions}
               />
             )}
 
