@@ -83,14 +83,14 @@ const PortfolioCard = ({
         {/* Results & Client */}
         <div className="grid grid-cols-1 gap-3">
           <div className="flex items-center gap-2 text-sm">
-            <Target className="w-4 h-4 text-green-400" />
+            <Target className="w-4 h-4 text-violet-400" />
             <span className="text-white/80">Result: </span>
-            <span className="text-green-400 font-medium">{results}</span>
+            <span className="text-violet-400 font-medium">{results}</span>
           </div>
           <div className="flex items-center gap-2 text-sm">
-            <Users className="w-4 h-4 text-blue-400" />
+            <Users className="w-4 h-4 text-purple-400" />
             <span className="text-white/80">Client: </span>
-            <span className="text-blue-400 font-medium">{client}</span>
+            <span className="text-purple-400 font-medium">{client}</span>
           </div>
         </div>
       </CardContent>
