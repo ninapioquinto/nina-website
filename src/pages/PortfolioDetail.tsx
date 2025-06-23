@@ -65,9 +65,7 @@ const PortfolioDetail = () => {
             {/* Solution Section */}
             {project.id === "8" && <section>
                 <h2 className="text-3xl font-bold text-white mb-6">The Solution</h2>
-                <p className="text-white/80 text-lg leading-relaxed">
-                  I built a comprehensive CRM solution that combines three powerful technologies: Lovable.dev for creating an intuitive client-facing dashboard, Airtable for robust data management with dynamic views and relationships, and n8n for seamless backend automation. This tech stack allows the real estate team to manage their entire sales pipeline from one centralized platform while automating repetitive tasks like follow-ups, lead scoring, and performance tracking.
-                </p>
+                <p className="text-white/80 text-lg leading-relaxed">I built a comprehensive CRM solution that integrates three core technologies: Lovable.dev for an intuitive client-facing dashboard, Airtable for flexible data management with dynamic views and relationships, and n8n for seamless backend automation. This tech stack enables the real estate team to manage their entire sales pipeline from a centralized platform while automating repetitive tasks like follow-ups, lead scoring, and performance tracking.</p>
               </section>}
 
             {/* Solution/Workflow Steps */}
