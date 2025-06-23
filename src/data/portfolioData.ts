@@ -288,55 +288,6 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "7",
-    title: "Tool Experience Gallery",
-    description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
-    fullDescription: "This section showcases a collection of automation workflows I've designed and delivered for clients. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes across CRM, task management, lead handling, and data coordination.",
-    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
-    category: "Workflow Automation",
-    technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
-    results: "Faster internal processes and reduced manual delays",
-    client: "Various Clients",
-    duration: "Ongoing",
-    role: "Automation Systems Engineer",
-    challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
-    workflowSteps: [
-      {
-        step: "CRM Buildouts and Automation Pipelines",
-        description: "Designed comprehensive CRM systems with automated lead routing, scoring, and nurture sequences that seamlessly integrate with existing business processes."
-      },
-      {
-        step: "Multi-Step Lead Intake and Segmentation",
-        description: "Created intelligent lead capture workflows that automatically segment prospects based on their responses, behavior, and demographic data for targeted follow-up campaigns."
-      },
-      {
-        step: "Auto-Task Creation and Internal Coordination",
-        description: "Built systems that automatically generate tasks, assign responsibilities, and coordinate team activities based on triggers from various platforms and customer interactions."
-      },
-      {
-        step: "Cross-Platform Data Syncing",
-        description: "Implemented seamless data synchronization between different tools and platforms, ensuring consistent information across all systems without manual data entry."
-      },
-      {
-        step: "Status Updates and Workflow Triggers",
-        description: "Developed automated status reporting and workflow triggers that keep teams informed and processes moving forward without constant manual oversight."
-      },
-      {
-        step: "Notification Systems Across Teams",
-        description: "Created intelligent notification systems that alert the right people at the right time, reducing response delays and improving team coordination."
-      }
-    ],
-    outcomes: [
-      "Faster internal processes with reduced bottlenecks",
-      "More consistent lead handling and follow-up",
-      "Centralized and connected systems eliminating data silos",
-      "Reduced manual steps and operational delays",
-      "Better visibility across operations and team activities",
-      "Improved client satisfaction through faster response times"
-    ],
-    projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
-  },
-  {
-    id: "8",
     title: "Coaching Client Journey – Streamlined Lead-to-Client Pipeline",
     description: "Built a comprehensive end-to-end pipeline system in GoHighLevel that transforms scattered lead management into a streamlined, automated client journey from first contact to program completion.",
     fullDescription: "This Coaching Client Journey pipeline was built inside GoHighLevel to systematize every step, from first contact to client transformation. Each stage in the pipeline represents a specific moment in the buyer journey, backed by workflows, conditional logic, and lightweight team intervention only where necessary. Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
@@ -467,7 +418,7 @@ export const portfolioItems: PortfolioItem[] = [
     projectSummary: "This Coaching Client Journey pipeline transformed a scattered, high-touch sales process into a streamlined experience that still feels personal. The team is only looped in where human decision-making matters: discovery call outcomes, onboarding, and client success points. Follow-up is now fully automated, proposals are tracked with precision, and onboarding is a frictionless handoff. The coach has a real-time view of every lead and client stage, and the system is ready to scale without creating overwhelm."
   },
   {
-    id: "9",
+    id: "8",
     title: "Florida Realty CRM: Custom CRM System for Real Estate Deal Flow",
     description: "Developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking.",
     fullDescription: "I developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking. Key workflows like follow-ups, appointment scheduling, and document handling are now automated. Agents work from one centralized platform without the complexity of traditional CRM tools.",
@@ -547,6 +498,16 @@ export const portfolioItems: PortfolioItem[] = [
           bullets: [
             "Real-time commission tracking per agent and deal"
           ]
+        },
+        {
+          title: "Client-Facing Dashboard (Lovable)",
+          bullets: [
+            "Role-based access (agents see only their leads)",
+            "Visual summaries: lead stages, listing status, deal pipeline",
+            "Leaderboard by deals closed",
+            "Quick actions: Add new lead, property, or transaction",
+            "Forecast and overdue task alerts"
+          ]
         }
       ]
     },
@@ -560,5 +521,54 @@ export const portfolioItems: PortfolioItem[] = [
       "Agents save several hours each week by working in one streamlined system"
     ],
     projectSummary: "The CRM significantly improved efficiency across the business. Automated follow-ups reduced lead response time, while synced calendars prevented scheduling conflicts. Centralized data replaced fragmented tools, making it easier to manage deals and track agent performance. Overdue tasks surfaced automatically, keeping lead engagement consistent. Agents now save several hours each week by working in one streamlined system instead of juggling multiple apps and updates."
+  },
+  {
+    id: "9",
+    title: "Tool Experience Gallery",
+    description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
+    fullDescription: "This section showcases a collection of automation workflows I've designed and delivered for clients. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes across CRM, task management, lead handling, and data coordination.",
+    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    category: "Workflow Automation",
+    technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
+    results: "Faster internal processes and reduced manual delays",
+    client: "Various Clients",
+    duration: "Ongoing",
+    role: "Automation Systems Engineer",
+    challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
+    workflowSteps: [
+      {
+        step: "CRM Buildouts and Automation Pipelines",
+        description: "Designed comprehensive CRM systems with automated lead routing, scoring, and nurture sequences that seamlessly integrate with existing business processes."
+      },
+      {
+        step: "Multi-Step Lead Intake and Segmentation",
+        description: "Created intelligent lead capture workflows that automatically segment prospects based on their responses, behavior, and demographic data for targeted follow-up campaigns."
+      },
+      {
+        step: "Auto-Task Creation and Internal Coordination",
+        description: "Built systems that automatically generate tasks, assign responsibilities, and coordinate team activities based on triggers from various platforms and customer interactions."
+      },
+      {
+        step: "Cross-Platform Data Syncing",
+        description: "Implemented seamless data synchronization between different tools and platforms, ensuring consistent information across all systems without manual data entry."
+      },
+      {
+        step: "Status Updates and Workflow Triggers",
+        description: "Developed automated status reporting and workflow triggers that keep teams informed and processes moving forward without constant manual oversight."
+      },
+      {
+        step: "Notification Systems Across Teams",
+        description: "Created intelligent notification systems that alert the right people at the right time, reducing response delays and improving team coordination."
+      }
+    ],
+    outcomes: [
+      "Faster internal processes with reduced bottlenecks",
+      "More consistent lead handling and follow-up",
+      "Centralized and connected systems eliminating data silos",
+      "Reduced manual steps and operational delays",
+      "Better visibility across operations and team activities",
+      "Improved client satisfaction through faster response times"
+    ],
+    projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
   }
 ];
