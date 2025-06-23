@@ -89,7 +89,10 @@ const PortfolioDetail = () => {
 
             {/* Solution/Workflow Steps */}
             {project.workflowSteps ? (
-              <WorkflowSteps steps={project.workflowSteps} />
+              <WorkflowSteps 
+                steps={project.workflowSteps} 
+                supportingAutomations={project.supportingAutomations}
+              />
             ) : (
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6">Project Overview</h2>

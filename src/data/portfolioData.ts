@@ -1,6 +1,7 @@
 export interface WorkflowStep {
   step: string;
   description: string;
+  bullets?: string[];
 }
 
 export interface PortfolioItem {
@@ -19,6 +20,13 @@ export interface PortfolioItem {
   workflowSteps?: WorkflowStep[];
   outcomes?: string[];
   projectSummary?: string;
+  supportingAutomations?: {
+    title: string;
+    sections: {
+      title: string;
+      bullets: string[];
+    }[];
+  };
 }
 
 export const portfolioItems: PortfolioItem[] = [
@@ -342,45 +350,108 @@ export const portfolioItems: PortfolioItem[] = [
     workflowSteps: [
       {
         step: "New Lead Captured",
-        description: "Trigger: Opt-in form, funnel, DM, or lead magnet. Action: Tag based on lead source (Instagram, Facebook ad, referral, podcast). Automation: Add to nurture sequence and notify the coach's team."
+        description: "Trigger: Opt-in form, funnel, DM, or lead magnet\nAction: Tag based on lead source (Instagram, Facebook ad, referral, podcast)\nAutomation: Add to nurture sequence and notify the coach's team"
       },
       {
         step: "Qualified Lead",
-        description: "Trigger: Application submitted. Action: Assign lead score, tag as qualified, and capture estimated deal value. Automation: Send email and SMS with booking link for a strategy call."
+        description: "Trigger: Application submitted\nAction: Assign lead score, tag as qualified, and capture estimated deal value\nAutomation: Send email and SMS with booking link for a strategy call"
       },
       {
         step: "Call Booked",
-        description: "Trigger: Discovery call scheduled via GoHighLevel calendar. Action: Trigger automated email and SMS reminders. Automation: Move lead to this stage and apply booking tag in the CRM."
+        description: "Trigger: Discovery call scheduled via GoHighLevel calendar\nAction: Trigger automated email and SMS reminders\nAutomation: Move lead to this stage and apply booking tag in the CRM"
       },
       {
         step: "Discovery Call Completed",
-        description: "Trigger: Manual move after the call. Action: Log outcome (Fit, Not Fit, or Needs Nurture) in internal form. Automation: If marked Fit → trigger proposal sequence. If Needs Nurture → add to warm re-engagement workflow. If Not Fit → tag and remove from pipeline. Notify the coach's team when action is needed."
+        description: "Trigger: Manual move after the call\nAction: Log outcome (Fit, Not Fit, or Needs Nurture) in internal form\nAutomation:",
+        bullets: [
+          "If marked Fit → trigger proposal sequence",
+          "If Needs Nurture → add to warm re-engagement workflow",
+          "If Not Fit → tag and remove from pipeline",
+          "Notify the coach's team when action is needed"
+        ]
       },
       {
         step: "Offer Sent or Proposal Out",
-        description: "Trigger: Proposal, program link, or payment option sent. Action: Send customized offer page (GoHighLevel form, video sales page, or Stripe checkout link). Automation: Move lead to this stage automatically. Trigger follow-up if payment isn't completed within 48–72 hours."
+        description: "Trigger: Proposal, program link, or payment option sent\nAction: Send customized offer page (GoHighLevel form, video sales page, or Stripe checkout link)\nAutomation:",
+        bullets: [
+          "Move lead to this stage automatically",
+          "Trigger follow-up if payment isn't completed within 48–72 hours"
+        ]
       },
       {
         step: "Enrolled – Payment Received",
-        description: "Trigger: Payment completed via webhook or order form. Automation: Send welcome email sequence. Trigger onboarding form. Grant portal or membership access. Create internal onboarding task and notify the team."
+        description: "Trigger: Payment completed via webhook or order form\nAutomation:",
+        bullets: [
+          "Send welcome email sequence",
+          "Trigger onboarding form",
+          "Grant portal or membership access",
+          "Create internal onboarding task and notify the team"
+        ]
       },
       {
         step: "Onboarding in Progress",
-        description: "Trigger: Onboarding form submitted or call booked. Action: Tag as 'Active Client'. Automation: Schedule kickoff call via calendar. Optional: add to Slack for communication."
+        description: "Trigger: Onboarding form submitted or call booked\nAction: Tag as \"Active Client\"\nAutomation:",
+        bullets: [
+          "Schedule kickoff call via calendar",
+          "Optional: add to Slack for communication"
+        ]
       },
       {
         step: "Active Client – In Program",
-        description: "Trigger: Kickoff call completed. Action: Log session schedule, assign accountability coach if applicable. Automation: Trigger milestone check-in workflows (Week 3, Week 6, Week 8)."
+        description: "Trigger: Kickoff call completed\nAction: Log session schedule, assign accountability coach if applicable\nAutomation: Trigger milestone check-in workflows (Week 3, Week 6, Week 8)"
       },
       {
         step: "Testimonial or Case Study Stage",
-        description: "Trigger: Client hits a milestone or shares a win. Action: Prompt for testimonial or book a feedback call. Automation: Submit form and route responses to Airtable for storage."
+        description: "Trigger: Client hits a milestone or shares a win\nAction: Prompt for testimonial or book a feedback call\nAutomation: Submit form and route responses to Airtable for storage"
       },
       {
         step: "Upsell, Renewal, or Referral",
-        description: "Trigger: Program nearing completion or client expresses interest. Action: Offer long-term coaching, invite to group program, or request referrals. Automation: Apply re-engagement or referral reward tags."
+        description: "Trigger: Program nearing completion or client expresses interest\nAction: Offer long-term coaching, invite to group program, or request referrals\nAutomation: Apply re-engagement or referral reward tags"
       }
     ],
+    supportingAutomations: {
+      title: "Supporting Automations Included",
+      sections: [
+        {
+          title: "Funnel & Calendar Integration",
+          bullets: [
+            "Funnel opt-ins push leads into Stage One with correct source tagging",
+            "Calendar bookings move contacts to Stage Three and update CRM tags"
+          ]
+        },
+        {
+          title: "Payment & Proposal Tracking",
+          bullets: [
+            "GoHighLevel and Stripe webhooks automatically transition leads to Stage Six upon payment",
+            "Smart reminder flow runs at Stage Five if payment hasn't been completed in time"
+          ]
+        },
+        {
+          title: "Lead Nurture & Follow-Up",
+          bullets: [
+            "Post-opt-in nurture workflows (email + SMS) with conditional logic",
+            "No-show reminders and automated rebooking sequences",
+            "Smart segmentation with tags like \"Hot Lead,\" \"Needs Nurture,\" and \"Inactive\""
+          ]
+        },
+        {
+          title: "Seamless Onboarding Experience",
+          bullets: [
+            "Onboarding workflow triggers when form or payment is received",
+            "Client tagging, portal access, Slack setup, and kickoff scheduling handled automatically",
+            "Built-in check-in messages at strategic points in the program"
+          ]
+        },
+        {
+          title: "Testimonial, Retention & Referral Flows",
+          bullets: [
+            "Testimonial requests triggered by internal tags or milestone events",
+            "Responses submitted through feedback forms and stored in Airtable or Notion",
+            "Referral or renewal offers delivered based on tags or program timeline"
+          ]
+        }
+      ]
+    },
     outcomes: [
       "Transformed scattered sales process into streamlined, automated experience",
       "Eliminated manual follow-up tasks while maintaining personal touch",
