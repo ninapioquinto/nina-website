@@ -330,7 +330,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: "8",
     title: "Coaching Client Journey – Streamlined Lead-to-Client Pipeline",
     description: "Built a comprehensive end-to-end pipeline system in GoHighLevel that transforms scattered lead management into a streamlined, automated client journey from first contact to program completion.",
-    fullDescription: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
+    fullDescription: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience. This Coaching Client Journey pipeline was built inside GoHighLevel to systematize every step, from first contact to client transformation. Each stage in the pipeline represents a specific moment in the buyer journey, backed by workflows, conditional logic, and lightweight team intervention only where necessary.",
     image: "/lovable-uploads/c50fef96-b7a7-4856-a6ef-c8e0baf975e1.png",
     category: "CRM Automation",
     technologies: ["GoHighLevel", "Stripe", "Airtable", "SMS Automation", "Email Sequences"],
