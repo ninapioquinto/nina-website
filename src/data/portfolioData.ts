@@ -1,3 +1,4 @@
+
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -496,6 +497,16 @@ export const portfolioItems: PortfolioItem[] = [
           title: "Performance Tracking",
           bullets: [
             "Real-time commission tracking per agent and deal"
+          ]
+        },
+        {
+          title: "Client-Facing Dashboard (Lovable)",
+          bullets: [
+            "Role-based access (agents see only their leads)",
+            "Visual summaries: lead stages, listing status, deal pipeline",
+            "Leaderboard by deals closed",
+            "Quick actions: Add new lead, property, or transaction",
+            "Forecast and overdue task alerts"
           ]
         }
       ]
