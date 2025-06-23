@@ -7,8 +7,8 @@ import { portfolioItems } from '../data/portfolioData';
 const PortfolioShowcase = () => {
   const navigate = useNavigate();
   
-  // Show only first 6 items for the showcase
-  const showcaseItems = portfolioItems.slice(0, 6);
+  // Show first 7 items for the showcase (updated from 6 to include the new coaching item)
+  const showcaseItems = portfolioItems.slice(0, 7);
 
   return (
     <section id="portfolio" className="py-24 relative overflow-hidden">
