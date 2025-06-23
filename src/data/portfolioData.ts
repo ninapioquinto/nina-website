@@ -1,4 +1,3 @@
-
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -326,5 +325,58 @@ export const portfolioItems: PortfolioItem[] = [
       "Improved client satisfaction through faster response times"
     ],
     projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
+  },
+  {
+    id: "8",
+    title: "Coaching Client Journey – Streamlined Lead-to-Client Pipeline",
+    description: "Built a comprehensive end-to-end pipeline system in GoHighLevel that transforms scattered lead management into a streamlined, automated client journey from first contact to program completion.",
+    fullDescription: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
+    image: "/lovable-uploads/c50fef96-b7a7-4856-a6ef-c8e0baf975e1.png",
+    category: "CRM Automation",
+    technologies: ["GoHighLevel", "Stripe", "Airtable", "SMS Automation", "Email Sequences"],
+    results: "Streamlined client journey with automated follow-ups",
+    client: "Business Coach",
+    duration: "3 months",
+    role: "Pipeline Systems Engineer",
+    challenge: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
+    workflowSteps: [
+      {
+        step: "New Lead Captured",
+        description: "Triggers from opt-in forms, funnels, DMs, or lead magnets. Automatically tags based on lead source (Instagram, Facebook ad, referral, podcast) and adds to nurture sequence while notifying the coach's team."
+      },
+      {
+        step: "Qualified Lead",
+        description: "Activates when application is submitted. Assigns lead score, tags as qualified, captures estimated deal value, and sends automated email and SMS with booking link for strategy call."
+      },
+      {
+        step: "Call Booked",
+        description: "Triggered when discovery call is scheduled via GoHighLevel calendar. Sends automated email and SMS reminders, moves lead to this stage, and applies booking tag in CRM."
+      },
+      {
+        step: "Discovery Call Completed",
+        description: "Manual move after call completion. Logs outcome (Fit, Not Fit, or Needs Nurture) and triggers appropriate automation: proposal sequence for Fit leads, warm re-engagement for Nurture, or removal for Not Fit."
+      },
+      {
+        step: "Offer Sent",
+        description: "Sends customized offer page (GoHighLevel form, video sales page, or Stripe checkout link). Automatically moves lead to this stage and triggers follow-up if payment isn't completed within 48-72 hours."
+      },
+      {
+        step: "Payment Received & Enrollment",
+        description: "Triggered by payment completion via webhook. Sends welcome email sequence, triggers onboarding form, grants portal access, creates internal tasks, and notifies team."
+      },
+      {
+        step: "Active Client Management",
+        description: "Manages ongoing client relationship with milestone check-ins, testimonial collection, and upsell/renewal opportunities based on program progress and client engagement."
+      }
+    ],
+    outcomes: [
+      "Transformed scattered sales process into streamlined, automated experience",
+      "Eliminated manual follow-up tasks while maintaining personal touch",
+      "Created real-time visibility of every lead and client stage",
+      "Built scalable system ready for growth without team overwhelm",
+      "Achieved seamless onboarding and client success tracking",
+      "Integrated payment processing with automatic stage progression"
+    ],
+    projectSummary: "This comprehensive pipeline system demonstrates how GoHighLevel can centralize and automate complex coaching businesses while preserving the personal relationship that drives client success."
   }
 ];
