@@ -265,7 +265,13 @@ export const portfolioItems: PortfolioItem[] = [
       },
       {
         step: "Content Collection via Apify",
-        description: "Each platform uses a custom Apify actor to gather public post-level data: LinkedIn (Author details, post content, reactions), Instagram (Reels metadata, captions, hashtags, view counts), YouTube (Video titles, channels, stats, thumbnails), X (Tweet text, author profiles, follower counts, engagement)."
+        description: "Each platform uses a custom Apify actor to gather public post-level data:",
+        bullets: [
+          "LinkedIn: Author details, post content, reactions",
+          "Instagram: Reels metadata, captions, hashtags, view counts",
+          "YouTube: Video titles, channels, stats, thumbnails",
+          "X: Tweet text, author profiles, follower counts, engagement"
+        ]
       },
       {
         step: "AI Transcription and Enrichment",
