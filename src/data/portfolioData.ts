@@ -1,4 +1,3 @@
-
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -475,7 +474,7 @@ export const portfolioItems: PortfolioItem[] = [
       }
     ],
     supportingAutomations: {
-      title: "Automation Highlights (n8n)",
+      title: "Automation and Dashboard Highlights",
       sections: [
         {
           title: "Lead Management",
