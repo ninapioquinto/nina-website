@@ -83,15 +83,15 @@ const AboutContent = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-slate-800/40 via-indigo-900/20 to-violet-900/30 backdrop-blur-xl rounded-xl border border-white/10 p-6">
-          <h4 className="text-lg font-semibold text-indigo-300 mb-4 flex items-center gap-2">
+        <div className="bg-gradient-to-br from-slate-800/40 via-violet-900/20 to-purple-900/30 backdrop-blur-xl rounded-xl border border-white/10 p-6">
+          <h4 className="text-lg font-semibold text-violet-300 mb-4 flex items-center gap-2">
             <Zap className="w-5 h-5" />
             Strategic Process
           </h4>
           <div className="space-y-3">
             {process.map((step, index) => (
               <div key={index} className="flex items-start gap-3">
-                <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-indigo-500/20 to-violet-500/20 rounded-full border border-indigo-400/30 flex items-center justify-center text-xs font-bold text-indigo-300">
+                <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-full border border-violet-400/30 flex items-center justify-center text-xs font-bold text-violet-300">
                   {index + 1}
                 </div>
                 <span className="text-gray-300 text-sm leading-relaxed">{step}</span>
@@ -111,7 +111,7 @@ const AboutContent = () => {
               <div key={index} className="group">
                 <div className="bg-gradient-to-br from-slate-800/40 via-purple-900/20 to-indigo-900/30 backdrop-blur-xl rounded-xl border border-white/10 p-6 h-full transition-all duration-300 group-hover:border-purple-400/30 group-hover:bg-white/5">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-full border border-purple-400/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-full border border-purple-400/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-6 h-6 text-purple-300" />
                     </div>
                     <h5 className="text-lg font-semibold text-white mb-2">{item.title}</h5>
