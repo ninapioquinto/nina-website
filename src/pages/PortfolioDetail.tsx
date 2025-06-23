@@ -87,6 +87,16 @@ const PortfolioDetail = () => {
               </section>
             )}
 
+            {/* Solution Section */}
+            {project.id === "8" && (
+              <section>
+                <h2 className="text-3xl font-bold text-white mb-6">The Solution</h2>
+                <p className="text-white/80 text-lg leading-relaxed">
+                  This Coaching Client Journey pipeline was built inside GoHighLevel to systematize every step, from first contact to client transformation. Each stage in the pipeline represents a specific moment in the buyer journey, backed by workflows, conditional logic, and lightweight team intervention only where necessary.
+                </p>
+              </section>
+            )}
+
             {/* Solution/Workflow Steps */}
             {project.workflowSteps ? (
               <WorkflowSteps 
