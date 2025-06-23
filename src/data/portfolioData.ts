@@ -342,31 +342,43 @@ export const portfolioItems: PortfolioItem[] = [
     workflowSteps: [
       {
         step: "New Lead Captured",
-        description: "Triggers from opt-in forms, funnels, DMs, or lead magnets. Automatically tags based on lead source (Instagram, Facebook ad, referral, podcast) and adds to nurture sequence while notifying the coach's team."
+        description: "Trigger: Opt-in form, funnel, DM, or lead magnet. Action: Tag based on lead source (Instagram, Facebook ad, referral, podcast). Automation: Add to nurture sequence and notify the coach's team."
       },
       {
         step: "Qualified Lead",
-        description: "Activates when application is submitted. Assigns lead score, tags as qualified, captures estimated deal value, and sends automated email and SMS with booking link for strategy call."
+        description: "Trigger: Application submitted. Action: Assign lead score, tag as qualified, and capture estimated deal value. Automation: Send email and SMS with booking link for a strategy call."
       },
       {
         step: "Call Booked",
-        description: "Triggered when discovery call is scheduled via GoHighLevel calendar. Sends automated email and SMS reminders, moves lead to this stage, and applies booking tag in CRM."
+        description: "Trigger: Discovery call scheduled via GoHighLevel calendar. Action: Trigger automated email and SMS reminders. Automation: Move lead to this stage and apply booking tag in the CRM."
       },
       {
         step: "Discovery Call Completed",
-        description: "Manual move after call completion. Logs outcome (Fit, Not Fit, or Needs Nurture) and triggers appropriate automation: proposal sequence for Fit leads, warm re-engagement for Nurture, or removal for Not Fit."
+        description: "Trigger: Manual move after the call. Action: Log outcome (Fit, Not Fit, or Needs Nurture) in internal form. Automation: If marked Fit → trigger proposal sequence. If Needs Nurture → add to warm re-engagement workflow. If Not Fit → tag and remove from pipeline. Notify the coach's team when action is needed."
       },
       {
-        step: "Offer Sent",
-        description: "Sends customized offer page (GoHighLevel form, video sales page, or Stripe checkout link). Automatically moves lead to this stage and triggers follow-up if payment isn't completed within 48-72 hours."
+        step: "Offer Sent or Proposal Out",
+        description: "Trigger: Proposal, program link, or payment option sent. Action: Send customized offer page (GoHighLevel form, video sales page, or Stripe checkout link). Automation: Move lead to this stage automatically. Trigger follow-up if payment isn't completed within 48–72 hours."
       },
       {
-        step: "Payment Received & Enrollment",
-        description: "Triggered by payment completion via webhook. Sends welcome email sequence, triggers onboarding form, grants portal access, creates internal tasks, and notifies team."
+        step: "Enrolled – Payment Received",
+        description: "Trigger: Payment completed via webhook or order form. Automation: Send welcome email sequence. Trigger onboarding form. Grant portal or membership access. Create internal onboarding task and notify the team."
       },
       {
-        step: "Active Client Management",
-        description: "Manages ongoing client relationship with milestone check-ins, testimonial collection, and upsell/renewal opportunities based on program progress and client engagement."
+        step: "Onboarding in Progress",
+        description: "Trigger: Onboarding form submitted or call booked. Action: Tag as 'Active Client'. Automation: Schedule kickoff call via calendar. Optional: add to Slack for communication."
+      },
+      {
+        step: "Active Client – In Program",
+        description: "Trigger: Kickoff call completed. Action: Log session schedule, assign accountability coach if applicable. Automation: Trigger milestone check-in workflows (Week 3, Week 6, Week 8)."
+      },
+      {
+        step: "Testimonial or Case Study Stage",
+        description: "Trigger: Client hits a milestone or shares a win. Action: Prompt for testimonial or book a feedback call. Automation: Submit form and route responses to Airtable for storage."
+      },
+      {
+        step: "Upsell, Renewal, or Referral",
+        description: "Trigger: Program nearing completion or client expresses interest. Action: Offer long-term coaching, invite to group program, or request referrals. Automation: Apply re-engagement or referral reward tags."
       }
     ],
     outcomes: [
@@ -375,8 +387,11 @@ export const portfolioItems: PortfolioItem[] = [
       "Created real-time visibility of every lead and client stage",
       "Built scalable system ready for growth without team overwhelm",
       "Achieved seamless onboarding and client success tracking",
-      "Integrated payment processing with automatic stage progression"
+      "Integrated payment processing with automatic stage progression",
+      "Delivered funnel & calendar integration with correct source tagging",
+      "Implemented smart reminder flows and no-show rebooking sequences",
+      "Created testimonial collection and referral reward systems"
     ],
-    projectSummary: "This comprehensive pipeline system demonstrates how GoHighLevel can centralize and automate complex coaching businesses while preserving the personal relationship that drives client success."
+    projectSummary: "This Coaching Client Journey pipeline transformed a scattered, high-touch sales process into a streamlined experience that still feels personal. The team is only looped in where human decision-making matters: discovery call outcomes, onboarding, and client success points. Follow-up is now fully automated, proposals are tracked with precision, and onboarding is a frictionless handoff. The coach has a real-time view of every lead and client stage, and the system is ready to scale without creating overwhelm."
   }
 ];
