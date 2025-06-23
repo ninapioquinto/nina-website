@@ -1,3 +1,4 @@
+
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -349,19 +350,19 @@ export const portfolioItems: PortfolioItem[] = [
     challenge: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
     workflowSteps: [
       {
-        step: "New Lead Captured",
+        step: "1. New Lead Captured",
         description: "Trigger: Opt-in form, funnel, DM, or lead magnet\nAction: Tag based on lead source (Instagram, Facebook ad, referral, podcast)\nAutomation: Add to nurture sequence and notify the coach's team"
       },
       {
-        step: "Qualified Lead",
+        step: "2. Qualified Lead",
         description: "Trigger: Application submitted\nAction: Assign lead score, tag as qualified, and capture estimated deal value\nAutomation: Send email and SMS with booking link for a strategy call"
       },
       {
-        step: "Call Booked",
+        step: "3. Call Booked",
         description: "Trigger: Discovery call scheduled via GoHighLevel calendar\nAction: Trigger automated email and SMS reminders\nAutomation: Move lead to this stage and apply booking tag in the CRM"
       },
       {
-        step: "Discovery Call Completed",
+        step: "4. Discovery Call Completed",
         description: "Trigger: Manual move after the call\nAction: Log outcome (Fit, Not Fit, or Needs Nurture) in internal form\nAutomation:",
         bullets: [
           "If marked Fit → trigger proposal sequence",
@@ -371,7 +372,7 @@ export const portfolioItems: PortfolioItem[] = [
         ]
       },
       {
-        step: "Offer Sent or Proposal Out",
+        step: "5. Offer Sent or Proposal Out",
         description: "Trigger: Proposal, program link, or payment option sent\nAction: Send customized offer page (GoHighLevel form, video sales page, or Stripe checkout link)\nAutomation:",
         bullets: [
           "Move lead to this stage automatically",
@@ -379,7 +380,7 @@ export const portfolioItems: PortfolioItem[] = [
         ]
       },
       {
-        step: "Enrolled – Payment Received",
+        step: "6. Enrolled – Payment Received",
         description: "Trigger: Payment completed via webhook or order form\nAutomation:",
         bullets: [
           "Send welcome email sequence",
@@ -389,7 +390,7 @@ export const portfolioItems: PortfolioItem[] = [
         ]
       },
       {
-        step: "Onboarding in Progress",
+        step: "7. Onboarding in Progress",
         description: "Trigger: Onboarding form submitted or call booked\nAction: Tag as \"Active Client\"\nAutomation:",
         bullets: [
           "Schedule kickoff call via calendar",
@@ -397,15 +398,15 @@ export const portfolioItems: PortfolioItem[] = [
         ]
       },
       {
-        step: "Active Client – In Program",
+        step: "8. Active Client – In Program",
         description: "Trigger: Kickoff call completed\nAction: Log session schedule, assign accountability coach if applicable\nAutomation: Trigger milestone check-in workflows (Week 3, Week 6, Week 8)"
       },
       {
-        step: "Testimonial or Case Study Stage",
+        step: "9. Testimonial or Case Study Stage",
         description: "Trigger: Client hits a milestone or shares a win\nAction: Prompt for testimonial or book a feedback call\nAutomation: Submit form and route responses to Airtable for storage"
       },
       {
-        step: "Upsell, Renewal, or Referral",
+        step: "10. Upsell, Renewal, or Referral",
         description: "Trigger: Program nearing completion or client expresses interest\nAction: Offer long-term coaching, invite to group program, or request referrals\nAutomation: Apply re-engagement or referral reward tags"
       }
     ],
@@ -446,7 +447,7 @@ export const portfolioItems: PortfolioItem[] = [
           title: "Testimonial, Retention & Referral Flows",
           bullets: [
             "Testimonial requests triggered by internal tags or milestone events",
-            "Responses submitted through feedback forms and stored in Airtable or Notion",
+            "Responses submitted through feedback forms and stored in Airtable",
             "Referral or renewal offers delivered based on tags or program timeline"
           ]
         }
@@ -464,5 +465,100 @@ export const portfolioItems: PortfolioItem[] = [
       "Created testimonial collection and referral reward systems"
     ],
     projectSummary: "This Coaching Client Journey pipeline transformed a scattered, high-touch sales process into a streamlined experience that still feels personal. The team is only looped in where human decision-making matters: discovery call outcomes, onboarding, and client success points. Follow-up is now fully automated, proposals are tracked with precision, and onboarding is a frictionless handoff. The coach has a real-time view of every lead and client stage, and the system is ready to scale without creating overwhelm."
+  },
+  {
+    id: "9",
+    title: "Florida Realty CRM: Custom CRM System for Real Estate Deal Flow",
+    description: "Developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking.",
+    fullDescription: "I developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking. Key workflows like follow-ups, appointment scheduling, and document handling are now automated. Agents work from one centralized platform without the complexity of traditional CRM tools.",
+    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    category: "CRM Development",
+    technologies: ["Lovable.dev", "Airtable", "n8n"],
+    results: "Agents save several hours each week with streamlined workflows",
+    client: "Florida Real Estate Team",
+    duration: "4 months",
+    role: "Automation Systems Engineer",
+    challenge: "The real estate team was managing client relationships using spreadsheets, calendars, and scattered chat threads. Follow-ups were often missed, deal tracking lacked structure, and leadership had no real-time visibility into pipeline activity or agent performance. Manual processes slowed down agents and made growth difficult to manage.",
+    workflowSteps: [
+      {
+        step: "1. Leads & Contacts",
+        description: "Organized lead capture, nurturing, and qualification.",
+        bullets: [
+          "Multi-channel lead source tracking (Website, Instagram, Referral, listing platforms, etc.)",
+          "Sales pipeline stages: New → Contacted → Site Visit → Offer → Closed",
+          "Smart tagging: Hot / Warm / Cold",
+          "Auto-updated \"Last Contacted\"",
+          "Follow-up reminders via email, SMS, or WhatsApp"
+        ]
+      },
+      {
+        step: "2. Property Listings",
+        description: "Manage private/internal listing data and status tracking.",
+        bullets: [
+          "Location, Price, Status (Available, Under Offer, Sold, Rented)",
+          "Media support (photos, videos, walkthrough links)",
+          "Assigned agents and listing dates",
+          "Owner contact details (kept private)"
+        ]
+      },
+      {
+        step: "3. Activities & Follow-Ups",
+        description: "Track every touchpoint with built-in automation.",
+        bullets: [
+          "Communication logs (call, email, SMS)",
+          "Scheduled viewings or meetings (calendar synced)",
+          "Auto-reminders and overdue alerts",
+          "Notes organized by lead or property"
+        ]
+      },
+      {
+        step: "4. Deals & Transactions",
+        description: "Real-time deal visibility and agent commission tracking.",
+        bullets: [
+          "Deal stages: Negotiation → Contract Sent → Deposit Paid → Closed",
+          "Linked buyer and property records",
+          "Commission calculator by agent",
+          "Expected close date",
+          "Document uploads (contracts, IDs, deposit slips)"
+        ]
+      }
+    ],
+    supportingAutomations: {
+      title: "Automation Highlights (n8n)",
+      sections: [
+        {
+          title: "Lead Management",
+          bullets: [
+            "Auto-capture leads from listing platforms, ads, and web forms",
+            "Auto-capture of leads from forms and DMs",
+            "Duplicate contact detection"
+          ]
+        },
+        {
+          title: "Communication & Follow-Up",
+          bullets: [
+            "Email sequence follow-ups based on lead status",
+            "WhatsApp and SMS reminders for upcoming tasks",
+            "Calendar sync for viewings and appointments"
+          ]
+        },
+        {
+          title: "Performance Tracking",
+          bullets: [
+            "Real-time commission tracking per agent and deal"
+          ]
+        }
+      ]
+    },
+    outcomes: [
+      "Significantly improved efficiency across the business",
+      "Automated follow-ups reduced lead response time",
+      "Synced calendars prevented scheduling conflicts",
+      "Centralized data replaced fragmented tools",
+      "Made it easier to manage deals and track agent performance",
+      "Overdue tasks surfaced automatically, keeping lead engagement consistent",
+      "Agents save several hours each week by working in one streamlined system"
+    ],
+    projectSummary: "The CRM significantly improved efficiency across the business. Automated follow-ups reduced lead response time, while synced calendars prevented scheduling conflicts. Centralized data replaced fragmented tools, making it easier to manage deals and track agent performance. Overdue tasks surfaced automatically, keeping lead engagement consistent. Agents now save several hours each week by working in one streamlined system instead of juggling multiple apps and updates."
   }
 ];
