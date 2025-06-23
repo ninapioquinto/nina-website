@@ -252,7 +252,7 @@ export const portfolioItems: PortfolioItem[] = [
     results: "Reduced turnaround time from hours to under a minute",
     client: "Marketing Teams",
     duration: "2 months",
-    role: "AI Automation Developer",
+    role: "Automation Systems Engineer",
     challenge: "Marketing and research teams were spending too much time manually collecting content and engagement data from LinkedIn, Instagram, YouTube, and X. Visiting each link, copying data, and updating spreadsheets slowed down workflows and limited how quickly teams could act on insights. The client needed a fast and reliable way to turn social media links into structured data automatically.",
     workflowSteps: [
       {
