@@ -1,57 +1,45 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Portfolio from "./pages/Portfolio";
-import PortfolioDetail from "./pages/PortfolioDetail";
-import WorkWithMe from "./pages/WorkWithMe";
-import AiExecutiveAssistant from "./pages/AiExecutiveAssistant";
-import NotFound from "./pages/NotFound";
-import LinkTree from "./pages/LinkTree";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Particles from "./components/Particles";
-import StarryBackground from "./components/StarryBackground";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Index from './pages/Index';
+import WorkWithMe from './pages/WorkWithMe';
+import Portfolio from './pages/Portfolio';
+import PortfolioDetail from './pages/PortfolioDetail';
+import AiExecutiveAssistant from './pages/AiExecutiveAssistant';
+import LinkTree from './pages/LinkTree';
+import NotFound from './pages/NotFound';
+import ErrorBoundary from './components/ErrorBoundary';
+import { Toaster } from './components/ui/sonner';
+import './App.css';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
-const PageWrapper = ({ children }: { children: React.ReactNode }) => (
-  <>
-    <StarryBackground />
-    <Particles />
-    <div className="relative z-10">
-      <Navbar />
-      <main className="pt-24 sm:pt-28 pb-12">
-        {children}
-      </main>
-      <Footer />
-    </div>
-  </>
-);
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
-          <Route path="/portfolio/:id" element={<PageWrapper><PortfolioDetail /></PageWrapper>} />
-          {/* The routes below are temporarily disabled. */}
-          {/* <Route path="/work-with-me" element={<PageWrapper><WorkWithMe /></PageWrapper>} /> */}
-          <Route path="/ai-executive-assistant" element={<PageWrapper><AiExecutiveAssistant /></PageWrapper>} />
-          <Route path="/links" element={<LinkTree />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+function App() {
+  return (
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/work-with-me" element={<WorkWithMe />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+            <Route path="/ai-executive-assistant" element={<AiExecutiveAssistant />} />
+            <Route path="/links" element={<LinkTree />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Toaster />
+        </Router>
+      </QueryClientProvider>
+    </ErrorBoundary>
+  );
+}
 
 export default App;
