@@ -35,9 +35,7 @@ const AboutContent = () => {
               </h3>
               
               <div className="h-1 w-16 bg-gradient-to-r from-purple-400 to-violet-400 rounded-full mb-4"></div>
-              <p className="text-gray-200 leading-relaxed">
-                Specializing in strategic automation for businesses ready to simplify operations and scale with clarity and confidence.
-              </p>
+              <p className="text-gray-200 leading-relaxed">Specializing in strategic automation and custom app development for businesses ready to simplify operations and scale with clarity and confidence.</p>
             </div>
           </div>
         </div>
