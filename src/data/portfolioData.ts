@@ -1,3 +1,4 @@
+
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -34,7 +35,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "AutoSupport AI – Intelligent Email Triage",
     description: "Designed an intelligent email triage system using AI to automatically identify, prioritize, and route customer emails in real time, saving 90% of manual sorting time.",
     fullDescription: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. The client needed a solution to filter, classify, and prioritize incoming emails with precision and speed. I designed an intelligent email triage system that uses AI to automatically identify, prioritize, and route customer emails in real time.",
-    image: "/lovable-uploads/c33e6ee7-cfe0-4654-af4d-14c950e0a46a.png",
+    image: "/lovable-uploads/46993cce-dbcf-4f79-9dce-1214b9c031b4.png",
     category: "AI Automation",
     technologies: ["Make (Integromat)", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
     results: "90% time saved on email sorting",
