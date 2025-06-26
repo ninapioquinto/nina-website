@@ -1,4 +1,3 @@
-
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -199,7 +198,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "AI Email Concierge – Intelligent Inbox Management for Busy Teams",
     description: "Designed a fully automated email management system that intelligently classifies incoming messages, drafts context-aware responses, and notifies the right people without delay.",
     fullDescription: "Managing a shared inbox across multiple departments often leads to chaos. Important emails from customers, sales leads, or finance teams can easily be buried under newsletters, promotional offers, and internal back-and-forth. The client needed an automated way to sort, label, and respond to emails quickly while keeping key messages visible to the right teams.",
-    image: "/lovable-uploads/ab61576f-da73-4131-bed5-4674c92cee7f.png",
+    image: "/lovable-uploads/d8a8c313-e71b-455b-85e1-35823ee15983.png",
     category: "Email Automation",
     technologies: ["n8n", "OpenAI GPT-4o", "Gmail", "Slack"],
     results: "Reduced manual inbox management time significantly",
