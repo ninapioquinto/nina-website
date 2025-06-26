@@ -59,7 +59,7 @@ const MyProcess = () => {
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6 reveal">
                 <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
-                  The Maven System Method™
+                  The CoreOps Framework
                 </span>
               </h2>
               
