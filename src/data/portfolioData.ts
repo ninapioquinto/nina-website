@@ -653,5 +653,55 @@ export const portfolioItems: PortfolioItem[] = [
       "Comprehensive reporting for data-driven business decisions"
     ],
     projectSummary: "This MedSpa CRM solution delivers a highly customized, secure, and efficient platform that enhances client experience, optimizes staff workflows, and drives business growth for luxury medspa operations. It balances rich features with simplicity to enable rapid deployment and iterative improvements based on real user feedback."
+  },
+  {
+    id: "11",
+    title: "Credit & Business Funding CRM Build Out",
+    description: "Migrated an entire credit repair and funding business into GoHighLevel and designed a custom CRM tailored to the real flow of the business. The system centralizes all activity and automates repetitive tasks, creating a smooth, scalable infrastructure.",
+    fullDescription: "This growing credit repair and funding business was in the early stages of expansion, eager to scale. But their fragmented setup was slowing them down. Managing operations across a basic website, SuiteDash CRM, Typeform, and manual processes created unnecessary friction. As new leads increased and client needs evolved, the lack of a streamlined system led to missed opportunities, inconsistent follow-ups, and administrative overwhelm.",
+    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    category: "CRM Development",
+    technologies: ["GoHighLevel", "Make.com"],
+    results: "$112,000 opportunity value captured, $53,000 revenue generated, 45% win rate",
+    client: "Credit Repair & Funding Business",
+    duration: "3 months",
+    role: "Automation Systems Engineer",
+    challenge: "The business was ready to grow, but their systems were not. Their lead capture process required juggling multiple tools that didn't speak to each other. Onboarding was inconsistent, client communication was delayed, and tracking funding stages was difficult. They needed more than just a CRM. They needed a centralized, intelligent system to run their operations, manage leads, track funding, and deliver a better experience for their clients from start to finish.",
+    workflowSteps: [
+      {
+        step: "Centralized CRM Dashboard",
+        description: "Every lead, client, and stage of the funding journey is visible in one place. The dashboard provides a clear overview of all activity, updated in real-time."
+      },
+      {
+        step: "Automated Lead Capture & Nurture",
+        description: "When a new lead comes in, the system automatically qualifies and tags them. They receive an email and SMS sequence designed to educate and convert, while the team is instantly notified to follow up."
+      },
+      {
+        step: "Smart Client Portal",
+        description: "Clients can securely access their portal to track credit repair progress, view funding milestones, and complete onboarding steps with ease."
+      },
+      {
+        step: "Course Delivery System",
+        description: "An integrated course hub allows clients to access learning material at their own pace, reducing support requests and increasing self-serve value."
+      },
+      {
+        step: "Pipeline & Task Automation",
+        description: "Each stage of the client journey is automated with smart triggers, from application to funding. Tasks are assigned to team members automatically, ensuring nothing falls through the cracks."
+      },
+      {
+        step: "Funding Tracker",
+        description: "A live dashboard tracks the stages of funding for each client, giving both the team and the client complete transparency on the progress."
+      }
+    ],
+    outcomes: [
+      "$112,000 opportunity value captured through improved visibility and timely follow-ups",
+      "$53,000 revenue generated from newly closed deals",
+      "45% win rate across qualified leads",
+      "Faster onboarding process with consistent nurturing",
+      "Smarter tracking and pipeline management",
+      "Eliminated operational overwhelm and administrative bottlenecks",
+      "Centralized operations with enhanced client experience"
+    ],
+    projectSummary: "This project gave the client more than automation. It gave them control. By thoughtfully designing a tailored GoHighLevel CRM, I helped this credit repair and funding team eliminate overwhelm, centralize their operations, and build a business model that scales without chaos. They now operate with clarity and confidence, supported by a system that aligns with their growth goals and enhances every step of the client journey."
   }
 ];
