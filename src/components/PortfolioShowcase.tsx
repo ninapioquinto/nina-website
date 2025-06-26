@@ -29,7 +29,7 @@ const PortfolioShowcase = () => {
         <div className="text-center mb-16 reveal">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/30">
-              ✨ Portfolio Showcase
+              ✨ Project Showcase
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
@@ -50,8 +49,7 @@ const Navbar = () => {
   const links = [
     { href: 'about', label: 'About', type: 'section' },
     { href: 'my-process', label: 'My Process', type: 'section' },
-    { href: '/portfolio', label: 'Portfolio', type: 'page' },
-    { href: 'case-study', label: 'Case Study', type: 'section' },
+    { href: '/portfolio', label: 'Projects', type: 'page' },
     { href: 'faq', label: 'FAQ', type: 'section' },
     { href: 'contact', label: 'Contact', type: 'section' }
   ];
