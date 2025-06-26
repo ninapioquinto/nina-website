@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const AboutHeader = () => {
-  return (
-    <div className="text-center mb-16 reveal">
+  return <div className="text-center mb-16 reveal">
       <div className="inline-flex items-center justify-center mb-6">
         <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
         <div className="mx-4 px-4 py-1 rounded-full bg-purple-500/20 border border-purple-300/30">
@@ -12,14 +9,11 @@ const AboutHeader = () => {
         <div className="h-px w-12 bg-gradient-to-r from-transparent via-purple-300/60 to-transparent"></div>
       </div>
       
-      <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">
-        The AI Automation & CRM Maven
-      </h2>
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">Automation Systems Engineer 
+&amp; App Developer</h2>
       <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
         I build custom no-code automation systems that simplify operations and drive sustainable growth for service-based businesses.
       </p>
-    </div>
-  );
+    </div>;
 };
-
 export default AboutHeader;
