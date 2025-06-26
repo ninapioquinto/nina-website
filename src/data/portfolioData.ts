@@ -1,3 +1,4 @@
+
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -240,7 +241,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "LeadGen AI (Social Edition) – Intelligent Social Content Extraction and Analysis",
     description: "Developed a content automation system that processes social media URLs, gathers public post and profile information, enriches it with AI-generated transcripts, and logs everything in Google Sheets.",
     fullDescription: "Marketing and research teams were spending too much time manually collecting content and engagement data from LinkedIn, Instagram, YouTube, and X. Visiting each link, copying data, and updating spreadsheets slowed down workflows and limited how quickly teams could act on insights. The client needed a fast and reliable way to turn social media links into structured data automatically.",
-    image: "/lovable-uploads/cc9d382f-4232-40fb-9355-3cf96bcbc0d8.png",
+    image: "/lovable-uploads/3d5dc397-b8f4-49de-8ef9-e01de95e3fed.png",
     category: "Content Intelligence",
     technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
     results: "Reduced turnaround time from hours to under a minute",
