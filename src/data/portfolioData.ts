@@ -697,9 +697,9 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
     description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
     fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
-    image: "/lovable-uploads/ac40fb5e-7919-485c-8dce-b2f92ec7d489.png",
+    image: "/lovable-uploads/023192a6-83e2-4e5b-93b3-4385c9b78a84.png",
     category: "CRM Development",
-    technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms", "Google Calendar"],
+    technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms"],
     results: "Streamlined operations with reduced manual work and improved response times",
     client: "Texas Roofing Company",
     role: "App Developer",
@@ -736,7 +736,7 @@ export const portfolioItems: PortfolioItem[] = [
         description: "Integrated scheduling system with team coordination.",
         bullets: [
           "Book inspections and job schedules",
-          "Sync with Google Calendar",
+          "Sync with calendar systems",
           "View by day, week, or month",
           "Assign events to staff or subcontractors"
         ]
