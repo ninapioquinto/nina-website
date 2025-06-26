@@ -1,8 +1,6 @@
-
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from './ui/card';
 import { CheckCircle } from 'lucide-react';
-
 const MyProcess = () => {
   const sectionRef = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -26,7 +24,6 @@ const MyProcess = () => {
       });
     };
   }, []);
-  
   const steps = [{
     number: "01",
     title: "Discovery and Operational Review",
@@ -48,11 +45,8 @@ const MyProcess = () => {
     description: "Before anything goes live, I test every step and walk through the logic to make sure it runs smoothly. I remove any clutter and simplify where needed. You get a complete walkthrough so you and your team can use the system confidently without confusion or overwhelm.",
     testimonial: "We didn't need hours of training. It just made sense. And it works."
   }];
-  
   const benefits = ["A system tailored to your business operations", "Automation that reduces workload and increases speed", "Better data visibility and cleaner handoffs", "Full ownership and a clean setup your team will actually use"];
-  
-  return (
-    <section id="my-process" ref={sectionRef} className="py-20 relative">
+  return <section id="my-process" ref={sectionRef} className="py-20 relative">
       {/* Subtle background overlay */}
       <div className="absolute inset-0 bg-black/20"></div>
 
@@ -79,9 +73,7 @@ const MyProcess = () => {
               <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
             </div>
 
-            <p className="text-xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed reveal">
-              A clear and proven system to streamline operations, reduce manual work, and help you scale with custom CRMs and AI-powered automation.
-            </p>
+            <p className="text-xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed reveal">A clear and proven system to streamline operations, reduce manual work, and help you scale with custom apps, CRMs and AI-powered automation.</p>
             
             <p className="text-lg text-white/80 max-w-4xl mx-auto leading-relaxed reveal">
               Most businesses waste time jumping between tools, chasing follow-ups, or fixing tasks that should already be done. This process replaces that with a smarter way to operate. I build custom systems that work quietly in the background, supporting your team and giving you control of your operations without adding complexity.
@@ -90,10 +82,9 @@ const MyProcess = () => {
 
           {/* Process Steps */}
           <div className="space-y-12 mb-16">
-            {steps.map((step, index) => (
-              <div key={step.number} className="reveal" style={{
-                animationDelay: `${index * 0.2}s`
-              }}>
+            {steps.map((step, index) => <div key={step.number} className="reveal" style={{
+            animationDelay: `${index * 0.2}s`
+          }}>
                 <Card className="border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 group relative overflow-hidden">
                   {/* Hover effect overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -121,8 +112,7 @@ const MyProcess = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* What You Get Section */}
@@ -147,12 +137,10 @@ const MyProcess = () => {
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                  {benefits.map((benefit, index) => <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="h-6 w-6 text-purple-400 flex-shrink-0 mt-0.5" />
                       <span className="text-white/85 text-base">{benefit}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
                 
                 <div className="text-center">
@@ -165,8 +153,6 @@ const MyProcess = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default MyProcess;
