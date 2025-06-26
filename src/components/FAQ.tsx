@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -10,7 +9,7 @@ import {
 const faqData = [
   {
     question: "What services do you offer?",
-    answer: "I design and implement custom AI automation systems and handle CRM buildout and optimization for service-based businesses. Using tools like n8n, Make.com, Zapier, Airtable, GoHighLevel, Zoho, and AI agents, I streamline operations, eliminate manual tasks, and develop intelligent systems tailored to your business goals."
+    answer: "I specialize in AI automation, custom application development, and CRM system design. My work focuses on improving operational efficiency, minimizing manual processes, and building systems that support sustainable business growth."
   },
   {
     question: "How do you ensure the systems you build align with my business needs?",
