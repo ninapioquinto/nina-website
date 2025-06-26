@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import {
   Accordion,
@@ -25,7 +26,7 @@ const faqData = [
   },
   {
     question: "What types of businesses do you work with?",
-    answer: "I primarily work with service-based businesses such as consultants, coaches, wellness providers, credit repair and funding. If your business relies on structured workflows, lead handling, or client management, I can help you build systems that improve efficiency and drive results."
+    answer: "I primarily work with businesses that rely on structured workflows, lead management, and client operations. Whether in services, digital products, or other operationally complex fields, I help build systems that improve efficiency, reduce manual work, and drive consistent results."
   },
   {
     question: "What's the next step if I'm interested in working with you?",
