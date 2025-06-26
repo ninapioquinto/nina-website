@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import PortfolioShowcase from '../components/PortfolioShowcase';
-import CaseStudy from '../components/CaseStudy';
 import Services from '../components/Services';
 import MyProcess from '../components/MyProcess';
 import Certifications from '../components/Certifications';
@@ -86,7 +85,6 @@ const Index = () => {
         <Services />
         <About />
         <PortfolioShowcase />
-        <CaseStudy />
         <WhyChooseMe />
         <Certifications />
         <MyProcess />
