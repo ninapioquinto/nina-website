@@ -575,5 +575,83 @@ export const portfolioItems: PortfolioItem[] = [
       "Improved client satisfaction through faster response times"
     ],
     projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
+  },
+  {
+    id: "10",
+    title: "Luxury Medspa CRM – Custom Built Client Experience System",
+    description: "Developed a fully customized CRM aligned with the medspa's exact workflow. The system handled every step of the client journey — from digital intake to post-treatment automation — with modules tailored to clinical, operational, and marketing needs.",
+    fullDescription: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    image: "/lovable-uploads/photo-1649972904349-6e44c42644a7",
+    category: "CRM Development",
+    technologies: ["Airtable", "Make.com", "Twilio", "Lovable.dev", "Custom Scheduling Widget"],
+    results: "Enhanced client experience with streamlined workflows",
+    client: "Luxury Medspa",
+    duration: "4 months",
+    role: "MVP App Engineer",
+    challenge: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    workflowSteps: [
+      {
+        step: "1. Client Management",
+        description: "Centralized client profiles and digital documentation.",
+        bullets: [
+          "Centralized profiles with contact details, birthdays, skin concerns, and treatment history",
+          "Photo uploads for before-and-after tracking and visual documentation",
+          "Digital intake and consent forms sent via secure links or completed in-clinic",
+          "Medical notes per appointment including treatment plans and attached visuals"
+        ]
+      },
+      {
+        step: "2. Appointment Management",
+        description: "Streamlined booking and scheduling system.",
+        bullets: [
+          "Integrated calendar showing upcoming and past appointments, color-coded by status",
+          "Automated SMS and email reminders with options to confirm or reschedule",
+          "Waitlist and walk-in tracker to optimize appointment flow during busy hours"
+        ]
+      },
+      {
+        step: "3. Service and Sales Tracking",
+        description: "Comprehensive service history and sales optimization.",
+        bullets: [
+          "Complete service history per client",
+          "Product purchase tracking for upsell opportunities and personalized care"
+        ]
+      },
+      {
+        step: "4. Automation and Follow-Ups",
+        description: "Intelligent client engagement and retention automation.",
+        bullets: [
+          "Scheduled check-ins at 3, 7, and 30 days after treatment via SMS or email",
+          "Review request flows with automated outreach",
+          "Client reactivation based on inactivity (30, 60, 90 days) with custom promos or messages"
+        ]
+      },
+      {
+        step: "5. Dashboard and Reporting",
+        description: "Real-time business intelligence and performance tracking.",
+        bullets: [
+          "Daily appointment summaries by practitioner or treatment room",
+          "Revenue tracking by service type and client profile",
+          "Client retention and visit frequency metrics for ongoing performance review"
+        ]
+      },
+      {
+        step: "6. Staff and Role Management",
+        description: "Secure access control and team coordination.",
+        bullets: [
+          "Role-based access controls for Admin, Therapist, and Receptionist accounts",
+          "Internal staff notes to support coordination without exposing client-facing data"
+        ]
+      }
+    ],
+    outcomes: [
+      "Enhanced client experience with personalized care tracking",
+      "Streamlined operations with automated appointment management",
+      "Improved staff coordination with role-based access controls",
+      "Increased revenue through intelligent upsell tracking",
+      "Better client retention through automated follow-up flows",
+      "Comprehensive reporting for data-driven business decisions"
+    ],
+    projectSummary: "This MedSpa CRM solution delivers a highly customized, secure, and efficient platform that enhances client experience, optimizes staff workflows, and drives business growth for luxury medspa operations. It balances rich features with simplicity to enable rapid deployment and iterative improvements based on real user feedback."
   }
 ];
