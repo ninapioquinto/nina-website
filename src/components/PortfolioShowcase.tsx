@@ -1,3 +1,4 @@
+
 import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import PortfolioCard from './PortfolioCard';
@@ -6,8 +7,8 @@ import { portfolioItems } from '../data/portfolioData';
 const PortfolioShowcase = () => {
   const navigate = useNavigate();
   
-  // Show first 6 items for the showcase
-  const showcaseItems = portfolioItems.slice(0, 6);
+  // Show first 9 items for the showcase
+  const showcaseItems = portfolioItems.slice(0, 9);
 
   return (
     <section id="portfolio" className="py-24 relative overflow-hidden">
