@@ -1,4 +1,3 @@
-
 interface WorkflowStep {
   step: string;
   description: string;
@@ -19,7 +18,7 @@ interface WorkflowStepsProps {
 const WorkflowSteps = ({ steps, supportingAutomations }: WorkflowStepsProps) => {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-white mb-6">Pipeline Stages Overview</h2>
+      <h2 className="text-3xl font-bold text-white mb-6">The Solution</h2>
       <div className="space-y-8">
         {steps.map((step, index) => (
           <div key={index} className="border-l-4 border-purple-400/40 pl-6 py-4 bg-gradient-to-r from-purple-900/10 to-transparent rounded-r-lg">
