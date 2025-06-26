@@ -1,4 +1,3 @@
-
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -77,7 +76,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "GHL Voice AI Agent – AI-Powered Voice Booking and Contact Sync",
     description: "Created a fully automated voice-to-booking workflow that connects incoming calls to CRM actions using AI, enabling 24/7 voice-to-calendar bookings without manual appointment setters.",
     fullDescription: "The client needed a way to automate appointment bookings from voice calls. Their goal was to eliminate the need for manual appointment setters and ensure that every lead interaction was captured accurately in GoHighLevel. They wanted a system that could understand natural speech, extract booking details, and sync everything with their CRM.",
-    image: "/lovable-uploads/4b10e90b-41e5-44e0-8e3b-68b2fa8cd602.png",
+    image: "/lovable-uploads/86ead6be-9665-4a0d-85d9-fb4141ccd91b.png",
     category: "Voice Automation",
     technologies: ["Make (Integromat)", "OpenAI GPT-4o", "GoHighLevel", "Retell AI"],
     results: "24/7 automated voice bookings",
