@@ -419,7 +419,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Florida Realty CRM: Custom CRM System for Real Estate Deal Flow",
     description: "Developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking.",
     fullDescription: "I developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking. Key workflows like follow-ups, appointment scheduling, and document handling are now automated. Agents work from one centralized platform without the complexity of traditional CRM tools.",
-    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    image: "/lovable-uploads/ebdac2e2-8530-45e9-b53b-56563ea878ae.png",
     category: "CRM Development",
     technologies: ["Lovable.dev", "Airtable", "n8n"],
     results: "Agents save several hours each week with streamlined workflows",
