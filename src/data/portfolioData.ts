@@ -156,7 +156,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "SalesFlow AI Agent – Instant Personalized Follow-Ups for Sales Calls",
     description: "Built an AI-powered workflow that generates personalized follow-ups seconds after a prospect books a call, using real company insights and testimonials to deliver high-quality messages.",
     fullDescription: "Sales teams were spending too much time writing follow-up emails after discovery calls. The messages often felt templated or lacked relevance. The client needed a way to instantly deliver personalized, high-quality messages using real company insights and testimonials.",
-    image: "/lovable-uploads/f33f1f05-555a-4043-8f47-babb6b1a2f95.png",
+    image: "/lovable-uploads/e1a84ff2-474d-46ff-b50c-085585187315.png",
     category: "Sales Automation",
     technologies: ["n8n", "GPT-4.1", "Google Sheets", "Tavily", "LangChain", "Agent Stack"],
     results: "Instant personalized follow-ups in seconds",
