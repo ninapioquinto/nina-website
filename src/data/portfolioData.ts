@@ -114,7 +114,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Social Media AutoPilot – AI-Powered Content Distribution Engine",
     description: "Built a fully automated system that transforms any article link into a complete multi-platform content campaign, eliminating manual repurposing and enabling consistent weekly publishing.",
     fullDescription: "Publishing consistently across multiple platforms was draining time and energy. My client wanted to turn long-form articles into engaging social content, but the manual effort required for writing summaries, designing visuals, and customizing posts for each platform made it unsustainable.",
-    image: "/lovable-uploads/58da3295-08c3-4d16-9214-f7d1bd815361.png",
+    image: "/lovable-uploads/31f28f38-0450-4242-9110-663b7252644c.png",
     category: "Content Automation",
     technologies: ["Make.com", "OpenAI GPT-4o", "Perplexity AI", "DALL·E 3", "Google Sheets"],
     results: "Consistent weekly publishing across 4 platforms",
