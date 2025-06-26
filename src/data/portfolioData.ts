@@ -691,5 +691,114 @@ export const portfolioItems: PortfolioItem[] = [
       "Centralized operations with enhanced client experience"
     ],
     projectSummary: "This project gave the client more than automation. It gave them control. By thoughtfully designing a tailored GoHighLevel CRM, I helped this credit repair and funding team eliminate overwhelm, centralize their operations, and build a business model that scales without chaos. They now operate with clarity and confidence, supported by a system that aligns with their growth goals and enhances every step of the client journey."
+  },
+  {
+    id: "12",
+    title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
+    description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
+    fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
+    image: "/lovable-uploads/ac40fb5e-7919-485c-8dce-b2f92ec7d489.png",
+    category: "CRM Development",
+    technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms", "Google Calendar"],
+    results: "Streamlined operations with reduced manual work and improved response times",
+    client: "Texas Roofing Company",
+    role: "App Developer",
+    challenge: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
+    workflowSteps: [
+      {
+        step: "Lead and Contact Management",
+        description: "Centralized database with comprehensive lead tracking and segmentation.",
+        bullets: [
+          "Centralized database of leads and clients",
+          "Tracks names, property addresses, contact details, and lead sources",
+          "Lead tagging and segmentation by ZIP code or service type"
+        ]
+      },
+      {
+        step: "Sales and Job Pipeline",
+        description: "Visual Kanban board system for managing job progression.",
+        bullets: [
+          "Visual Kanban board with clear stages: Lead In, Inspection Scheduled, Quote Sent, Approved, Job Scheduled, Completed, Closed or Lost",
+          "Each job record includes notes, team comments, and file uploads"
+        ]
+      },
+      {
+        step: "Quote and Proposal Tracking",
+        description: "Comprehensive quote management with status tracking.",
+        bullets: [
+          "Upload or generate quote documents",
+          "Track status including Drafted, Sent, Viewed, and Accepted",
+          "Optional integration with e-signature tools like Tally or PandaDoc"
+        ]
+      },
+      {
+        step: "Calendar and Scheduling",
+        description: "Integrated scheduling system with team coordination.",
+        bullets: [
+          "Book inspections and job schedules",
+          "Sync with Google Calendar",
+          "View by day, week, or month",
+          "Assign events to staff or subcontractors"
+        ]
+      },
+      {
+        step: "Built-In Roofing Tools",
+        description: "Industry-specific calculators and safety tools.",
+        bullets: [
+          "Roofing Calculator – Computes roof area, square footage, and cost estimates",
+          "Pitch Measurement Tool – Calculates slope using angle input or mobile photo",
+          "Material Estimator – Estimates shingles, underlayment, nails, flashing, and more",
+          "Safety Checklist – Mobile-friendly checklist for PPE, ladder setup, and job site safety"
+        ]
+      }
+    ],
+    supportingAutomations: {
+      title: "Key Features and Automation",
+      sections: [
+        {
+          title: "Task Management & Documentation",
+          bullets: [
+            "Add tasks to any lead or job with owners, due dates, and priorities",
+            "Upload permits, contracts, inspection reports, and job site photos",
+            "Mobile upload support for field teams",
+            "Organized by client or job ID"
+          ]
+        },
+        {
+          title: "Automation Triggers",
+          bullets: [
+            "Auto-tag new leads based on form inputs",
+            "Automatically advance pipeline stages after quote approval",
+            "Set up automated reminders and follow-ups via email or SMS"
+          ]
+        },
+        {
+          title: "Dashboard and Reporting",
+          bullets: [
+            "Real-time KPIs including new leads, quotes sent, deals won, and job progress",
+            "Optional map view of active and completed jobs by ZIP code",
+            "Filter by lead source, job type, or date range"
+          ]
+        },
+        {
+          title: "Client-Facing Portal",
+          bullets: [
+            "Read-only dashboard for clients to view project updates",
+            "Includes job status, photos, and shared documents"
+          ]
+        }
+      ]
+    },
+    outcomes: [
+      "Significantly reduced manual work across all operations",
+      "Improved response time on quotes and client communications",
+      "Eliminated missed follow-ups through intelligent automation",
+      "Enhanced collaboration between office and field teams",
+      "Delivered single source of truth for all company operations",
+      "Enabled scaling operations with better organization",
+      "Created more professional customer experience",
+      "Provided full visibility into pipeline and task assignments"
+    ],
+    projectSummary: "This CRM gave the roofing company a single source of truth for all operations. It significantly reduced manual work, improved response time on quotes, and eliminated missed follow-ups through automation. With full visibility into the pipeline and task assignments, the office and field teams now collaborate more effectively. The client was able to scale operations with better organization, faster communication, and a more professional customer experience."
   }
 ];
