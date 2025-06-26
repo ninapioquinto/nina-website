@@ -697,7 +697,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
     description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
     fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
-    image: "/lovable-uploads/ac40fb5e-7919-485c-8dce-b2f92ec7d489.png",
+    image: "/lovable-uploads/38801ee5-15f0-4091-98c0-6a2d2526d557.png",
     category: "CRM Development",
     technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms", "Google Calendar"],
     results: "Streamlined operations with reduced manual work and improved response times",
