@@ -14,7 +14,6 @@ export interface PortfolioItem {
   technologies: string[];
   results: string;
   client: string;
-  duration: string;
   role: string;
   challenge: string;
   workflowSteps?: WorkflowStep[];
@@ -40,7 +39,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Make (Integromat)", "OpenAI GPT-4o-mini", "Google Mail", "Slack", "Relevance AI"],
     results: "90% time saved on email sorting",
     client: "Customer Support Team",
-    duration: "2 months",
     role: "Automation Systems Engineer",
     challenge: "Customer support inboxes can easily become overloaded. Important requests get buried under general inquiries or irrelevant messages. The client needed a solution to filter, classify, and prioritize incoming emails with precision and speed.",
     workflowSteps: [
@@ -83,7 +81,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Make (Integromat)", "OpenAI GPT-4o", "GoHighLevel", "Retell AI"],
     results: "24/7 automated voice bookings",
     client: "GoHighLevel Users",
-    duration: "3 months",
     role: "Automation Systems Engineer",
     challenge: "The client needed a way to automate appointment bookings from voice calls. Their goal was to eliminate the need for manual appointment setters and ensure that every lead interaction was captured accurately in GoHighLevel. They wanted a system that could understand natural speech, extract booking details, and sync everything with their CRM.",
     workflowSteps: [
@@ -122,7 +119,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Make.com", "OpenAI GPT-4o", "Perplexity AI", "DALL·E 3", "Google Sheets"],
     results: "Consistent weekly publishing across 4 platforms",
     client: "Content Creator",
-    duration: "2.5 months",
     role: "Automation Systems Engineer",
     challenge: "Publishing consistently across multiple platforms was draining time and energy. My client wanted to turn long-form articles into engaging social content, but the manual effort required for writing summaries, designing visuals, and customizing posts for each platform made it unsustainable.",
     workflowSteps: [
@@ -165,7 +161,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["n8n", "GPT-4.1", "Google Sheets", "Tavily", "LangChain", "Agent Stack"],
     results: "Instant personalized follow-ups in seconds",
     client: "Sales Team",
-    duration: "2.5 months",
     role: "Automation Systems Engineer",
     challenge: "Sales teams were spending too much time writing follow-up emails after discovery calls. The messages often felt templated or lacked relevance. The client needed a way to instantly deliver personalized, high-quality messages using real company insights and testimonials.",
     workflowSteps: [
@@ -208,7 +203,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["n8n", "OpenAI GPT-4o", "Gmail", "Slack"],
     results: "Reduced manual inbox management time significantly",
     client: "Busy Teams",
-    duration: "2 months",
     role: "Automation Systems Engineer",
     challenge: "Managing a shared inbox across multiple departments often leads to chaos. Important emails from customers, sales leads, or finance teams can easily be buried under newsletters, promotional offers, and internal back-and-forth. The client needed an automated way to sort, label, and respond to emails quickly while keeping key messages visible to the right teams.",
     workflowSteps: [
@@ -251,7 +245,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["n8n", "OpenAI GPT-4o-mini", "Apify", "Google Sheets", "LangChain"],
     results: "Reduced turnaround time from hours to under a minute",
     client: "Marketing Teams",
-    duration: "2 months",
     role: "Automation Systems Engineer",
     challenge: "Marketing and research teams were spending too much time manually collecting content and engagement data from LinkedIn, Instagram, YouTube, and X. Visiting each link, copying data, and updating spreadsheets slowed down workflows and limited how quickly teams could act on insights. The client needed a fast and reliable way to turn social media links into structured data automatically.",
     workflowSteps: [
@@ -301,7 +294,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["GoHighLevel", "Stripe", "Airtable", "SMS Automation", "Email Sequences"],
     results: "Streamlined client journey with automated follow-ups",
     client: "Business Coach",
-    duration: "3 months",
     role: "Automation Systems Engineer",
     challenge: "Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
     workflowSteps: [
@@ -432,7 +424,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Lovable.dev", "Airtable", "n8n"],
     results: "Agents save several hours each week with streamlined workflows",
     client: "Florida Real Estate Team",
-    duration: "4 months",
     role: "Automation Systems Engineer",
     challenge: "The real estate team was managing client relationships using spreadsheets, calendars, and scattered chat threads. Follow-ups were often missed, deal tracking lacked structure, and leadership had no real-time visibility into pipeline activity or agent performance. Manual processes slowed down agents and made growth difficult to manage.",
     workflowSteps: [
@@ -537,7 +528,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
     results: "Faster internal processes and reduced manual delays",
     client: "Various Clients",
-    duration: "Ongoing",
     role: "Automation Systems Engineer",
     challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
     workflowSteps: [
@@ -586,7 +576,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Airtable", "Make.com", "Twilio", "Lovable.dev", "Custom Scheduling Widget"],
     results: "Enhanced client experience with streamlined workflows",
     client: "Luxury Medspa",
-    duration: "4 months",
     role: "MVP App Engineer",
     challenge: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
     workflowSteps: [
@@ -664,7 +653,6 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["GoHighLevel", "Make.com"],
     results: "$112,000 opportunity value captured, $53,000 revenue generated, 45% win rate",
     client: "Credit Repair & Funding Business",
-    duration: "3 months",
     role: "Automation Systems Engineer",
     challenge: "The business was ready to grow, but their systems were not. Their lead capture process required juggling multiple tools that didn't speak to each other. Onboarding was inconsistent, client communication was delayed, and tracking funding stages was difficult. They needed more than just a CRM. They needed a centralized, intelligent system to run their operations, manage leads, track funding, and deliver a better experience for their clients from start to finish.",
     workflowSteps: [

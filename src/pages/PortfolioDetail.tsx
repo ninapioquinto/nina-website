@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -65,7 +64,6 @@ const PortfolioDetail = () => {
           <ProjectMeta 
             client={project.client} 
             results={project.results} 
-            duration={project.duration} 
           />
 
           {/* Project Image */}
