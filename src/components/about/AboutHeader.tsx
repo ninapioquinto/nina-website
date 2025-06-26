@@ -11,9 +11,7 @@ const AboutHeader = () => {
       
       <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent leading-tight">Automation Systems Engineer 
 &amp; App Developer</h2>
-      <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-        I build custom no-code automation systems that simplify operations and drive sustainable growth for service-based businesses.
-      </p>
+      <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Technical infrastructure designed to enable operational clarity and long-term scalability.</p>
     </div>;
 };
 export default AboutHeader;
