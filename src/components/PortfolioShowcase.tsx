@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 import { Button } from './ui/button';
 import PortfolioCard from './PortfolioCard';
@@ -33,7 +32,7 @@ const PortfolioShowcase = () => {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Automation Solutions That{' '}
+            Business Solutions That{' '}
             <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
               Drive Results
             </span>
