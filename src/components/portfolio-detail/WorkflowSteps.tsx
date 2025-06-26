@@ -1,13 +1,18 @@
-
 interface WorkflowStep {
-  title: string;
+  step: string;
   description: string;
   bullets?: string[];
 }
 
 interface WorkflowStepsProps {
   steps: WorkflowStep[];
-  supportingAutomations?: string[];
+  supportingAutomations?: {
+    title: string;
+    sections: {
+      title: string;
+      bullets: string[];
+    }[];
+  };
 }
 
 const WorkflowSteps = ({ steps, supportingAutomations }: WorkflowStepsProps) => {
@@ -18,7 +23,7 @@ const WorkflowSteps = ({ steps, supportingAutomations }: WorkflowStepsProps) => 
         {steps.map((step, index) => (
           <div key={index} className="border-l-4 border-purple-400/40 pl-6 py-4 bg-gradient-to-r from-purple-900/10 to-transparent rounded-r-lg">
             <h3 className="text-xl font-bold text-white mb-4">
-              {index + 1}. {step.title}
+              {index + 1}. {step.step}
             </h3>
             <div className="text-white/80 leading-relaxed space-y-3">
               <div className="whitespace-pre-line">{step.description}</div>
@@ -36,17 +41,22 @@ const WorkflowSteps = ({ steps, supportingAutomations }: WorkflowStepsProps) => 
         ))}
       </div>
 
-      {supportingAutomations && supportingAutomations.length > 0 && (
+      {supportingAutomations && (
         <div className="mt-12">
-          <h2 className="text-3xl font-bold text-white mb-6">Supporting Automations</h2>
-          <div className="bg-gradient-to-r from-purple-900/10 to-transparent rounded-lg p-6 border border-purple-400/20">
-            <ul className="list-disc list-inside space-y-2 ml-4">
-              {supportingAutomations.map((automation, index) => (
-                <li key={index} className="text-white/80 leading-relaxed">
-                  {automation}
-                </li>
-              ))}
-            </ul>
+          <h2 className="text-3xl font-bold text-white mb-6">{supportingAutomations.title}</h2>
+          <div className="space-y-6">
+            {supportingAutomations.sections.map((section, index) => (
+              <div key={index} className="bg-gradient-to-r from-purple-900/10 to-transparent rounded-lg p-6 border border-purple-400/20">
+                <h3 className="text-xl font-bold text-white mb-4">{section.title}</h3>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  {section.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="text-white/80 leading-relaxed">
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       )}

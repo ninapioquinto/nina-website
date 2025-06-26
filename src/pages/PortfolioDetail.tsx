@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -67,12 +66,12 @@ const PortfolioDetail = () => {
             results={project.results} 
           />
 
-          {/* Project Image - Fixed to show full image */}
+          {/* Project Image */}
           <div className="mb-12">
             <img 
               src={project.image} 
               alt={project.title} 
-              className="w-full h-auto max-h-96 object-contain rounded-2xl border border-white/10 bg-white/5" 
+              className="w-full h-64 md:h-96 object-cover rounded-2xl border border-white/10" 
             />
           </div>
 
