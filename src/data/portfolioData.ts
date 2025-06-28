@@ -763,7 +763,7 @@ export const portfolioItems: PortfolioItem[] = [
     technologies: ["Airtable", "Dropbox", "Google Drive", "Make.com"],
     results: "Reduced manual work and improved cross-team collaboration with transparent client visibility",
     client: "Content Marketing Agency",
-    role: "Airtable Developer & Workflow Architect",
+    role: "Automation Systems Engineer",
     challenge: "A content marketing agency needed a centralized system to manage clients, projects, and deliverables across multiple teams and tools. Their existing setup relied on scattered spreadsheets, disconnected cloud storage, and manual communication, creating inefficiencies and missed deadlines.",
     workflowSteps: [
       {
@@ -771,7 +771,7 @@ export const portfolioItems: PortfolioItem[] = [
         description: "Built comprehensive database structure connecting clients, projects, tasks, and team members with relational links for complete visibility."
       },
       {
-        step: "Team-Specific Interfaces for Writers, Editors, and Project Managers",
+        step: "Team-Specific Interfaces for Writers, Video Editors, and Project Managers",
         description: "Created customized views and interfaces tailored to each role's specific needs and workflows."
       },
       {
