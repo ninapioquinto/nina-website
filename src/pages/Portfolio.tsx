@@ -1,4 +1,6 @@
 
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import StarryBackground from '../components/StarryBackground';
 import Particles from '../components/Particles';
 import PortfolioCard from '../components/PortfolioCard';
@@ -7,6 +9,7 @@ import { portfolioItems } from '../data/portfolioData';
 const Portfolio = () => {
   return (
     <div className="min-h-screen relative">
+      <Navbar />
       <StarryBackground />
       <Particles />
       
@@ -36,6 +39,8 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
