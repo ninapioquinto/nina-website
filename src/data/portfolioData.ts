@@ -399,7 +399,7 @@ export const portfolioItems: PortfolioItem[] = [
     results: "Enhanced client experience with streamlined workflows",
     client: "Luxury Medspa",
     role: "MVP App Engineer",
-    challenge: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    challenge: "A luxury medspa based in Illinois was relying on disjointed tools and manual processes to manage client care. As client volume grew, it became harder to maintain personalized experiences, streamline follow-ups, and coordinate staff effectively. The team needed a secure, all-in-one system to manage records, track treatments, automate communication, and support a seamless high-end experience.",
     workflowSteps: [
       {
         step: "1. Client Management",
