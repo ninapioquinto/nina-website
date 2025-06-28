@@ -755,50 +755,54 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "12",
-    title: "Tool Experience Gallery",
-    description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
-    fullDescription: "This section showcases a collection of automation workflows I've designed and delivered for clients. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes across CRM, task management, lead handling, and data coordination.",
+    title: "HVAC Upsell & Cross-Sell Campaign",
+    description: "Designed an automated upsell and cross-sell campaign using GoHighLevel to increase average order value for an HVAC company through personalized, multi-channel follow-ups and conditional logic based on customer behavior.",
+    fullDescription: "An HVAC company needed an automated system to increase average order value by presenting timely upsell and cross-sell offers after service or equipment purchases. Their existing process was manual, inconsistent, and lacked personalization, resulting in missed revenue opportunities and lower customer retention. They required a scalable, multi-channel campaign that could deliver relevant offers based on customer behavior while maintaining trust and transparency.",
     image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
-    category: "Workflow Automation",
-    technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
-    results: "Faster internal processes and reduced manual delays",
-    client: "Various Clients",
+    category: "Sales Automation",
+    technologies: ["GoHighLevel"],
+    results: "Significantly increased average order value through automated ethical upselling",
+    client: "HVAC Company",
     role: "Automation Systems Engineer",
-    challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
+    challenge: "An HVAC company needed an automated system to increase average order value by presenting timely upsell and cross-sell offers after service or equipment purchases. Their existing process was manual, inconsistent, and lacked personalization, resulting in missed revenue opportunities and lower customer retention. They required a scalable, multi-channel campaign that could deliver relevant offers based on customer behavior while maintaining trust and transparency.",
     workflowSteps: [
       {
-        step: "CRM Buildouts and Automation Pipelines",
-        description: "Designed comprehensive CRM systems with automated lead routing, scoring, and nurture sequences that seamlessly integrate with existing business processes."
+        step: "Automated Trigger & Thank You Sequence",
+        description: "Starts immediately post-purchase and sends branded thank-you email with initial upsell or cross-sell offer."
       },
       {
-        step: "Multi-Step Lead Intake and Segmentation",
-        description: "Created intelligent lead capture workflows that automatically segment prospects based on their responses, behavior, and demographic data for targeted follow-up campaigns."
+        step: "Conditional Logic Branching",
+        description: "Adjusts follow-ups based on clicks and inquiries, segmenting customers into engaged, partially engaged, or non-responsive groups."
       },
       {
-        step: "Auto-Task Creation and Internal Coordination",
-        description: "Built systems that automatically generate tasks, assign responsibilities, and coordinate team activities based on triggers from various platforms and customer interactions."
+        step: "Multi-Channel Follow-Ups",
+        description: "Timed email and SMS messages to nurture leads and promote seasonal offers."
       },
       {
-        step: "Cross-Platform Data Syncing",
-        description: "Implemented seamless data synchronization between different tools and platforms, ensuring consistent information across all systems without manual data entry."
+        step: "Personalized Product Recommendations",
+        description: "Suggests higher-tier HVAC units, filter replacements, or maintenance contracts tailored to customer needs."
       },
       {
-        step: "Status Updates and Workflow Triggers",
-        description: "Developed automated status reporting and workflow triggers that keep teams informed and processes moving forward without constant manual oversight."
+        step: "Digital Proposal Integration",
+        description: "Showcases interactive product demos, videos, and financing options to simplify decision-making."
       },
       {
-        step: "Notification Systems Across Teams",
-        description: "Created intelligent notification systems that alert the right people at the right time, reducing response delays and improving team coordination."
+        step: "Behavior-Based Segmentation",
+        description: "Ensures messaging relevance and avoids spamming uninterested customers."
+      },
+      {
+        step: "Performance Tracking & Reporting",
+        description: "Monitors engagement and conversion metrics for continuous optimization."
       }
     ],
     outcomes: [
-      "Faster internal processes with reduced bottlenecks",
-      "More consistent lead handling and follow-up",
-      "Centralized and connected systems eliminating data silos",
-      "Reduced manual steps and operational delays",
-      "Better visibility across operations and team activities",
-      "Improved client satisfaction through faster response times"
+      "Significantly increased average order value through automated ethical upselling and cross-selling",
+      "Improved customer retention through relevant service offerings",  
+      "Reduced manual follow-up efforts while maintaining personalization",
+      "Enhanced customer satisfaction through timely, relevant communications",
+      "Created scalable system that drives revenue growth",
+      "Delivered transparent, trust-building customer experience"
     ],
-    projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
+    projectSummary: "This campaign significantly increased average order value by automating ethical upselling and cross-selling, improving customer retention through relevant service offerings, and reducing manual follow-up efforts. The HVAC company gained a scalable system that delivers personalized, timely communications, enhancing customer satisfaction and driving revenue growth."
   }
 ];
