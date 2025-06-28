@@ -755,54 +755,55 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "12",
-    title: "HVAC Upsell & Cross-Sell Campaign",
-    description: "Designed an automated upsell and cross-sell campaign using GoHighLevel to increase average order value for an HVAC company through personalized, multi-channel follow-ups and conditional logic based on customer behavior.",
-    fullDescription: "An HVAC company needed an automated system to increase average order value by presenting timely upsell and cross-sell offers after service or equipment purchases. Their existing process was manual, inconsistent, and lacked personalization, resulting in missed revenue opportunities and lower customer retention. They required a scalable, multi-channel campaign that could deliver relevant offers based on customer behavior while maintaining trust and transparency.",
+    title: "Airtable System Build for Content Marketing Agency",
+    description: "Designed and developed a comprehensive Airtable-centered system for content marketing operations using Airtable, Dropbox, Google Drive, and Make.com to centralize client management, project workflows, and team collaboration.",
+    fullDescription: "A content marketing agency needed a centralized system to manage clients, projects, and deliverables across multiple teams and tools. Their existing setup relied on scattered spreadsheets, disconnected cloud storage, and manual communication, creating inefficiencies and missed deadlines.",
     image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
-    category: "Sales Automation",
-    technologies: ["GoHighLevel"],
-    results: "Significantly increased average order value through automated ethical upselling",
-    client: "HVAC Company",
-    role: "Automation Systems Engineer",
-    challenge: "An HVAC company needed an automated system to increase average order value by presenting timely upsell and cross-sell offers after service or equipment purchases. Their existing process was manual, inconsistent, and lacked personalization, resulting in missed revenue opportunities and lower customer retention. They required a scalable, multi-channel campaign that could deliver relevant offers based on customer behavior while maintaining trust and transparency.",
+    category: "Database Development",
+    technologies: ["Airtable", "Dropbox", "Google Drive", "Make.com"],
+    results: "Reduced manual work and improved cross-team collaboration with transparent client visibility",
+    client: "Content Marketing Agency",
+    role: "Airtable Developer & Workflow Architect",
+    challenge: "A content marketing agency needed a centralized system to manage clients, projects, and deliverables across multiple teams and tools. Their existing setup relied on scattered spreadsheets, disconnected cloud storage, and manual communication, creating inefficiencies and missed deadlines.",
     workflowSteps: [
       {
-        step: "Automated Trigger & Thank You Sequence",
-        description: "Starts immediately post-purchase and sends branded thank-you email with initial upsell or cross-sell offer."
+        step: "Centralized Client & Project Database with Linked Records",
+        description: "Built comprehensive database structure connecting clients, projects, tasks, and team members with relational links for complete visibility."
       },
       {
-        step: "Conditional Logic Branching",
-        description: "Adjusts follow-ups based on clicks and inquiries, segmenting customers into engaged, partially engaged, or non-responsive groups."
+        step: "Team-Specific Interfaces for Writers, Editors, and Project Managers",
+        description: "Created customized views and interfaces tailored to each role's specific needs and workflows."
       },
       {
-        step: "Multi-Channel Follow-Ups",
-        description: "Timed email and SMS messages to nurture leads and promote seasonal offers."
+        step: "Automated File Syncing with Dropbox & Google Drive via Make.com",
+        description: "Integrated cloud storage platforms to automatically organize and sync project assets and deliverables."
       },
       {
-        step: "Personalized Product Recommendations",
-        description: "Suggests higher-tier HVAC units, filter replacements, or maintenance contracts tailored to customer needs."
+        step: "Task Workflows and Status Tracking for Each Team Role",
+        description: "Implemented status tracking systems and automated workflows specific to content creation processes."
       },
       {
-        step: "Digital Proposal Integration",
-        description: "Showcases interactive product demos, videos, and financing options to simplify decision-making."
+        step: "Client-Facing Portal for Deliverables, Timelines, and Feedback",
+        description: "Developed client portal allowing transparent access to project progress, deliverables, and feedback collection."
       },
       {
-        step: "Behavior-Based Segmentation",
-        description: "Ensures messaging relevance and avoids spamming uninterested customers."
+        step: "Filtered Views for Prioritization and Deadlines",
+        description: "Created intelligent filtering and sorting systems to help teams prioritize work and meet deadlines."
       },
       {
-        step: "Performance Tracking & Reporting",
-        description: "Monitors engagement and conversion metrics for continuous optimization."
+        step: "Scalable Structure for Adding New Clients or Content Types",
+        description: "Designed flexible database architecture to accommodate business growth and new service offerings."
       }
     ],
     outcomes: [
-      "Significantly increased average order value through automated ethical upselling and cross-selling",
-      "Improved customer retention through relevant service offerings",  
-      "Reduced manual follow-up efforts while maintaining personalization",
-      "Enhanced customer satisfaction through timely, relevant communications",
-      "Created scalable system that drives revenue growth",
-      "Delivered transparent, trust-building customer experience"
+      "Reduced manual work across all content creation processes",
+      "Improved cross-team collaboration with centralized communication",
+      "Provided clients with transparent visibility on deliverables and timelines",
+      "Streamlined file management and asset organization",
+      "Enhanced project tracking and deadline management",
+      "Created scalable system for agency growth",
+      "Eliminated communication bottlenecks between teams"
     ],
-    projectSummary: "This campaign significantly increased average order value by automating ethical upselling and cross-selling, improving customer retention through relevant service offerings, and reducing manual follow-up efforts. The HVAC company gained a scalable system that delivers personalized, timely communications, enhancing customer satisfaction and driving revenue growth."
+    projectSummary: "This system reduced manual work, improved cross-team collaboration, and provided clients with transparent visibility on deliverables, helping the agency deliver projects faster and more reliably."
   }
 ];
