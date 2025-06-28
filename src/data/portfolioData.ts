@@ -392,7 +392,7 @@ export const portfolioItems: PortfolioItem[] = [
     id: "8",
     title: "Luxury Medspa CRM – Custom Built Client Experience System",
     description: "Developed a fully customized CRM aligned with the medspa's exact workflow. The system handled every step of the client journey — from digital intake to post-treatment automation — with modules tailored to clinical, operational, and marketing needs.",
-    fullDescription: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    fullDescription: "A luxury medspa based in Illinois was relying on disjointed tools and manual processes to manage client care. As client volume grew, it became harder to maintain personalized experiences, streamline follow-ups, and coordinate staff effectively. The team needed a secure, all-in-one system to manage records, track treatments, automate communication, and support a seamless high-end experience.",
     image: "/lovable-uploads/8d5bc30f-8b9b-4a2e-8ea0-8b623cf0c7d0.png",
     category: "CRM Development",
     technologies: ["Airtable", "n8n", "Twilio", "Lovable.dev", "Custom Scheduling Widget"],
