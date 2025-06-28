@@ -758,7 +758,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: "Airtable System Build for Content Marketing Agency",
     description: "Designed and developed a comprehensive Airtable-centered system for content marketing operations using Airtable, Dropbox, Google Drive, and Make.com to centralize client management, project workflows, and team collaboration.",
     fullDescription: "A content marketing agency needed a centralized system to manage clients, projects, and deliverables across multiple teams and tools. Their existing setup relied on scattered spreadsheets, disconnected cloud storage, and manual communication, creating inefficiencies and missed deadlines.",
-    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    image: "/lovable-uploads/61a77c97-3442-411e-bd4c-4732acbc23cc.png",
     category: "Database Development",
     technologies: ["Airtable", "Dropbox", "Google Drive", "Make.com"],
     results: "Reduced manual work and improved cross-team collaboration with transparent client visibility",
