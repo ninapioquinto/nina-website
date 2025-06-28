@@ -7,13 +7,16 @@ import PortfolioCard from '../components/PortfolioCard';
 import { portfolioItems } from '../data/portfolioData';
 
 const Portfolio = () => {
+  console.log('Portfolio items:', portfolioItems);
+  console.log('Number of portfolio items:', portfolioItems?.length);
+
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative bg-background">
       <Navbar />
       <StarryBackground />
       <Particles />
       
-      <div className="relative z-10 py-12">
+      <div className="relative z-10 py-12 pt-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -30,13 +33,20 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
-              <div key={item.id} className="reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                <PortfolioCard {...item} />
-              </div>
-            ))}
-          </div>
+          {portfolioItems && portfolioItems.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {portfolioItems.map((item, index) => (
+                <div key={item.id} className="reveal" style={{ animationDelay: `${index * 0.1}s` }}>
+                  <PortfolioCard {...item} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center text-white">
+              <p>No portfolio items found or data is loading...</p>
+              <p className="text-sm text-white/60 mt-2">Portfolio items: {portfolioItems?.length || 0}</p>
+            </div>
+          )}
         </div>
       </div>
       
