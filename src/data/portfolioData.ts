@@ -1,3 +1,4 @@
+
 export interface WorkflowStep {
   step: string;
   description: string;
@@ -286,6 +287,296 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "7",
+    title: "Florida Realty CRM: Custom CRM System for Real Estate Deal Flow",
+    description: "Developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking.",
+    fullDescription: "I developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking. Key workflows like follow-ups, appointment scheduling, and document handling are now automated. Agents work from one centralized platform without the complexity of traditional CRM tools.",
+    image: "/lovable-uploads/ebdac2e2-8530-45e9-b53b-56563ea878ae.png",
+    category: "CRM Development",
+    technologies: ["Lovable.dev", "Airtable", "n8n"],
+    results: "Agents save several hours each week with streamlined workflows",
+    client: "Florida Real Estate Team",
+    role: "Automation Systems Engineer",
+    challenge: "The real estate team was managing client relationships using spreadsheets, calendars, and scattered chat threads. Follow-ups were often missed, deal tracking lacked structure, and leadership had no real-time visibility into pipeline activity or agent performance. Manual processes slowed down agents and made growth difficult to manage.",
+    workflowSteps: [
+      {
+        step: "1. Leads & Contacts",
+        description: "Organized lead capture, nurturing, and qualification.",
+        bullets: [
+          "Multi-channel lead source tracking (Website, Instagram, Referral, listing platforms, etc.)",
+          "Sales pipeline stages: New → Contacted → Site Visit → Offer → Closed",
+          "Smart tagging: Hot / Warm / Cold",
+          "Auto-updated \"Last Contacted\"",
+          "Follow-up reminders via email, SMS, or WhatsApp"
+        ]
+      },
+      {
+        step: "2. Property Listings",
+        description: "Manage private/internal listing data and status tracking.",
+        bullets: [
+          "Location, Price, Status (Available, Under Offer, Sold, Rented)",
+          "Media support (photos, videos, walkthrough links)",
+          "Assigned agents and listing dates",
+          "Owner contact details (kept private)"
+        ]
+      },
+      {
+        step: "3. Activities & Follow-Ups",
+        description: "Track every touchpoint with built-in automation.",
+        bullets: [
+          "Communication logs (call, email, SMS)",
+          "Scheduled viewings or meetings (calendar synced)",
+          "Auto-reminders and overdue alerts",
+          "Notes organized by lead or property"
+        ]
+      },
+      {
+        step: "4. Deals & Transactions",
+        description: "Real-time deal visibility and agent commission tracking.",
+        bullets: [
+          "Deal stages: Negotiation → Contract Sent → Deposit Paid → Closed",
+          "Linked buyer and property records",
+          "Commission calculator by agent",
+          "Expected close date",
+          "Document uploads (contracts, IDs, deposit slips)"
+        ]
+      }
+    ],
+    supportingAutomations: {
+      title: "Automation and Dashboard Highlights",
+      sections: [
+        {
+          title: "Lead Management",
+          bullets: [
+            "Auto-capture leads from listing platforms, ads, and web forms",
+            "Auto-capture of leads from forms and DMs",
+            "Duplicate contact detection"
+          ]
+        },
+        {
+          title: "Communication & Follow-Up",
+          bullets: [
+            "Email sequence follow-ups based on lead status",
+            "WhatsApp and SMS reminders for upcoming tasks",
+            "Calendar sync for viewings and appointments"
+          ]
+        },
+        {
+          title: "Performance Tracking",
+          bullets: [
+            "Real-time commission tracking per agent and deal"
+          ]
+        },
+        {
+          title: "Client-Facing Dashboard (Lovable)",
+          bullets: [
+            "Role-based access (agents see only their leads)",
+            "Visual summaries: lead stages, listing status, deal pipeline",
+            "Leaderboard by deals closed",
+            "Quick actions: Add new lead, property, or transaction",
+            "Forecast and overdue task alerts"
+          ]
+        }
+      ]
+    },
+    outcomes: [
+      "Significantly improved efficiency across the business",
+      "Automated follow-ups reduced lead response time",
+      "Synced calendars prevented scheduling conflicts",
+      "Centralized data replaced fragmented tools",
+      "Made it easier to manage deals and track agent performance",
+      "Overdue tasks surfaced automatically, keeping lead engagement consistent",
+      "Agents save several hours each week by working in one streamlined system"
+    ],
+    projectSummary: "The CRM significantly improved efficiency across the business. Automated follow-ups reduced lead response time, while synced calendars prevented scheduling conflicts. Centralized data replaced fragmented tools, making it easier to manage deals and track agent performance. Overdue tasks surfaced automatically, keeping lead engagement consistent. Agents now save several hours each week by working in one streamlined system instead of juggling multiple apps and updates."
+  },
+  {
+    id: "8",
+    title: "Luxury Medspa CRM – Custom Built Client Experience System",
+    description: "Developed a fully customized CRM aligned with the medspa's exact workflow. The system handled every step of the client journey — from digital intake to post-treatment automation — with modules tailored to clinical, operational, and marketing needs.",
+    fullDescription: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    image: "/lovable-uploads/8d5bc30f-8b9b-4a2e-8ea0-8b623cf0c7d0.png",
+    category: "CRM Development",
+    technologies: ["Airtable", "Make.com", "Twilio", "Lovable.dev", "Custom Scheduling Widget"],
+    results: "Enhanced client experience with streamlined workflows",
+    client: "Luxury Medspa",
+    role: "MVP App Engineer",
+    challenge: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
+    workflowSteps: [
+      {
+        step: "1. Client Management",
+        description: "Centralized client profiles and digital documentation.",
+        bullets: [
+          "Centralized profiles with contact details, birthdays, skin concerns, and treatment history",
+          "Photo uploads for before-and-after tracking and visual documentation",
+          "Digital intake and consent forms sent via secure links or completed in-clinic",
+          "Medical notes per appointment including treatment plans and attached visuals"
+        ]
+      },
+      {
+        step: "2. Appointment Management",
+        description: "Streamlined booking and scheduling system.",
+        bullets: [
+          "Integrated calendar showing upcoming and past appointments, color-coded by status",
+          "Automated SMS and email reminders with options to confirm or reschedule",
+          "Waitlist and walk-in tracker to optimize appointment flow during busy hours"
+        ]
+      },
+      {
+        step: "3. Service and Sales Tracking",
+        description: "Comprehensive service history and sales optimization.",
+        bullets: [
+          "Complete service history per client",
+          "Product purchase tracking for upsell opportunities and personalized care"
+        ]
+      },
+      {
+        step: "4. Automation and Follow-Ups",
+        description: "Intelligent client engagement and retention automation.",
+        bullets: [
+          "Scheduled check-ins at 3, 7, and 30 days after treatment via SMS or email",
+          "Review request flows with automated outreach",
+          "Client reactivation based on inactivity (30, 60, 90 days) with custom promos or messages"
+        ]
+      },
+      {
+        step: "5. Dashboard and Reporting",
+        description: "Real-time business intelligence and performance tracking.",
+        bullets: [
+          "Daily appointment summaries by practitioner or treatment room",
+          "Revenue tracking by service type and client profile",
+          "Client retention and visit frequency metrics for ongoing performance review"
+        ]
+      },
+      {
+        step: "6. Staff and Role Management",
+        description: "Secure access control and team coordination.",
+        bullets: [
+          "Role-based access controls for Admin, Therapist, and Receptionist accounts",
+          "Internal staff notes to support coordination without exposing client-facing data"
+        ]
+      }
+    ],
+    outcomes: [
+      "Enhanced client experience with personalized care tracking",
+      "Streamlined operations with automated appointment management",
+      "Improved staff coordination with role-based access controls",
+      "Increased revenue through intelligent upsell tracking",
+      "Better client retention through automated follow-up flows",
+      "Comprehensive reporting for data-driven business decisions"
+    ],
+    projectSummary: "This MedSpa CRM solution delivers a highly customized, secure, and efficient platform that enhances client experience, optimizes staff workflows, and drives business growth for luxury medspa operations. It balances rich features with simplicity to enable rapid deployment and iterative improvements based on real user feedback."
+  },
+  {
+    id: "9",
+    title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
+    description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
+    fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
+    image: "/lovable-uploads/31686b78-6f39-4afe-a748-65c0499d89ad.png",
+    category: "CRM Development",
+    technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms", "Google Calendar"],
+    results: "Streamlined operations with reduced manual work and improved response times",
+    client: "Texas Roofing Company",
+    role: "App Developer",
+    challenge: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
+    workflowSteps: [
+      {
+        step: "Lead and Contact Management",
+        description: "Centralized database with comprehensive lead tracking and segmentation.",
+        bullets: [
+          "Centralized database of leads and clients",
+          "Tracks names, property addresses, contact details, and lead sources",
+          "Lead tagging and segmentation by ZIP code or service type"
+        ]
+      },
+      {
+        step: "Sales and Job Pipeline",
+        description: "Visual Kanban board system for managing job progression.",
+        bullets: [
+          "Visual Kanban board with clear stages: Lead In, Inspection Scheduled, Quote Sent, Approved, Job Scheduled, Completed, Closed or Lost",
+          "Each job record includes notes, team comments, and file uploads"
+        ]
+      },
+      {
+        step: "Quote and Proposal Tracking",
+        description: "Comprehensive quote management with status tracking.",
+        bullets: [
+          "Upload or generate quote documents",
+          "Track status including Drafted, Sent, Viewed, and Accepted",
+          "Optional integration with e-signature tools like Tally or PandaDoc"
+        ]
+      },
+      {
+        step: "Calendar and Scheduling",
+        description: "Integrated scheduling system with team coordination.",
+        bullets: [
+          "Book inspections and job schedules",
+          "Sync with Google Calendar",
+          "View by day, week, or month",
+          "Assign events to staff or subcontractors"
+        ]
+      },
+      {
+        step: "Built-In Roofing Tools",
+        description: "Industry-specific calculators and safety tools.",
+        bullets: [
+          "Roofing Calculator – Computes roof area, square footage, and cost estimates",
+          "Pitch Measurement Tool – Calculates slope using angle input or mobile photo",
+          "Material Estimator – Estimates shingles, underlayment, nails, flashing, and more",
+          "Safety Checklist – Mobile-friendly checklist for PPE, ladder setup, and job site safety"
+        ]
+      }
+    ],
+    supportingAutomations: {
+      title: "Key Features and Automation",
+      sections: [
+        {
+          title: "Task Management & Documentation",
+          bullets: [
+            "Add tasks to any lead or job with owners, due dates, and priorities",
+            "Upload permits, contracts, inspection reports, and job site photos",
+            "Mobile upload support for field teams",
+            "Organized by client or job ID"
+          ]
+        },
+        {
+          title: "Automation Triggers",
+          bullets: [
+            "Auto-tag new leads based on form inputs",
+            "Automatically advance pipeline stages after quote approval",
+            "Set up automated reminders and follow-ups via email or SMS"
+          ]
+        },
+        {
+          title: "Dashboard and Reporting",
+          bullets: [
+            "Real-time KPIs including new leads, quotes sent, deals won, and job progress",
+            "Optional map view of active and completed jobs by ZIP code",
+            "Filter by lead source, job type, or date range"
+          ]
+        },
+        {
+          title: "Client-Facing Portal",
+          bullets: [
+            "Read-only dashboard for clients to view project updates",
+            "Includes job status, photos, and shared documents"
+          ]
+        }
+      ]
+    },
+    outcomes: [
+      "Significantly reduced manual work across all operations",
+      "Improved response time on quotes and client communications",
+      "Eliminated missed follow-ups through intelligent automation",
+      "Enhanced collaboration between office and field teams",
+      "Delivered single source of truth for all company operations",
+      "Enabled scaling operations with better organization",
+      "Created more professional customer experience",
+      "Provided full visibility into pipeline and task assignments"
+    ],
+    projectSummary: "This CRM gave the roofing company a single source of truth for all operations. It significantly reduced manual work, improved response time on quotes, and eliminated missed follow-ups through automation. With full visibility into the pipeline and task assignments, the office and field teams now collaborate more effectively. The client was able to scale operations with better organization, faster communication, and a more professional customer experience."
+  },
+  {
+    id: "10",
     title: "Coaching Client Journey – Streamlined Lead-to-Client Pipeline",
     description: "Built a comprehensive end-to-end pipeline system in GoHighLevel that transforms scattered lead management into a streamlined, automated client journey from first contact to program completion.",
     fullDescription: "This Coaching Client Journey pipeline was built inside GoHighLevel to systematize every step, from first contact to client transformation. Each stage in the pipeline represents a specific moment in the buyer journey, backed by workflows, conditional logic, and lightweight team intervention only where necessary. Leads were coming in from Instagram, Facebook ads, referrals, and podcasts. But nothing was centralized. Conversations happened in DMs, follow-ups were missed, and onboarding lacked structure. Manual tracking created bottlenecks and made it hard to scale the client experience.",
@@ -415,235 +706,6 @@ export const portfolioItems: PortfolioItem[] = [
     projectSummary: "This Coaching Client Journey pipeline transformed a scattered, high-touch sales process into a streamlined experience that still feels personal. The team is only looped in where human decision-making matters: discovery call outcomes, onboarding, and client success points. Follow-up is now fully automated, proposals are tracked with precision, and onboarding is a frictionless handoff. The coach has a real-time view of every lead and client stage, and the system is ready to scale without creating overwhelm."
   },
   {
-    id: "8",
-    title: "Florida Realty CRM: Custom CRM System for Real Estate Deal Flow",
-    description: "Developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking.",
-    fullDescription: "I developed a fully customized CRM tailored to the daily operations of a Florida-based real estate business. Using Lovable.dev for the client-facing interface, Airtable for structured data and dynamic views, and n8n for backend automation, the system handles everything from lead intake to commission tracking. Key workflows like follow-ups, appointment scheduling, and document handling are now automated. Agents work from one centralized platform without the complexity of traditional CRM tools.",
-    image: "/lovable-uploads/ebdac2e2-8530-45e9-b53b-56563ea878ae.png",
-    category: "CRM Development",
-    technologies: ["Lovable.dev", "Airtable", "n8n"],
-    results: "Agents save several hours each week with streamlined workflows",
-    client: "Florida Real Estate Team",
-    role: "Automation Systems Engineer",
-    challenge: "The real estate team was managing client relationships using spreadsheets, calendars, and scattered chat threads. Follow-ups were often missed, deal tracking lacked structure, and leadership had no real-time visibility into pipeline activity or agent performance. Manual processes slowed down agents and made growth difficult to manage.",
-    workflowSteps: [
-      {
-        step: "1. Leads & Contacts",
-        description: "Organized lead capture, nurturing, and qualification.",
-        bullets: [
-          "Multi-channel lead source tracking (Website, Instagram, Referral, listing platforms, etc.)",
-          "Sales pipeline stages: New → Contacted → Site Visit → Offer → Closed",
-          "Smart tagging: Hot / Warm / Cold",
-          "Auto-updated \"Last Contacted\"",
-          "Follow-up reminders via email, SMS, or WhatsApp"
-        ]
-      },
-      {
-        step: "2. Property Listings",
-        description: "Manage private/internal listing data and status tracking.",
-        bullets: [
-          "Location, Price, Status (Available, Under Offer, Sold, Rented)",
-          "Media support (photos, videos, walkthrough links)",
-          "Assigned agents and listing dates",
-          "Owner contact details (kept private)"
-        ]
-      },
-      {
-        step: "3. Activities & Follow-Ups",
-        description: "Track every touchpoint with built-in automation.",
-        bullets: [
-          "Communication logs (call, email, SMS)",
-          "Scheduled viewings or meetings (calendar synced)",
-          "Auto-reminders and overdue alerts",
-          "Notes organized by lead or property"
-        ]
-      },
-      {
-        step: "4. Deals & Transactions",
-        description: "Real-time deal visibility and agent commission tracking.",
-        bullets: [
-          "Deal stages: Negotiation → Contract Sent → Deposit Paid → Closed",
-          "Linked buyer and property records",
-          "Commission calculator by agent",
-          "Expected close date",
-          "Document uploads (contracts, IDs, deposit slips)"
-        ]
-      }
-    ],
-    supportingAutomations: {
-      title: "Automation and Dashboard Highlights",
-      sections: [
-        {
-          title: "Lead Management",
-          bullets: [
-            "Auto-capture leads from listing platforms, ads, and web forms",
-            "Auto-capture of leads from forms and DMs",
-            "Duplicate contact detection"
-          ]
-        },
-        {
-          title: "Communication & Follow-Up",
-          bullets: [
-            "Email sequence follow-ups based on lead status",
-            "WhatsApp and SMS reminders for upcoming tasks",
-            "Calendar sync for viewings and appointments"
-          ]
-        },
-        {
-          title: "Performance Tracking",
-          bullets: [
-            "Real-time commission tracking per agent and deal"
-          ]
-        },
-        {
-          title: "Client-Facing Dashboard (Lovable)",
-          bullets: [
-            "Role-based access (agents see only their leads)",
-            "Visual summaries: lead stages, listing status, deal pipeline",
-            "Leaderboard by deals closed",
-            "Quick actions: Add new lead, property, or transaction",
-            "Forecast and overdue task alerts"
-          ]
-        }
-      ]
-    },
-    outcomes: [
-      "Significantly improved efficiency across the business",
-      "Automated follow-ups reduced lead response time",
-      "Synced calendars prevented scheduling conflicts",
-      "Centralized data replaced fragmented tools",
-      "Made it easier to manage deals and track agent performance",
-      "Overdue tasks surfaced automatically, keeping lead engagement consistent",
-      "Agents save several hours each week by working in one streamlined system"
-    ],
-    projectSummary: "The CRM significantly improved efficiency across the business. Automated follow-ups reduced lead response time, while synced calendars prevented scheduling conflicts. Centralized data replaced fragmented tools, making it easier to manage deals and track agent performance. Overdue tasks surfaced automatically, keeping lead engagement consistent. Agents now save several hours each week by working in one streamlined system instead of juggling multiple apps and updates."
-  },
-  {
-    id: "9",
-    title: "Tool Experience Gallery",
-    description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
-    fullDescription: "This section showcases a collection of automation workflows I've designed and delivered for clients. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes across CRM, task management, lead handling, and data coordination.",
-    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
-    category: "Workflow Automation",
-    technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
-    results: "Faster internal processes and reduced manual delays",
-    client: "Various Clients",
-    role: "Automation Systems Engineer",
-    challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
-    workflowSteps: [
-      {
-        step: "CRM Buildouts and Automation Pipelines",
-        description: "Designed comprehensive CRM systems with automated lead routing, scoring, and nurture sequences that seamlessly integrate with existing business processes."
-      },
-      {
-        step: "Multi-Step Lead Intake and Segmentation",
-        description: "Created intelligent lead capture workflows that automatically segment prospects based on their responses, behavior, and demographic data for targeted follow-up campaigns."
-      },
-      {
-        step: "Auto-Task Creation and Internal Coordination",
-        description: "Built systems that automatically generate tasks, assign responsibilities, and coordinate team activities based on triggers from various platforms and customer interactions."
-      },
-      {
-        step: "Cross-Platform Data Syncing",
-        description: "Implemented seamless data synchronization between different tools and platforms, ensuring consistent information across all systems without manual data entry."
-      },
-      {
-        step: "Status Updates and Workflow Triggers",
-        description: "Developed automated status reporting and workflow triggers that keep teams informed and processes moving forward without constant manual oversight."
-      },
-      {
-        step: "Notification Systems Across Teams",
-        description: "Created intelligent notification systems that alert the right people at the right time, reducing response delays and improving team coordination."
-      }
-    ],
-    outcomes: [
-      "Faster internal processes with reduced bottlenecks",
-      "More consistent lead handling and follow-up",
-      "Centralized and connected systems eliminating data silos",
-      "Reduced manual steps and operational delays",
-      "Better visibility across operations and team activities",
-      "Improved client satisfaction through faster response times"
-    ],
-    projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
-  },
-  {
-    id: "10",
-    title: "Luxury Medspa CRM – Custom Built Client Experience System",
-    description: "Developed a fully customized CRM aligned with the medspa's exact workflow. The system handled every step of the client journey — from digital intake to post-treatment automation — with modules tailored to clinical, operational, and marketing needs.",
-    fullDescription: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
-    image: "/lovable-uploads/8d5bc30f-8b9b-4a2e-8ea0-8b623cf0c7d0.png",
-    category: "CRM Development",
-    technologies: ["Airtable", "Make.com", "Twilio", "Lovable.dev", "Custom Scheduling Widget"],
-    results: "Enhanced client experience with streamlined workflows",
-    client: "Luxury Medspa",
-    role: "MVP App Engineer",
-    challenge: "A luxury medspa was managing clients through a patchwork of spreadsheets, paper forms, and manual reminders. With rising client volume and a need for personalized care, the team needed a secure and unified system to manage client records, track treatments, automate follow-ups, and coordinate staff roles — all while delivering a high-end experience.",
-    workflowSteps: [
-      {
-        step: "1. Client Management",
-        description: "Centralized client profiles and digital documentation.",
-        bullets: [
-          "Centralized profiles with contact details, birthdays, skin concerns, and treatment history",
-          "Photo uploads for before-and-after tracking and visual documentation",
-          "Digital intake and consent forms sent via secure links or completed in-clinic",
-          "Medical notes per appointment including treatment plans and attached visuals"
-        ]
-      },
-      {
-        step: "2. Appointment Management",
-        description: "Streamlined booking and scheduling system.",
-        bullets: [
-          "Integrated calendar showing upcoming and past appointments, color-coded by status",
-          "Automated SMS and email reminders with options to confirm or reschedule",
-          "Waitlist and walk-in tracker to optimize appointment flow during busy hours"
-        ]
-      },
-      {
-        step: "3. Service and Sales Tracking",
-        description: "Comprehensive service history and sales optimization.",
-        bullets: [
-          "Complete service history per client",
-          "Product purchase tracking for upsell opportunities and personalized care"
-        ]
-      },
-      {
-        step: "4. Automation and Follow-Ups",
-        description: "Intelligent client engagement and retention automation.",
-        bullets: [
-          "Scheduled check-ins at 3, 7, and 30 days after treatment via SMS or email",
-          "Review request flows with automated outreach",
-          "Client reactivation based on inactivity (30, 60, 90 days) with custom promos or messages"
-        ]
-      },
-      {
-        step: "5. Dashboard and Reporting",
-        description: "Real-time business intelligence and performance tracking.",
-        bullets: [
-          "Daily appointment summaries by practitioner or treatment room",
-          "Revenue tracking by service type and client profile",
-          "Client retention and visit frequency metrics for ongoing performance review"
-        ]
-      },
-      {
-        step: "6. Staff and Role Management",
-        description: "Secure access control and team coordination.",
-        bullets: [
-          "Role-based access controls for Admin, Therapist, and Receptionist accounts",
-          "Internal staff notes to support coordination without exposing client-facing data"
-        ]
-      }
-    ],
-    outcomes: [
-      "Enhanced client experience with personalized care tracking",
-      "Streamlined operations with automated appointment management",
-      "Improved staff coordination with role-based access controls",
-      "Increased revenue through intelligent upsell tracking",
-      "Better client retention through automated follow-up flows",
-      "Comprehensive reporting for data-driven business decisions"
-    ],
-    projectSummary: "This MedSpa CRM solution delivers a highly customized, secure, and efficient platform that enhances client experience, optimizes staff workflows, and drives business growth for luxury medspa operations. It balances rich features with simplicity to enable rapid deployment and iterative improvements based on real user feedback."
-  },
-  {
     id: "11",
     title: "Credit & Business Funding CRM Build Out",
     description: "Migrated an entire credit repair and funding business into GoHighLevel and designed a custom CRM tailored to the real flow of the business. The system centralizes all activity and automates repetitive tasks, creating a smooth, scalable infrastructure.",
@@ -694,111 +756,50 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "12",
-    title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
-    description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
-    fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
-    image: "/lovable-uploads/31686b78-6f39-4afe-a748-65c0499d89ad.png",
-    category: "CRM Development",
-    technologies: ["Lovable.dev", "Airtable", "n8n", "Custom Forms", "Google Calendar"],
-    results: "Streamlined operations with reduced manual work and improved response times",
-    client: "Texas Roofing Company",
-    role: "App Developer",
-    challenge: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
+    title: "Tool Experience Gallery",
+    description: "Collection of automation workflows designed for clients using Zapier, GoHighLevel, Airtable, and ClickUp. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes.",
+    fullDescription: "This section showcases a collection of automation workflows I've designed and delivered for clients. These builds reflect practical, system-driven solutions that enhance operational efficiency, reduce repetitive manual work, and create smoother internal processes across CRM, task management, lead handling, and data coordination.",
+    image: "/lovable-uploads/757bfbe1-b164-438c-bc9e-77779e3d4cfb.png",
+    category: "Workflow Automation",
+    technologies: ["Make.com", "Zapier", "n8n", "GoHighLevel", "ClickUp", "Airtable"],
+    results: "Faster internal processes and reduced manual delays",
+    client: "Various Clients",
+    role: "Automation Systems Engineer",
+    challenge: "Clients across different industries were facing common operational challenges: repetitive manual tasks, disconnected systems, inefficient lead handling processes, and lack of visibility across their operations. They needed practical automation solutions that could integrate with their existing tools and workflows.",
     workflowSteps: [
       {
-        step: "Lead and Contact Management",
-        description: "Centralized database with comprehensive lead tracking and segmentation.",
-        bullets: [
-          "Centralized database of leads and clients",
-          "Tracks names, property addresses, contact details, and lead sources",
-          "Lead tagging and segmentation by ZIP code or service type"
-        ]
+        step: "CRM Buildouts and Automation Pipelines",
+        description: "Designed comprehensive CRM systems with automated lead routing, scoring, and nurture sequences that seamlessly integrate with existing business processes."
       },
       {
-        step: "Sales and Job Pipeline",
-        description: "Visual Kanban board system for managing job progression.",
-        bullets: [
-          "Visual Kanban board with clear stages: Lead In, Inspection Scheduled, Quote Sent, Approved, Job Scheduled, Completed, Closed or Lost",
-          "Each job record includes notes, team comments, and file uploads"
-        ]
+        step: "Multi-Step Lead Intake and Segmentation",
+        description: "Created intelligent lead capture workflows that automatically segment prospects based on their responses, behavior, and demographic data for targeted follow-up campaigns."
       },
       {
-        step: "Quote and Proposal Tracking",
-        description: "Comprehensive quote management with status tracking.",
-        bullets: [
-          "Upload or generate quote documents",
-          "Track status including Drafted, Sent, Viewed, and Accepted",
-          "Optional integration with e-signature tools like Tally or PandaDoc"
-        ]
+        step: "Auto-Task Creation and Internal Coordination",
+        description: "Built systems that automatically generate tasks, assign responsibilities, and coordinate team activities based on triggers from various platforms and customer interactions."
       },
       {
-        step: "Calendar and Scheduling",
-        description: "Integrated scheduling system with team coordination.",
-        bullets: [
-          "Book inspections and job schedules",
-          "Sync with Google Calendar",
-          "View by day, week, or month",
-          "Assign events to staff or subcontractors"
-        ]
+        step: "Cross-Platform Data Syncing",
+        description: "Implemented seamless data synchronization between different tools and platforms, ensuring consistent information across all systems without manual data entry."
       },
       {
-        step: "Built-In Roofing Tools",
-        description: "Industry-specific calculators and safety tools.",
-        bullets: [
-          "Roofing Calculator – Computes roof area, square footage, and cost estimates",
-          "Pitch Measurement Tool – Calculates slope using angle input or mobile photo",
-          "Material Estimator – Estimates shingles, underlayment, nails, flashing, and more",
-          "Safety Checklist – Mobile-friendly checklist for PPE, ladder setup, and job site safety"
-        ]
+        step: "Status Updates and Workflow Triggers",
+        description: "Developed automated status reporting and workflow triggers that keep teams informed and processes moving forward without constant manual oversight."
+      },
+      {
+        step: "Notification Systems Across Teams",
+        description: "Created intelligent notification systems that alert the right people at the right time, reducing response delays and improving team coordination."
       }
     ],
-    supportingAutomations: {
-      title: "Key Features and Automation",
-      sections: [
-        {
-          title: "Task Management & Documentation",
-          bullets: [
-            "Add tasks to any lead or job with owners, due dates, and priorities",
-            "Upload permits, contracts, inspection reports, and job site photos",
-            "Mobile upload support for field teams",
-            "Organized by client or job ID"
-          ]
-        },
-        {
-          title: "Automation Triggers",
-          bullets: [
-            "Auto-tag new leads based on form inputs",
-            "Automatically advance pipeline stages after quote approval",
-            "Set up automated reminders and follow-ups via email or SMS"
-          ]
-        },
-        {
-          title: "Dashboard and Reporting",
-          bullets: [
-            "Real-time KPIs including new leads, quotes sent, deals won, and job progress",
-            "Optional map view of active and completed jobs by ZIP code",
-            "Filter by lead source, job type, or date range"
-          ]
-        },
-        {
-          title: "Client-Facing Portal",
-          bullets: [
-            "Read-only dashboard for clients to view project updates",
-            "Includes job status, photos, and shared documents"
-          ]
-        }
-      ]
-    },
     outcomes: [
-      "Significantly reduced manual work across all operations",
-      "Improved response time on quotes and client communications",
-      "Eliminated missed follow-ups through intelligent automation",
-      "Enhanced collaboration between office and field teams",
-      "Delivered single source of truth for all company operations",
-      "Enabled scaling operations with better organization",
-      "Created more professional customer experience",
-      "Provided full visibility into pipeline and task assignments"
+      "Faster internal processes with reduced bottlenecks",
+      "More consistent lead handling and follow-up",
+      "Centralized and connected systems eliminating data silos",
+      "Reduced manual steps and operational delays",
+      "Better visibility across operations and team activities",
+      "Improved client satisfaction through faster response times"
     ],
-    projectSummary: "This CRM gave the roofing company a single source of truth for all operations. It significantly reduced manual work, improved response time on quotes, and eliminated missed follow-ups through automation. With full visibility into the pipeline and task assignments, the office and field teams now collaborate more effectively. The client was able to scale operations with better organization, faster communication, and a more professional customer experience."
+    projectSummary: "This collection demonstrates how strategic automation can transform business operations across multiple industries and use cases, creating scalable solutions that grow with the business."
   }
 ];
