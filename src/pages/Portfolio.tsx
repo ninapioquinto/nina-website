@@ -1,22 +1,16 @@
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import StarryBackground from '../components/StarryBackground';
 import Particles from '../components/Particles';
 import PortfolioCard from '../components/PortfolioCard';
 import { portfolioItems } from '../data/portfolioData';
 
 const Portfolio = () => {
-  console.log('Portfolio items:', portfolioItems);
-  console.log('Number of portfolio items:', portfolioItems?.length);
-
   return (
-    <div className="min-h-screen relative bg-background">
-      <Navbar />
+    <div className="min-h-screen relative">
       <StarryBackground />
       <Particles />
       
-      <div className="relative z-10 py-12 pt-24">
+      <div className="relative z-10 py-12">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -33,24 +27,15 @@ const Portfolio = () => {
             </p>
           </div>
 
-          {portfolioItems && portfolioItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {portfolioItems.map((item, index) => (
-                <div key={item.id} className="reveal" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <PortfolioCard {...item} />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center text-white">
-              <p>No portfolio items found or data is loading...</p>
-              <p className="text-sm text-white/60 mt-2">Portfolio items: {portfolioItems?.length || 0}</p>
-            </div>
-          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {portfolioItems.map((item, index) => (
+              <div key={item.id} className="reveal" style={{ animationDelay: `${index * 0.1}s` }}>
+                <PortfolioCard {...item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };
