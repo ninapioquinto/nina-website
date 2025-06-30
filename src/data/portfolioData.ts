@@ -468,7 +468,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "9",
     title: "Texas Roofing CRM – Custom CRM for a Roofing Company",
-    description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion with built-in roofing tools.",
+    description: "Developed a custom CRM built specifically for the roofing industry using Lovable.dev, Airtable, and n8n to streamline everything from lead capture to job completion.",
     fullDescription: "A Texas-based roofing company needed a centralized system to manage leads, job sites, inspections, and client communications. Their process relied on spreadsheets, manual updates, and fragmented tools that caused delays, missed follow-ups, and internal misalignment. They needed a lightweight CRM that could reflect their real-world operations, support both office and field teams, and allow for future expansion.",
     image: "/lovable-uploads/31686b78-6f39-4afe-a748-65c0499d89ad.png",
     category: "CRM Development",
@@ -512,16 +512,6 @@ export const portfolioItems: PortfolioItem[] = [
           "Sync with Google Calendar",
           "View by day, week, or month",
           "Assign events to staff or subcontractors"
-        ]
-      },
-      {
-        step: "Built-In Roofing Tools",
-        description: "Industry-specific calculators and safety tools.",
-        bullets: [
-          "Roofing Calculator – Computes roof area, square footage, and cost estimates",
-          "Pitch Measurement Tool – Calculates slope using angle input or mobile photo",
-          "Material Estimator – Estimates shingles, underlayment, nails, flashing, and more",
-          "Safety Checklist – Mobile-friendly checklist for PPE, ladder setup, and job site safety"
         ]
       }
     ],
