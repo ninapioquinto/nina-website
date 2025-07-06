@@ -6,16 +6,16 @@ const CallToActionSection = () => {
     <div className="text-center reveal">
       <div className="relative group max-w-5xl mx-auto">
         {/* Animated background layers */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-violet-600/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/60 via-purple-900/40 to-indigo-900/50 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-600/20 via-navy-500/20 to-navy-700/20 rounded-3xl blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/60 via-navy-900/40 to-navy-800/50 rounded-3xl"></div>
         
         {/* Tech border effect */}
-        <div className="absolute inset-0 rounded-3xl border border-white/10 group-hover:border-purple-400/40 transition-colors duration-700"></div>
+        <div className="absolute inset-0 rounded-3xl border border-white/10 group-hover:border-navy-400/40 transition-colors duration-700"></div>
         
         {/* Main content */}
-        <div className="relative bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-indigo-900/70 backdrop-blur-2xl rounded-3xl overflow-hidden">
+        <div className="relative bg-gradient-to-br from-slate-900/80 via-navy-900/60 to-navy-800/70 backdrop-blur-2xl rounded-3xl overflow-hidden">
           {/* Top accent line */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-purple-400/80 to-transparent"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-navy-400/80 to-transparent"></div>
           
           {/* Grid overlay */}
           <div className="absolute inset-0 bg-grid opacity-[0.02]"></div>
@@ -24,12 +24,12 @@ const CallToActionSection = () => {
             {/* Header */}
             <div className="mb-10">
               <div className="inline-flex items-center gap-2 mb-6">
-                <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
-                <span className="text-xs uppercase tracking-[0.25em] text-purple-300 font-medium">Future-Ready Systems</span>
-                <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse"></div>
+                <div className="w-1 h-1 bg-navy-400 rounded-full animate-pulse"></div>
+                <span className="text-xs uppercase tracking-[0.25em] text-navy-300 font-medium">Future-Ready Systems</span>
+                <div className="w-1 h-1 bg-navy-400 rounded-full animate-pulse"></div>
               </div>
               
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-purple-100 to-indigo-100 bg-clip-text text-transparent mb-6 leading-tight">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-navy-100 to-slate-100 bg-clip-text text-transparent mb-6 leading-tight">
                 Ready to Transform <br className="hidden md:block" /> Your Operations?
               </h3>
             </div>
@@ -41,15 +41,15 @@ const CallToActionSection = () => {
               </p>
               
               {/* Highlighted box */}
-              <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 backdrop-blur-xl rounded-2xl p-8 border border-white/10 group-hover:border-purple-400/20 transition-colors duration-700 mb-10">
+              <div className="bg-gradient-to-r from-navy-500/10 to-navy-600/10 backdrop-blur-xl rounded-2xl p-8 border border-white/10 group-hover:border-navy-400/20 transition-colors duration-700 mb-10">
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-xl border border-purple-400/30 flex items-center justify-center mb-6">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400/80 to-indigo-400/80 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-navy-600/20 to-navy-700/20 backdrop-blur-xl border border-navy-400/30 flex items-center justify-center mb-6">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-navy-400/80 to-accent-gold/80 flex items-center justify-center">
                       <div className="w-3 h-3 bg-white rounded-full"></div>
                     </div>
                   </div>
                   
-                  <h4 className="text-xl font-bold bg-gradient-to-r from-purple-200 via-violet-200 to-indigo-200 bg-clip-text text-transparent mb-4">
+                  <h4 className="text-xl font-bold bg-gradient-to-r from-navy-200 via-slate-200 to-navy-100 bg-clip-text text-transparent mb-4">
                     Let's begin with a personalized discovery call
                   </h4>
                   
@@ -61,9 +61,9 @@ const CallToActionSection = () => {
               
               {/* Tech-inspired button - optional call to action */}
               <div className="inline-flex">
-                <button className="py-3 px-8 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-full border border-purple-400/30 text-white font-medium flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 group/btn">
+                <button className="py-3 px-8 bg-gradient-to-r from-navy-500/20 to-navy-600/20 rounded-full border border-navy-400/30 text-white font-medium flex items-center gap-2 hover:shadow-lg hover:shadow-navy-500/20 transition-all duration-300 group/btn">
                   <span>Schedule a Call</span>
-                  <div className="w-6 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent group-hover/btn:w-10 transition-all duration-300"></div>
+                  <div className="w-6 h-px bg-gradient-to-r from-transparent via-navy-400 to-transparent group-hover/btn:w-10 transition-all duration-300"></div>
                 </button>
               </div>
             </div>

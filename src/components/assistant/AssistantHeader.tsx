@@ -21,12 +21,12 @@ export const AssistantHeader = () => {
             </Link>
             
             <div className="text-center mb-12 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-purple-600/20 to-violet-600/20 blur-3xl rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-navy-600/20 to-navy-700/20 blur-3xl rounded-full"></div>
                 <div className="relative">
-                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-purple-600 rounded-2xl flex items-center justify-center">
+                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-primary to-navy-600 rounded-2xl flex items-center justify-center">
                         <Bot className="w-8 h-8 text-white" />
                     </div>
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent leading-tight">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-navy-400 via-slate-500 to-navy-300 bg-clip-text text-transparent leading-tight">
                         AI Executive Assistant
                     </h1>
                     <div className="flex items-center justify-center space-x-2 mb-8">
@@ -42,7 +42,7 @@ export const AssistantHeader = () => {
                     
                     <Button 
                         onClick={handleDownload}
-                        className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
+                        className="bg-gradient-to-r from-primary via-navy-600 to-navy-700 hover:from-primary/90 hover:via-navy-600/90 hover:to-navy-700/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
                     >
                         <Download className="w-5 h-5 mr-3" />
                         Download the AI Assistant

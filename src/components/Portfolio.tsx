@@ -10,7 +10,7 @@ const aiAutomationProjects = [{
   tech: ["Zapier", "Airtable", "Make"],
   link: "#",
   icon: Code,
-  gradient: "from-purple-500/20 to-violet-600/20"
+  gradient: "from-navy-500/20 to-navy-600/20"
 }, {
   id: 3,
   title: "Sales Pipeline Automation",
@@ -18,7 +18,7 @@ const aiAutomationProjects = [{
   tech: ["OpenAI", "Make", "GoHighLevel"],
   link: "#",
   icon: Zap,
-  gradient: "from-indigo-500/20 to-purple-600/20"
+  gradient: "from-navy-600/20 to-navy-700/20"
 }, {
   id: 6,
   title: "Lead Capture & Nurture System",
@@ -26,7 +26,7 @@ const aiAutomationProjects = [{
   tech: ["Make", "OpenAI", "GoHighLevel"],
   link: "#",
   icon: Bot,
-  gradient: "from-violet-500/20 to-indigo-600/20"
+  gradient: "from-navy-500/20 to-navy-800/20"
 }];
 
 // GoHighLevel projects
@@ -37,7 +37,7 @@ const goHighLevelProjects = [{
   tech: ["GoHighLevel", "Custom Fields", "Workflows"],
   link: "#",
   icon: Target,
-  gradient: "from-purple-500/20 to-violet-600/20"
+  gradient: "from-navy-500/20 to-navy-600/20"
 }, {
   id: 8,
   title: "Sales Funnel Optimization",
@@ -45,7 +45,7 @@ const goHighLevelProjects = [{
   tech: ["GoHighLevel", "Landing Pages", "Email Sequences"],
   link: "#",
   icon: Users,
-  gradient: "from-indigo-500/20 to-purple-600/20"
+  gradient: "from-navy-600/20 to-navy-700/20"
 }, {
   id: 9,
   title: "Reputation Management System",
@@ -53,7 +53,7 @@ const goHighLevelProjects = [{
   tech: ["GoHighLevel", "SMS Campaigns", "Review Funnels"],
   link: "#",
   icon: BarChart3,
-  gradient: "from-violet-500/20 to-indigo-600/20"
+  gradient: "from-navy-500/20 to-navy-800/20"
 }];
 
 const Portfolio = () => {
@@ -94,9 +94,9 @@ const Portfolio = () => {
     <section id="portfolio" ref={sectionRef} className="py-32 relative overflow-hidden">
       {/* Modern tech background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/85 to-indigo-900/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-navy-900/85 to-navy-800/95"></div>
         <div className="absolute inset-0 bg-grid opacity-10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.1)_0%,transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(30,58,95,0.1)_0%,transparent_50%)]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -104,16 +104,16 @@ const Portfolio = () => {
           {/* Updated header design with elegant typography */}
           <div className="text-center mb-20">
             <div className="relative inline-block">
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-navy-400/60 to-transparent"></div>
               
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3 sm:mb-4 reveal">
                 Featured{' '}
-                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-navy-300 via-slate-200 to-navy-200 bg-clip-text text-transparent">
                   Projects
                 </span>
               </h2>
               
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-navy-400/40 to-transparent"></div>
             </div>
             
             <p className="text-xl text-white/80 mb-16 max-w-3xl mx-auto leading-relaxed reveal">
@@ -126,10 +126,10 @@ const Portfolio = () => {
             {/* Enhanced section header */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6 reveal">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-violet-600/20 border border-purple-400/30 flex items-center justify-center backdrop-blur-sm">
-                  <Bot className="w-4 h-4 text-purple-300" />
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy-500/20 to-navy-600/20 border border-navy-400/30 flex items-center justify-center backdrop-blur-sm">
+                  <Bot className="w-4 h-4 text-navy-300" />
                 </div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-navy-400 via-slate-500 to-navy-300 bg-clip-text text-transparent">
                   AI Automation
                 </h3>
               </div>
@@ -138,10 +138,10 @@ const Portfolio = () => {
             {/* Modern video showcase */}
             <div className="mb-16 reveal">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-violet-500/30 to-indigo-500/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <Card className="relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/30 group transition-all duration-500">
+                <div className="absolute -inset-1 bg-gradient-to-r from-navy-500/30 via-navy-600/30 to-navy-700/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <Card className="relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-navy-400/30 group transition-all duration-500">
                   <CardContent className="p-8">
-                    <div className="bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative">
+                    <div className="bg-gradient-to-br from-slate-800/80 to-navy-900/40 rounded-xl overflow-hidden border border-white/10 relative">
                       <div style={{
                         position: 'relative',
                         width: '100%',
@@ -196,9 +196,9 @@ const Portfolio = () => {
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'}`}>
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-navy-400/30 ${activeCard === project.id ? 'border-navy-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(30,58,95,0.4)]' : 'hover:border-navy-400/30 hover:shadow-[0_8px_25px_-8px_rgba(30,58,95,0.3)]'}`}>
                       {/* Animated background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-navy-500/5 via-transparent to-navy-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
                       {/* Shimmer effect using Tailwind animation */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
@@ -207,16 +207,16 @@ const Portfolio = () => {
                       
                       <CardHeader className="relative z-10 pb-4">
                         <div className="flex items-start justify-between mb-4">
-                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-purple-400/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className="w-6 h-6 text-purple-300" />
+                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-navy-400/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
+                            <IconComponent className="w-6 h-6 text-navy-300" />
                           </div>
                           
-                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
-                            <ArrowUpRight className="w-4 h-4 text-purple-300" />
+                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-navy-500/20 hover:border-navy-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
+                            <ArrowUpRight className="w-4 h-4 text-navy-300" />
                           </a>
                         </div>
                         
-                        <CardTitle className="text-xl font-bold text-white group-hover:text-purple-100 transition-colors duration-300 leading-tight">
+                        <CardTitle className="text-xl font-bold text-white group-hover:text-navy-100 transition-colors duration-300 leading-tight">
                           {project.title}
                         </CardTitle>
                         
@@ -228,7 +228,7 @@ const Portfolio = () => {
                       <CardContent className="relative z-10 pt-0">
                         <div className="flex flex-wrap gap-2">
                           {project.tech.map((tech, i) => (
-                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
+                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/20 group-hover:border-navy-400/40 group-hover:bg-navy-500/30 transition-all duration-300">
                               {tech}
                             </span>
                           ))}
@@ -246,10 +246,10 @@ const Portfolio = () => {
             {/* Enhanced section header */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-3 mb-6 reveal">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-violet-600/20 border border-purple-400/30 flex items-center justify-center backdrop-blur-sm">
-                  <Target className="w-4 h-4 text-purple-300" />
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-navy-500/20 to-navy-600/20 border border-navy-400/30 flex items-center justify-center backdrop-blur-sm">
+                  <Target className="w-4 h-4 text-navy-300" />
                 </div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 via-violet-500 to-indigo-400 bg-clip-text text-transparent">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-navy-400 via-slate-500 to-navy-300 bg-clip-text text-transparent">
                   GoHighLevel
                 </h3>
               </div>
@@ -258,10 +258,10 @@ const Portfolio = () => {
             {/* Modern video showcase for GoHighLevel */}
             <div className="mb-16 reveal">
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500/30 via-violet-500/30 to-indigo-500/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <Card className="relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-purple-400/30 group transition-all duration-500">
+                <div className="absolute -inset-1 bg-gradient-to-r from-navy-500/30 via-navy-600/30 to-navy-700/30 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <Card className="relative overflow-hidden border border-white/20 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-navy-400/30 group transition-all duration-500">
                   <CardContent className="p-8">
-                    <div className="bg-gradient-to-br from-slate-800/80 to-purple-900/40 rounded-xl overflow-hidden border border-white/10 relative">
+                    <div className="bg-gradient-to-br from-slate-800/80 to-navy-900/40 rounded-xl overflow-hidden border border-white/10 relative">
                       <div style={{
                         position: 'relative',
                         width: '100%',
@@ -299,7 +299,7 @@ const Portfolio = () => {
               </div>
             </div>
             
-            {/* Enhanced projects grid with consistent purple color scheme */}
+            {/* Enhanced projects grid with consistent navy color scheme */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {goHighLevelProjects.map((project, index) => {
                 const IconComponent = project.icon;
@@ -316,9 +316,9 @@ const Portfolio = () => {
                     {/* Glow effect */}
                     <div className={`absolute -inset-1 bg-gradient-to-r ${project.gradient} rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-1000`}></div>
                     
-                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-purple-400/30 ${activeCard === project.id ? 'border-purple-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(139,92,246,0.4)]' : 'hover:border-purple-400/30 hover:shadow-[0_8px_25px_-8px_rgba(139,92,246,0.3)]'}`}>
+                    <Card className={`relative h-full border border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-700 group overflow-hidden hover:bg-white/10 hover:border-navy-400/30 ${activeCard === project.id ? 'border-navy-400/40 scale-[1.02] shadow-[0_20px_40px_-12px_rgba(30,58,95,0.4)]' : 'hover:border-navy-400/30 hover:shadow-[0_8px_25px_-8px_rgba(30,58,95,0.3)]'}`}>
                       {/* Animated background */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-navy-500/5 via-transparent to-navy-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                       
                       {/* Shimmer effect using Tailwind animation */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
@@ -327,16 +327,16 @@ const Portfolio = () => {
                       
                       <CardHeader className="relative z-10 pb-4">
                         <div className="flex items-start justify-between mb-4">
-                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-purple-400/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className="w-6 h-6 text-purple-300" />
+                          <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} border border-navy-400/30 flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform duration-300`}>
+                            <IconComponent className="w-6 h-6 text-navy-300" />
                           </div>
                           
-                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-purple-500/20 hover:border-purple-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
-                            <ArrowUpRight className="w-4 h-4 text-purple-300" />
+                          <a href={project.link} className={`w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm transition-all duration-300 hover:bg-navy-500/20 hover:border-navy-400/40 ${activeCard === project.id ? 'scale-110' : ''}`}>
+                            <ArrowUpRight className="w-4 h-4 text-navy-300" />
                           </a>
                         </div>
                         
-                        <CardTitle className="text-xl font-bold text-white group-hover:text-purple-100 transition-colors duration-300 leading-tight">
+                        <CardTitle className="text-xl font-bold text-white group-hover:text-navy-100 transition-colors duration-300 leading-tight">
                           {project.title}
                         </CardTitle>
                         
@@ -348,7 +348,7 @@ const Portfolio = () => {
                       <CardContent className="relative z-10 pt-0">
                         <div className="flex flex-wrap gap-2">
                           {project.tech.map((tech, i) => (
-                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20 group-hover:border-purple-400/40 group-hover:bg-purple-500/30 transition-all duration-300">
+                            <span key={i} className="px-3 py-1.5 text-xs font-medium rounded-lg bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/20 group-hover:border-navy-400/40 group-hover:bg-navy-500/30 transition-all duration-300">
                               {tech}
                             </span>
                           ))}

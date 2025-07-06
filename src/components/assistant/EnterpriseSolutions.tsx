@@ -37,7 +37,7 @@ export const EnterpriseSolutions = ({ tools }: EnterpriseSolutionsProps) => {
                 <p className="text-white/90 mb-8 text-lg leading-relaxed max-w-3xl mx-auto">
                     When your business demands clarity, efficiency, and scale, your systems should deliver.
                 </p>
-                <Link to="/#contact" className="inline-flex items-center bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl glow-border">
+                <Link to="/#contact" className="inline-flex items-center bg-gradient-to-r from-primary via-navy-600 to-navy-700 hover:from-primary/90 hover:via-navy-600/90 hover:to-navy-700/90 text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl glow-border">
                     <Calendar className="w-5 h-5 mr-3" />
                     Book a Discovery Call
                 </Link>
