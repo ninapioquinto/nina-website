@@ -42,7 +42,7 @@ export default {
           navy: "#0f1c2e",
           blue: "#1e3a5f",
           slate: "#334155",
-          gold: "#d4af37",
+          light: "#64748b", // Changed from gold to light blue/slate
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",

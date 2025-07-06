@@ -28,7 +28,7 @@ const WhyChooseMe = () => {
                 
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
                   I bring a rare combination of{' '}
-                  <span className="bg-gradient-to-r from-navy-300 via-accent-gold to-navy-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
                     certifications
                   </span>{' '}
                   in AI automation, generative AI for data engineering, Make, and Airtable.
@@ -68,7 +68,7 @@ const WhyChooseMe = () => {
                 
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
                   Working with me means you will never be left guessing. I communicate{' '}
-                  <span className="bg-gradient-to-r from-navy-300 via-accent-gold to-navy-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
                     complex automation strategies
                   </span>{' '}
                   in a straightforward way.
@@ -87,7 +87,7 @@ const WhyChooseMe = () => {
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-navy-400/60 to-transparent"></div>
               
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
-                <span className="bg-gradient-to-r from-navy-300 via-accent-gold to-navy-200 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
                   Trusted partner
                 </span>{' '}
                 for clients worldwide
@@ -112,7 +112,7 @@ const WhyChooseMe = () => {
                 
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight tracking-tight">
                   I have optimized{' '}
-                  <span className="bg-gradient-to-r from-navy-300 via-accent-gold to-navy-200 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
                     lead management
                   </span>{' '}
                   for real estate teams and streamlined operations for business owners.

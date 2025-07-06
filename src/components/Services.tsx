@@ -33,13 +33,13 @@ const services: Service[] = [
     actions: ["Gather form responses", "Sync with CRM", "Create new record"]
   },
   {
-    icon: <Receipt className="w-6 h-6 text-yellow-400" />,
+    icon: <Receipt className="w-6 h-6 text-navy-500" />,
     title: "Invoice Follow-Up",
     description: "Recover unpaid invoices",
     actions: ["Detect overdue payments", "Send payment reminders", "Schedule next follow-up"]
   },
   {
-    icon: <Home className="w-6 h-6 text-pink-400" />,
+    icon: <Home className="w-6 h-6 text-slate-400" />,
     title: "Real Estate Inquiry",
     description: "Respond to property questions",
     actions: ["Share property info", "Schedule viewings", "Send agent intro email"]
@@ -57,7 +57,7 @@ const services: Service[] = [
     actions: ["Track subscription end dates", "Send renewal reminders", "Link to payment"]
   },
   {
-    icon: <Calendar className="w-6 h-6 text-rose-400" />,
+    icon: <Calendar className="w-6 h-6 text-blue-400" />,
     title: "Event Registration Bot",
     description: "Manage event sign-ups",
     actions: ["Register attendees", "Send confirmation", "Add to calendar"]
@@ -103,7 +103,7 @@ const Services = () => {
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
                 Operational systems built for{' '}
-                <span className="bg-gradient-to-r from-navy-300 via-accent-gold to-navy-200 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
                   clarity, performance, and scale.
                 </span>
               </h2>

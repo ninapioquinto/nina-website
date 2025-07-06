@@ -11,7 +11,7 @@ const chartConfig = {
   },
   revenue: {
     label: 'Revenue Impact', 
-    color: '#d4af37', // accent-gold
+    color: '#64748b', // accent-light
   },
 } satisfies ChartConfig;
 

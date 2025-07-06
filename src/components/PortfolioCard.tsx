@@ -88,8 +88,8 @@ const PortfolioCard = ({
         {/* Results & Client - Compact */}
         <div className="space-y-1">
           <div className="flex items-center gap-1 text-xs">
-            <Target className="w-3 h-3 text-accent-gold" />
-            <span className="text-accent-gold font-medium truncate">{results}</span>
+            <Target className="w-3 h-3 text-accent-light" />
+            <span className="text-accent-light font-medium truncate">{results}</span>
           </div>
           <div className="flex items-center gap-1 text-xs">
             <Users className="w-3 h-3 text-navy-400" />

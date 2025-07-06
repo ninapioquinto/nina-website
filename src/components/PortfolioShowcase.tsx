@@ -21,7 +21,7 @@ const PortfolioShowcase = () => {
 
       {/* Elegant floating elements */}
       <div className="absolute top-20 right-20 w-20 h-20 rounded-full bg-gradient-to-br from-navy-500/15 to-navy-600/10 blur-xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-28 h-28 rounded-full bg-gradient-to-tl from-navy-500/15 to-accent-gold/10 blur-xl animate-float" style={{
+      <div className="absolute bottom-20 left-20 w-28 h-28 rounded-full bg-gradient-to-tl from-navy-500/15 to-accent-light/10 blur-xl animate-float" style={{
         animationDelay: '3s'
       }}></div>
 
@@ -34,7 +34,7 @@ const PortfolioShowcase = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Business Solutions That{' '}
-            <span className="bg-gradient-to-r from-navy-400 via-accent-gold to-navy-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-navy-400 via-accent-light to-navy-500 bg-clip-text text-transparent">
               Drive Results
             </span>
           </h2>
