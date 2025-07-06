@@ -14,11 +14,11 @@ export const FinalCTA = () => {
 
     return (
         <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-purple-600/10 to-violet-600/10 blur-3xl rounded-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-navy-600/10 to-navy-700/10 blur-3xl rounded-3xl"></div>
             <div className="relative p-12 rounded-3xl bg-white/5 border border-white/20 backdrop-blur-xl">
                 <div className="text-center">
                     <div className="flex items-center justify-center mb-8">
-                        <div className="p-4 rounded-full bg-gradient-to-r from-primary to-purple-600 mr-4">
+                        <div className="p-4 rounded-full bg-gradient-to-r from-primary to-navy-600 mr-4">
                             <Bot className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-4xl font-bold text-white">
@@ -48,7 +48,7 @@ export const FinalCTA = () => {
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Button 
                             onClick={handleDownload}
-                            className="bg-gradient-to-r from-primary via-purple-600 to-violet-600 hover:from-primary/90 hover:via-purple-600/90 hover:to-violet-600/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
+                            className="bg-gradient-to-r from-primary via-navy-600 to-navy-700 hover:from-primary/90 hover:via-navy-600/90 hover:to-navy-700/90 text-white px-10 py-6 text-lg rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg glow-border"
                         >
                             <Download className="w-6 h-6 mr-3" />
                             Download the AI Assistant

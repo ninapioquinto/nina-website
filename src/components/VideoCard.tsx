@@ -30,7 +30,7 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
   if (showEmbed && embedCode) {
     return (
       <div className="group">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border border-purple-400/20 mb-6">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-900/20 to-navy-800/20 border border-navy-400/20 mb-6">
           <div dangerouslySetInnerHTML={{ __html: embedCode }} />
           
           <button 
@@ -69,7 +69,7 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
 
   return (
     <div className="group cursor-pointer" onClick={handleVideoClick}>
-      <div className="relative overflow-hidden rounded-3xl aspect-video mb-6 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 border border-purple-400/20">
+      <div className="relative overflow-hidden rounded-3xl aspect-video mb-6 bg-gradient-to-br from-navy-900/20 to-navy-800/20 border border-navy-400/20">
         <img
           src={thumbnail}
           alt={title}
@@ -81,7 +81,7 @@ const VideoCard = ({ title, description, thumbnail, duration, views, uploadTime,
         
         {/* Play button overlay */}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-          <div className="w-20 h-20 bg-gradient-to-r from-purple-600/30 to-indigo-600/30 rounded-full flex items-center justify-center backdrop-blur-xl border border-white/30">
+          <div className="w-20 h-20 bg-gradient-to-r from-navy-600/30 to-navy-700/30 rounded-full flex items-center justify-center backdrop-blur-xl border border-white/30">
             {embedCode ? (
               <Play className="w-8 h-8 text-white ml-1" fill="currentColor" />
             ) : videoUrl ? (

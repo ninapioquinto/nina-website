@@ -14,27 +14,27 @@ const PortfolioShowcase = () => {
     <section id="portfolio" className="py-24 relative overflow-hidden">
       {/* Background with advanced effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-purple-900/50 to-indigo-900/70"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.1)_0%,transparent_70%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/95 via-navy-800/50 to-navy-950/70"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,58,95,0.1)_0%,transparent_70%)]"></div>
         <div className="absolute inset-0 bg-grid opacity-[0.03]"></div>
       </div>
 
       {/* Elegant floating elements */}
-      <div className="absolute top-20 right-20 w-20 h-20 rounded-full bg-gradient-to-br from-violet-500/15 to-purple-600/10 blur-xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-28 h-28 rounded-full bg-gradient-to-tl from-indigo-500/15 to-violet-600/10 blur-xl animate-float" style={{
+      <div className="absolute top-20 right-20 w-20 h-20 rounded-full bg-gradient-to-br from-navy-500/15 to-navy-600/10 blur-xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-28 h-28 rounded-full bg-gradient-to-tl from-navy-500/15 to-accent-gold/10 blur-xl animate-float" style={{
         animationDelay: '3s'
       }}></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 reveal">
           <div className="inline-block mb-4">
-            <span className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/30">
+            <span className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/30">
               ✨ Project Showcase
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Business Solutions That{' '}
-            <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-indigo-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-navy-400 via-accent-gold to-navy-300 bg-clip-text text-transparent">
               Drive Results
             </span>
           </h2>
@@ -55,7 +55,7 @@ const PortfolioShowcase = () => {
         <div className="text-center reveal">
           <Button 
             onClick={() => navigate('/portfolio')}
-            className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white border-0 px-8 py-3 text-lg font-medium shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
+            className="bg-gradient-to-r from-navy-600 to-navy-700 hover:from-navy-700 hover:to-navy-800 text-white border-0 px-8 py-3 text-lg font-medium shadow-2xl hover:shadow-navy-500/25 transition-all duration-300"
           >
             View All Projects
           </Button>
