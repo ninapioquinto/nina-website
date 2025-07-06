@@ -71,16 +71,16 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <div className="relative inline-block">
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-navy-400/60 to-transparent"></div>
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
               
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3 sm:mb-4">
                 Frequently Asked{' '}
-                <span className="bg-gradient-to-r from-navy-300 via-slate-200 to-accent-gold bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
                   Questions
                 </span>
               </h2>
               
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-navy-400/40 to-transparent"></div>
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
             </div>
           </div>
           
@@ -97,7 +97,7 @@ const FAQ = () => {
                   className="border border-white/10 rounded-lg overflow-hidden bg-accent/20 px-4 sm:px-6 group"
                 >
                   <AccordionTrigger className="text-left py-4 sm:py-5 hover:no-underline">
-                    <span className="text-base sm:text-lg font-medium group-data-[state=open]:text-accent-gold transition-colors pr-4">{item.question}</span>
+                    <span className="text-base sm:text-lg font-medium group-data-[state=open]:text-primary transition-colors pr-4">{item.question}</span>
                   </AccordionTrigger>
                   <AccordionContent className="text-white/80 pb-4 sm:pb-5 data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up text-sm sm:text-base leading-relaxed">
                     {item.answer}

@@ -1,4 +1,3 @@
-
 import React from "react";
 import {
   motion,
@@ -132,8 +131,8 @@ const CertificationCard = ({ cert, translate }: CertificationCardProps) => {
       key={cert.id}
       className="w-[280px] h-[200px] sm:w-[400px] sm:h-[300px] relative flex-shrink-0"
     >
-      <Card className="group relative h-full border border-white/10 bg-accent/30 backdrop-blur-sm transition-all duration-500 hover:border-navy-500/50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-600/10 to-navy-800/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <Card className="group relative h-full border border-white/10 bg-accent/30 backdrop-blur-sm transition-all duration-500 hover:border-primary/50 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-accent-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
         <div className="relative z-20 h-full p-3 sm:p-4">
           <div className="w-full h-full rounded-lg overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10">
@@ -146,14 +145,14 @@ const CertificationCard = ({ cert, translate }: CertificationCardProps) => {
         </div>
 
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-600/20 to-navy-800/20 animate-pulse-glow" />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-700/5" />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent-purple/20 animate-pulse-glow" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5" />
         </div>
         
         <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 z-30 bg-black/80 backdrop-blur-sm rounded-lg p-2 sm:p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <div className="flex items-center justify-between mb-1">
             <h3 className="text-xs sm:text-sm font-semibold text-white truncate">{cert.title}</h3>
-            <Badge className="h-3 w-3 sm:h-4 sm:w-4 text-accent-gold flex-shrink-0 ml-2" />
+            <Badge className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0 ml-2" />
           </div>
           <p className="text-xs text-white/70 mb-1">{cert.organization}</p>
           <p className="text-xs text-white/50">

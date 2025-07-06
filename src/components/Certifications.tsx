@@ -82,21 +82,21 @@ const Certifications = () => {
 
   return (
     <section id="certifications" ref={sectionRef} className="bg-accent/5 relative">
-      {/* Updated certifications header with navy and gold typography */}
+      {/* Updated certifications header with elegant typography */}
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="max-w-6xl mx-auto mb-12 sm:mb-16">
           <div className="text-center">
             <div className="relative inline-block">
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-navy-400/60 to-transparent"></div>
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
               
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3 sm:mb-4">
                 My{' '}
-                <span className="bg-gradient-to-r from-navy-300 via-slate-200 to-accent-gold bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
                   Certifications
                 </span>
               </h2>
               
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-navy-400/40 to-transparent"></div>
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
             </div>
             
             <p className="text-center text-base sm:text-lg text-white/70 mb-12 sm:mb-16 max-w-2xl mx-auto">
