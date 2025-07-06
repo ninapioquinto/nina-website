@@ -1,7 +1,7 @@
 
 @layer utilities {
   .glow-text {
-    text-shadow: 0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5);
+    text-shadow: 0 0 15px rgba(30, 58, 95, 0.8), 0 0 30px rgba(30, 58, 95, 0.5);
   }
 
   .glow-border {
@@ -16,7 +16,7 @@
     right: -2px;
     bottom: -2px;
     border-radius: inherit;
-    background: linear-gradient(45deg, rgba(139, 92, 246, 0.4), rgba(56, 189, 248, 0.4), rgba(232, 121, 249, 0.4));
+    background: linear-gradient(45deg, rgba(30, 58, 95, 0.4), rgba(44, 82, 130, 0.4), rgba(212, 175, 55, 0.3));
     z-index: -1;
     filter: blur(8px);
     opacity: 0;
@@ -29,13 +29,13 @@
 
   .bg-grid {
     background-image: 
-      linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(30, 58, 95, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 58, 95, 0.03) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
   .text-gradient {
-    background: linear-gradient(90deg, #a855f7, #8b5cf6, #7c3aed);
+    background: linear-gradient(90deg, #2c5282, #1e3a5f, #334155);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -59,14 +59,16 @@
   }
 
   .group-data-\[state\=open\]:text-primary {
-    color: rgb(139, 92, 246);
+    color: rgb(30, 58, 95);
   }
   
-  /* Luxury card styles */
+  /* Luxury navy card styles */
   .luxury-card {
     position: relative;
     backdrop-filter: blur(20px);
     transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    background: rgba(10, 18, 32, 0.3);
+    border: 1px solid rgba(30, 58, 95, 0.2);
   }
 
   .luxury-card::before {
@@ -78,7 +80,7 @@
     bottom: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(168, 85, 247, 0.2), rgba(99, 102, 241, 0.3));
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.3), rgba(44, 82, 130, 0.2), rgba(212, 175, 55, 0.2));
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     opacity: 0;
@@ -101,7 +103,7 @@
     opacity: 1;
   }
 
-  /* Premium button styles */
+  /* Premium navy button styles */
   .luxury-button {
     position: relative;
     overflow: hidden;
@@ -116,7 +118,7 @@
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    background: linear-gradient(45deg, transparent, rgba(30, 58, 95, 0.15), transparent);
     opacity: 0;
     transition: opacity 0.5s ease;
   }
@@ -125,19 +127,19 @@
     opacity: 1;
   }
 
-  /* Luxury scroll indicator */
+  /* Luxury scroll indicator with navy theme */
   .luxury-scroll-indicator {
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(30, 58, 95, 0.15);
     backdrop-filter: blur(20px);
     transition: all 0.5s ease;
   }
 
   .luxury-scroll-indicator:hover {
-    border-color: rgba(139, 92, 246, 0.6);
-    background: rgba(139, 92, 246, 0.15);
+    border-color: rgba(212, 175, 55, 0.6);
+    background: rgba(30, 58, 95, 0.25);
   }
 
-  /* Sophisticated section overlays */
+  /* Sophisticated section overlays with navy theme */
   .section-overlay {
     position: relative;
     z-index: 1;
@@ -150,12 +152,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 15, 20, 0.8), rgba(30, 20, 40, 0.6));
+    background: linear-gradient(135deg, rgba(10, 18, 32, 0.8), rgba(30, 41, 59, 0.6));
     backdrop-filter: blur(10px);
     z-index: -1;
   }
   
-  /* Premium background effects */
+  /* Premium background effects with navy theme */
   .bg-seamless {
     background-attachment: fixed;
     background-position: center;
@@ -163,15 +165,15 @@
     background-size: cover;
   }
 
-  /* Elegant divider styles */
+  /* Elegant divider styles with navy/gold theme */
   .luxury-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(30, 58, 95, 0.5), rgba(212, 175, 55, 0.3), rgba(30, 58, 95, 0.5), transparent);
   }
 
   .luxury-divider-vertical {
     width: 1px;
-    background: linear-gradient(180deg, transparent, rgba(139, 92, 246, 0.5), transparent);
+    background: linear-gradient(180deg, transparent, rgba(30, 58, 95, 0.5), rgba(212, 175, 55, 0.3), rgba(30, 58, 95, 0.5), transparent);
   }
 
   /* Premium animation delays */

@@ -26,22 +26,23 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#0a0a0e",
+        background: "#0a1220",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#8B5CF6",
+          DEFAULT: "#1e3a5f",
           foreground: "#ffffff",
         },
         secondary: {
-          DEFAULT: "#6B21A8",
+          DEFAULT: "#2c5282",
           foreground: "#ffffff",
         },
         accent: {
-          DEFAULT: "#1E293B",
+          DEFAULT: "#1a2332",
           foreground: "#ffffff",
-          pink: "#E879F9",
-          blue: "#38BDF8",
-          purple: "#A78BFA",
+          navy: "#0f1c2e",
+          blue: "#1e3a5f",
+          slate: "#334155",
+          gold: "#d4af37",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -54,6 +55,19 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        navy: {
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+          950: "#0a1220",
         },
       },
       borderRadius: {
@@ -84,10 +98,10 @@ export default {
         },
         "glow": {
           "0%, 100%": { 
-            boxShadow: "0 0 5px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3)" 
+            boxShadow: "0 0 5px rgba(30, 58, 95, 0.5), 0 0 20px rgba(30, 58, 95, 0.3)" 
           },
           "50%": { 
-            boxShadow: "0 0 15px rgba(139, 92, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.5)" 
+            boxShadow: "0 0 15px rgba(30, 58, 95, 0.8), 0 0 30px rgba(30, 58, 95, 0.5)" 
           }
         },
         "float": {

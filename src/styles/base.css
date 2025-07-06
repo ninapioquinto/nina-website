@@ -40,19 +40,31 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-navy-950 text-foreground font-inter antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
-    background-image: url('/lovable-uploads/c50fef96-b7a7-4856-a6ef-c8e0baf975e1.png');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(135deg, #0a1220 0%, #1e293b 50%, #0f172a 100%);
     background-attachment: fixed;
-    background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
-    color: #f8f8f8;
+    color: #e2e8f0;
     cursor: default;
     position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(30, 58, 95, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(44, 82, 130, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(51, 65, 85, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
   }
 
   body::-webkit-scrollbar {
@@ -71,15 +83,15 @@
     to { background-position: 100% 0; }
   }
 
-  .rainbow-banner-gradient-1 {
+  .luxury-banner-gradient-1 {
     mask-image: linear-gradient(to bottom, white, transparent), 
                 radial-gradient(circle at top center, white, transparent);
     mask-composite: intersect;
     animation: moving-banner 16s linear infinite reverse;
-    --start: rgba(0,87,255,0.5);
-    --mid: rgba(255,0,166,0.77);
-    --end: rgba(255,77,0,0.4);
-    --via: rgba(164,255,68,0.4);
+    --start: rgba(30,58,95,0.5);
+    --mid: rgba(44,82,130,0.77);
+    --end: rgba(51,65,85,0.4);
+    --via: rgba(100,116,139,0.4);
     background-image: repeating-linear-gradient(
       60deg,
       var(--end),
@@ -97,18 +109,18 @@
       var(--end) calc(50% - 12px)
     );
     background-size: 200% 100%;
-    mix-blend-mode: difference;
+    mix-blend-mode: overlay;
   }
 
-  .rainbow-banner-gradient-2 {
+  .luxury-banner-gradient-2 {
     mask-image: linear-gradient(to bottom, white, transparent),
                 radial-gradient(circle at top center, white, transparent);
     mask-composite: intersect;
     animation: moving-banner 20s linear infinite;
-    --start: rgba(255,120,120,0.5);
-    --mid: rgba(36,188,255,0.4);
-    --end: rgba(64,0,255,0.51);
-    --via: rgba(255,89,0,0.56);
+    --start: rgba(71,85,105,0.5);
+    --mid: rgba(30,58,95,0.4);
+    --end: rgba(15,23,42,0.6);
+    --via: rgba(52,71,103,0.56);
     background-image: repeating-linear-gradient(
       45deg,
       var(--end),
@@ -126,6 +138,6 @@
       var(--end) calc(50% - 16.8px)
     );
     background-size: 200% 100%;
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: soft-light;
   }
 }
