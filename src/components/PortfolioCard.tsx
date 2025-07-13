@@ -33,7 +33,7 @@ const PortfolioCard = ({
 
   return (
     <Card 
-      className="group hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-navy-400/30 cursor-pointer h-full"
+      className="group hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 hover:border-purple-400/30 cursor-pointer h-full"
       onClick={handleCardClick}
     >
       {/* Project Image - Reduced height */}
@@ -44,19 +44,19 @@ const PortfolioCard = ({
           className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-2 left-2">
-          <Badge variant="secondary" className="bg-navy-500/20 text-navy-200 border-navy-400/20 text-xs">
+          <Badge variant="secondary" className="bg-purple-500/20 text-purple-200 border-purple-400/20 text-xs">
             {category}
           </Badge>
         </div>
         <div className="absolute top-2 right-2">
-          <div className="w-6 h-6 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:bg-navy-500/20 group-hover:border-navy-400/40 transition-all duration-300">
+          <div className="w-6 h-6 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center group-hover:bg-purple-500/20 group-hover:border-purple-400/40 transition-all duration-300">
             <ArrowUpRight className="w-3 h-3 text-white" />
           </div>
         </div>
       </div>
 
       <CardHeader className="pb-2 pt-3">
-        <CardTitle className="text-lg font-bold text-white group-hover:text-navy-100 transition-colors line-clamp-2 leading-tight">
+        <CardTitle className="text-lg font-bold text-white group-hover:text-purple-100 transition-colors line-clamp-2 leading-tight">
           {title}
         </CardTitle>
         <CardDescription className="text-white/70 group-hover:text-white/90 transition-colors line-clamp-2 text-sm">
@@ -72,13 +72,13 @@ const PortfolioCard = ({
             {technologies.slice(0, 3).map((tech, index) => (
               <span 
                 key={index}
-                className="px-1.5 py-0.5 text-xs rounded-md bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/20"
+                className="px-1.5 py-0.5 text-xs rounded-md bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20"
               >
                 {tech}
               </span>
             ))}
             {technologies.length > 3 && (
-              <span className="px-1.5 py-0.5 text-xs rounded-md bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/20">
+              <span className="px-1.5 py-0.5 text-xs rounded-md bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/20">
                 +{technologies.length - 3}
               </span>
             )}
@@ -88,12 +88,12 @@ const PortfolioCard = ({
         {/* Results & Client - Compact */}
         <div className="space-y-1">
           <div className="flex items-center gap-1 text-xs">
-            <Target className="w-3 h-3 text-accent-light" />
-            <span className="text-accent-light font-medium truncate">{results}</span>
+            <Target className="w-3 h-3 text-violet-400" />
+            <span className="text-violet-400 font-medium truncate">{results}</span>
           </div>
           <div className="flex items-center gap-1 text-xs">
-            <Users className="w-3 h-3 text-navy-400" />
-            <span className="text-navy-400 font-medium truncate">{client}</span>
+            <Users className="w-3 h-3 text-purple-400" />
+            <span className="text-purple-400 font-medium truncate">{client}</span>
           </div>
         </div>
       </CardContent>

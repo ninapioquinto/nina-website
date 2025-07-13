@@ -17,7 +17,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
-              <span className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-navy-500/20 to-navy-600/20 text-navy-200 border border-navy-400/30">
+              <span className="px-4 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-purple-500/20 to-violet-500/20 text-purple-200 border border-purple-400/30">
                 ✨ Complete Portfolio
               </span>
             </div>

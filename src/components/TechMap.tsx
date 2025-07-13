@@ -8,7 +8,7 @@ const points = map.getPoints();
 
 const svgOptions = {
   backgroundColor: 'transparent',
-  color: 'rgb(30, 58, 95)', // navy blue instead of purple
+  color: 'rgb(217, 119, 255)', // much brighter purple/magenta
   radius: 0.25,
 };
 
@@ -26,7 +26,7 @@ const TechMap = () => {
           opacity={1}
           className="animate-pulse drop-shadow-sm"
           style={{
-            filter: 'drop-shadow(0 0 2px rgba(30, 58, 95, 0.6))'
+            filter: 'drop-shadow(0 0 2px rgba(217, 119, 255, 0.6))'
           }}
         />
       ))}

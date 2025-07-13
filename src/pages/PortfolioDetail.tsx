@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
@@ -47,7 +46,7 @@ const PortfolioDetail = () => {
           <Button 
             onClick={() => navigate('/portfolio')} 
             variant="outline" 
-            className="mb-8 border-navy-400/20 text-navy-200 hover:bg-navy-500/10 hover:border-navy-300/30"
+            className="mb-8 border-purple-400/20 text-purple-200 hover:bg-purple-500/10 hover:border-purple-300/30"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio

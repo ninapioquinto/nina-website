@@ -27,25 +27,25 @@ const services: Service[] = [
     actions: ["Track order via API", "Send order updates", "Escalate to human agent if needed"]
   },
   {
-    icon: <ClipboardList className="w-6 h-6 text-navy-400" />,
+    icon: <ClipboardList className="w-6 h-6 text-purple-400" />,
     title: "Intake Automation",
     description: "Collect client details with ease",
     actions: ["Gather form responses", "Sync with CRM", "Create new record"]
   },
   {
-    icon: <Receipt className="w-6 h-6 text-navy-500" />,
+    icon: <Receipt className="w-6 h-6 text-yellow-400" />,
     title: "Invoice Follow-Up",
     description: "Recover unpaid invoices",
     actions: ["Detect overdue payments", "Send payment reminders", "Schedule next follow-up"]
   },
   {
-    icon: <Home className="w-6 h-6 text-slate-400" />,
+    icon: <Home className="w-6 h-6 text-pink-400" />,
     title: "Real Estate Inquiry",
     description: "Respond to property questions",
     actions: ["Share property info", "Schedule viewings", "Send agent intro email"]
   },
   {
-    icon: <UserPlus className="w-6 h-6 text-navy-400" />,
+    icon: <UserPlus className="w-6 h-6 text-indigo-400" />,
     title: "Onboarding Assistant",
     description: "Welcome new users",
     actions: ["Provide onboarding guide", "Create CRM entry", "Send custom welcome email"]
@@ -57,7 +57,7 @@ const services: Service[] = [
     actions: ["Track subscription end dates", "Send renewal reminders", "Link to payment"]
   },
   {
-    icon: <Calendar className="w-6 h-6 text-blue-400" />,
+    icon: <Calendar className="w-6 h-6 text-rose-400" />,
     title: "Event Registration Bot",
     description: "Manage event sign-ups",
     actions: ["Register attendees", "Send confirmation", "Add to calendar"]
@@ -99,17 +99,17 @@ const Services = () => {
           <div className="text-center mb-8">
             <div className="relative inline-block">
               {/* Decorative accent line above */}
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-navy-400/60 to-transparent"></div>
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-16 h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent"></div>
               
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
                 Operational systems built for{' '}
-                <span className="bg-gradient-to-r from-navy-300 via-accent-light to-navy-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-300 bg-clip-text text-transparent">
                   clarity, performance, and scale.
                 </span>
               </h2>
               
               {/* Decorative accent line below */}
-              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-navy-400/40 to-transparent"></div>
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"></div>
             </div>
           </div>
           

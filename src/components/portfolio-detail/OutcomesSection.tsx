@@ -11,14 +11,14 @@ const OutcomesSection = ({ outcomes, projectSummary }: OutcomesSectionProps) => 
       <ul className="space-y-3">
         {outcomes.map((outcome, index) => (
           <li key={index} className="flex items-start gap-3">
-            <div className="w-2 h-2 rounded-full bg-accent-gold mt-2 flex-shrink-0"></div>
+            <div className="w-2 h-2 rounded-full bg-violet-400 mt-2 flex-shrink-0"></div>
             <p className="text-white/80">{outcome}</p>
           </li>
         ))}
       </ul>
       {projectSummary && (
-        <div className="mt-6 p-6 bg-gradient-to-r from-navy-900/20 to-navy-800/20 border border-navy-400/20 rounded-xl">
-          <p className="text-navy-200 font-medium italic">
+        <div className="mt-6 p-6 bg-gradient-to-r from-purple-900/20 to-violet-900/20 border border-purple-400/20 rounded-xl">
+          <p className="text-purple-200 font-medium italic">
             {projectSummary}
           </p>
         </div>

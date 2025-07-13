@@ -24,7 +24,7 @@ const ChallengesSolutions = ({ challenges, solutions }: ChallengesSolutionsProps
         <ul className="space-y-3">
           {solutions.map((solution, index) => (
             <li key={index} className="flex items-start gap-3">
-              <div className="w-2 h-2 rounded-full bg-accent-gold mt-2 flex-shrink-0"></div>
+              <div className="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
               <p className="text-white/80">{solution}</p>
             </li>
           ))}

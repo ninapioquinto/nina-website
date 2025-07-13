@@ -7,11 +7,11 @@ import { type ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } f
 const chartConfig = {
   efficiency: {
     label: 'Efficiency Gain',
-    color: '#1e3a5f', // navy-700
+    color: '#8b5cf6', // purple-500
   },
   revenue: {
     label: 'Revenue Impact', 
-    color: '#64748b', // accent-light
+    color: '#3b82f6', // blue-500
   },
 } satisfies ChartConfig;
 
@@ -26,7 +26,7 @@ const chartData = [
 
 const SuccessChart = () => {
   return (
-    <div className="bg-black/20 backdrop-blur-xl border-t border-navy-500/20 relative overflow-hidden">
+    <div className="bg-black/20 backdrop-blur-xl border-t border-purple-500/20 relative overflow-hidden">
       <ChartContainer className="h-48 sm:h-64 md:h-80 w-full" config={chartConfig}>
         <AreaChart
           accessibilityLayer
@@ -50,7 +50,7 @@ const SuccessChart = () => {
           <CartesianGrid 
             strokeDasharray="3 3" 
             vertical={false} 
-            className="stroke-navy-500/10" 
+            className="stroke-purple-500/10" 
           />
           <XAxis 
             dataKey="month" 
@@ -65,7 +65,7 @@ const SuccessChart = () => {
           />
           <ChartTooltip 
             cursor={false} 
-            content={<ChartTooltipContent className="bg-black/90 backdrop-blur-xl border-navy-500/30 text-white rounded-lg" />} 
+            content={<ChartTooltipContent className="bg-black/90 backdrop-blur-xl border-purple-500/30 text-white rounded-lg" />} 
           />
           <Area 
             strokeWidth={2} 
