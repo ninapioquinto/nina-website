@@ -9,6 +9,7 @@ import AiExecutiveAssistant from './pages/AiExecutiveAssistant';
 import LinkTree from './pages/LinkTree';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
+import PasswordProtection from './components/PasswordProtection';
 import { Toaster } from './components/ui/sonner';
 import './App.css';
 
@@ -25,18 +26,20 @@ function App() {
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/work-with-me" element={<WorkWithMe />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/portfolio/:id" element={<PortfolioDetail />} />
-            <Route path="/ai-executive-assistant" element={<AiExecutiveAssistant />} />
-            <Route path="/links" element={<LinkTree />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <Toaster />
-        </Router>
+        <PasswordProtection>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/work-with-me" element={<WorkWithMe />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+              <Route path="/ai-executive-assistant" element={<AiExecutiveAssistant />} />
+              <Route path="/links" element={<LinkTree />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Toaster />
+          </Router>
+        </PasswordProtection>
       </QueryClientProvider>
     </ErrorBoundary>
   );
