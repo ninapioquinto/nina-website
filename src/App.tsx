@@ -22,6 +22,9 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  // Add console log to verify app is loading
+  console.log('App component mounted successfully');
+  
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
